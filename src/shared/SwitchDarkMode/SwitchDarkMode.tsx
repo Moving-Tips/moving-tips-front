@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react"
 import { MoonIcon } from "@heroicons/react/solid"
 import { SunIcon } from "@heroicons/react/outline"
+
 export interface SwitchDarkModeProps {
   className?: string
 }
+
 const SwitchDarkMode: React.FC<SwitchDarkModeProps> = ({ className = "" }) => {
   const [isDarkMode, setIsDarkMode] = useState(false)
-
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
+    const verify = window.matchMedia("(prefers-color-scheme: dark)").matches
+    if (localStorage.theme === "dark" || (!("theme" in localStorage) && verify)) {
       toDark()
     } else {
       toLight()
@@ -50,9 +48,9 @@ const SwitchDarkMode: React.FC<SwitchDarkModeProps> = ({ className = "" }) => {
     >
       <span className="sr-only">Enable dark mode</span>
       {isDarkMode ? (
-        <MoonIcon className="w-7 h-7" aria-hidden="true" />
+        <MoonIcon className="w-7 h-7" aria-hidden="true"/>
       ) : (
-        <SunIcon className="w-7 h-7" aria-hidden="true" />
+        <SunIcon className="w-7 h-7" aria-hidden="true"/>
       )}
     </button>
   )
