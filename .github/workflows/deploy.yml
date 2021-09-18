@@ -1,13 +1,13 @@
-name: Build on Main
+name: Deploy on server
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
 jobs:
   build:
-    name: Build on Main
+    name: Deploy on server
     runs-on: ubuntu-latest
 
     steps:
@@ -25,9 +25,6 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Run tests
-      run: npm run test
-
     - name: Upload production-ready build files
       uses: actions/upload-artifact@v2
       with:
@@ -38,17 +35,17 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
 
     steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v2
-      with:
-        name: production-files
-        path: ./build
+      - name: Checkout
+        uses: actions/checkout@v1
 
-    - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: sa-east-1
+
+      - name: Deploy static site to S3 bucket
+        run: aws s3 sync ./build s3://www.movingtips.com.br  --delete

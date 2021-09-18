@@ -1,29 +1,26 @@
-name: Development & test
+name: Development test
 
 on:
   push:
     branches:
       - develop
-  pull_request:
-    branches:
-      - develop
 
 jobs:
   build:
-    name: Test Develop
+    name: Development test
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    
+
     - name: Install Node.js
       uses: actions/setup-node@v1
       with:
         node-version: 13.x
-    
+
     - name: Install NPM packages
       run: npm ci
-    
+
     - name: Run tests
       run: npm run test
