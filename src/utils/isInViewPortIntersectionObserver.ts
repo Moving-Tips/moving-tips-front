@@ -15,7 +15,7 @@ const checkInViewIntersectionObserver = ({
   ) => {
     entries.map((entry: IntersectionObserverEntry) => {
       if (entry.isIntersecting) {
-        // NEED CALLBACK WILL RETURN BOOLEAN ---- IF TRUE WE WILL UNOBSERVER AND FALSE IS NO
+        // NEED CALLBACK WILL RETURN BOOLEAN ---- IF TRUE WE WILL UNOBSERVED AND FALSE IS NO
         const unobserve = callback()
         unobserve && observer.unobserve(entry.target)
       }
@@ -25,7 +25,7 @@ const checkInViewIntersectionObserver = ({
 
   // _checkBrowserSupport-----
   if (typeof window.IntersectionObserver === "undefined") {
-    console.error(
+    console.log(
       "window.IntersectionObserver === undefined! => Your Browser is Notsupport"
     )
     return
