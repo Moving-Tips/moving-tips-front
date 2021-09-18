@@ -1,19 +1,19 @@
-import React, { FC } from "react";
-import BackgroundSection from "components/BackgroundSection/BackgroundSection";
-import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism";
-import SectionGridAuthorBox from "components/SectionGridAuthorBox/SectionGridAuthorBox";
-import SectionHeroArchivePage from "components/SectionHeroArchivePage/SectionHeroArchivePage";
-import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories";
-import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
-import SectionGridHasMap from "./SectionGridHasMap";
-import { Helmet } from "react-helmet";
+import React, { FC } from "react"
+import BackgroundSection from "components/BackgroundSection/BackgroundSection"
+import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism"
+import SectionGridAuthorBox from "components/SectionGridAuthorBox/SectionGridAuthorBox"
+import SectionHeroArchivePage from "components/SectionHeroArchivePage/SectionHeroArchivePage"
+import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories"
+import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2"
+import SectionGridHasMap from "./SectionGridHasMap"
+import { Helmet } from "react-helmet"
 
 export interface ListingStayMapPageProps {
-  className?: string;
+  className?: string
 }
 
 const ListingStayMapPage: FC<ListingStayMapPageProps> = ({
-  className = "",
+  className = ""
 }) => {
   return (
     <div
@@ -58,7 +58,7 @@ const ListingStayMapPage: FC<ListingStayMapPageProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ListingStayMapPage;
+export default ListingStayMapPage

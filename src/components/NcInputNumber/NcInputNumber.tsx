@@ -1,14 +1,14 @@
-import React, { FC, useEffect, useState } from "react";
-import { MinusIcon, PlusIcon } from "@heroicons/react/solid";
+import React, { FC, useEffect, useState } from "react"
+import { MinusIcon, PlusIcon } from "@heroicons/react/solid"
 
 export interface NcInputNumberProps {
-  className?: string;
-  defaultValue?: number;
-  min?: number;
-  max?: number;
-  onChange?: (value: number) => void;
-  label?: string;
-  desc?: string;
+  className?: string
+  defaultValue?: number
+  min?: number
+  max?: number
+  onChange?: (value: number) => void
+  label?: string
+  desc?: string
 }
 
 const NcInputNumber: FC<NcInputNumberProps> = ({
@@ -18,22 +18,22 @@ const NcInputNumber: FC<NcInputNumberProps> = ({
   max,
   onChange,
   label,
-  desc,
+  desc
 }) => {
-  const [value, setValue] = useState(defaultValue);
+  const [value, setValue] = useState(defaultValue)
 
   useEffect(() => {
-    onChange && onChange(value);
-  }, [value]);
+    onChange && onChange(value)
+  }, [value])
 
   const handleClickDecrement = () => {
-    if (min >= value) return;
-    setValue((state) => state - 1);
-  };
+    if (min >= value) return
+    setValue((state) => state - 1)
+  }
   const handleClickIncrement = () => {
-    if (max && max <= value) return;
-    setValue((state) => state + 1);
-  };
+    if (max && max <= value) return
+    setValue((state) => state + 1)
+  }
 
   const renderLabel = () => {
     return (
@@ -47,8 +47,8 @@ const NcInputNumber: FC<NcInputNumberProps> = ({
           </span>
         )}
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -79,7 +79,7 @@ const NcInputNumber: FC<NcInputNumberProps> = ({
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NcInputNumber;
+export default NcInputNumber

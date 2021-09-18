@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
 
 export interface TemplateNameProps {
-  className?: string;
+  className?: string
 }
 
 const TemplateName: FC<TemplateNameProps> = ({ className = "" }) => {
@@ -9,7 +9,7 @@ const TemplateName: FC<TemplateNameProps> = ({ className = "" }) => {
     <div className={`nc-TemplateName ${className}`} data-nc-id="TemplateName">
       THIS IS TemplateName
     </div>
-  );
-};
+  )
+}
 
-export default TemplateName;
+export default TemplateName

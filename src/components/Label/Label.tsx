@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
 
 export interface LabelProps {
-  className?: string;
+  className?: string
 }
 
 const Label: FC<LabelProps> = ({ className = "", children }) => {
@@ -12,7 +12,7 @@ const Label: FC<LabelProps> = ({ className = "", children }) => {
     >
       {children}
     </label>
-  );
-};
+  )
+}
 
-export default Label;
+export default Label

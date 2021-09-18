@@ -1,13 +1,13 @@
-import Heading from "components/Heading/Heading";
-import React, { FC } from "react";
-import NcImage from "shared/NcImage/NcImage";
-import HIW1img from "images/HIW1.png";
-import HIW2img from "images/HIW2.png";
-import HIW3img from "images/HIW3.png";
-import VectorImg from "images/VectorHIW.svg";
+import Heading from "components/Heading/Heading"
+import React, { FC } from "react"
+import NcImage from "shared/NcImage/NcImage"
+import HIW1img from "images/HIW1.png"
+import HIW2img from "images/HIW2.png"
+import HIW3img from "images/HIW3.png"
+import VectorImg from "images/VectorHIW.svg"
 
 export interface SectionHowItWorkProps {
-  className?: string;
+  className?: string
 }
 
 const DEMO_DATA = [
@@ -15,21 +15,21 @@ const DEMO_DATA = [
     id: 1,
     img: HIW1img,
     title: "Book & relax",
-    desc: "Let each trip be an inspirational journey, each room a peaceful space",
+    desc: "Let each trip be an inspirational journey, each room a peaceful space"
   },
   {
     id: 2,
     img: HIW2img,
     title: "Smart checklist",
-    desc: "Let each trip be an inspirational journey, each room a peaceful space",
+    desc: "Let each trip be an inspirational journey, each room a peaceful space"
   },
   {
     id: 3,
     img: HIW3img,
     title: "Save more",
-    desc: "Let each trip be an inspirational journey, each room a peaceful space",
-  },
-];
+    desc: "Let each trip be an inspirational journey, each room a peaceful space"
+  }
+]
 
 const SectionHowItWork: FC<SectionHowItWorkProps> = ({ className = "" }) => {
   return (
@@ -65,7 +65,7 @@ const SectionHowItWork: FC<SectionHowItWorkProps> = ({ className = "" }) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionHowItWork;
+export default SectionHowItWork

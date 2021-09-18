@@ -1,66 +1,66 @@
-import React, { useEffect, useState } from "react";
-import LocationInput from "./LocationInput";
-import { FocusedInputShape } from "react-dates";
-import RentalCarDatesRangeInput from "./RentalCarDatesRangeInput";
-import ButtonSubmit from "./ButtonSubmit";
-import { FC } from "react";
-import moment from "moment";
+import React, { useEffect, useState, FC } from "react"
+import LocationInput from "./LocationInput"
+import { FocusedInputShape } from "react-dates"
+import RentalCarDatesRangeInput from "./RentalCarDatesRangeInput"
+import ButtonSubmit from "./ButtonSubmit"
+
+import moment from "moment"
 
 export interface DateRage {
-  startDate: moment.Moment | null;
-  endDate: moment.Moment | null;
+  startDate: moment.Moment | null
+  endDate: moment.Moment | null
 }
 
 export interface TimeRage {
-  startTime: string;
-  endTime: string;
+  startTime: string
+  endTime: string
 }
 
 export interface RentalCarSearchFormProps {
-  haveDefaultValue?: boolean;
+  haveDefaultValue?: boolean
 }
 
 const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({
-  haveDefaultValue,
+  haveDefaultValue
 }) => {
   // DEFAULT DATA FOR ARCHIVE PAGE
-  const defaultPickUpInputValue = "Tokyo, Jappan";
-  const defaultDropOffInputValue = "Paris, France";
+  const defaultPickUpInputValue = "Tokyo, Jappan"
+  const defaultDropOffInputValue = "Paris, France"
   // const defaultDateRange = {
   //   startDate: moment("2021-08-08"),
   //   endDate: moment("2021-09-09"),
-  // };
+  // }
 
   // USE STATE
   const [dateRangeValue, setDateRangeValue] = useState<DateRage>({
     startDate: null,
-    endDate: null,
-  });
+    endDate: null
+  })
   const [timeRangeValue, setTimeRangeValue] = useState<TimeRage>({
     startTime: "10:00 AM",
-    endTime: "10:00 AM",
-  });
-  const [pickUpInputValue, setPickUpInputValue] = useState("");
-  const [dropOffInputValue, setDropOffInputValue] = useState("");
+    endTime: "10:00 AM"
+  })
+  const [pickUpInputValue, setPickUpInputValue] = useState("")
+  const [dropOffInputValue, setDropOffInputValue] = useState("")
   const [fieldFocused, setFieldFocused] = useState<
-    FocusedInputShape | "dropOffInput" | null
-  >(null);
+  FocusedInputShape | "dropOffInput" | null
+  >(null)
   const [dropOffLocationType, setDropOffLocationType] = useState<
-    "same" | "different"
-  >("same");
+  "same" | "different"
+  >("same")
 
   // USER EFFECT
   useEffect(() => {
     if (haveDefaultValue) {
       setDateRangeValue({
         startDate: moment(),
-        endDate: moment().add(4, "days"),
-      });
+        endDate: moment().add(4, "days")
+      })
 
-      setPickUpInputValue(defaultPickUpInputValue);
-      setDropOffInputValue(defaultDropOffInputValue);
+      setPickUpInputValue(defaultPickUpInputValue)
+      setDropOffInputValue(defaultDropOffInputValue)
     }
-  }, []);
+  }, [])
   //
 
   const renderRadioBtn = () => {
@@ -105,8 +105,8 @@ const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({
           </label>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderForm = () => {
     return (
@@ -147,8 +147,8 @@ const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({
               }
               onFocusChange={(focus) => setFieldFocused(focus)}
               onChange={(data) => {
-                setDateRangeValue(data.stateDate);
-                setTimeRangeValue(data.stateTimeRage);
+                setDateRangeValue(data.stateDate)
+                setTimeRangeValue(data.stateTimeRage)
               }}
             />
             {/* BUTTON SUBMIT OF FORM */}
@@ -158,10 +158,10 @@ const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({
           </div>
         </form>
       </div>
-    );
-  };
+    )
+  }
 
-  return renderForm();
-};
+  return renderForm()
+}
 
-export default RentalCarSearchForm;
+export default RentalCarSearchForm

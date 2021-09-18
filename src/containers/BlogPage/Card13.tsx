@@ -1,17 +1,17 @@
-import React, { FC } from "react";
-import NcImage from "shared/NcImage/NcImage";
-import PostCardMeta from "components/PostCardMeta/PostCardMeta";
-import { PostDataType } from "data/types";
-import { Link } from "react-router-dom";
-import PostTypeFeaturedIcon from "components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
+import React, { FC } from "react"
+import NcImage from "shared/NcImage/NcImage"
+import PostCardMeta from "components/PostCardMeta/PostCardMeta"
+import { PostDataType } from "data/types"
+import { Link } from "react-router-dom"
+import PostTypeFeaturedIcon from "components/PostTypeFeaturedIcon/PostTypeFeaturedIcon"
 
 export interface Card13Props {
-  className?: string;
-  post: PostDataType;
+  className?: string
+  post: PostDataType
 }
 
 const Card13: FC<Card13Props> = ({ className = "", post }) => {
-  const { title, href, desc, featuredImage, date, postType } = post;
+  const { title, href, desc, featuredImage, date, postType } = post
 
   return (
     <div className={`nc-Card13 relative flex ${className}`} data-nc-id="Card13">
@@ -50,7 +50,7 @@ const Card13: FC<Card13Props> = ({ className = "", post }) => {
         />
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default Card13;
+export default Card13

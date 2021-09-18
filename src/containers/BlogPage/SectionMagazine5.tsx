@@ -1,10 +1,10 @@
-import React, { FC } from "react";
-import { PostDataType } from "data/types";
-import Card12 from "./Card12";
-import Card13 from "./Card13";
+import React, { FC } from "react"
+import { PostDataType } from "data/types"
+import Card12 from "./Card12"
+import Card13 from "./Card13"
 
 export interface SectionMagazine5Props {
-  posts: PostDataType[];
+  posts: PostDataType[]
 }
 
 const SectionMagazine5: FC<SectionMagazine5Props> = ({ posts }) => {
@@ -21,7 +21,7 @@ const SectionMagazine5: FC<SectionMagazine5Props> = ({ posts }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionMagazine5;
+export default SectionMagazine5

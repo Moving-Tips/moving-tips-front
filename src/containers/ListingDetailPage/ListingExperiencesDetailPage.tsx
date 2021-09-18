@@ -1,30 +1,30 @@
-import React, { FC, useState } from "react";
-import { ArrowRightIcon } from "@heroicons/react/outline";
-import LocationMarker from "components/AnyReactComponent/LocationMarker";
-import CommentListing from "components/CommentListing/CommentListing";
-import FiveStartIconForRate from "components/FiveStartIconForRate/FiveStartIconForRate";
-import GuestsInput from "components/HeroSearchForm/GuestsInput";
-import StartRating from "components/StartRating/StartRating";
-import GoogleMapReact from "google-map-react";
-import useWindowSize from "hooks/useWindowResize";
-import moment from "moment";
-import { DayPickerSingleDateController } from "react-dates";
-import Avatar from "shared/Avatar/Avatar";
-import Badge from "shared/Badge/Badge";
-import ButtonCircle from "shared/Button/ButtonCircle";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import ButtonSecondary from "shared/Button/ButtonSecondary";
-import Input from "shared/Input/Input";
-import NcImage from "shared/NcImage/NcImage";
-import LikeSaveBtns from "./LikeSaveBtns";
-import ModalPhotos from "./ModalPhotos";
-import BackgroundSection from "components/BackgroundSection/BackgroundSection";
-import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories";
-import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
-import ExperiencesDateSingleInput from "components/HeroSearchForm/ExperiencesDateSingleInput";
+import React, { FC, useState } from "react"
+import { ArrowRightIcon } from "@heroicons/react/outline"
+import LocationMarker from "components/AnyReactComponent/LocationMarker"
+import CommentListing from "components/CommentListing/CommentListing"
+import FiveStartIconForRate from "components/FiveStartIconForRate/FiveStartIconForRate"
+import GuestsInput from "components/HeroSearchForm/GuestsInput"
+import StartRating from "components/StartRating/StartRating"
+import GoogleMapReact from "google-map-react"
+import useWindowSize from "hooks/useWindowResize"
+import moment from "moment"
+import { DayPickerSingleDateController } from "react-dates"
+import Avatar from "shared/Avatar/Avatar"
+import Badge from "shared/Badge/Badge"
+import ButtonCircle from "shared/Button/ButtonCircle"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import ButtonSecondary from "shared/Button/ButtonSecondary"
+import Input from "shared/Input/Input"
+import NcImage from "shared/NcImage/NcImage"
+import LikeSaveBtns from "./LikeSaveBtns"
+import ModalPhotos from "./ModalPhotos"
+import BackgroundSection from "components/BackgroundSection/BackgroundSection"
+import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories"
+import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2"
+import ExperiencesDateSingleInput from "components/HeroSearchForm/ExperiencesDateSingleInput"
 
 export interface ListingExperiencesDetailPageProps {
-  className?: string;
+  className?: string
 }
 
 const PHOTOS: string[] = [
@@ -36,48 +36,48 @@ const PHOTOS: string[] = [
   "https://images.pexels.com/photos/1320686/pexels-photo-1320686.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   "https://images.pexels.com/photos/261394/pexels-photo-261394.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   "https://images.pexels.com/photos/2861361/pexels-photo-2861361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  "https://images.pexels.com/photos/2677398/pexels-photo-2677398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-];
+  "https://images.pexels.com/photos/2677398/pexels-photo-2677398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+]
 
 const includes_demo = [
   { name: "Set Menu Lunch on boat" },
   { name: "Express Bus From Hanoi To Halong and Return" },
   { name: "Mineral Water On Express Bus" },
   { name: "Kayak or Bamboo Boat. Life Jacket." },
-  { name: "Halong Bay Entrance Ticket" },
-];
-console.log(11, moment());
+  { name: "Halong Bay Entrance Ticket" }
+]
+console.log(11, moment())
 
 const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
-  className = "",
+  className = ""
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [openFocusIndex, setOpenFocusIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false)
+  const [openFocusIndex, setOpenFocusIndex] = useState(0)
   const [selectedDate, setSelectedDate] = useState<moment.Moment | null>(
     moment().add(2, "days")
-  );
+  )
 
-  const windowSize = useWindowSize();
+  const windowSize = useWindowSize()
 
   const getDaySize = () => {
     if (windowSize.width <= 375) {
-      return 34;
+      return 34
     }
     if (windowSize.width <= 500) {
-      return undefined;
+      return undefined
     }
     if (windowSize.width <= 1280) {
-      return 56;
+      return 56
     }
-    return 48;
-  };
+    return 48
+  }
 
   const handleOpenModal = (index: number) => {
-    setIsOpen(true);
-    setOpenFocusIndex(index);
-  };
+    setIsOpen(true)
+    setOpenFocusIndex(index)
+  }
 
-  const handleCloseModal = () => setIsOpen(false);
+  const handleCloseModal = () => setIsOpen(false)
 
   const renderSection1 = () => {
     return (
@@ -133,8 +133,8 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection2 = () => {
     return (
@@ -186,8 +186,8 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
           </p>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection3 = () => {
     return (
@@ -211,8 +211,8 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
             ))}
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSectionCheckIndate = () => {
     return (
@@ -242,8 +242,8 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection5 = () => {
     return (
@@ -341,8 +341,8 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
           <ButtonSecondary href="##">See host profile</ButtonSecondary>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection6 = () => {
     return (
@@ -381,8 +381,8 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection7 = () => {
     return (
@@ -401,13 +401,13 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
           <div className="rounded-xl overflow-hidden">
             <GoogleMapReact
               bootstrapURLKeys={{
-                key: "AIzaSyDxJaU8bLdx7sSJ8fcRdhYS1pLk8Jdvnx0",
+                key: "AIzaSyDxJaU8bLdx7sSJ8fcRdhYS1pLk8Jdvnx0"
               }}
               defaultZoom={15}
               yesIWantToUseGoogleMapApiInternals
               defaultCenter={{
                 lat: 55.9607277,
-                lng: 36.2172614,
+                lng: 36.2172614
               }}
             >
               <LocationMarker lat={55.9607277} lng={36.2172614} />
@@ -415,8 +415,8 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection8 = () => {
     return (
@@ -458,8 +458,8 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSidebar = () => {
     return (
@@ -492,7 +492,7 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
               defaultValue={{
                 guestAdults: 1,
                 guestChildren: 2,
-                guestInfants: 0,
+                guestInfants: 0
               }}
             />
           </div>
@@ -518,8 +518,8 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
         {/* SUBMIT */}
         <ButtonPrimary>Reserve</ButtonPrimary>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -649,7 +649,7 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
         <SectionSubscribe2 className="pt-24 lg:pt-32" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ListingExperiencesDetailPage;
+export default ListingExperiencesDetailPage

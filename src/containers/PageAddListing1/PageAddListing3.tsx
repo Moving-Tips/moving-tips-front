@@ -1,8 +1,8 @@
-import NcInputNumber from "components/NcInputNumber/NcInputNumber";
-import React, { FC } from "react";
-import Select from "shared/Select/Select";
-import CommonLayout from "./CommonLayout";
-import FormItem from "./FormItem";
+import NcInputNumber from "components/NcInputNumber/NcInputNumber"
+import React, { FC } from "react"
+import Select from "shared/Select/Select"
+import CommonLayout from "./CommonLayout"
+import FormItem from "./FormItem"
 
 export interface PageAddListing3Props {}
 
@@ -36,7 +36,7 @@ const PageAddListing3: FC<PageAddListing3Props> = () => {
         </div>
       </>
     </CommonLayout>
-  );
-};
+  )
+}
 
-export default PageAddListing3;
+export default PageAddListing3

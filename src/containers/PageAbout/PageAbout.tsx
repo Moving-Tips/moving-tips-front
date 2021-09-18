@@ -1,16 +1,16 @@
-import rightImg from "images/about-hero-right.png";
-import React, { FC } from "react";
-import SectionFounder from "./SectionFounder";
-import SectionStatistic from "./SectionStatistic";
-import { Helmet } from "react-helmet";
-import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
-import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism";
-import BackgroundSection from "components/BackgroundSection/BackgroundSection";
-import SectionHero from "./SectionHero";
-import SectionClientSay from "components/SectionClientSay/SectionClientSay";
+import rightImg from "images/about-hero-right.png"
+import React, { FC } from "react"
+import SectionFounder from "./SectionFounder"
+import SectionStatistic from "./SectionStatistic"
+import { Helmet } from "react-helmet"
+import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2"
+import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism"
+import BackgroundSection from "components/BackgroundSection/BackgroundSection"
+import SectionHero from "./SectionHero"
+import SectionClientSay from "components/SectionClientSay/SectionClientSay"
 
 export interface PageAboutProps {
-  className?: string;
+  className?: string
 }
 
 const PageAbout: FC<PageAboutProps> = ({ className = "" }) => {
@@ -45,7 +45,7 @@ const PageAbout: FC<PageAboutProps> = ({ className = "" }) => {
         <SectionSubscribe2 />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PageAbout;
+export default PageAbout

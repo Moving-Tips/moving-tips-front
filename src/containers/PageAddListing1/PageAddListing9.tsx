@@ -1,32 +1,32 @@
-import NcInputNumber from "components/NcInputNumber/NcInputNumber";
-import useWindowSize from "hooks/useWindowResize";
-import moment from "moment";
-import React, { FC, useState } from "react";
-import { DayPickerSingleDateController } from "react-dates";
-import CommonLayout from "./CommonLayout";
+import NcInputNumber from "components/NcInputNumber/NcInputNumber"
+import useWindowSize from "hooks/useWindowResize"
+import moment from "moment"
+import React, { FC, useState } from "react"
+import { DayPickerSingleDateController } from "react-dates"
+import CommonLayout from "./CommonLayout"
 
 export interface PageAddListing9Props {}
 
 const PageAddListing9: FC<PageAddListing9Props> = () => {
-  const [dates, setDates] = useState<moment.Moment[]>([]);
+  const [dates, setDates] = useState<moment.Moment[]>([])
 
-  function handleDateChange(date: moment.Moment) {
-    const wasPreviouslyPicked = dates.some((d) => d.isSame(date));
+  function handleDateChange (date: moment.Moment) {
+    const wasPreviouslyPicked = dates.some((d) => d.isSame(date))
     if (wasPreviouslyPicked) {
-      setDates((previousDates) => previousDates.filter((d) => !d.isSame(date)));
+      setDates((previousDates) => previousDates.filter((d) => !d.isSame(date)))
     } else {
-      setDates((previousDates) => [...previousDates, date]);
+      setDates((previousDates) => [...previousDates, date])
     }
   }
 
-  const windowSize = useWindowSize();
+  const windowSize = useWindowSize()
 
   const getDaySize = () => {
     if (windowSize.width <= 600) {
-      return undefined;
+      return undefined
     }
-    return 56;
-  };
+    return 56
+  }
 
   return (
     <CommonLayout
@@ -73,7 +73,7 @@ const PageAddListing9: FC<PageAddListing9Props> = () => {
         </div>
       </>
     </CommonLayout>
-  );
-};
+  )
+}
 
-export default PageAddListing9;
+export default PageAddListing9

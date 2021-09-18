@@ -1,14 +1,14 @@
-import React, { FC } from "react";
-import rightImg from "images/our-features.png";
-import NcImage from "shared/NcImage/NcImage";
-import Badge from "shared/Badge/Badge";
+import React, { FC } from "react"
+import rightImg from "images/our-features.png"
+import NcImage from "shared/NcImage/NcImage"
+import Badge from "shared/Badge/Badge"
 
 export interface SectionOurFeaturesProps {
-  className?: string;
+  className?: string
 }
 
 const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
-  className = "py-14",
+  className = "py-14"
 }) => {
   return (
     <div
@@ -58,7 +58,7 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionOurFeatures;
+export default SectionOurFeatures

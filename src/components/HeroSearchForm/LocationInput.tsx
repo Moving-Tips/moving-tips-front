@@ -1,17 +1,15 @@
-import React, { useState } from "react";
-import { FC } from "react";
-import { useEffect } from "react";
-import ClearDataButton from "./ClearDataButton";
-import { useRef } from "react";
+import React, { useState, FC, useEffect, useRef } from "react"
+
+import ClearDataButton from "./ClearDataButton"
 
 export interface LocationInputProps {
-  defaultValue: string;
-  onChange?: (value: string) => void;
-  onInputDone?: (value: string) => void;
-  placeHolder?: string;
-  desc?: string;
-  className?: string;
-  autoFocus?: boolean;
+  defaultValue: string
+  onChange?: (value: string) => void
+  onInputDone?: (value: string) => void
+  placeHolder?: string
+  desc?: string
+  className?: string
+  autoFocus?: boolean
 }
 
 const LocationInput: FC<LocationInputProps> = ({
@@ -21,57 +19,57 @@ const LocationInput: FC<LocationInputProps> = ({
   onInputDone,
   placeHolder = "Location",
   desc = "Where are you going?",
-  className = "nc-flex-1.5",
+  className = "nc-flex-1.5"
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
-  const [value, setValue] = useState(defaultValue);
-  const [showPopover, setShowPopover] = useState(autoFocus);
-
-  useEffect(() => {
-    setValue(defaultValue);
-  }, [defaultValue]);
+  const [value, setValue] = useState(defaultValue)
+  const [showPopover, setShowPopover] = useState(autoFocus)
 
   useEffect(() => {
-    setShowPopover(autoFocus);
-  }, [autoFocus]);
+    setValue(defaultValue)
+  }, [defaultValue])
+
+  useEffect(() => {
+    setShowPopover(autoFocus)
+  }, [autoFocus])
 
   useEffect(() => {
     if (eventClickOutsideDiv) {
-      document.removeEventListener("click", eventClickOutsideDiv);
+      document.removeEventListener("click", eventClickOutsideDiv)
     }
-    showPopover && document.addEventListener("click", eventClickOutsideDiv);
+    showPopover && document.addEventListener("click", eventClickOutsideDiv)
     return () => {
-      document.removeEventListener("click", eventClickOutsideDiv);
-    };
-  }, [showPopover]);
+      document.removeEventListener("click", eventClickOutsideDiv)
+    }
+  }, [showPopover])
 
   useEffect(() => {
-    onChange && onChange(value);
-  }, [value]);
+    onChange && onChange(value)
+  }, [value])
 
   useEffect(() => {
     if (showPopover && inputRef.current) {
-      inputRef.current.focus();
+      inputRef.current.focus()
     }
-  }, [showPopover]);
+  }, [showPopover])
 
   const eventClickOutsideDiv = (event: MouseEvent) => {
-    if (!containerRef.current) return;
+    if (!containerRef.current) return
     // CLICK IN_SIDE
     if (!showPopover || containerRef.current.contains(event.target as Node)) {
-      return;
+      return
     }
     // CLICK OUT_SIDE
-    setShowPopover(false);
-  };
+    setShowPopover(false)
+  }
 
   const handleSelectLocation = (item: string) => {
-    setValue(item);
-    onInputDone && onInputDone(item);
-    setShowPopover(false);
-  };
+    setValue(item)
+    onInputDone && onInputDone(item)
+    setShowPopover(false)
+  }
 
   const renderRecentSearches = () => {
     return (
@@ -84,7 +82,7 @@ const LocationInput: FC<LocationInputProps> = ({
             "Hamptons, Suffolk County, NY",
             "Las Vegas, NV, United States",
             "Ueno, Taito, Tokyo",
-            "Ikebukuro, Toshima, Tokyo",
+            "Ikebukuro, Toshima, Tokyo"
           ].map((item) => (
             <span
               onClick={() => handleSelectLocation(item)}
@@ -114,8 +112,8 @@ const LocationInput: FC<LocationInputProps> = ({
           ))}
         </div>
       </>
-    );
-  };
+    )
+  }
 
   const renderSearchValue = () => {
     return (
@@ -124,7 +122,7 @@ const LocationInput: FC<LocationInputProps> = ({
           "Ha Noi, Viet Nam",
           "San Diego, CA",
           "Humboldt Park, Chicago, IL",
-          "Bangor, Northern Ireland",
+          "Bangor, Northern Ireland"
         ].map((item) => (
           <span
             onClick={() => handleSelectLocation(item)}
@@ -159,8 +157,8 @@ const LocationInput: FC<LocationInputProps> = ({
           </span>
         ))}
       </>
-    );
-  };
+    )
+  }
 
   return (
     <div className={`relative flex ${className}`} ref={containerRef}>
@@ -202,7 +200,7 @@ const LocationInput: FC<LocationInputProps> = ({
             ref={inputRef}
           />
           <span className="block mt-0.5 text-sm text-neutral-400 font-light ">
-            <span className="line-clamp-1">{!!value ? placeHolder : desc}</span>
+            <span className="line-clamp-1">{value ? placeHolder : desc}</span>
           </span>
           {value && showPopover && (
             <ClearDataButton onClick={() => setValue("")} />
@@ -215,7 +213,7 @@ const LocationInput: FC<LocationInputProps> = ({
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default LocationInput;
+export default LocationInput

@@ -1,20 +1,20 @@
-import React, { FC } from "react";
-import { TaxonomyType } from "data/types";
-import { NavLink } from "react-router-dom";
-import NcImage from "shared/NcImage/NcImage";
+import React, { FC } from "react"
+import { TaxonomyType } from "data/types"
+import { NavLink } from "react-router-dom"
+import NcImage from "shared/NcImage/NcImage"
 
 export interface CardCategory1Props {
-  className?: string;
-  taxonomy: TaxonomyType;
-  size?: "large" | "normal";
+  className?: string
+  taxonomy: TaxonomyType
+  size?: "large" | "normal"
 }
 
 const CardCategory1: FC<CardCategory1Props> = ({
   className = "",
   size = "normal",
-  taxonomy,
+  taxonomy
 }) => {
-  const { count, name, href = "/", thumbnail } = taxonomy;
+  const { count, name, href = "/", thumbnail } = taxonomy
   return (
     <NavLink
       to={href}
@@ -44,7 +44,7 @@ const CardCategory1: FC<CardCategory1Props> = ({
         </span>
       </div>
     </NavLink>
-  );
-};
+  )
+}
 
-export default CardCategory1;
+export default CardCategory1

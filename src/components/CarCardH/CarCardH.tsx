@@ -1,20 +1,20 @@
-import React, { FC } from "react";
-import { DEMO_CAR_LISTINGS } from "data/listings";
-import { CarDataType } from "data/types";
-import StartRating from "components/StartRating/StartRating";
-import { Link } from "react-router-dom";
-import BtnLikeIcon from "components/BtnLikeIcon/BtnLikeIcon";
-import SaleOffBadge from "components/SaleOffBadge/SaleOffBadge";
-import Badge from "shared/Badge/Badge";
-import Avatar from "shared/Avatar/Avatar";
-import NcImage from "shared/NcImage/NcImage";
+import React, { FC } from "react"
+import { DEMO_CAR_LISTINGS } from "data/listings"
+import { CarDataType } from "data/types"
+import StartRating from "components/StartRating/StartRating"
+import { Link } from "react-router-dom"
+import BtnLikeIcon from "components/BtnLikeIcon/BtnLikeIcon"
+import SaleOffBadge from "components/SaleOffBadge/SaleOffBadge"
+import Badge from "shared/Badge/Badge"
+import Avatar from "shared/Avatar/Avatar"
+import NcImage from "shared/NcImage/NcImage"
 
 export interface CarCardHProps {
-  className?: string;
-  data?: CarDataType;
+  className?: string
+  data?: CarDataType
 }
 
-const DEMO_DATA: CarDataType = DEMO_CAR_LISTINGS[0];
+const DEMO_DATA: CarDataType = DEMO_CAR_LISTINGS[0]
 
 const CarCardH: FC<CarCardHProps> = ({ className = "", data = DEMO_DATA }) => {
   const {
@@ -28,8 +28,8 @@ const CarCardH: FC<CarCardHProps> = ({ className = "", data = DEMO_DATA }) => {
     reviewStart,
     reviewCount,
     author,
-    featuredImage,
-  } = data;
+    featuredImage
+  } = data
 
   const renderSliderGallery = () => {
     return (
@@ -40,8 +40,8 @@ const CarCardH: FC<CarCardHProps> = ({ className = "", data = DEMO_DATA }) => {
         <BtnLikeIcon isLiked={like} className="absolute right-3 top-3" />
         {saleOff && <SaleOffBadge className="absolute left-3 top-3" />}
       </div>
-    );
-  };
+    )
+  }
 
   const renderContent = () => {
     return (
@@ -116,8 +116,8 @@ const CarCardH: FC<CarCardHProps> = ({ className = "", data = DEMO_DATA }) => {
           </span>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -129,7 +129,7 @@ const CarCardH: FC<CarCardHProps> = ({ className = "", data = DEMO_DATA }) => {
         {renderContent()}
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default CarCardH;
+export default CarCardH

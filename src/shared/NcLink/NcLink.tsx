@@ -1,9 +1,9 @@
-import React, { FC } from "react";
-import { Link, LinkProps } from "react-router-dom";
+import React, { FC } from "react"
+import { Link, LinkProps } from "react-router-dom"
 
 export interface NcLinkProps extends LinkProps {
-  className?: string;
-  colorClass?: string;
+  className?: string
+  colorClass?: string
 }
 
 const NcLink: FC<NcLinkProps> = ({
@@ -20,7 +20,7 @@ const NcLink: FC<NcLinkProps> = ({
     >
       {children}
     </Link>
-  );
-};
+  )
+}
 
-export default NcLink;
+export default NcLink

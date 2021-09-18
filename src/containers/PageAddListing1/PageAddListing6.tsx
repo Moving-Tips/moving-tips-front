@@ -1,6 +1,6 @@
-import React, { FC } from "react";
-import Textarea from "shared/Textarea/Textarea";
-import CommonLayout from "./CommonLayout";
+import React, { FC } from "react"
+import Textarea from "shared/Textarea/Textarea"
+import CommonLayout from "./CommonLayout"
 
 export interface PageAddListing6Props {}
 
@@ -26,7 +26,7 @@ const PageAddListing6: FC<PageAddListing6Props> = () => {
         <Textarea placeholder="..." rows={14} />
       </>
     </CommonLayout>
-  );
-};
+  )
+}
 
-export default PageAddListing6;
+export default PageAddListing6

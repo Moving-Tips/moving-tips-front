@@ -1,6 +1,6 @@
-import React, { FC } from "react";
-import Checkbox from "shared/Checkbox/Checkbox";
-import CommonLayout from "./CommonLayout";
+import React, { FC } from "react"
+import Checkbox from "shared/Checkbox/Checkbox"
+import CommonLayout from "./CommonLayout"
 
 export interface PageAddListing4Props {}
 
@@ -93,7 +93,7 @@ const PageAddListing4: FC<PageAddListing4Props> = () => {
         </div>
       </>
     </CommonLayout>
-  );
-};
+  )
+}
 
-export default PageAddListing4;
+export default PageAddListing4

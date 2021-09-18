@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import Input from "shared/Input/Input";
-import Select from "shared/Select/Select";
-import CommonLayout from "./CommonLayout";
-import FormItem from "./FormItem";
+import React, { FC } from "react"
+import Input from "shared/Input/Input"
+import Select from "shared/Select/Select"
+import CommonLayout from "./CommonLayout"
+import FormItem from "./FormItem"
 
 export interface PageAddListing1Props {}
 
@@ -52,7 +52,7 @@ const PageAddListing1: FC<PageAddListing1Props> = () => {
         </div>
       </>
     </CommonLayout>
-  );
-};
+  )
+}
 
-export default PageAddListing1;
+export default PageAddListing1

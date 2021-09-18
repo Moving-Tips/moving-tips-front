@@ -1,22 +1,22 @@
-import React, { FC } from "react";
-import { AuthorType } from "data/types";
-import { StarIcon } from "@heroicons/react/solid";
-import { Link } from "react-router-dom";
-import Avatar from "shared/Avatar/Avatar";
-import Badge from "shared/Badge/Badge";
+import React, { FC } from "react"
+import { AuthorType } from "data/types"
+import { StarIcon } from "@heroicons/react/solid"
+import { Link } from "react-router-dom"
+import Avatar from "shared/Avatar/Avatar"
+import Badge from "shared/Badge/Badge"
 
 export interface CardAuthorBoxProps {
-  className?: string;
-  author: AuthorType;
-  index?: number;
+  className?: string
+  author: AuthorType
+  index?: number
 }
 
 const CardAuthorBox: FC<CardAuthorBoxProps> = ({
   className = "",
   author,
-  index,
+  index
 }) => {
-  const { displayName, href = "/", avatar, starRating } = author;
+  const { displayName, href = "/", avatar, starRating } = author
   return (
     <Link
       to={href}
@@ -51,7 +51,7 @@ const CardAuthorBox: FC<CardAuthorBoxProps> = ({
         <StarIcon className="w-5 h-5 text-yellow-600 ml-2" />
       </div>
     </Link>
-  );
-};
+  )
+}
 
-export default CardAuthorBox;
+export default CardAuthorBox

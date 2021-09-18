@@ -1,26 +1,26 @@
-import { Tab } from "@headlessui/react";
-import CarCard from "components/CarCard/CarCard";
-import CommentListing from "components/CommentListing/CommentListing";
-import ExperiencesCard from "components/ExperiencesCard/ExperiencesCard";
-import StartRating from "components/StartRating/StartRating";
-import StayCard from "components/StayCard/StayCard";
+import { Tab } from "@headlessui/react"
+import CarCard from "components/CarCard/CarCard"
+import CommentListing from "components/CommentListing/CommentListing"
+import ExperiencesCard from "components/ExperiencesCard/ExperiencesCard"
+import StartRating from "components/StartRating/StartRating"
+import StayCard from "components/StayCard/StayCard"
 import {
   DEMO_CAR_LISTINGS,
   DEMO_EXPERIENCES_LISTINGS,
-  DEMO_STAY_LISTINGS,
-} from "data/listings";
-import React, { FC, Fragment, useState } from "react";
-import Avatar from "shared/Avatar/Avatar";
-import ButtonSecondary from "shared/Button/ButtonSecondary";
-import SocialsList from "shared/SocialsList/SocialsList";
-import { Helmet } from "react-helmet";
+  DEMO_STAY_LISTINGS
+} from "data/listings"
+import React, { FC, Fragment, useState } from "react"
+import Avatar from "shared/Avatar/Avatar"
+import ButtonSecondary from "shared/Button/ButtonSecondary"
+import SocialsList from "shared/SocialsList/SocialsList"
+import { Helmet } from "react-helmet"
 
 export interface AuthorPageProps {
-  className?: string;
+  className?: string
 }
 
 const AuthorPage: FC<AuthorPageProps> = ({ className = "" }) => {
-  let [categories] = useState(["Stays", "Experiences", "Car for rent"]);
+  const [categories] = useState(["Stays", "Experiences", "Car for rent"])
 
   const renderSidebar = () => {
     return (
@@ -114,8 +114,8 @@ const AuthorPage: FC<AuthorPageProps> = ({ className = "" }) => {
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection1 = () => {
     return (
@@ -185,8 +185,8 @@ const AuthorPage: FC<AuthorPageProps> = ({ className = "" }) => {
           </Tab.Group>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection2 = () => {
     return (
@@ -206,8 +206,8 @@ const AuthorPage: FC<AuthorPageProps> = ({ className = "" }) => {
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div className={`nc-AuthorPage ${className}`} data-nc-id="AuthorPage">
@@ -224,7 +224,7 @@ const AuthorPage: FC<AuthorPageProps> = ({ className = "" }) => {
         </div>
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default AuthorPage;
+export default AuthorPage

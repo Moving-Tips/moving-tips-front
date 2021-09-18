@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const LikeSaveBtns = () => {
   return (
@@ -40,7 +40,7 @@ const LikeSaveBtns = () => {
         </span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LikeSaveBtns;
+export default LikeSaveBtns

@@ -1,25 +1,25 @@
-import React, { FC } from "react";
-import { DEMO_CAR_LISTINGS } from "data/listings";
-import { CarDataType } from "data/types";
-import StartRating from "components/StartRating/StartRating";
-import { Link } from "react-router-dom";
-import BtnLikeIcon from "components/BtnLikeIcon/BtnLikeIcon";
-import SaleOffBadge from "components/SaleOffBadge/SaleOffBadge";
-import Badge from "shared/Badge/Badge";
-import NcImage from "shared/NcImage/NcImage";
+import React, { FC } from "react"
+import { DEMO_CAR_LISTINGS } from "data/listings"
+import { CarDataType } from "data/types"
+import StartRating from "components/StartRating/StartRating"
+import { Link } from "react-router-dom"
+import BtnLikeIcon from "components/BtnLikeIcon/BtnLikeIcon"
+import SaleOffBadge from "components/SaleOffBadge/SaleOffBadge"
+import Badge from "shared/Badge/Badge"
+import NcImage from "shared/NcImage/NcImage"
 
 export interface CarCardProps {
-  className?: string;
-  data?: CarDataType;
-  size?: "default" | "small";
+  className?: string
+  data?: CarDataType
+  size?: "default" | "small"
 }
 
-const DEMO_DATA: CarDataType = DEMO_CAR_LISTINGS[0];
+const DEMO_DATA: CarDataType = DEMO_CAR_LISTINGS[0]
 
 const CarCard: FC<CarCardProps> = ({
   size = "default",
   className = "",
-  data = DEMO_DATA,
+  data = DEMO_DATA
 }) => {
   const {
     featuredImage,
@@ -32,8 +32,8 @@ const CarCard: FC<CarCardProps> = ({
     reviewStart,
     reviewCount,
     seats,
-    gearshift,
-  } = data;
+    gearshift
+  } = data
 
   const renderSliderGallery = () => {
     return (
@@ -48,8 +48,8 @@ const CarCard: FC<CarCardProps> = ({
         <BtnLikeIcon isLiked={like} className="absolute right-3 top-3" />
         {saleOff && <SaleOffBadge className="absolute left-3 top-3" />}
       </div>
-    );
-  };
+    )
+  }
 
   const renderContent = () => {
     return (
@@ -87,8 +87,8 @@ const CarCard: FC<CarCardProps> = ({
           <StartRating reviewCount={reviewCount} point={reviewStart} />
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -100,7 +100,7 @@ const CarCard: FC<CarCardProps> = ({
         {renderContent()}
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default CarCard;
+export default CarCard

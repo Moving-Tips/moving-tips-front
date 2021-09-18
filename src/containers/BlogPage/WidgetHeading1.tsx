@@ -1,17 +1,17 @@
-import { CustomLink } from "data/types";
-import React, { FC } from "react";
-import { Link } from "react-router-dom";
+import { CustomLink } from "data/types"
+import React, { FC } from "react"
+import { Link } from "react-router-dom"
 
 export interface WidgetHeading1Props {
-  className?: string;
-  title: string;
-  viewAll: CustomLink;
+  className?: string
+  title: string
+  viewAll: CustomLink
 }
 
 const WidgetHeading1: FC<WidgetHeading1Props> = ({
   className = "",
   title,
-  viewAll,
+  viewAll
 }) => {
   return (
     <div
@@ -32,7 +32,7 @@ const WidgetHeading1: FC<WidgetHeading1Props> = ({
         </Link>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default WidgetHeading1;
+export default WidgetHeading1

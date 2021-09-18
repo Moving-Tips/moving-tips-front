@@ -1,9 +1,9 @@
-import React from "react";
-import { FC } from "react";
-import Avatar from "shared/Avatar/Avatar";
+import React, { FC } from "react"
+
+import Avatar from "shared/Avatar/Avatar"
 
 export interface CommentProps {
-  isSmall?: boolean;
+  isSmall?: boolean
 }
 
 const Comment: FC<CommentProps> = ({ isSmall }) => {
@@ -56,7 +56,7 @@ const Comment: FC<CommentProps> = ({ isSmall }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Comment;
+export default Comment

@@ -1,21 +1,21 @@
-import React, { FC } from "react";
-import { AuthorType } from "data/types";
-import { ArrowRightIcon } from "@heroicons/react/solid";
-import { NavLink } from "react-router-dom";
-import Avatar from "shared/Avatar/Avatar";
-import NcImage from "shared/NcImage/NcImage";
-import convertNumbThousand from "utils/convertNumbThousand";
+import React, { FC } from "react"
+import { AuthorType } from "data/types"
+import { ArrowRightIcon } from "@heroicons/react/solid"
+import { NavLink } from "react-router-dom"
+import Avatar from "shared/Avatar/Avatar"
+import NcImage from "shared/NcImage/NcImage"
+import convertNumbThousand from "utils/convertNumbThousand"
 
 export interface CardAuthorBox2Props {
-  className?: string;
-  author: AuthorType;
+  className?: string
+  author: AuthorType
 }
 
 const CardAuthorBox2: FC<CardAuthorBox2Props> = ({
   className = "",
-  author,
+  author
 }) => {
-  const { displayName, href = "/", avatar, jobName, count, bgImage } = author;
+  const { displayName, href = "/", avatar, jobName, count, bgImage } = author
   return (
     <NavLink
       to={href}
@@ -57,7 +57,7 @@ const CardAuthorBox2: FC<CardAuthorBox2Props> = ({
         </div>
       </div>
     </NavLink>
-  );
-};
+  )
+}
 
-export default CardAuthorBox2;
+export default CardAuthorBox2

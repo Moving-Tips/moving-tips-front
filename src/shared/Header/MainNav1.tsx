@@ -1,13 +1,13 @@
-import React, { FC } from "react";
-import Logo from "shared/Logo/Logo";
-import Navigation from "shared/Navigation/Navigation";
-import SearchDropdown from "./SearchDropdown";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import MenuBar from "shared/MenuBar/MenuBar";
-import SwitchDarkMode from "shared/SwitchDarkMode/SwitchDarkMode";
+import React, { FC } from "react"
+import Logo from "shared/Logo/Logo"
+import Navigation from "shared/Navigation/Navigation"
+import SearchDropdown from "./SearchDropdown"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import MenuBar from "shared/MenuBar/MenuBar"
+import SwitchDarkMode from "shared/SwitchDarkMode/SwitchDarkMode"
 
 export interface MainNav1Props {
-  isTop: boolean;
+  isTop: boolean
 }
 
 const MainNav1: FC<MainNav1Props> = ({ isTop }) => {
@@ -35,7 +35,7 @@ const MainNav1: FC<MainNav1Props> = ({ isTop }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MainNav1;
+export default MainNav1

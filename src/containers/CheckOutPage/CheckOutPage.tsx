@@ -1,18 +1,18 @@
-import { Tab } from "@headlessui/react";
-import { PencilAltIcon } from "@heroicons/react/outline";
-import React, { FC, Fragment } from "react";
-import visaPng from "images/vis.png";
-import mastercardPng from "images/mastercard.svg";
-import Input from "shared/Input/Input";
-import Label from "components/Label/Label";
-import Textarea from "shared/Textarea/Textarea";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import NcImage from "shared/NcImage/NcImage";
-import StartRating from "components/StartRating/StartRating";
-import NcModal from "shared/NcModal/NcModal";
+import { Tab } from "@headlessui/react"
+import { PencilAltIcon } from "@heroicons/react/outline"
+import React, { FC, Fragment } from "react"
+import visaPng from "images/vis.png"
+import mastercardPng from "images/mastercard.svg"
+import Input from "shared/Input/Input"
+import Label from "components/Label/Label"
+import Textarea from "shared/Textarea/Textarea"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import NcImage from "shared/NcImage/NcImage"
+import StartRating from "components/StartRating/StartRating"
+import NcModal from "shared/NcModal/NcModal"
 
 export interface CheckOutPageProps {
-  className?: string;
+  className?: string
 }
 
 const CheckOutPage: FC<CheckOutPageProps> = ({ className = "" }) => {
@@ -59,8 +59,8 @@ const CheckOutPage: FC<CheckOutPageProps> = ({ className = "" }) => {
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderMain = () => {
     return (
@@ -196,8 +196,8 @@ const CheckOutPage: FC<CheckOutPageProps> = ({ className = "" }) => {
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div className={`nc-CheckOutPage ${className}`} data-nc-id="CheckOutPage">
@@ -206,7 +206,7 @@ const CheckOutPage: FC<CheckOutPageProps> = ({ className = "" }) => {
         <div className="hidden lg:block flex-grow">{renderSidebar()}</div>
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default CheckOutPage;
+export default CheckOutPage

@@ -1,15 +1,15 @@
-import React, { FC } from "react";
-import twFocusClass from "utils/twFocusClass";
+import React, { FC } from "react"
+import twFocusClass from "utils/twFocusClass"
 
 export interface NextPrevProps {
-  className?: string;
-  currentPage?: number;
-  totalPage?: number;
-  btnClassName?: string;
-  onClickNext?: () => void;
-  onClickPrev?: () => void;
-  onlyNext?: boolean;
-  onlyPrev?: boolean;
+  className?: string
+  currentPage?: number
+  totalPage?: number
+  btnClassName?: string
+  onClickNext?: () => void
+  onClickPrev?: () => void
+  onlyNext?: boolean
+  onlyPrev?: boolean
 }
 
 const NextPrev: FC<NextPrevProps> = ({
@@ -18,7 +18,7 @@ const NextPrev: FC<NextPrevProps> = ({
   onClickPrev = () => {},
   btnClassName = "w-10 h-10",
   onlyNext = false,
-  onlyPrev = false,
+  onlyPrev = false
 }) => {
   return (
     <div
@@ -49,7 +49,7 @@ const NextPrev: FC<NextPrevProps> = ({
         </button>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default NextPrev;
+export default NextPrev

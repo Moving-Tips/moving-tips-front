@@ -1,8 +1,8 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
 
 export interface LocationMarkerProps {
-  lat: number;
-  lng: number;
+  lat: number
+  lng: number
 }
 
 const LocationMarker: FC<LocationMarkerProps> = () => {
@@ -21,7 +21,7 @@ const LocationMarker: FC<LocationMarkerProps> = () => {
         />
       </svg>
     </div>
-  );
-};
+  )
+}
 
-export default LocationMarker;
+export default LocationMarker

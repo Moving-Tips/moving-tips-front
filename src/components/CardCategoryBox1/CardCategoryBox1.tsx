@@ -1,20 +1,20 @@
-import React, { FC } from "react";
-import { TaxonomyType } from "data/types";
-import { Link } from "react-router-dom";
-import NcImage from "shared/NcImage/NcImage";
-import Badge from "shared/Badge/Badge";
-import convertNumbThousand from "utils/convertNumbThousand";
+import React, { FC } from "react"
+import { TaxonomyType } from "data/types"
+import { Link } from "react-router-dom"
+import NcImage from "shared/NcImage/NcImage"
+import Badge from "shared/Badge/Badge"
+import convertNumbThousand from "utils/convertNumbThousand"
 
 export interface CardCategoryBox1Props {
-  className?: string;
-  taxonomy: TaxonomyType;
+  className?: string
+  taxonomy: TaxonomyType
 }
 
 const CardCategoryBox1: FC<CardCategoryBox1Props> = ({
   className = "",
-  taxonomy,
+  taxonomy
 }) => {
-  const { count, name, thumbnail, href = "/" } = taxonomy;
+  const { count, name, thumbnail, href = "/" } = taxonomy
   return (
     <Link
       to={href}
@@ -41,7 +41,7 @@ const CardCategoryBox1: FC<CardCategoryBox1Props> = ({
         </span>
       </div>
     </Link>
-  );
-};
+  )
+}
 
-export default CardCategoryBox1;
+export default CardCategoryBox1

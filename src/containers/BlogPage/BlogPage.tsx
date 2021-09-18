@@ -1,17 +1,17 @@
-import React from "react";
-import { DEMO_POSTS } from "data/posts";
-import { Helmet } from "react-helmet";
-import SectionAds from "./SectionAds";
-import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
-import SectionMagazine5 from "./SectionMagazine5";
-import SectionLatestPosts from "./SectionLatestPosts";
-import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism";
+import React from "react"
+import { DEMO_POSTS } from "data/posts"
+import { Helmet } from "react-helmet"
+import SectionAds from "./SectionAds"
+import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2"
+import SectionMagazine5 from "./SectionMagazine5"
+import SectionLatestPosts from "./SectionLatestPosts"
+import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism"
 
 // DEMO DATA
-const POSTS = DEMO_POSTS;
+const POSTS = DEMO_POSTS
 
 // DEMO POST FOR MAGAZINE SECTION
-const MAGAZINE1_POSTS = POSTS.filter((_, i) => i >= 0 && i < 8);
+const MAGAZINE1_POSTS = POSTS.filter((_, i) => i >= 0 && i < 8)
 //
 
 const BlogPage: React.FC = () => {
@@ -41,7 +41,7 @@ const BlogPage: React.FC = () => {
         <SectionSubscribe2 className="pb-16 lg:pb-28" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BlogPage;
+export default BlogPage

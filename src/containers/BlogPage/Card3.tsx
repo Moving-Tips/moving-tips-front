@@ -1,18 +1,18 @@
-import React, { FC } from "react";
-import NcImage from "shared/NcImage/NcImage";
-import PostCardMeta from "components/PostCardMeta/PostCardMeta";
-import { PostDataType } from "data/types";
-import { Link } from "react-router-dom";
-import CategoryBadgeList from "components/CategoryBadgeList/CategoryBadgeList";
-import PostTypeFeaturedIcon from "components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
+import React, { FC } from "react"
+import NcImage from "shared/NcImage/NcImage"
+import PostCardMeta from "components/PostCardMeta/PostCardMeta"
+import { PostDataType } from "data/types"
+import { Link } from "react-router-dom"
+import CategoryBadgeList from "components/CategoryBadgeList/CategoryBadgeList"
+import PostTypeFeaturedIcon from "components/PostTypeFeaturedIcon/PostTypeFeaturedIcon"
 
 export interface Card3Props {
-  className?: string;
-  post: PostDataType;
+  className?: string
+  post: PostDataType
 }
 
 const Card3: FC<Card3Props> = ({ className = "h-full", post }) => {
-  const { title, href, featuredImage, desc, categories, postType } = post;
+  const { title, href, featuredImage, desc, categories, postType } = post
 
   return (
     <div
@@ -64,7 +64,7 @@ const Card3: FC<Card3Props> = ({ className = "h-full", post }) => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Card3;
+export default Card3

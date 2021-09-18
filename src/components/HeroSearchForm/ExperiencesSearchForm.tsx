@@ -1,41 +1,40 @@
-import React, { useEffect, useState } from "react";
-import LocationInput from "./LocationInput";
-import GuestsInput, { GuestsInputProps } from "./GuestsInput";
-import ExperiencesDateSingleInput from "./ExperiencesDateSingleInput";
-import ButtonSubmit from "./ButtonSubmit";
-import moment from "moment";
-import { FC } from "react";
+import React, { useEffect, useState, FC } from "react"
+import LocationInput from "./LocationInput"
+import GuestsInput, { GuestsInputProps } from "./GuestsInput"
+import ExperiencesDateSingleInput from "./ExperiencesDateSingleInput"
+import ButtonSubmit from "./ButtonSubmit"
+import moment from "moment"
 
 // DEFAULT DATA FOR ARCHIVE PAGE
-const defaultLocationValue = "Tokyo, Jappan";
-const defaultDate = moment();
+const defaultLocationValue = "Tokyo, Jappan"
+const defaultDate = moment()
 const defaultGuestValue: GuestsInputProps["defaultValue"] = {
   guestAdults: 2,
   guestChildren: 2,
-  guestInfants: 1,
-};
+  guestInfants: 1
+}
 
 export interface ExperiencesSearchFormProps {
-  haveDefaultValue?: boolean;
+  haveDefaultValue?: boolean
 }
 
 const ExperiencesSearchForm: FC<ExperiencesSearchFormProps> = ({
-  haveDefaultValue,
+  haveDefaultValue
 }) => {
-  const [dateValue, setdateValue] = useState<moment.Moment | null>(null);
-  const [locationInputValue, setLocationInputValue] = useState("");
-  const [guestValue, setGuestValue] = useState({});
+  const [dateValue, setdateValue] = useState<moment.Moment | null>(null)
+  const [locationInputValue, setLocationInputValue] = useState("")
+  const [guestValue, setGuestValue] = useState({})
 
-  const [dateFocused, setDateFocused] = useState<boolean>(false);
+  const [dateFocused, setDateFocused] = useState<boolean>(false)
   //
 
   useEffect(() => {
     if (haveDefaultValue) {
-      setdateValue(defaultDate);
-      setLocationInputValue(defaultLocationValue);
-      setGuestValue(defaultGuestValue);
+      setdateValue(defaultDate)
+      setLocationInputValue(defaultLocationValue)
+      setGuestValue(defaultGuestValue)
     }
-  }, []);
+  }, [])
 
   //
 
@@ -53,7 +52,7 @@ const ExperiencesSearchForm: FC<ExperiencesSearchFormProps> = ({
           onChange={(date) => setdateValue(date)}
           defaultFocus={dateFocused}
           onFocusChange={(focus: boolean) => {
-            setDateFocused(focus);
+            setDateFocused(focus)
           }}
         />
 
@@ -66,10 +65,10 @@ const ExperiencesSearchForm: FC<ExperiencesSearchFormProps> = ({
           <ButtonSubmit />
         </div>
       </form>
-    );
-  };
+    )
+  }
 
-  return renderForm();
-};
+  return renderForm()
+}
 
-export default ExperiencesSearchForm;
+export default ExperiencesSearchForm

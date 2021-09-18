@@ -1,12 +1,12 @@
-import React, { FC, ReactNode } from "react";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
+import React, { FC, ReactNode } from "react"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
 
 export interface SectionHeroProps {
-  className?: string;
-  rightImg: string;
-  heading: ReactNode;
-  subHeading: string;
-  btnText: string;
+  className?: string
+  rightImg: string
+  heading: ReactNode
+  subHeading: string
+  btnText: string
 }
 
 const SectionHero: FC<SectionHeroProps> = ({
@@ -14,7 +14,7 @@ const SectionHero: FC<SectionHeroProps> = ({
   rightImg,
   heading,
   subHeading,
-  btnText,
+  btnText
 }) => {
   return (
     <div
@@ -36,7 +36,7 @@ const SectionHero: FC<SectionHeroProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionHero;
+export default SectionHero

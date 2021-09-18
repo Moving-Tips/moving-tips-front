@@ -1,11 +1,11 @@
-import { TaxonomyType } from "data/types";
-import React, { FC } from "react";
-import { Link } from "react-router-dom";
+import { TaxonomyType } from "data/types"
+import React, { FC } from "react"
+import { Link } from "react-router-dom"
 
 export interface TagProps {
-  className?: string;
-  tag: TaxonomyType;
-  hideCount?: boolean;
+  className?: string
+  tag: TaxonomyType
+  hideCount?: boolean
 }
 
 const Tag: FC<TagProps> = ({ className = "", tag, hideCount = false }) => {
@@ -20,7 +20,7 @@ const Tag: FC<TagProps> = ({ className = "", tag, hideCount = false }) => {
         <span className="text-xs font-normal"> ({tag.count})</span>
       )}
     </Link>
-  );
-};
+  )
+}
 
-export default Tag;
+export default Tag

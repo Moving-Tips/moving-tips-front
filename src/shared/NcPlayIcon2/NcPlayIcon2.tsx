@@ -1,13 +1,13 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
 
 export interface NcPlayIcon2Props {
-  className?: string;
-  iconClass?: string;
+  className?: string
+  iconClass?: string
 }
 
 const NcPlayIcon2: FC<NcPlayIcon2Props> = ({
   className = "w-8 h-8 md:w-10 md:h-10",
-  iconClass = "w-5 h-5",
+  iconClass = "w-5 h-5"
 }) => {
   return (
     <div
@@ -32,7 +32,7 @@ const NcPlayIcon2: FC<NcPlayIcon2Props> = ({
         </svg>
       </span>
     </div>
-  );
-};
+  )
+}
 
-export default NcPlayIcon2;
+export default NcPlayIcon2

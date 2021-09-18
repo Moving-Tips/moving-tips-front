@@ -1,17 +1,17 @@
-import React, { FC, Fragment, ReactNode, useEffect, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import ButtonClose from "shared/ButtonClose/ButtonClose";
-import Button from "shared/Button/Button";
+import React, { FC, Fragment, ReactNode, useEffect, useState } from "react"
+import { Dialog, Transition } from "@headlessui/react"
+import ButtonClose from "shared/ButtonClose/ButtonClose"
+import Button from "shared/Button/Button"
 
 export interface NcModalProps {
-  renderContent: () => ReactNode;
-  renderTrigger?: (openModal: Function) => ReactNode;
-  contentExtraClass?: string;
-  contentPaddingClass?: string;
-  triggerText?: ReactNode;
-  modalTitle?: ReactNode;
-  isOpenProp?: boolean;
-  onCloseModal?: () => void;
+  renderContent: () => ReactNode
+  renderTrigger?: (openModal: Function) => ReactNode
+  contentExtraClass?: string
+  contentPaddingClass?: string
+  triggerText?: ReactNode
+  modalTitle?: ReactNode
+  isOpenProp?: boolean
+  onCloseModal?: () => void
 }
 
 const NcModal: FC<NcModalProps> = ({
@@ -22,26 +22,26 @@ const NcModal: FC<NcModalProps> = ({
   triggerText = "Open Modal",
   modalTitle = "Modal title",
   isOpenProp,
-  onCloseModal,
+  onCloseModal
 }) => {
-  let [isOpen, setIsOpen] = useState(!!isOpenProp);
+  const [isOpen, setIsOpen] = useState(!!isOpenProp)
 
-  function closeModal() {
+  function closeModal () {
     if (typeof isOpenProp !== "boolean") {
-      setIsOpen(false);
+      setIsOpen(false)
     }
-    onCloseModal && onCloseModal();
+    onCloseModal && onCloseModal()
   }
 
-  function openModal() {
+  function openModal () {
     if (typeof isOpenProp !== "boolean") {
-      setIsOpen(true);
+      setIsOpen(true)
     }
   }
 
   useEffect(() => {
-    setIsOpen(!!isOpenProp);
-  }, [isOpenProp]);
+    setIsOpen(!!isOpenProp)
+  }, [isOpenProp])
 
   return (
     <div className="nc-NcModal">
@@ -75,7 +75,7 @@ const NcModal: FC<NcModalProps> = ({
               className="inline-block h-screen align-middle"
               aria-hidden="true"
             >
-              &#8203;
+              &#8203
             </span>
             <Transition.Child
               as={Fragment}
@@ -110,7 +110,7 @@ const NcModal: FC<NcModalProps> = ({
         </Dialog>
       </Transition>
     </div>
-  );
-};
+  )
+}
 
-export default NcModal;
+export default NcModal

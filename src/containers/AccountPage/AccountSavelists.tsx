@@ -1,18 +1,18 @@
-import { Tab } from "@headlessui/react";
-import CarCard from "components/CarCard/CarCard";
-import ExperiencesCard from "components/ExperiencesCard/ExperiencesCard";
-import StayCard from "components/StayCard/StayCard";
+import { Tab } from "@headlessui/react"
+import CarCard from "components/CarCard/CarCard"
+import ExperiencesCard from "components/ExperiencesCard/ExperiencesCard"
+import StayCard from "components/StayCard/StayCard"
 import {
   DEMO_CAR_LISTINGS,
   DEMO_EXPERIENCES_LISTINGS,
-  DEMO_STAY_LISTINGS,
-} from "data/listings";
-import React, { Fragment, useState } from "react";
-import ButtonSecondary from "shared/Button/ButtonSecondary";
-import CommonLayout from "./CommonLayout";
+  DEMO_STAY_LISTINGS
+} from "data/listings"
+import React, { Fragment, useState } from "react"
+import ButtonSecondary from "shared/Button/ButtonSecondary"
+import CommonLayout from "./CommonLayout"
 
 const AccountSavelists = () => {
-  let [categories] = useState(["Stays", "Experiences", "Cars"]);
+  const [categories] = useState(["Stays", "Experiences", "Cars"])
 
   const renderSection1 = () => {
     return (
@@ -78,14 +78,14 @@ const AccountSavelists = () => {
           </Tab.Group>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div>
       <CommonLayout>{renderSection1()}</CommonLayout>
     </div>
-  );
-};
+  )
+}
 
-export default AccountSavelists;
+export default AccountSavelists

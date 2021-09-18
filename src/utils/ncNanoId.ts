@@ -1,4 +1,4 @@
-export default function ncNanoId(prefix = "nc_") {
+export default function ncNanoId (prefix = "nc_") {
   return (
     prefix +
     Date.now() +
@@ -6,5 +6,5 @@ export default function ncNanoId(prefix = "nc_") {
     Math.floor(Math.random() * 999999999999999) +
     "_" +
     Math.floor(Math.random() * 999999999999999)
-  );
+  )
 }

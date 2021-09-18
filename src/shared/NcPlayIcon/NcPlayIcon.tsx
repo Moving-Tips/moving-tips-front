@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
 
 export interface NcPlayIconProps {
-  className?: string;
+  className?: string
 }
 
 const NcPlayIcon: FC<NcPlayIconProps> = ({ className = "" }) => {
@@ -30,7 +30,7 @@ const NcPlayIcon: FC<NcPlayIconProps> = ({ className = "" }) => {
         </span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NcPlayIcon;
+export default NcPlayIcon

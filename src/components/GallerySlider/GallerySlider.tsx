@@ -1,29 +1,29 @@
-import Glide from "@glidejs/glide";
-import React, { FC, useEffect } from "react";
-import NcImage from "shared/NcImage/NcImage";
-import NextPrev from "shared/NextPrev/NextPrev";
-import ncNanoId from "utils/ncNanoId";
+import Glide from "@glidejs/glide"
+import React, { FC, useEffect } from "react"
+import NcImage from "shared/NcImage/NcImage"
+import NextPrev from "shared/NextPrev/NextPrev"
+import ncNanoId from "utils/ncNanoId"
 
 export interface GallerySliderProps {
-  className?: string;
-  galleryImgs: string[];
-  ratioClass?: string;
+  className?: string
+  galleryImgs: string[]
+  ratioClass?: string
 }
 
 const GallerySlider: FC<GallerySliderProps> = ({
   className = "",
   galleryImgs,
-  ratioClass = "aspect-w-4 aspect-h-3",
+  ratioClass = "aspect-w-4 aspect-h-3"
 }) => {
-  const UNIQUE_CLASS = "nc_glide2_" + ncNanoId();
+  const UNIQUE_CLASS = "nc_glide2_" + ncNanoId()
 
   useEffect(() => {
     new Glide(`.${UNIQUE_CLASS}`, {
       perView: 1,
       gap: 0,
-      keyboard: false,
-    }).mount();
-  }, []);
+      keyboard: false
+    }).mount()
+  }, [])
 
   const renderDots = () => {
     return (
@@ -39,8 +39,8 @@ const GallerySlider: FC<GallerySliderProps> = ({
           />
         ))}
       </div>
-    );
-  };
+    )
+  }
 
   const renderSliderGallery = () => {
     return (
@@ -66,14 +66,14 @@ const GallerySlider: FC<GallerySliderProps> = ({
           <NextPrev className="w-full justify-between" btnClassName="w-8 h-8" />
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div className={`nc-GallerySlider ${className}`} data-nc-id="GallerySlider">
       {renderSliderGallery()}
     </div>
-  );
-};
+  )
+}
 
-export default GallerySlider;
+export default GallerySlider

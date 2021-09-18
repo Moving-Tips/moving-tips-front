@@ -1,38 +1,38 @@
-import React, { FC } from "react";
-import Heading from "components/Heading/Heading";
-import { DEMO_POSTS } from "data/posts";
-import { PostDataType } from "data/types";
-import Pagination from "shared/Pagination/Pagination";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import WidgetTags from "./WidgetTags";
-import WidgetCategories from "./WidgetCategories";
-import WidgetPosts from "./WidgetPosts";
-import Card3 from "./Card3";
+import React, { FC } from "react"
+import Heading from "components/Heading/Heading"
+import { DEMO_POSTS } from "data/posts"
+import { PostDataType } from "data/types"
+import Pagination from "shared/Pagination/Pagination"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import WidgetTags from "./WidgetTags"
+import WidgetCategories from "./WidgetCategories"
+import WidgetPosts from "./WidgetPosts"
+import Card3 from "./Card3"
 
 // THIS IS DEMO FOR MAIN DEMO
 // OTHER DEMO WILL PASS PROPS
-const postsDemo: PostDataType[] = DEMO_POSTS.filter((_, i) => i > 7 && i < 14);
+const postsDemo: PostDataType[] = DEMO_POSTS.filter((_, i) => i > 7 && i < 14)
 //
 export interface SectionLatestPostsProps {
-  posts?: PostDataType[];
-  className?: string;
-  postCardName?: "card3";
+  posts?: PostDataType[]
+  className?: string
+  postCardName?: "card3"
 }
 
 const SectionLatestPosts: FC<SectionLatestPostsProps> = ({
   posts = postsDemo,
   postCardName = "card3",
-  className = "",
+  className = ""
 }) => {
   const renderCard = (post: PostDataType) => {
     switch (postCardName) {
       case "card3":
-        return <Card3 key={post.id} className="" post={post} />;
+        return <Card3 key={post.id} className="" post={post} />
 
       default:
-        return null;
+        return null
     }
-  };
+  }
 
   return (
     <div className={`nc-SectionLatestPosts relative ${className}`}>
@@ -54,7 +54,7 @@ const SectionLatestPosts: FC<SectionLatestPostsProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionLatestPosts;
+export default SectionLatestPosts

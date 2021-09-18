@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { SingleDatePicker, AnchorDirectionShape } from "react-dates";
-import { FC } from "react";
-import ClearDataButton from "./ClearDataButton";
-import moment from "moment";
-import useWindowSize from "hooks/useWindowResize";
+import React, { useEffect, useState, FC } from "react"
+import { SingleDatePicker, AnchorDirectionShape } from "react-dates"
+
+import ClearDataButton from "./ClearDataButton"
+import moment from "moment"
+import useWindowSize from "hooks/useWindowResize"
 
 export interface ExperiencesDateSingleInputProps {
-  defaultValue: moment.Moment | null;
-  onChange?: (date: moment.Moment | null) => void;
-  defaultFocus?: boolean;
-  fieldClassName?: string;
-  onFocusChange: (focused: boolean) => void;
-  className?: string;
-  anchorDirection?: AnchorDirectionShape;
+  defaultValue: moment.Moment | null
+  onChange?: (date: moment.Moment | null) => void
+  defaultFocus?: boolean
+  fieldClassName?: string
+  onFocusChange: (focused: boolean) => void
+  className?: string
+  anchorDirection?: AnchorDirectionShape
 }
 
 const ExperiencesDateSingleInput: FC<ExperiencesDateSingleInputProps> = ({
@@ -22,38 +22,38 @@ const ExperiencesDateSingleInput: FC<ExperiencesDateSingleInputProps> = ({
   onFocusChange,
   anchorDirection,
   className = "",
-  fieldClassName = "[ nc-hero-field-padding ]",
+  fieldClassName = "[ nc-hero-field-padding ]"
 }) => {
-  const [focusedInput, setFocusedInput] = useState(defaultFocus);
-  const [startDate, setStartDate] = useState(defaultValue);
+  const [focusedInput, setFocusedInput] = useState(defaultFocus)
+  const [startDate, setStartDate] = useState(defaultValue)
 
-  const windowSize = useWindowSize();
-
-  useEffect(() => {
-    setStartDate(defaultValue);
-  }, [defaultValue]);
+  const windowSize = useWindowSize()
 
   useEffect(() => {
-    setFocusedInput(defaultFocus);
-  }, [defaultFocus]);
+    setStartDate(defaultValue)
+  }, [defaultValue])
+
+  useEffect(() => {
+    setFocusedInput(defaultFocus)
+  }, [defaultFocus])
 
   useEffect(() => {
     if (onChange) {
-      onChange(startDate);
+      onChange(startDate)
     }
-  }, [startDate]);
+  }, [startDate])
 
   const handleClearData = () => {
-    setStartDate(null);
-  };
+    setStartDate(null)
+  }
 
   const handleDateFocusChange = (arg: { focused: boolean }) => {
-    setFocusedInput(arg.focused);
-    onFocusChange && onFocusChange(arg.focused);
-  };
+    setFocusedInput(arg.focused)
+    onFocusChange && onFocusChange(arg.focused)
+  }
 
   const renderInputCheckInDate = () => {
-    const focused = focusedInput;
+    const focused = focusedInput
     return (
       <div
         className={`flex w-full relative ${fieldClassName} items-center space-x-3 cursor-pointer ${
@@ -89,8 +89,8 @@ const ExperiencesDateSingleInput: FC<ExperiencesDateSingleInputProps> = ({
           )}
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div className={`relative flex ${className}`} style={{ flex: "1 0 0%" }}>
@@ -113,7 +113,7 @@ const ExperiencesDateSingleInput: FC<ExperiencesDateSingleInputProps> = ({
 
       {renderInputCheckInDate()}
     </div>
-  );
-};
+  )
+}
 
-export default ExperiencesDateSingleInput;
+export default ExperiencesDateSingleInput

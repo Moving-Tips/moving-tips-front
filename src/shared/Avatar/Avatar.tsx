@@ -1,15 +1,15 @@
-import { avatarColors } from "contains/contants";
-import React, { FC } from "react";
-import avatar1 from "images/avatars/Image-1.png";
+import { avatarColors } from "contains/contants"
+import React, { FC } from "react"
+import avatar1 from "images/avatars/Image-1.png"
 
 export interface AvatarProps {
-  containerClassName?: string;
-  sizeClass?: string;
-  radius?: string;
-  imgUrl?: string;
-  userName?: string;
-  hasChecked?: boolean;
-  hasCheckedClass?: string;
+  containerClassName?: string
+  sizeClass?: string
+  radius?: string
+  imgUrl?: string
+  userName?: string
+  hasChecked?: boolean
+  hasCheckedClass?: string
 }
 
 const Avatar: FC<AvatarProps> = ({
@@ -19,16 +19,16 @@ const Avatar: FC<AvatarProps> = ({
   imgUrl = avatar1,
   userName,
   hasChecked,
-  hasCheckedClass = "w-4 h-4 -top-0.5 -right-0.5",
+  hasCheckedClass = "w-4 h-4 -top-0.5 -right-0.5"
 }) => {
-  const url = imgUrl || "";
-  const name = userName || "John Doe";
+  const url = imgUrl || ""
+  const name = userName || "John Doe"
   const _setBgColor = (name: string) => {
     const backgroundIndex = Math.floor(
       name.charCodeAt(0) % avatarColors.length
-    );
-    return avatarColors[backgroundIndex];
-  };
+    )
+    return avatarColors[backgroundIndex]
+  }
 
   return (
     <div
@@ -52,7 +52,7 @@ const Avatar: FC<AvatarProps> = ({
         </span>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Avatar;
+export default Avatar

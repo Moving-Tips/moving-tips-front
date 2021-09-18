@@ -1,7 +1,7 @@
-import React, { FC } from "react";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import Input from "shared/Input/Input";
-import CommonLayout from "./CommonLayout";
+import React, { FC } from "react"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import Input from "shared/Input/Input"
+import CommonLayout from "./CommonLayout"
 
 export interface PageAddListing5Props {}
 
@@ -28,8 +28,8 @@ const PageAddListing5: FC<PageAddListing5Props> = () => {
           {label}
         </label>
       </div>
-    );
-  };
+    )
+  }
 
   const renderNoInclude = (text: string) => {
     return (
@@ -39,8 +39,8 @@ const PageAddListing5: FC<PageAddListing5Props> = () => {
         </span>
         <i className="text-2xl text-neutral-400 las la-times-circle hover:text-neutral-900 dark:hover:text-neutral-100 cursor-pointer"></i>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <CommonLayout
@@ -128,7 +128,7 @@ const PageAddListing5: FC<PageAddListing5Props> = () => {
         </div>
       </>
     </CommonLayout>
-  );
-};
+  )
+}
 
-export default PageAddListing5;
+export default PageAddListing5

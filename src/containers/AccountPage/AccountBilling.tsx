@@ -1,6 +1,6 @@
-import React from "react";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import CommonLayout from "./CommonLayout";
+import React from "react"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import CommonLayout from "./CommonLayout"
 
 const AccountBilling = () => {
   return (
@@ -31,7 +31,7 @@ const AccountBilling = () => {
         </div>
       </CommonLayout>
     </div>
-  );
-};
+  )
+}
 
-export default AccountBilling;
+export default AccountBilling

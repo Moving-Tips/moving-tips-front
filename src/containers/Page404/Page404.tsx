@@ -1,8 +1,8 @@
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import React from "react";
-import { Helmet } from "react-helmet";
-import NcImage from "shared/NcImage/NcImage";
-import I404Png from "images/404.png";
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import React from "react"
+import { Helmet } from "react-helmet"
+import NcImage from "shared/NcImage/NcImage"
+import I404Png from "images/404.png"
 
 const Page404: React.FC = () => (
   <div className="nc-Page404">
@@ -22,6 +22,6 @@ const Page404: React.FC = () => (
       </header>
     </div>
   </div>
-);
+)
 
-export default Page404;
+export default Page404

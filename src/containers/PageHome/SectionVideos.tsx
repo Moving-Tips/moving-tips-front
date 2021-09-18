@@ -1,18 +1,18 @@
-import Heading from "shared/Heading/Heading";
-import NcImage from "shared/NcImage/NcImage";
-import NcPlayIcon from "shared/NcPlayIcon/NcPlayIcon";
-import NcPlayIcon2 from "shared/NcPlayIcon2/NcPlayIcon2";
-import React, { FC, useState } from "react";
+import Heading from "shared/Heading/Heading"
+import NcImage from "shared/NcImage/NcImage"
+import NcPlayIcon from "shared/NcPlayIcon/NcPlayIcon"
+import NcPlayIcon2 from "shared/NcPlayIcon2/NcPlayIcon2"
+import React, { FC, useState } from "react"
 
 export interface VideoType {
-  id: string;
-  title: string;
-  thumbnail: string;
+  id: string
+  title: string
+  thumbnail: string
 }
 
 export interface SectionVideosProps {
-  videos?: VideoType[];
-  className?: string;
+  videos?: VideoType[]
+  className?: string
 }
 
 const VIDEOS_DEMO: VideoType[] = [
@@ -20,43 +20,43 @@ const VIDEOS_DEMO: VideoType[] = [
     id: "NcRifDitRnU",
     title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
     thumbnail:
-      "https://images.pexels.com/photos/131423/pexels-photo-131423.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/131423/pexels-photo-131423.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   },
   {
     id: "a5V6gdu5ih8",
     title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
     thumbnail:
-      "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   },
   {
     id: "MuB7HHeuNbc",
     title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
     thumbnail:
-      "https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   },
   {
     id: "eEaZvEZye84",
     title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
     thumbnail:
-      "https://images.pexels.com/photos/4983184/pexels-photo-4983184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/4983184/pexels-photo-4983184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   },
   {
     id: "EuDJZDaSP0Q",
     title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
     thumbnail:
-      "https://images.pexels.com/photos/2549018/pexels-photo-2549018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  },
-];
+      "https://images.pexels.com/photos/2549018/pexels-photo-2549018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  }
+]
 
 const SectionVideos: FC<SectionVideosProps> = ({
   videos = VIDEOS_DEMO,
-  className = "",
+  className = ""
 }) => {
-  const [isPlay, setIsPlay] = useState(false);
-  const [currentVideo, setCurrentVideo] = useState(0);
+  const [isPlay, setIsPlay] = useState(false)
+  const [currentVideo, setCurrentVideo] = useState(0)
 
   const renderMainVideo = () => {
-    const video: VideoType = videos[currentVideo];
+    const video: VideoType = videos[currentVideo]
     return (
       <div
         className="group aspect-w-16 aspect-h-16 sm:aspect-h-9 bg-neutral-800 rounded-3xl overflow-hidden border-4 border-white dark:border-neutral-900 sm:rounded-[50px] sm:border-[10px]"
@@ -67,7 +67,7 @@ const SectionVideos: FC<SectionVideosProps> = ({
             src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
             title={video.title}
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer autoplay clipboard-write encrypted-media gyroscope picture-in-picture"
             allowFullScreen
           ></iframe>
         ) : (
@@ -88,17 +88,17 @@ const SectionVideos: FC<SectionVideosProps> = ({
           </>
         )}
       </div>
-    );
-  };
+    )
+  }
 
   const renderSubVideo = (video: VideoType, index: number) => {
-    if (index === currentVideo) return null;
+    if (index === currentVideo) return null
     return (
       <div
         className="group relative aspect-h-16 aspect-w-16 rounded-2xl cursor-pointer overflow-hidden sm:aspect-h-12 sm:rounded-3xl lg:aspect-h-9"
         onClick={() => {
-          setCurrentVideo(index);
-          !isPlay && setIsPlay(true);
+          setCurrentVideo(index)
+          !isPlay && setIsPlay(true)
         }}
         title={video.title}
         key={String(index)}
@@ -114,8 +114,8 @@ const SectionVideos: FC<SectionVideosProps> = ({
           alt={video.title}
         />
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div className={`nc-SectionVideos ${className}`}>
@@ -136,7 +136,7 @@ const SectionVideos: FC<SectionVideosProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionVideos;
+export default SectionVideos

@@ -1,34 +1,34 @@
-import React, { FC, Fragment, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import { ArrowRightIcon } from "@heroicons/react/outline";
-import LocationMarker from "components/AnyReactComponent/LocationMarker";
-import CommentListing from "components/CommentListing/CommentListing";
-import FiveStartIconForRate from "components/FiveStartIconForRate/FiveStartIconForRate";
-import GuestsInput from "components/HeroSearchForm/GuestsInput";
-import StayDatesRangeInput from "components/HeroSearchForm/StayDatesRangeInput";
-import { DateRage } from "components/HeroSearchForm/StaySearchForm";
-import StartRating from "components/StartRating/StartRating";
-import GoogleMapReact from "google-map-react";
-import useWindowSize from "hooks/useWindowResize";
-import moment from "moment";
-import { DayPickerRangeController, FocusedInputShape } from "react-dates";
-import Avatar from "shared/Avatar/Avatar";
-import Badge from "shared/Badge/Badge";
-import ButtonCircle from "shared/Button/ButtonCircle";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import ButtonSecondary from "shared/Button/ButtonSecondary";
-import ButtonClose from "shared/ButtonClose/ButtonClose";
-import Input from "shared/Input/Input";
-import NcImage from "shared/NcImage/NcImage";
-import LikeSaveBtns from "./LikeSaveBtns";
-import ModalPhotos from "./ModalPhotos";
-import BackgroundSection from "components/BackgroundSection/BackgroundSection";
-import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories";
-import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
+import React, { FC, Fragment, useState } from "react"
+import { Dialog, Transition } from "@headlessui/react"
+import { ArrowRightIcon } from "@heroicons/react/outline"
+import LocationMarker from "components/AnyReactComponent/LocationMarker"
+import CommentListing from "components/CommentListing/CommentListing"
+import FiveStartIconForRate from "components/FiveStartIconForRate/FiveStartIconForRate"
+import GuestsInput from "components/HeroSearchForm/GuestsInput"
+import StayDatesRangeInput from "components/HeroSearchForm/StayDatesRangeInput"
+import { DateRage } from "components/HeroSearchForm/StaySearchForm"
+import StartRating from "components/StartRating/StartRating"
+import GoogleMapReact from "google-map-react"
+import useWindowSize from "hooks/useWindowResize"
+import moment from "moment"
+import { DayPickerRangeController, FocusedInputShape } from "react-dates"
+import Avatar from "shared/Avatar/Avatar"
+import Badge from "shared/Badge/Badge"
+import ButtonCircle from "shared/Button/ButtonCircle"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import ButtonSecondary from "shared/Button/ButtonSecondary"
+import ButtonClose from "shared/ButtonClose/ButtonClose"
+import Input from "shared/Input/Input"
+import NcImage from "shared/NcImage/NcImage"
+import LikeSaveBtns from "./LikeSaveBtns"
+import ModalPhotos from "./ModalPhotos"
+import BackgroundSection from "components/BackgroundSection/BackgroundSection"
+import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories"
+import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2"
 
 export interface ListingStayDetailPageProps {
-  className?: string;
-  isPreviewMode?: boolean;
+  className?: string
+  isPreviewMode?: boolean
 }
 
 const PHOTOS: string[] = [
@@ -40,8 +40,8 @@ const PHOTOS: string[] = [
   "https://images.pexels.com/photos/1320686/pexels-photo-1320686.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   "https://images.pexels.com/photos/261394/pexels-photo-261394.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   "https://images.pexels.com/photos/2861361/pexels-photo-2861361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  "https://images.pexels.com/photos/2677398/pexels-photo-2677398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-];
+  "https://images.pexels.com/photos/2677398/pexels-photo-2677398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+]
 
 const Amenities_demos = [
   { name: "la-key", icon: "la-key" },
@@ -70,53 +70,53 @@ const Amenities_demos = [
   { name: "la-dice", icon: "la-dice" },
   { name: "la-dumbbell", icon: "la-dumbbell" },
   { name: "la-hot-tub", icon: "la-hot-tub" },
-  { name: "la-infinity", icon: "la-infinity" },
-];
+  { name: "la-infinity", icon: "la-infinity" }
+]
 
 const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
   className = "",
-  isPreviewMode,
+  isPreviewMode
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [openFocusIndex, setOpenFocusIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false)
+  const [openFocusIndex, setOpenFocusIndex] = useState(0)
   const [selectedDate, setSelectedDate] = useState<DateRage>({
     startDate: moment(),
-    endDate: moment().add(4, "days"),
-  });
+    endDate: moment().add(4, "days")
+  })
 
   const [focusedInputSectionCheckDate, setFocusedInputSectionCheckDate] =
-    useState<FocusedInputShape>("startDate");
-  let [isOpenModalAmenities, setIsOpenModalAmenities] = useState(false);
+    useState<FocusedInputShape>("startDate")
+  const [isOpenModalAmenities, setIsOpenModalAmenities] = useState(false)
 
-  const windowSize = useWindowSize();
+  const windowSize = useWindowSize()
 
   const getDaySize = () => {
     if (windowSize.width <= 375) {
-      return 34;
+      return 34
     }
     if (windowSize.width <= 500) {
-      return undefined;
+      return undefined
     }
     if (windowSize.width <= 1280) {
-      return 56;
+      return 56
     }
-    return 48;
-  };
-
-  function closeModalAmenities() {
-    setIsOpenModalAmenities(false);
+    return 48
   }
 
-  function openModalAmenities() {
-    setIsOpenModalAmenities(true);
+  function closeModalAmenities () {
+    setIsOpenModalAmenities(false)
+  }
+
+  function openModalAmenities () {
+    setIsOpenModalAmenities(true)
   }
 
   const handleOpenModal = (index: number) => {
-    setIsOpen(true);
-    setOpenFocusIndex(index);
-  };
+    setIsOpen(true)
+    setOpenFocusIndex(index)
+  }
 
-  const handleCloseModal = () => setIsOpen(false);
+  const handleCloseModal = () => setIsOpen(false)
 
   const renderSection1 = () => {
     return (
@@ -184,8 +184,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection2 = () => {
     return (
@@ -212,8 +212,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           </span>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection3 = () => {
     return (
@@ -244,8 +244,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
         </div>
         {renderMotalAmenities()}
       </div>
-    );
-  };
+    )
+  }
 
   const renderMotalAmenities = () => {
     return (
@@ -273,7 +273,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
               className="inline-block h-screen align-middle"
               aria-hidden="true"
             >
-              &#8203;
+              &#8203
             </span>
             <Transition.Child
               as={Fragment}
@@ -316,8 +316,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           </div>
         </Dialog>
       </Transition>
-    );
-  };
+    )
+  }
 
   const renderSection4 = () => {
     return (
@@ -360,8 +360,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSectionCheckIndate = () => {
     return (
@@ -394,8 +394,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection5 = () => {
     return (
@@ -493,8 +493,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           <ButtonSecondary href="##">See host profile</ButtonSecondary>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection6 = () => {
     return (
@@ -533,8 +533,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection7 = () => {
     return (
@@ -553,13 +553,13 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           <div className="rounded-xl overflow-hidden">
             <GoogleMapReact
               bootstrapURLKeys={{
-                key: "AIzaSyDxJaU8bLdx7sSJ8fcRdhYS1pLk8Jdvnx0",
+                key: "AIzaSyDxJaU8bLdx7sSJ8fcRdhYS1pLk8Jdvnx0"
               }}
               defaultZoom={15}
               yesIWantToUseGoogleMapApiInternals
               defaultCenter={{
                 lat: 55.9607277,
-                lng: 36.2172614,
+                lng: 36.2172614
               }}
             >
               <LocationMarker lat={55.9607277} lng={36.2172614} />
@@ -567,8 +567,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection8 = () => {
     return (
@@ -621,8 +621,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSidebar = () => {
     return (
@@ -654,7 +654,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             defaultValue={{
               guestAdults: 1,
               guestChildren: 2,
-              guestInfants: 0,
+              guestInfants: 0
             }}
           />
         </form>
@@ -679,8 +679,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
         {/* SUBMIT */}
         <ButtonPrimary>Reserve</ButtonPrimary>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -815,7 +815,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default ListingStayDetailPage;
+export default ListingStayDetailPage

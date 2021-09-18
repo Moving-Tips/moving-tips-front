@@ -1,19 +1,18 @@
-import { Transition } from "@headlessui/react";
-import CarCard from "components/CarCard/CarCard";
-import ExperiencesCard from "components/ExperiencesCard/ExperiencesCard";
-import StayCard from "components/StayCard/StayCard";
-import { CarDataType, ExperiencesDataType, StayDataType } from "data/types";
-import React, { FC, Fragment } from "react";
-import { useState } from "react";
+import { Transition } from "@headlessui/react"
+import CarCard from "components/CarCard/CarCard"
+import ExperiencesCard from "components/ExperiencesCard/ExperiencesCard"
+import StayCard from "components/StayCard/StayCard"
+import { CarDataType, ExperiencesDataType, StayDataType } from "data/types"
+import React, { FC, Fragment, useState } from "react"
 
 export interface AnyReactComponentProps {
-  className?: string;
-  listing?: StayDataType;
-  experiences?: ExperiencesDataType;
-  car?: CarDataType;
-  isSelected?: boolean;
-  lat: number;
-  lng: number;
+  className?: string
+  listing?: StayDataType
+  experiences?: ExperiencesDataType
+  car?: CarDataType
+  isSelected?: boolean
+  lat: number
+  lng: number
 }
 
 const AnyReactComponent: FC<AnyReactComponentProps> = ({
@@ -21,9 +20,9 @@ const AnyReactComponent: FC<AnyReactComponentProps> = ({
   listing,
   car,
   experiences,
-  isSelected,
+  isSelected
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div
@@ -66,7 +65,7 @@ const AnyReactComponent: FC<AnyReactComponentProps> = ({
         </div>
       </Transition>
     </div>
-  );
-};
+  )
+}
 
-export default AnyReactComponent;
+export default AnyReactComponent

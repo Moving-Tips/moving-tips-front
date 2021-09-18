@@ -1,6 +1,6 @@
-import React from "react";
-import { FC } from "react";
-import { NavLink } from "react-router-dom";
+import React, { FC } from "react"
+
+import { NavLink } from "react-router-dom"
 
 export interface CommonLayoutProps {}
 
@@ -43,7 +43,7 @@ const CommonLayout: FC<CommonLayoutProps> = ({ children }) => {
       </div>
       <div className="container pt-14 sm:pt-20 pb-24 lg:pb-32">{children}</div>
     </div>
-  );
-};
+  )
+}
 
-export default CommonLayout;
+export default CommonLayout

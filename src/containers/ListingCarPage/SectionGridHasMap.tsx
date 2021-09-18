@@ -1,21 +1,21 @@
-import React, { FC, useState } from "react";
-import AnyReactComponent from "components/AnyReactComponent/AnyReactComponent";
-import GoogleMapReact from "google-map-react";
-import { DEMO_CAR_LISTINGS } from "data/listings";
-import ButtonClose from "shared/ButtonClose/ButtonClose";
-import Checkbox from "shared/Checkbox/Checkbox";
-import Pagination from "shared/Pagination/Pagination";
-import TabFilters from "./TabFilters";
-import Heading2 from "components/Heading/Heading2";
-import CarCardH from "components/CarCardH/CarCardH";
+import React, { FC, useState } from "react"
+import AnyReactComponent from "components/AnyReactComponent/AnyReactComponent"
+import GoogleMapReact from "google-map-react"
+import { DEMO_CAR_LISTINGS } from "data/listings"
+import ButtonClose from "shared/ButtonClose/ButtonClose"
+import Checkbox from "shared/Checkbox/Checkbox"
+import Pagination from "shared/Pagination/Pagination"
+import TabFilters from "./TabFilters"
+import Heading2 from "components/Heading/Heading2"
+import CarCardH from "components/CarCardH/CarCardH"
 
-const DEMO_CARS = DEMO_CAR_LISTINGS.filter((_, i) => i < 12);
+const DEMO_CARS = DEMO_CAR_LISTINGS.filter((_, i) => i < 12)
 
 export interface SectionGridHasMapProps {}
 
 const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
-  const [currentHoverID, setCurrentHoverID] = useState<string | number>(-1);
-  const [showFullMapFixed, setShowFullMapFixed] = useState(false);
+  const [currentHoverID, setCurrentHoverID] = useState<string | number>(-1)
+  const [showFullMapFixed, setShowFullMapFixed] = useState(false)
 
   return (
     <div>
@@ -84,7 +84,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
 
             <GoogleMapReact
               bootstrapURLKeys={{
-                key: "AIzaSyDxJaU8bLdx7sSJ8fcRdhYS1pLk8Jdvnx0",
+                key: "AIzaSyDxJaU8bLdx7sSJ8fcRdhYS1pLk8Jdvnx0"
               }}
               defaultZoom={12}
               yesIWantToUseGoogleMapApiInternals
@@ -104,7 +104,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionGridHasMap;
+export default SectionGridHasMap

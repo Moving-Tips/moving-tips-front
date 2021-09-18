@@ -1,51 +1,51 @@
-import React, { Fragment, useState } from "react";
-import { Dialog, Popover, Transition } from "@headlessui/react";
-import NcInputNumber from "components/NcInputNumber/NcInputNumber";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import ButtonThird from "shared/Button/ButtonThird";
-import ButtonClose from "shared/ButtonClose/ButtonClose";
-import Checkbox from "shared/Checkbox/Checkbox";
+import React, { Fragment, useState } from "react"
+import { Dialog, Popover, Transition } from "@headlessui/react"
+import NcInputNumber from "components/NcInputNumber/NcInputNumber"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import ButtonThird from "shared/Button/ButtonThird"
+import ButtonClose from "shared/ButtonClose/ButtonClose"
+import Checkbox from "shared/Checkbox/Checkbox"
 
 // DEMO DATA
 const typeOfPaces = [
   {
     name: "Entire place",
-    description: "Have a place to yourself",
+    description: "Have a place to yourself"
   },
   {
     name: "Private room",
-    description: "Have your own room and share some common spaces",
+    description: "Have your own room and share some common spaces"
   },
   {
     name: "Hotel room",
     description:
-      "Have a private or shared room in a boutique hotel, hostel, and more",
+      "Have a private or shared room in a boutique hotel, hostel, and more"
   },
   {
     name: "Shared room",
-    description: "Stay in a shared space, like a common room",
-  },
-];
+    description: "Stay in a shared space, like a common room"
+  }
+]
 
 const rangePrices = [
   {
-    name: "$ 0 - 20",
+    name: "$ 0 - 20"
   },
   {
     name: "$ 20 - 50",
-    defaultChecked: true,
+    defaultChecked: true
   },
   {
     name: "$ 50 - 100",
-    defaultChecked: true,
+    defaultChecked: true
   },
   {
-    name: "$ 100 - 200",
+    name: "$ 100 - 200"
   },
   {
-    name: "> $1,000",
-  },
-];
+    name: "> $1,000"
+  }
+]
 
 const moreFilter1 = [
   { name: "Kitchen", defaultChecked: true },
@@ -57,16 +57,16 @@ const moreFilter1 = [
   { name: "Indoor fireplace" },
   { name: "Breakfast" },
   { name: "Hair dryer" },
-  { name: " Dedicated workspace" },
-];
+  { name: " Dedicated workspace" }
+]
 
 const moreFilter2 = [
   { name: " Free parking on premise" },
   { name: "Hot tub" },
   { name: "Gym" },
   { name: " Pool" },
-  { name: " EV charger" },
-];
+  { name: " EV charger" }
+]
 
 const moreFilter3 = [
   { name: " House" },
@@ -78,20 +78,20 @@ const moreFilter3 = [
   { name: " Condominium", defaultChecked: true },
   { name: " Cottage" },
   { name: " Guest suite" },
-  { name: " Guesthouse" },
-];
+  { name: " Guesthouse" }
+]
 
-const moreFilter4 = [{ name: " Pets allowed" }, { name: "Smoking allowed" }];
+const moreFilter4 = [{ name: " Pets allowed" }, { name: "Smoking allowed" }]
 
 const TabFilters = () => {
-  const [isOpenMoreFilter, setisOpenMoreFilter] = useState(false);
-  const [isOpenMoreFilterMobile, setisOpenMoreFilterMobile] = useState(false);
+  const [isOpenMoreFilter, setisOpenMoreFilter] = useState(false)
+  const [isOpenMoreFilterMobile, setisOpenMoreFilterMobile] = useState(false)
   //
-  const closeModalMoreFilter = () => setisOpenMoreFilter(false);
-  const openModalMoreFilter = () => setisOpenMoreFilter(true);
+  const closeModalMoreFilter = () => setisOpenMoreFilter(false)
+  const openModalMoreFilter = () => setisOpenMoreFilter(true)
   //
-  const closeModalMoreFilterMobile = () => setisOpenMoreFilterMobile(false);
-  const openModalMoreFilterMobile = () => setisOpenMoreFilterMobile(true);
+  const closeModalMoreFilterMobile = () => setisOpenMoreFilterMobile(false)
+  const openModalMoreFilterMobile = () => setisOpenMoreFilterMobile(true)
 
   const renderXClear = () => {
     return (
@@ -109,8 +109,8 @@ const TabFilters = () => {
           />
         </svg>
       </span>
-    );
-  };
+    )
+  }
 
   const renderTabsTypeOfPlace = () => {
     return (
@@ -163,8 +163,8 @@ const TabFilters = () => {
           </>
         )}
       </Popover>
-    );
-  };
+    )
+  }
 
   const renderTabsRoomAndBeds = () => {
     return (
@@ -211,8 +211,8 @@ const TabFilters = () => {
           </>
         )}
       </Popover>
-    );
-  };
+    )
+  }
 
   const renderTabsPriceRage = () => {
     return (
@@ -321,17 +321,17 @@ const TabFilters = () => {
           </>
         )}
       </Popover>
-    );
-  };
+    )
+  }
 
   const renderMoreFilterItem = (
-    data: {
-      name: string;
-      defaultChecked?: boolean;
-    }[]
+    data: Array<{
+      name: string
+      defaultChecked?: boolean
+    }>
   ) => {
-    const list1 = data.filter((_, i) => i < data.length / 2);
-    const list2 = data.filter((_, i) => i >= data.length / 2);
+    const list1 = data.filter((_, i) => i < data.length / 2)
+    const list2 = data.filter((_, i) => i >= data.length / 2)
     return (
       <div className="grid grid-cols-2 gap-8">
         <div className="flex flex-col space-y-5">
@@ -355,8 +355,8 @@ const TabFilters = () => {
           ))}
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderTabMoreFilter = () => {
     return (
@@ -393,7 +393,7 @@ const TabFilters = () => {
                 className="inline-block h-screen align-middle"
                 aria-hidden="true"
               >
-                &#8203;
+                &#8203
               </span>
               <Transition.Child
                 className="inline-block py-8 h-screen w-full"
@@ -466,8 +466,8 @@ const TabFilters = () => {
           </Dialog>
         </Transition>
       </div>
-    );
-  };
+    )
+  }
 
   const renderTabMoreFilterMobile = () => {
     return (
@@ -504,7 +504,7 @@ const TabFilters = () => {
                 className="inline-block h-screen align-middle"
                 aria-hidden="true"
               >
-                &#8203;
+                &#8203
               </span>
               <Transition.Child
                 className="inline-block py-8 h-screen w-full"
@@ -610,8 +610,8 @@ const TabFilters = () => {
           </Dialog>
         </Transition>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div className="flex lg:space-x-4">
@@ -623,7 +623,7 @@ const TabFilters = () => {
       </div>
       {renderTabMoreFilterMobile()}
     </div>
-  );
-};
+  )
+}
 
-export default TabFilters;
+export default TabFilters

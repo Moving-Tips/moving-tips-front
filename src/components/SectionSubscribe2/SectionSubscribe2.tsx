@@ -1,12 +1,12 @@
-import React, { FC } from "react";
-import ButtonCircle from "shared/Button/ButtonCircle";
-import rightImg from "images/SVG-subcribe2.png";
-import NcImage from "shared/NcImage/NcImage";
-import Badge from "shared/Badge/Badge";
-import Input from "shared/Input/Input";
+import React, { FC } from "react"
+import ButtonCircle from "shared/Button/ButtonCircle"
+import rightImg from "images/SVG-subcribe2.png"
+import NcImage from "shared/NcImage/NcImage"
+import Badge from "shared/Badge/Badge"
+import Input from "shared/Input/Input"
 
 export interface SectionSubscribe2Props {
-  className?: string;
+  className?: string
 }
 
 const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
@@ -54,7 +54,7 @@ const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
         <NcImage src={rightImg} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionSubscribe2;
+export default SectionSubscribe2

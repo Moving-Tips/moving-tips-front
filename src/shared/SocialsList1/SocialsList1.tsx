@@ -1,16 +1,16 @@
-import { SocialType } from "shared/SocialsShare/SocialsShare";
-import React, { FC } from "react";
+import { SocialType } from "shared/SocialsShare/SocialsShare"
+import React, { FC } from "react"
 
 export interface SocialsList1Props {
-  className?: string;
+  className?: string
 }
 
 const socials: SocialType[] = [
   { name: "Facebook", icon: "lab la-facebook-square", href: "#" },
   { name: "Twitter", icon: "lab la-twitter", href: "#" },
   { name: "Youtube", icon: "lab la-youtube", href: "#" },
-  { name: "Instagram", icon: "lab la-instagram", href: "#" },
-];
+  { name: "Instagram", icon: "lab la-instagram", href: "#" }
+]
 
 const SocialsList1: FC<SocialsList1Props> = ({ className = "space-y-2.5" }) => {
   const renderItem = (item: SocialType, index: number) => {
@@ -23,14 +23,14 @@ const SocialsList1: FC<SocialsList1Props> = ({ className = "space-y-2.5" }) => {
         <i className={item.icon}></i>
         <span className="hidden lg:block text-sm">{item.name}</span>
       </a>
-    );
-  };
+    )
+  }
 
   return (
     <div className={`nc-SocialsList1 ${className}`} data-nc-id="SocialsList1">
       {socials.map(renderItem)}
     </div>
-  );
-};
+  )
+}
 
-export default SocialsList1;
+export default SocialsList1

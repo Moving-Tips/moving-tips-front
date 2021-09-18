@@ -1,10 +1,10 @@
-import React, { FC } from "react";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import imagePng from "images/hero-right.png";
-import HeroSearchForm from "components/HeroSearchForm/HeroSearchForm";
+import React, { FC } from "react"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import imagePng from "images/hero-right.png"
+import HeroSearchForm from "components/HeroSearchForm/HeroSearchForm"
 
 export interface SectionHeroProps {
-  className?: string;
+  className?: string
 }
 
 const SectionHero: FC<SectionHeroProps> = ({ className = "" }) => {
@@ -35,7 +35,7 @@ const SectionHero: FC<SectionHeroProps> = ({ className = "" }) => {
         <HeroSearchForm />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionHero;
+export default SectionHero

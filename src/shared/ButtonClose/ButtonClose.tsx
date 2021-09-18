@@ -1,15 +1,15 @@
-import React from "react";
-import { XIcon } from "@heroicons/react/solid";
-import twFocusClass from "utils/twFocusClass";
+import React from "react"
+import { XIcon } from "@heroicons/react/solid"
+import twFocusClass from "utils/twFocusClass"
 
 export interface ButtonCloseProps {
-  className?: string;
-  onClick?: () => void;
+  className?: string
+  onClick?: () => void
 }
 
 const ButtonClose: React.FC<ButtonCloseProps> = ({
   className = "",
-  onClick = () => {},
+  onClick = () => {}
 }) => {
   return (
     <button
@@ -22,7 +22,7 @@ const ButtonClose: React.FC<ButtonCloseProps> = ({
       <span className="sr-only">Close</span>
       <XIcon className="w-5 h-5" />
     </button>
-  );
-};
+  )
+}
 
-export default ButtonClose;
+export default ButtonClose

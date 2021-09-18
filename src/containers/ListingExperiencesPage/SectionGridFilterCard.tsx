@@ -1,23 +1,23 @@
-import React, { FC } from "react";
-import { DEMO_EXPERIENCES_LISTINGS } from "data/listings";
-import { ExperiencesDataType, StayDataType } from "data/types";
-import Pagination from "shared/Pagination/Pagination";
-import TabFilters from "./TabFilters";
-import Heading2 from "components/Heading/Heading2";
-import ExperiencesCard from "components/ExperiencesCard/ExperiencesCard";
+import React, { FC } from "react"
+import { DEMO_EXPERIENCES_LISTINGS } from "data/listings"
+import { ExperiencesDataType, StayDataType } from "data/types"
+import Pagination from "shared/Pagination/Pagination"
+import TabFilters from "./TabFilters"
+import Heading2 from "components/Heading/Heading2"
+import ExperiencesCard from "components/ExperiencesCard/ExperiencesCard"
 
 export interface SectionGridFilterCardProps {
-  className?: string;
-  data?: StayDataType[];
+  className?: string
+  data?: StayDataType[]
 }
 
 const DEMO_DATA: ExperiencesDataType[] = DEMO_EXPERIENCES_LISTINGS.filter(
   (_, i) => i < 8
-);
+)
 
 const SectionGridFilterCard: FC<SectionGridFilterCardProps> = ({
   className = "",
-  data = DEMO_DATA,
+  data = DEMO_DATA
 }) => {
   return (
     <div
@@ -48,7 +48,7 @@ const SectionGridFilterCard: FC<SectionGridFilterCardProps> = ({
         <Pagination />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionGridFilterCard;
+export default SectionGridFilterCard

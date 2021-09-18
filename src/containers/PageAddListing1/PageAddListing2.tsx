@@ -1,13 +1,13 @@
-import { LocationMarkerIcon } from "@heroicons/react/solid";
-import LocationMarker from "components/AnyReactComponent/LocationMarker";
-import Label from "components/Label/Label";
-import GoogleMapReact from "google-map-react";
-import React, { FC } from "react";
-import ButtonSecondary from "shared/Button/ButtonSecondary";
-import Input from "shared/Input/Input";
-import Select from "shared/Select/Select";
-import CommonLayout from "./CommonLayout";
-import FormItem from "./FormItem";
+import { LocationMarkerIcon } from "@heroicons/react/solid"
+import LocationMarker from "components/AnyReactComponent/LocationMarker"
+import Label from "components/Label/Label"
+import GoogleMapReact from "google-map-react"
+import React, { FC } from "react"
+import ButtonSecondary from "shared/Button/ButtonSecondary"
+import Input from "shared/Input/Input"
+import Select from "shared/Select/Select"
+import CommonLayout from "./CommonLayout"
+import FormItem from "./FormItem"
 
 export interface PageAddListing2Props {}
 
@@ -66,13 +66,13 @@ const PageAddListing2: FC<PageAddListing2Props> = () => {
                 <div className="rounded-xl overflow-hidden">
                   <GoogleMapReact
                     bootstrapURLKeys={{
-                      key: "AIzaSyDxJaU8bLdx7sSJ8fcRdhYS1pLk8Jdvnx0",
+                      key: "AIzaSyDxJaU8bLdx7sSJ8fcRdhYS1pLk8Jdvnx0"
                     }}
                     defaultZoom={15}
                     yesIWantToUseGoogleMapApiInternals
                     defaultCenter={{
                       lat: 55.9607277,
-                      lng: 36.2172614,
+                      lng: 36.2172614
                     }}
                   >
                     <LocationMarker lat={55.9607277} lng={36.2172614} />
@@ -84,7 +84,7 @@ const PageAddListing2: FC<PageAddListing2Props> = () => {
         </div>
       </>
     </CommonLayout>
-  );
-};
+  )
+}
 
-export default PageAddListing2;
+export default PageAddListing2

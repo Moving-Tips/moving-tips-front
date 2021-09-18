@@ -1,20 +1,20 @@
-import Glide from "@glidejs/glide";
-import Heading from "components/Heading/Heading";
-import React, { FC } from "react";
-import { useEffect } from "react";
-import ncNanoId from "utils/ncNanoId";
-import clientSayMain from "images/clientSayMain.png";
-import clientSay1 from "images/clientSay1.png";
-import clientSay2 from "images/clientSay2.png";
-import clientSay3 from "images/clientSay3.png";
-import clientSay4 from "images/clientSay4.png";
-import clientSay5 from "images/clientSay5.png";
-import clientSay6 from "images/clientSay6.png";
-import quotationImg from "images/quotation.png";
-import quotationImg2 from "images/quotation2.png";
+import Glide from "@glidejs/glide"
+import Heading from "components/Heading/Heading"
+import React, { FC, useEffect } from "react"
+
+import ncNanoId from "utils/ncNanoId"
+import clientSayMain from "images/clientSayMain.png"
+import clientSay1 from "images/clientSay1.png"
+import clientSay2 from "images/clientSay2.png"
+import clientSay3 from "images/clientSay3.png"
+import clientSay4 from "images/clientSay4.png"
+import clientSay5 from "images/clientSay5.png"
+import clientSay6 from "images/clientSay6.png"
+import quotationImg from "images/quotation.png"
+import quotationImg2 from "images/quotation2.png"
 
 export interface SectionClientSayProps {
-  className?: string;
+  className?: string
 }
 
 const DEMO_DATA = [
@@ -23,34 +23,34 @@ const DEMO_DATA = [
     clientName: "Tiana Abie",
     clientAddress: "Malaysia",
     content:
-      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!",
+      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!"
   },
   {
     id: 2,
     clientName: "Lennie Swiffan",
     clientAddress: "London",
     content:
-      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!",
+      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!"
   },
   {
     id: 3,
     clientName: "Berta Emili",
     clientAddress: "Tokyo",
     content:
-      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!",
-  },
-];
+      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!"
+  }
+]
 
 const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
-  const UNIQUE_CLASS = "glide_" + ncNanoId();
+  const UNIQUE_CLASS = "glide_" + ncNanoId()
 
   useEffect(() => {
     if (document.querySelector(`.${UNIQUE_CLASS}`)) {
       new Glide(`.${UNIQUE_CLASS}`, {
-        perView: 1,
-      }).mount();
+        perView: 1
+      }).mount()
     }
-  }, []);
+  }, [])
 
   const renderBg = () => {
     return (
@@ -78,8 +78,8 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
         />
         <img className="absolute -right-10 top-10 " src={clientSay6} alt="" />
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -156,7 +156,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionClientSay;
+export default SectionClientSay

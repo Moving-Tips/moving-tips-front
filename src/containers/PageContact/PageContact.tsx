@@ -1,32 +1,32 @@
-import React, { FC } from "react";
-import { Helmet } from "react-helmet";
-import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
-import SocialsList from "shared/SocialsList/SocialsList";
-import Label from "components/Label/Label";
-import Input from "shared/Input/Input";
-import Textarea from "shared/Textarea/Textarea";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import SectionClientSay from "components/SectionClientSay/SectionClientSay";
-import BackgroundSection from "components/BackgroundSection/BackgroundSection";
+import React, { FC } from "react"
+import { Helmet } from "react-helmet"
+import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2"
+import SocialsList from "shared/SocialsList/SocialsList"
+import Label from "components/Label/Label"
+import Input from "shared/Input/Input"
+import Textarea from "shared/Textarea/Textarea"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import SectionClientSay from "components/SectionClientSay/SectionClientSay"
+import BackgroundSection from "components/BackgroundSection/BackgroundSection"
 
 export interface PageContactProps {
-  className?: string;
+  className?: string
 }
 
 const info = [
   {
     title: "🗺 ADDRESS",
-    desc: "Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter",
+    desc: "Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter"
   },
   {
     title: "💌 EMAIL",
-    desc: "nc.example@example.com",
+    desc: "nc.example@example.com"
   },
   {
     title: "☎ PHONE",
-    desc: "000-123-456-7890",
-  },
-];
+    desc: "000-123-456-7890"
+  }
+]
 
 const PageContact: FC<PageContactProps> = ({ className = "" }) => {
   return (
@@ -104,7 +104,7 @@ const PageContact: FC<PageContactProps> = ({ className = "" }) => {
         <SectionSubscribe2 className="py-24 lg:py-32" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PageContact;
+export default PageContact

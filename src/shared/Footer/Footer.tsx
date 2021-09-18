@@ -1,12 +1,12 @@
-import Logo from "shared/Logo/Logo";
-import SocialsList1 from "shared/SocialsList1/SocialsList1";
-import { CustomLink } from "data/types";
-import React from "react";
+import Logo from "shared/Logo/Logo"
+import SocialsList1 from "shared/SocialsList1/SocialsList1"
+import { CustomLink } from "data/types"
+import React from "react"
 
 export interface WidgetFooterMenu {
-  id: string;
-  title: string;
-  menus: CustomLink[];
+  id: string
+  title: string
+  menus: CustomLink[]
 }
 
 const widgetMenus: WidgetFooterMenu[] = [
@@ -21,8 +21,8 @@ const widgetMenus: WidgetFooterMenu[] = [
       { href: "#", label: "Editor Support" },
       { href: "#", label: "Utility-First" },
       { href: "#", label: "Dark Mode" },
-      { href: "#", label: "Responsive Design" },
-    ],
+      { href: "#", label: "Responsive Design" }
+    ]
   },
   {
     id: "1",
@@ -35,8 +35,8 @@ const widgetMenus: WidgetFooterMenu[] = [
       { href: "#", label: "Customers" },
       { href: "#", label: "Security" },
       { href: "#", label: "Integrations" },
-      { href: "#", label: "Contact" },
-    ],
+      { href: "#", label: "Contact" }
+    ]
   },
   {
     id: "2",
@@ -49,8 +49,8 @@ const widgetMenus: WidgetFooterMenu[] = [
       { href: "#", label: "What's new" },
       { href: "#", label: "Releases" },
       { href: "#", label: "Careers" },
-      { href: "#", label: "About us" },
-    ],
+      { href: "#", label: "About us" }
+    ]
   },
   {
     id: "4",
@@ -63,10 +63,10 @@ const widgetMenus: WidgetFooterMenu[] = [
       { href: "#", label: "Concurrent Mode" },
       { href: "#", label: "API Reference" },
       { href: "#", label: "Advanced Guides" },
-      { href: "#", label: "Main Concepts" },
-    ],
-  },
-];
+      { href: "#", label: "Main Concepts" }
+    ]
+  }
+]
 
 const Footer: React.FC = () => {
   const renderWidgetMenuItem = (menu: WidgetFooterMenu, index: number) => {
@@ -89,8 +89,8 @@ const Footer: React.FC = () => {
           ))}
         </ul>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div className="nc-Footer relative py-24 lg:py-32 border-t border-neutral-200 dark:border-neutral-700">
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
         {widgetMenus.map(renderWidgetMenuItem)}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

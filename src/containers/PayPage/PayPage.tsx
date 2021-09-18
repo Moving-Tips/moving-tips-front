@@ -1,10 +1,10 @@
-import StartRating from "components/StartRating/StartRating";
-import React, { FC } from "react";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import NcImage from "shared/NcImage/NcImage";
+import StartRating from "components/StartRating/StartRating"
+import React, { FC } from "react"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import NcImage from "shared/NcImage/NcImage"
 
 export interface PayPageProps {
-  className?: string;
+  className?: string
 }
 
 const PayPage: FC<PayPageProps> = ({ className = "" }) => {
@@ -124,8 +124,8 @@ const PayPage: FC<PayPageProps> = ({ className = "" }) => {
           <ButtonPrimary href="/">Explore more stays</ButtonPrimary>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div className={`nc-PayPage ${className}`} data-nc-id="PayPage">
@@ -133,7 +133,7 @@ const PayPage: FC<PayPageProps> = ({ className = "" }) => {
         <div className="max-w-4xl mx-auto">{renderContent()}</div>
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default PayPage;
+export default PayPage

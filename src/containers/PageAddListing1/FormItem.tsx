@@ -1,18 +1,17 @@
-import Label from "components/Label/Label";
-import React from "react";
-import { FC } from "react";
+import Label from "components/Label/Label"
+import React, { FC } from "react"
 
 export interface FormItemProps {
-  className?: string;
-  label?: string;
-  desc?: string;
+  className?: string
+  label?: string
+  desc?: string
 }
 
 const FormItem: FC<FormItemProps> = ({
   children,
   className = "",
   label,
-  desc,
+  desc
 }) => {
   return (
     <div className={className}>
@@ -24,7 +23,7 @@ const FormItem: FC<FormItemProps> = ({
         </span>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default FormItem;
+export default FormItem

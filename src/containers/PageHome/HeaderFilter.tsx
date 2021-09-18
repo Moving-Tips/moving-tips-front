@@ -1,16 +1,15 @@
-import React, { FC } from "react";
-import Heading from "shared/Heading/Heading";
-import Nav from "shared/Nav/Nav";
-import NavItem from "shared/NavItem/NavItem";
-import ButtonSecondary from "shared/Button/ButtonSecondary";
-import { ReactNode } from "react";
+import React, { FC, ReactNode } from "react"
+import Heading from "shared/Heading/Heading"
+import Nav from "shared/Nav/Nav"
+import NavItem from "shared/NavItem/NavItem"
+import ButtonSecondary from "shared/Button/ButtonSecondary"
 
 export interface HeaderFilterProps {
-  tabActive: string;
-  tabs: string[];
-  heading: ReactNode;
-  subHeading?: ReactNode;
-  onClickTab: (item: string) => void;
+  tabActive: string
+  tabs: string[]
+  heading: ReactNode
+  subHeading?: ReactNode
+  onClickTab: (item: string) => void
 }
 
 const HeaderFilter: FC<HeaderFilterProps> = ({
@@ -18,7 +17,7 @@ const HeaderFilter: FC<HeaderFilterProps> = ({
   tabs,
   subHeading = "",
   heading = "🎈 Latest Articles",
-  onClickTab,
+  onClickTab
 }) => {
   return (
     <div className="flex flex-col mb-8 relative">
@@ -46,7 +45,7 @@ const HeaderFilter: FC<HeaderFilterProps> = ({
         </span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HeaderFilter;
+export default HeaderFilter

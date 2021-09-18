@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import CommonLayout from "./CommonLayout";
+import React, { FC } from "react"
+import CommonLayout from "./CommonLayout"
 
 export interface PageAddListing7Props {}
 
@@ -108,7 +108,7 @@ const PageAddListing7: FC<PageAddListing7Props> = () => {
         </div>
       </>
     </CommonLayout>
-  );
-};
+  )
+}
 
-export default PageAddListing7;
+export default PageAddListing7

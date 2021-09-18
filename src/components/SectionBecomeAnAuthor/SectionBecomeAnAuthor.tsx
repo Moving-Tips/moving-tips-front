@@ -1,17 +1,17 @@
-import React, { FC } from "react";
-import NcImage from "shared/NcImage/NcImage";
-import rightImgDemo from "images/BecomeAnAuthorImg.png";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import Logo from "shared/Logo/Logo";
+import React, { FC } from "react"
+import NcImage from "shared/NcImage/NcImage"
+import rightImgDemo from "images/BecomeAnAuthorImg.png"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import Logo from "shared/Logo/Logo"
 
 export interface SectionBecomeAnAuthorProps {
-  className?: string;
-  rightImg?: string;
+  className?: string
+  rightImg?: string
 }
 
 const SectionBecomeAnAuthor: FC<SectionBecomeAnAuthorProps> = ({
   className = "",
-  rightImg = rightImgDemo,
+  rightImg = rightImgDemo
 }) => {
   return (
     <div
@@ -36,7 +36,7 @@ const SectionBecomeAnAuthor: FC<SectionBecomeAnAuthorProps> = ({
         <NcImage src={rightImg} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionBecomeAnAuthor;
+export default SectionBecomeAnAuthor

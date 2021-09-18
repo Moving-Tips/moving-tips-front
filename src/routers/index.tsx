@@ -1,44 +1,44 @@
-import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Page } from "./types";
-import ScrollToTop from "./ScrollToTop";
-import Footer from "shared/Footer/Footer";
-import PageHome from "containers/PageHome/PageHome";
-import Header from "shared/Header/Header";
-import Page404 from "containers/Page404/Page404";
-import ListingStayPage from "containers/ListingStayPage/ListingStayPage";
-import ListingStayMapPage from "containers/ListingStayPage/ListingStayMapPage";
-import ListingExperiencesPage from "containers/ListingExperiencesPage/ListingExperiencesPage";
-import ListingExperiencesMapPage from "containers/ListingExperiencesPage/ListingExperiencesMapPage";
-import ListingStayDetailPage from "containers/ListingDetailPage/ListingStayDetailPage";
-import ListingExperiencesDetailPage from "containers/ListingDetailPage/ListingExperiencesDetailPage";
-import ListingCarPage from "containers/ListingCarPage/ListingCarPage";
-import ListingCarMapPage from "containers/ListingCarPage/ListingCarMapPage";
-import ListingCarDetailPage from "containers/ListingDetailPage/ListingCarDetailPage";
-import CheckOutPage from "containers/CheckOutPage/CheckOutPage";
-import PayPage from "containers/PayPage/PayPage";
-import AuthorPage from "containers/AuthorPage/AuthorPage";
-import AccountPage from "containers/AccountPage/AccountPage";
-import AccountPass from "containers/AccountPage/AccountPass";
-import AccountSavelists from "containers/AccountPage/AccountSavelists";
-import AccountBilling from "containers/AccountPage/AccountBilling";
-import PageContact from "containers/PageContact/PageContact";
-import PageAbout from "containers/PageAbout/PageAbout";
-import PageSignUp from "containers/PageSignUp/PageSignUp";
-import PageLogin from "containers/PageLogin/PageLogin";
-import PageSubcription from "containers/PageSubcription/PageSubcription";
-import BlogPage from "containers/BlogPage/BlogPage";
-import BlogSingle from "containers/BlogPage/BlogSingle";
-import PageAddListing1 from "containers/PageAddListing1/PageAddListing1";
-import PageAddListing2 from "containers/PageAddListing1/PageAddListing2";
-import PageAddListing3 from "containers/PageAddListing1/PageAddListing3";
-import PageAddListing4 from "containers/PageAddListing1/PageAddListing4";
-import PageAddListing5 from "containers/PageAddListing1/PageAddListing5";
-import PageAddListing6 from "containers/PageAddListing1/PageAddListing6";
-import PageAddListing7 from "containers/PageAddListing1/PageAddListing7";
-import PageAddListing8 from "containers/PageAddListing1/PageAddListing8";
-import PageAddListing9 from "containers/PageAddListing1/PageAddListing9";
-import PageAddListing10 from "containers/PageAddListing1/PageAddListing10";
+import React from "react"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
+import { Page } from "./types"
+import ScrollToTop from "./ScrollToTop"
+import Footer from "shared/Footer/Footer"
+import PageHome from "containers/PageHome/PageHome"
+import Header from "shared/Header/Header"
+import Page404 from "containers/Page404/Page404"
+import ListingStayPage from "containers/ListingStayPage/ListingStayPage"
+import ListingStayMapPage from "containers/ListingStayPage/ListingStayMapPage"
+import ListingExperiencesPage from "containers/ListingExperiencesPage/ListingExperiencesPage"
+import ListingExperiencesMapPage from "containers/ListingExperiencesPage/ListingExperiencesMapPage"
+import ListingStayDetailPage from "containers/ListingDetailPage/ListingStayDetailPage"
+import ListingExperiencesDetailPage from "containers/ListingDetailPage/ListingExperiencesDetailPage"
+import ListingCarPage from "containers/ListingCarPage/ListingCarPage"
+import ListingCarMapPage from "containers/ListingCarPage/ListingCarMapPage"
+import ListingCarDetailPage from "containers/ListingDetailPage/ListingCarDetailPage"
+import CheckOutPage from "containers/CheckOutPage/CheckOutPage"
+import PayPage from "containers/PayPage/PayPage"
+import AuthorPage from "containers/AuthorPage/AuthorPage"
+import AccountPage from "containers/AccountPage/AccountPage"
+import AccountPass from "containers/AccountPage/AccountPass"
+import AccountSavelists from "containers/AccountPage/AccountSavelists"
+import AccountBilling from "containers/AccountPage/AccountBilling"
+import PageContact from "containers/PageContact/PageContact"
+import PageAbout from "containers/PageAbout/PageAbout"
+import PageSignUp from "containers/PageSignUp/PageSignUp"
+import PageLogin from "containers/PageLogin/PageLogin"
+import PageSubcription from "containers/PageSubcription/PageSubcription"
+import BlogPage from "containers/BlogPage/BlogPage"
+import BlogSingle from "containers/BlogPage/BlogSingle"
+import PageAddListing1 from "containers/PageAddListing1/PageAddListing1"
+import PageAddListing2 from "containers/PageAddListing1/PageAddListing2"
+import PageAddListing3 from "containers/PageAddListing1/PageAddListing3"
+import PageAddListing4 from "containers/PageAddListing1/PageAddListing4"
+import PageAddListing5 from "containers/PageAddListing1/PageAddListing5"
+import PageAddListing6 from "containers/PageAddListing1/PageAddListing6"
+import PageAddListing7 from "containers/PageAddListing1/PageAddListing7"
+import PageAddListing8 from "containers/PageAddListing1/PageAddListing8"
+import PageAddListing9 from "containers/PageAddListing1/PageAddListing9"
+import PageAddListing10 from "containers/PageAddListing1/PageAddListing10"
 
 export const pages: Page[] = [
   { path: "/", exact: true, component: PageHome },
@@ -49,15 +49,15 @@ export const pages: Page[] = [
   //
   {
     path: "/listing-experiences",
-    component: ListingExperiencesPage,
+    component: ListingExperiencesPage
   },
   {
     path: "/listing-experiences-map",
-    component: ListingExperiencesMapPage,
+    component: ListingExperiencesMapPage
   },
   {
     path: "/listing-experiences-detail",
-    component: ListingExperiencesDetailPage,
+    component: ListingExperiencesDetailPage
   },
   //
   { path: "/listing-car", component: ListingCarPage },
@@ -91,8 +91,8 @@ export const pages: Page[] = [
   { path: "/about", component: PageAbout },
   { path: "/signup", component: PageSignUp },
   { path: "/login", component: PageLogin },
-  { path: "/subscription", component: PageSubcription },
-];
+  { path: "/subscription", component: PageSubcription }
+]
 
 const Routes = () => {
   return (
@@ -108,13 +108,13 @@ const Routes = () => {
               exact={!!exact}
               path={path}
             />
-          );
+          )
         })}
         <Route component={Page404} />
       </Switch>
       <Footer />
     </BrowserRouter>
-  );
-};
+  )
+}
 
-export default Routes;
+export default Routes

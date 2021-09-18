@@ -1,15 +1,15 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
 
 export interface BtnLikeIconProps {
-  className?: string;
-  colorClass?: string;
-  isLiked?: boolean;
+  className?: string
+  colorClass?: string
+  isLiked?: boolean
 }
 
 const BtnLikeIcon: FC<BtnLikeIconProps> = ({
   className = "",
   colorClass = "text-white bg-black bg-opacity-30 hover:bg-opacity-50",
-  isLiked = false,
+  isLiked = false
 }) => {
   return (
     <div
@@ -31,7 +31,7 @@ const BtnLikeIcon: FC<BtnLikeIconProps> = ({
         />
       </svg>
     </div>
-  );
-};
+  )
+}
 
-export default BtnLikeIcon;
+export default BtnLikeIcon

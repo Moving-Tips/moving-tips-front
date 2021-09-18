@@ -1,29 +1,29 @@
-import { CustomLink } from "data/types";
-import React, { FC } from "react";
-import { Link } from "react-router-dom";
-import twFocusClass from "utils/twFocusClass";
+import { CustomLink } from "data/types"
+import React, { FC } from "react"
+import { Link } from "react-router-dom"
+import twFocusClass from "utils/twFocusClass"
 
 const DEMO_PAGINATION: CustomLink[] = [
   {
     label: "1",
-    href: "#",
+    href: "#"
   },
   {
     label: "2",
-    href: "#",
+    href: "#"
   },
   {
     label: "3",
-    href: "#",
+    href: "#"
   },
   {
     label: "4",
-    href: "#",
-  },
-];
+    href: "#"
+  }
+]
 
 export interface PaginationProps {
-  className?: string;
+  className?: string
 }
 
 const Pagination: FC<PaginationProps> = ({ className = "" }) => {
@@ -37,7 +37,7 @@ const Pagination: FC<PaginationProps> = ({ className = "" }) => {
         >
           {pag.label}
         </span>
-      );
+      )
     }
     // RETURN UNACTIVE PAGINATION
     return (
@@ -48,8 +48,8 @@ const Pagination: FC<PaginationProps> = ({ className = "" }) => {
       >
         {pag.label}
       </Link>
-    );
-  };
+    )
+  }
 
   return (
     <nav
@@ -57,7 +57,7 @@ const Pagination: FC<PaginationProps> = ({ className = "" }) => {
     >
       {DEMO_PAGINATION.map(renderItem)}
     </nav>
-  );
-};
+  )
+}
 
-export default Pagination;
+export default Pagination

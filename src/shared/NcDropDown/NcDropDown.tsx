@@ -1,23 +1,23 @@
-import { DotsHorizontalIcon } from "@heroicons/react/solid";
-import React, { FC, Fragment, ReactNode } from "react";
-import { Menu, Transition } from "@headlessui/react";
-import twFocusClass from "utils/twFocusClass";
+import { DotsHorizontalIcon } from "@heroicons/react/solid"
+import React, { FC, Fragment, ReactNode } from "react"
+import { Menu, Transition } from "@headlessui/react"
+import twFocusClass from "utils/twFocusClass"
 
 export interface NcDropDownItem {
-  id: string;
-  name: string;
-  icon: string;
+  id: string
+  name: string
+  icon: string
 }
 
 export interface NcDropDownProps {
-  className?: string;
-  panelMenusClass?: string;
-  iconClass?: string;
-  data: NcDropDownItem[];
-  renderTrigger?: () => ReactNode;
-  renderItem?: (item: NcDropDownItem) => ReactNode;
-  title?: string;
-  onClick: (item: NcDropDownItem) => void;
+  className?: string
+  panelMenusClass?: string
+  iconClass?: string
+  data: NcDropDownItem[]
+  renderTrigger?: () => ReactNode
+  renderItem?: (item: NcDropDownItem) => ReactNode
+  title?: string
+  onClick: (item: NcDropDownItem) => void
 }
 
 const NcDropDown: FC<NcDropDownProps> = ({
@@ -28,7 +28,7 @@ const NcDropDown: FC<NcDropDownProps> = ({
   renderTrigger,
   renderItem,
   data,
-  onClick,
+  onClick
 }) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -86,7 +86,7 @@ const NcDropDown: FC<NcDropDownProps> = ({
         </Menu.Items>
       </Transition>
     </Menu>
-  );
-};
+  )
+}
 
-export default NcDropDown;
+export default NcDropDown

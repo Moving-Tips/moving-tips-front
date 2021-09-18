@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import Input from "shared/Input/Input";
-import Select from "shared/Select/Select";
-import CommonLayout from "./CommonLayout";
-import FormItem from "./FormItem";
+import React, { FC } from "react"
+import Input from "shared/Input/Input"
+import Select from "shared/Select/Select"
+import CommonLayout from "./CommonLayout"
+import FormItem from "./FormItem"
 
 export interface PageAddListing8Props {}
 
@@ -71,7 +71,7 @@ const PageAddListing8: FC<PageAddListing8Props> = () => {
         </div>
       </>
     </CommonLayout>
-  );
-};
+  )
+}
 
-export default PageAddListing8;
+export default PageAddListing8

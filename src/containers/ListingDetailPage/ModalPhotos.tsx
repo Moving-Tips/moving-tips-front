@@ -1,40 +1,40 @@
-import React, { FC, Fragment, useEffect, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import NextPrev from "shared/NextPrev/NextPrev";
-import ButtonClose from "shared/ButtonClose/ButtonClose";
+import React, { FC, Fragment, useEffect, useState } from "react"
+import { Dialog, Transition } from "@headlessui/react"
+import NextPrev from "shared/NextPrev/NextPrev"
+import ButtonClose from "shared/ButtonClose/ButtonClose"
 
 export interface ModalPhotosProps {
-  imgs: string[];
-  onClose: () => void;
-  isOpen: boolean;
-  initFocus?: number;
+  imgs: string[]
+  onClose: () => void
+  isOpen: boolean
+  initFocus?: number
 }
 
 const ModalPhotos: FC<ModalPhotosProps> = ({
   imgs,
   isOpen,
   onClose,
-  initFocus = 0,
+  initFocus = 0
 }) => {
-  const [indexActive, setindexActive] = useState(initFocus);
+  const [indexActive, setindexActive] = useState(initFocus)
 
   useEffect(() => {
-    setindexActive(initFocus);
-  }, [initFocus]);
+    setindexActive(initFocus)
+  }, [initFocus])
 
   const handleClickNext = () => {
     if (indexActive >= imgs.length - 1) {
-      return setindexActive(() => 0);
+      return setindexActive(() => 0)
     }
-    setindexActive((i) => i + 1);
-  };
+    setindexActive((i) => i + 1)
+  }
 
   const handleClickPrev = () => {
     if (indexActive <= 0) {
-      return setindexActive(() => imgs.length - 1);
+      return setindexActive(() => imgs.length - 1)
     }
-    setindexActive((i) => i - 1);
-  };
+    setindexActive((i) => i - 1)
+  }
 
   const renderModalPhotos = () => {
     return (
@@ -74,7 +74,7 @@ const ModalPhotos: FC<ModalPhotosProps> = ({
               className="inline-block h-screen align-middle"
               aria-hidden="true"
             >
-              &#8203;
+              &#8203
             </span>
 
             <div className="relative inline-block w-full max-w-5xl my-8 align-middle ">
@@ -92,10 +92,10 @@ const ModalPhotos: FC<ModalPhotosProps> = ({
           </div>
         </Dialog>
       </Transition>
-    );
-  };
+    )
+  }
 
-  return renderModalPhotos();
-};
+  return renderModalPhotos()
+}
 
-export default ModalPhotos;
+export default ModalPhotos

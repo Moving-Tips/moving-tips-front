@@ -1,15 +1,15 @@
-import Label from "components/Label/Label";
-import React, { FC } from "react";
-import Avatar from "shared/Avatar/Avatar";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import Input from "shared/Input/Input";
-import Select from "shared/Select/Select";
-import Textarea from "shared/Textarea/Textarea";
-import CommonLayout from "./CommonLayout";
-import { Helmet } from "react-helmet";
+import Label from "components/Label/Label"
+import React, { FC } from "react"
+import Avatar from "shared/Avatar/Avatar"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import Input from "shared/Input/Input"
+import Select from "shared/Select/Select"
+import Textarea from "shared/Textarea/Textarea"
+import CommonLayout from "./CommonLayout"
+import { Helmet } from "react-helmet"
 
 export interface AccountPageProps {
-  className?: string;
+  className?: string
 }
 
 const AccountPage: FC<AccountPageProps> = ({ className = "" }) => {
@@ -108,7 +108,7 @@ const AccountPage: FC<AccountPageProps> = ({ className = "" }) => {
         </div>
       </CommonLayout>
     </div>
-  );
-};
+  )
+}
 
-export default AccountPage;
+export default AccountPage

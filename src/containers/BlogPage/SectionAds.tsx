@@ -1,9 +1,9 @@
-import React, { FC } from "react";
-import NcImage from "shared/NcImage/NcImage";
-import imgAds from "images/ads.png";
+import React, { FC } from "react"
+import NcImage from "shared/NcImage/NcImage"
+import imgAds from "images/ads.png"
 
 export interface SectionAdsProps {
-  className?: string;
+  className?: string
 }
 
 const SectionAds: FC<SectionAdsProps> = ({ className = "" }) => {
@@ -11,7 +11,7 @@ const SectionAds: FC<SectionAdsProps> = ({ className = "" }) => {
     <a href="/#" className={`nc-SectionAds block w-full ${className}`}>
       <NcImage className="w-full" src={imgAds} />
     </a>
-  );
-};
+  )
+}
 
-export default SectionAds;
+export default SectionAds

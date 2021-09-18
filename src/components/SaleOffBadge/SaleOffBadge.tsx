@@ -1,13 +1,13 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
 
 export interface SaleOffBadgeProps {
-  className?: string;
-  desc?: string;
+  className?: string
+  desc?: string
 }
 
 const SaleOffBadge: FC<SaleOffBadgeProps> = ({
   className = "",
-  desc = "-10% today",
+  desc = "-10% today"
 }) => {
   return (
     <div
@@ -16,7 +16,7 @@ const SaleOffBadge: FC<SaleOffBadgeProps> = ({
     >
       {desc}
     </div>
-  );
-};
+  )
+}
 
-export default SaleOffBadge;
+export default SaleOffBadge

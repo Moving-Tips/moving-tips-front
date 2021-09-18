@@ -1,19 +1,19 @@
-import SectionHero from "components/SectionHero/SectionHero";
-import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories";
-import React from "react";
-import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
-import SectionOurFeatures from "components/SectionOurFeatures/SectionOurFeatures";
-import SectionGridFeaturePlaces from "./SectionGridFeaturePlaces";
-import SectionHowItWork from "components/SectionHowItWork/SectionHowItWork";
-import BackgroundSection from "components/BackgroundSection/BackgroundSection";
-import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism";
-import { TaxonomyType } from "data/types";
-import SectionGridAuthorBox from "components/SectionGridAuthorBox/SectionGridAuthorBox";
-import SectionGridCategoryBox from "components/SectionGridCategoryBox/SectionGridCategoryBox";
-import SectionBecomeAnAuthor from "components/SectionBecomeAnAuthor/SectionBecomeAnAuthor";
-import SectionVideos from "./SectionVideos";
-import SectionClientSay from "components/SectionClientSay/SectionClientSay";
-import { Helmet } from "react-helmet";
+import SectionHero from "components/SectionHero/SectionHero"
+import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories"
+import React from "react"
+import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2"
+import SectionOurFeatures from "components/SectionOurFeatures/SectionOurFeatures"
+import SectionGridFeaturePlaces from "./SectionGridFeaturePlaces"
+import SectionHowItWork from "components/SectionHowItWork/SectionHowItWork"
+import BackgroundSection from "components/BackgroundSection/BackgroundSection"
+import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism"
+import { TaxonomyType } from "data/types"
+import SectionGridAuthorBox from "components/SectionGridAuthorBox/SectionGridAuthorBox"
+import SectionGridCategoryBox from "components/SectionGridCategoryBox/SectionGridCategoryBox"
+import SectionBecomeAnAuthor from "components/SectionBecomeAnAuthor/SectionBecomeAnAuthor"
+import SectionVideos from "./SectionVideos"
+import SectionClientSay from "components/SectionClientSay/SectionClientSay"
+import { Helmet } from "react-helmet"
 
 const DEMO_CATS: TaxonomyType[] = [
   {
@@ -23,7 +23,7 @@ const DEMO_CATS: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
   },
   {
     id: "2",
@@ -32,7 +32,7 @@ const DEMO_CATS: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/7740160/pexels-photo-7740160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/7740160/pexels-photo-7740160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   },
   {
     id: "2",
@@ -41,7 +41,7 @@ const DEMO_CATS: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/739407/pexels-photo-739407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/739407/pexels-photo-739407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   },
   {
     id: "2",
@@ -50,7 +50,7 @@ const DEMO_CATS: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
   },
   {
     id: "2",
@@ -59,7 +59,7 @@ const DEMO_CATS: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/4151484/pexels-photo-4151484.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "https://images.pexels.com/photos/4151484/pexels-photo-4151484.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
   },
   {
     id: "2",
@@ -68,9 +68,9 @@ const DEMO_CATS: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/3250613/pexels-photo-3250613.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  },
-];
+      "https://images.pexels.com/photos/3250613/pexels-photo-3250613.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  }
+]
 
 const DEMO_CATS_2: TaxonomyType[] = [
   {
@@ -80,7 +80,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/5764100/pexels-photo-5764100.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "https://images.pexels.com/photos/5764100/pexels-photo-5764100.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
   },
   {
     id: "222",
@@ -89,7 +89,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/2869499/pexels-photo-2869499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/2869499/pexels-photo-2869499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   },
   {
     id: "3",
@@ -98,7 +98,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/7031413/pexels-photo-7031413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/7031413/pexels-photo-7031413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   },
   {
     id: "4",
@@ -107,7 +107,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/247532/pexels-photo-247532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/247532/pexels-photo-247532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   },
   {
     id: "5",
@@ -116,11 +116,11 @@ const DEMO_CATS_2: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/7031413/pexels-photo-7031413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  },
-];
+      "https://images.pexels.com/photos/7031413/pexels-photo-7031413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  }
+]
 
-function PageHome() {
+function PageHome () {
   return (
     <div className="nc-PageHome relative overflow-hidden">
       <Helmet>
@@ -197,7 +197,7 @@ function PageHome() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default PageHome;
+export default PageHome

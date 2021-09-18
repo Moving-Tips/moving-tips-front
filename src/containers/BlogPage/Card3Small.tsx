@@ -1,16 +1,16 @@
-import React, { FC } from "react";
-import PostCardMeta from "components/PostCardMeta/PostCardMeta";
-import { PostDataType } from "data/types";
-import { Link } from "react-router-dom";
-import NcImage from "shared/NcImage/NcImage";
+import React, { FC } from "react"
+import PostCardMeta from "components/PostCardMeta/PostCardMeta"
+import { PostDataType } from "data/types"
+import { Link } from "react-router-dom"
+import NcImage from "shared/NcImage/NcImage"
 
 export interface Card3SmallProps {
-  className?: string;
-  post: PostDataType;
+  className?: string
+  post: PostDataType
 }
 
 const Card3Small: FC<Card3SmallProps> = ({ className = "h-full", post }) => {
-  const { title, href, featuredImage } = post;
+  const { title, href, featuredImage } = post
 
   return (
     <div
@@ -42,7 +42,7 @@ const Card3Small: FC<Card3SmallProps> = ({ className = "h-full", post }) => {
         </div>
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default Card3Small;
+export default Card3Small

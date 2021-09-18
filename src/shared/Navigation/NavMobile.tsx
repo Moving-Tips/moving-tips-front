@@ -1,23 +1,23 @@
-import React from "react";
-import ButtonClose from "shared/ButtonClose/ButtonClose";
-import Logo from "shared/Logo/Logo";
-import { Disclosure } from "@headlessui/react";
-import { NavLink } from "react-router-dom";
-import { NavItemType } from "./NavigationItem";
-import { NAVIGATION_DEMO } from "data/navigation";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import SocialsList from "shared/SocialsList/SocialsList";
-import { ChevronDownIcon } from "@heroicons/react/solid";
-import SwitchDarkMode from "shared/SwitchDarkMode/SwitchDarkMode";
+import React from "react"
+import ButtonClose from "shared/ButtonClose/ButtonClose"
+import Logo from "shared/Logo/Logo"
+import { Disclosure } from "@headlessui/react"
+import { NavLink } from "react-router-dom"
+import { NavItemType } from "./NavigationItem"
+import { NAVIGATION_DEMO } from "data/navigation"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import SocialsList from "shared/SocialsList/SocialsList"
+import { ChevronDownIcon } from "@heroicons/react/solid"
+import SwitchDarkMode from "shared/SwitchDarkMode/SwitchDarkMode"
 
 export interface NavMobileProps {
-  data?: NavItemType[];
-  onClickClose?: () => void;
+  data?: NavItemType[]
+  onClickClose?: () => void
 }
 
 const NavMobile: React.FC<NavMobileProps> = ({
   data = NAVIGATION_DEMO,
-  onClickClose,
+  onClickClose
 }) => {
   const _renderMenuChild = (item: NavItemType) => {
     return (
@@ -28,7 +28,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
               exact
               strict
               to={{
-                pathname: i.href || undefined,
+                pathname: i.href || undefined
               }}
               className="flex px-4 py-2.5 text-neutral-900 dark:text-neutral-200 text-sm font-medium rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 mt-[2px]"
               activeClassName="text-secondary"
@@ -62,8 +62,8 @@ const NavMobile: React.FC<NavMobileProps> = ({
           </Disclosure>
         ))}
       </ul>
-    );
-  };
+    )
+  }
 
   const _renderItem = (item: NavItemType, index: number) => {
     return (
@@ -77,7 +77,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
           strict
           className="flex w-full items-center py-2.5 px-4 font-medium uppercase tracking-wide text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg"
           to={{
-            pathname: item.href || undefined,
+            pathname: item.href || undefined
           }}
           activeClassName="text-secondary"
         >
@@ -108,8 +108,8 @@ const NavMobile: React.FC<NavMobileProps> = ({
           <Disclosure.Panel>{_renderMenuChild(item)}</Disclosure.Panel>
         )}
       </Disclosure>
-    );
-  };
+    )
+  }
 
   return (
     <div className="overflow-y-auto w-full max-w-sm h-screen py-2 transition transform shadow-lg ring-1 dark:ring-neutral-700 bg-white dark:bg-neutral-900 divide-y-2 divide-neutral-100 dark:divide-neutral-800">
@@ -141,7 +141,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NavMobile;
+export default NavMobile

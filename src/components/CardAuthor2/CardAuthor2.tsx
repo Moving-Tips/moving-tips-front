@@ -1,13 +1,13 @@
-import React, { FC } from "react";
-import { PostDataType } from "data/types";
-import { Link } from "react-router-dom";
-import Avatar from "shared/Avatar/Avatar";
+import React, { FC } from "react"
+import { PostDataType } from "data/types"
+import { Link } from "react-router-dom"
+import Avatar from "shared/Avatar/Avatar"
 
 export interface CardAuthor2Props
   extends Pick<PostDataType, "date" | "author"> {
-  className?: string;
-  readingTime?: PostDataType["readingTime"];
-  hoverReadingTime?: boolean;
+  className?: string
+  readingTime?: PostDataType["readingTime"]
+  hoverReadingTime?: boolean
 }
 
 const CardAuthor2: FC<CardAuthor2Props> = ({
@@ -15,9 +15,9 @@ const CardAuthor2: FC<CardAuthor2Props> = ({
   author,
   readingTime,
   date,
-  hoverReadingTime = false,
+  hoverReadingTime = false
 }) => {
-  const { displayName, href = "/", avatar } = author;
+  const { displayName, href = "/", avatar } = author
   return (
     <Link
       to={href}
@@ -62,7 +62,7 @@ const CardAuthor2: FC<CardAuthor2Props> = ({
         </span>
       </div>
     </Link>
-  );
-};
+  )
+}
 
-export default CardAuthor2;
+export default CardAuthor2

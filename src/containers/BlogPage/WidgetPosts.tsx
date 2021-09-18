@@ -1,21 +1,21 @@
-import { DEMO_POSTS } from "data/posts";
-import { PostDataType } from "data/types";
-import React, { FC } from "react";
-import Card3Small from "./Card3Small";
-import WidgetHeading1 from "./WidgetHeading1";
+import { DEMO_POSTS } from "data/posts"
+import { PostDataType } from "data/types"
+import React, { FC } from "react"
+import Card3Small from "./Card3Small"
+import WidgetHeading1 from "./WidgetHeading1"
 
 export interface WidgetPostsProps {
-  className?: string;
-  posts?: PostDataType[];
+  className?: string
+  posts?: PostDataType[]
 }
 
 const widgetPostsDemo: PostDataType[] = DEMO_POSTS.filter(
   (_, i) => i > 2 && i < 7
-);
+)
 
 const WidgetPosts: FC<WidgetPostsProps> = ({
   className = "bg-neutral-100 dark:bg-neutral-800",
-  posts = widgetPostsDemo,
+  posts = widgetPostsDemo
 }) => {
   return (
     <div
@@ -36,7 +36,7 @@ const WidgetPosts: FC<WidgetPostsProps> = ({
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default WidgetPosts;
+export default WidgetPosts

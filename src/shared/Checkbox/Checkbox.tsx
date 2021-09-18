@@ -1,11 +1,11 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
 
 export interface CheckboxProps {
-  label?: string;
-  subLabel?: string;
-  className?: string;
-  name: string;
-  defaultChecked?: boolean;
+  label?: string
+  subLabel?: string
+  className?: string
+  name: string
+  defaultChecked?: boolean
 }
 
 const Checkbox: FC<CheckboxProps> = ({
@@ -13,7 +13,7 @@ const Checkbox: FC<CheckboxProps> = ({
   label = "",
   name,
   className = "",
-  defaultChecked,
+  defaultChecked
 }) => {
   return (
     <div className={`flex text-sm sm:text-base ${className}`}>
@@ -40,7 +40,7 @@ const Checkbox: FC<CheckboxProps> = ({
         </label>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Checkbox;
+export default Checkbox

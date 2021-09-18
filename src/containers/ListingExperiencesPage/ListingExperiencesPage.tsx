@@ -1,15 +1,15 @@
-import BackgroundSection from "components/BackgroundSection/BackgroundSection";
-import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism";
-import SectionHeroArchivePage from "components/SectionHeroArchivePage/SectionHeroArchivePage";
-import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories";
-import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
-import { TaxonomyType } from "data/types";
-import React, { FC } from "react";
-import SectionGridFilterCard from "./SectionGridFilterCard";
-import { Helmet } from "react-helmet";
+import BackgroundSection from "components/BackgroundSection/BackgroundSection"
+import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism"
+import SectionHeroArchivePage from "components/SectionHeroArchivePage/SectionHeroArchivePage"
+import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories"
+import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2"
+import { TaxonomyType } from "data/types"
+import React, { FC } from "react"
+import SectionGridFilterCard from "./SectionGridFilterCard"
+import { Helmet } from "react-helmet"
 
 export interface ListingExperiencesPageProps {
-  className?: string;
+  className?: string
 }
 
 const DEMO_CATS: TaxonomyType[] = [
@@ -21,7 +21,7 @@ const DEMO_CATS: TaxonomyType[] = [
     count: 17288,
     thumbnail:
       "https://images.pexels.com/photos/1118877/pexels-photo-1118877.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-    listingType: "experiences",
+    listingType: "experiences"
   },
   {
     id: "2",
@@ -31,7 +31,7 @@ const DEMO_CATS: TaxonomyType[] = [
     count: 2118,
     thumbnail:
       "https://images.pexels.com/photos/2412609/pexels-photo-2412609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    listingType: "experiences",
+    listingType: "experiences"
   },
   {
     id: "3",
@@ -41,7 +41,7 @@ const DEMO_CATS: TaxonomyType[] = [
     count: 36612,
     thumbnail:
       "https://images.pexels.com/photos/732895/pexels-photo-732895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    listingType: "experiences",
+    listingType: "experiences"
   },
   {
     id: "5",
@@ -51,7 +51,7 @@ const DEMO_CATS: TaxonomyType[] = [
     count: 188288,
     thumbnail:
       "https://images.pexels.com/photos/3152124/pexels-photo-3152124.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-    listingType: "experiences",
+    listingType: "experiences"
   },
   {
     id: "4",
@@ -61,12 +61,12 @@ const DEMO_CATS: TaxonomyType[] = [
     count: 188288,
     thumbnail:
       "https://images.pexels.com/photos/373290/pexels-photo-373290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    listingType: "experiences",
-  },
-];
+    listingType: "experiences"
+  }
+]
 
 const ListingExperiencesPage: FC<ListingExperiencesPageProps> = ({
-  className = "",
+  className = ""
 }) => {
   return (
     <div
@@ -112,7 +112,7 @@ const ListingExperiencesPage: FC<ListingExperiencesPageProps> = ({
         <SectionSubscribe2 className="py-24 lg:py-32" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ListingExperiencesPage;
+export default ListingExperiencesPage

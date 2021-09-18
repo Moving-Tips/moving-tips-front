@@ -1,11 +1,11 @@
-import NextPrev from "shared/NextPrev/NextPrev";
-import React, { HTMLAttributes, ReactNode } from "react";
+import NextPrev from "shared/NextPrev/NextPrev"
+import React, { HTMLAttributes, ReactNode } from "react"
 
 export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
-  fontClass?: string;
-  desc?: ReactNode;
-  hasNextPrev?: boolean;
-  isCenter?: boolean;
+  fontClass?: string
+  desc?: ReactNode
+  hasNextPrev?: boolean
+  isCenter?: boolean
 }
 
 const Heading: React.FC<HeadingProps> = ({
@@ -40,7 +40,7 @@ const Heading: React.FC<HeadingProps> = ({
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Heading;
+export default Heading

@@ -1,22 +1,22 @@
-import React, { FC } from "react";
-import Avatar from "shared/Avatar/Avatar";
-import { PostDataType } from "data/types";
-import { Link } from "react-router-dom";
+import React, { FC } from "react"
+import Avatar from "shared/Avatar/Avatar"
+import { PostDataType } from "data/types"
+import { Link } from "react-router-dom"
 
 export interface PostCardMetaV2Props {
-  className?: string;
-  meta: Pick<PostDataType, "date" | "author" | "title">;
-  hiddenAvatar?: boolean;
-  size?: "large" | "normal";
+  className?: string
+  meta: Pick<PostDataType, "date" | "author" | "title">
+  hiddenAvatar?: boolean
+  size?: "large" | "normal"
 }
 
 const PostCardMetaV2: FC<PostCardMetaV2Props> = ({
   className = "leading-none",
   meta,
   hiddenAvatar = false,
-  size = "normal",
+  size = "normal"
 }) => {
-  const { date, author, title } = meta;
+  const { date, author, title } = meta
   return (
     <div
       className={`nc-PostCardMetaV2 inline-flex items-center flex-wrap text-neutral-800 dark:text-neutral-200 ${
@@ -58,7 +58,7 @@ const PostCardMetaV2: FC<PostCardMetaV2Props> = ({
         </div>
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default PostCardMetaV2;
+export default PostCardMetaV2

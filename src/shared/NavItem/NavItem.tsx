@@ -1,12 +1,12 @@
-import React, { FC, ReactNode } from "react";
-import twFocusClass from "utils/twFocusClass";
+import React, { FC, ReactNode } from "react"
+import twFocusClass from "utils/twFocusClass"
 
 export interface NavItemProps {
-  className?: string;
-  radius?: string;
-  onClick?: () => void;
-  isActive?: boolean;
-  renderX?: ReactNode;
+  className?: string
+  radius?: string
+  onClick?: () => void
+  isActive?: boolean
+  renderX?: ReactNode
 }
 
 const NavItem: FC<NavItemProps> = ({
@@ -15,7 +15,7 @@ const NavItem: FC<NavItemProps> = ({
   children,
   onClick = () => {},
   isActive = false,
-  renderX,
+  renderX
 }) => {
   return (
     <li className="nc-NavItem relative" data-nc-id="NavItem">
@@ -27,13 +27,13 @@ const NavItem: FC<NavItemProps> = ({
             : "text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
         } ${twFocusClass()}`}
         onClick={() => {
-          onClick && onClick();
+          onClick && onClick()
         }}
       >
         {children}
       </button>
     </li>
-  );
-};
+  )
+}
 
-export default NavItem;
+export default NavItem

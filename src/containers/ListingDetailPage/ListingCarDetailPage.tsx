@@ -1,39 +1,39 @@
-import React, { FC, useState } from "react";
-import { ArrowRightIcon } from "@heroicons/react/outline";
-import LocationMarker from "components/AnyReactComponent/LocationMarker";
-import CommentListing from "components/CommentListing/CommentListing";
-import FiveStartIconForRate from "components/FiveStartIconForRate/FiveStartIconForRate";
-import { DateRage } from "components/HeroSearchForm/StaySearchForm";
-import StartRating from "components/StartRating/StartRating";
-import GoogleMapReact from "google-map-react";
-import useWindowSize from "hooks/useWindowResize";
-import moment from "moment";
-import { DayPickerRangeController, FocusedInputShape } from "react-dates";
-import Avatar from "shared/Avatar/Avatar";
-import Badge from "shared/Badge/Badge";
-import ButtonCircle from "shared/Button/ButtonCircle";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import ButtonSecondary from "shared/Button/ButtonSecondary";
-import Input from "shared/Input/Input";
-import NcImage from "shared/NcImage/NcImage";
-import LikeSaveBtns from "./LikeSaveBtns";
-import ModalPhotos from "./ModalPhotos";
-import BackgroundSection from "components/BackgroundSection/BackgroundSection";
-import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories";
-import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
-import carUtilities1 from "images/carUtilities/1.png";
-import carUtilities2 from "images/carUtilities/2.png";
-import carUtilities3 from "images/carUtilities/3.png";
-import carUtilities4 from "images/carUtilities/4.png";
-import carUtilities5 from "images/carUtilities/5.png";
-import carUtilities6 from "images/carUtilities/6.png";
-import carUtilities7 from "images/carUtilities/7.png";
-import carUtilities8 from "images/carUtilities/8.png";
-import RentalCarDatesRangeInput from "components/HeroSearchForm/RentalCarDatesRangeInput";
-import { TimeRage } from "components/HeroSearchForm/RentalCarSearchForm";
+import React, { FC, useState } from "react"
+import { ArrowRightIcon } from "@heroicons/react/outline"
+import LocationMarker from "components/AnyReactComponent/LocationMarker"
+import CommentListing from "components/CommentListing/CommentListing"
+import FiveStartIconForRate from "components/FiveStartIconForRate/FiveStartIconForRate"
+import { DateRage } from "components/HeroSearchForm/StaySearchForm"
+import StartRating from "components/StartRating/StartRating"
+import GoogleMapReact from "google-map-react"
+import useWindowSize from "hooks/useWindowResize"
+import moment from "moment"
+import { DayPickerRangeController, FocusedInputShape } from "react-dates"
+import Avatar from "shared/Avatar/Avatar"
+import Badge from "shared/Badge/Badge"
+import ButtonCircle from "shared/Button/ButtonCircle"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import ButtonSecondary from "shared/Button/ButtonSecondary"
+import Input from "shared/Input/Input"
+import NcImage from "shared/NcImage/NcImage"
+import LikeSaveBtns from "./LikeSaveBtns"
+import ModalPhotos from "./ModalPhotos"
+import BackgroundSection from "components/BackgroundSection/BackgroundSection"
+import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories"
+import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2"
+import carUtilities1 from "images/carUtilities/1.png"
+import carUtilities2 from "images/carUtilities/2.png"
+import carUtilities3 from "images/carUtilities/3.png"
+import carUtilities4 from "images/carUtilities/4.png"
+import carUtilities5 from "images/carUtilities/5.png"
+import carUtilities6 from "images/carUtilities/6.png"
+import carUtilities7 from "images/carUtilities/7.png"
+import carUtilities8 from "images/carUtilities/8.png"
+import RentalCarDatesRangeInput from "components/HeroSearchForm/RentalCarDatesRangeInput"
+import { TimeRage } from "components/HeroSearchForm/RentalCarSearchForm"
 
 export interface ListingCarDetailPageProps {
-  className?: string;
+  className?: string
 }
 
 const PHOTOS: string[] = [
@@ -44,8 +44,8 @@ const PHOTOS: string[] = [
   "https://images.pexels.com/photos/257851/pexels-photo-257851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   "https://images.pexels.com/photos/189454/pexels-photo-189454.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   "https://images.pexels.com/photos/193995/pexels-photo-193995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  "https://images.pexels.com/photos/575386/pexels-photo-575386.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-];
+  "https://images.pexels.com/photos/575386/pexels-photo-575386.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+]
 
 const includes_demo = [
   { name: "Free cancellation up to 48 hours before pick-up" },
@@ -53,65 +53,65 @@ const includes_demo = [
   { name: "Theft Protection with $19,999 excess" },
   { name: "Unlimited mileage" },
   {
-    name: "Car interiors and exteriors cleaned with disinfectant before pick-up",
+    name: "Car interiors and exteriors cleaned with disinfectant before pick-up"
   },
-  { name: "Masks are required at the pick-up location" },
-];
+  { name: "Masks are required at the pick-up location" }
+]
 
 const Amenities_demos = [
   { name: "59 MPG Combined, 58 City/60 Hwy", icon: carUtilities1 },
   {
     name: "Forward Collision-Avoidance Assist with Pedestrian Detection (FCA-Ped)",
-    icon: carUtilities2,
+    icon: carUtilities2
   },
   { name: "139-hp gas/electric combined", icon: carUtilities3 },
   { name: "Proximity Key with push button start", icon: carUtilities4 },
   { name: "8-inch color touchscreen display audio", icon: carUtilities5 },
   { name: "Smart Cruise Control with Stop & Go (SCC)", icon: carUtilities6 },
   { name: "LED Daytime Running Lights (DRL)", icon: carUtilities7 },
-  { name: "Blind-Spot Collision Warning (BCW)", icon: carUtilities8 },
-];
+  { name: "Blind-Spot Collision Warning (BCW)", icon: carUtilities8 }
+]
 
 const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
-  className = "",
+  className = ""
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [openFocusIndex, setOpenFocusIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false)
+  const [openFocusIndex, setOpenFocusIndex] = useState(0)
 
   // USE STATE
   const [dateRangeValue, setDateRangeValue] = useState<DateRage>({
     startDate: moment(),
-    endDate: moment().add(4, "days"),
-  });
+    endDate: moment().add(4, "days")
+  })
   const [timeRangeValue, setTimeRangeValue] = useState<TimeRage>({
     startTime: "10:00 AM",
-    endTime: "10:00 AM",
-  });
+    endTime: "10:00 AM"
+  })
 
   const [focusedInputSectionCheckDate, setFocusedInputSectionCheckDate] =
-    useState<FocusedInputShape>("startDate");
+    useState<FocusedInputShape>("startDate")
 
-  const windowSize = useWindowSize();
+  const windowSize = useWindowSize()
 
   const getDaySize = () => {
     if (windowSize.width <= 375) {
-      return 34;
+      return 34
     }
     if (windowSize.width <= 500) {
-      return undefined;
+      return undefined
     }
     if (windowSize.width <= 1280) {
-      return 56;
+      return 56
     }
-    return 48;
-  };
+    return 48
+  }
 
   const handleOpenModal = (index: number) => {
-    setIsOpen(true);
-    setOpenFocusIndex(index);
-  };
+    setIsOpen(true)
+    setOpenFocusIndex(index)
+  }
 
-  const handleCloseModal = () => setIsOpen(false);
+  const handleCloseModal = () => setIsOpen(false)
 
   const renderSection1 = () => {
     return (
@@ -167,8 +167,8 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   //
   const renderSectionTienIch = () => {
@@ -196,8 +196,8 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
           ))}
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection2 = () => {
     return (
@@ -218,8 +218,8 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
           </p>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection3 = () => {
     return (
@@ -243,8 +243,8 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
             ))}
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSectionCheckIndate = () => {
     return (
@@ -303,8 +303,8 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection5 = () => {
     return (
@@ -402,8 +402,8 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
           <ButtonSecondary href="##">See host profile</ButtonSecondary>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection6 = () => {
     return (
@@ -442,8 +442,8 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection7 = () => {
     return (
@@ -462,13 +462,13 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
           <div className="rounded-xl overflow-hidden">
             <GoogleMapReact
               bootstrapURLKeys={{
-                key: "AIzaSyDxJaU8bLdx7sSJ8fcRdhYS1pLk8Jdvnx0",
+                key: "AIzaSyDxJaU8bLdx7sSJ8fcRdhYS1pLk8Jdvnx0"
               }}
               defaultZoom={15}
               yesIWantToUseGoogleMapApiInternals
               defaultCenter={{
                 lat: 55.9607277,
-                lng: 36.2172614,
+                lng: 36.2172614
               }}
             >
               <LocationMarker lat={55.9607277} lng={36.2172614} />
@@ -476,8 +476,8 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSection8 = () => {
     return (
@@ -507,8 +507,8 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
           </span>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSidebarPrice = () => {
     return (
@@ -534,8 +534,8 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
             fieldClassName="p-5"
             wrapFieldClassName="flex flex-col w-full flex-shrink-0 relative divide-y divide-neutral-200 dark:divide-neutral-700"
             onChange={(data) => {
-              setDateRangeValue(data.stateDate);
-              setTimeRangeValue(data.stateTimeRage);
+              setDateRangeValue(data.stateDate)
+              setTimeRangeValue(data.stateTimeRage)
             }}
             anchorDirection={windowSize.width > 1400 ? "left" : "right"}
           />
@@ -558,8 +558,8 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
         {/* SUBMIT */}
         <ButtonPrimary>Reserve</ButtonPrimary>
       </div>
-    );
-  };
+    )
+  }
 
   const renderSidebarDetail = () => {
     return (
@@ -593,8 +593,8 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -743,7 +743,7 @@ const ListingCarDetailPage: FC<ListingCarDetailPageProps> = ({
         <SectionSubscribe2 className="pt-24 lg:pt-32" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ListingCarDetailPage;
+export default ListingCarDetailPage

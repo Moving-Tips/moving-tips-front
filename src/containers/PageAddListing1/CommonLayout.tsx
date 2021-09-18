@@ -1,13 +1,13 @@
-import React from "react";
-import { FC } from "react";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import ButtonSecondary from "shared/Button/ButtonSecondary";
+import React, { FC } from "react"
+
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import ButtonSecondary from "shared/Button/ButtonSecondary"
 
 export interface CommonLayoutProps {
-  index: string;
-  nextHref: string;
-  backtHref: string;
-  nextBtnText?: string;
+  index: string
+  nextHref: string
+  backtHref: string
+  nextBtnText?: string
 }
 
 const CommonLayout: FC<CommonLayoutProps> = ({
@@ -15,7 +15,7 @@ const CommonLayout: FC<CommonLayoutProps> = ({
   children,
   nextHref,
   nextBtnText,
-  backtHref,
+  backtHref
 }) => {
   return (
     <div
@@ -42,7 +42,7 @@ const CommonLayout: FC<CommonLayoutProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CommonLayout;
+export default CommonLayout

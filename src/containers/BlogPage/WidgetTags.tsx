@@ -1,18 +1,18 @@
-import React, { FC } from "react";
-import { TaxonomyType } from "data/types";
-import WidgetHeading1 from "./WidgetHeading1";
-import Tag from "shared/Tag/Tag";
-import { DEMO_TAGS } from "data/taxonomies";
+import React, { FC } from "react"
+import { TaxonomyType } from "data/types"
+import WidgetHeading1 from "./WidgetHeading1"
+import Tag from "shared/Tag/Tag"
+import { DEMO_TAGS } from "data/taxonomies"
 
 export interface WidgetTagsProps {
-  className?: string;
-  tags?: TaxonomyType[];
+  className?: string
+  tags?: TaxonomyType[]
 }
-const tagsDemo = DEMO_TAGS.filter((_, i) => i > 5);
+const tagsDemo = DEMO_TAGS.filter((_, i) => i > 5)
 
 const WidgetTags: FC<WidgetTagsProps> = ({
   className = "bg-neutral-100 dark:bg-neutral-800",
-  tags = tagsDemo,
+  tags = tagsDemo
 }) => {
   return (
     <div
@@ -29,7 +29,7 @@ const WidgetTags: FC<WidgetTagsProps> = ({
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default WidgetTags;
+export default WidgetTags

@@ -1,12 +1,12 @@
-import { PostDataType } from "data/types";
-import React, { FC } from "react";
+import { PostDataType } from "data/types"
+import React, { FC } from "react"
 
 export interface PostTypeFeaturedIconProps {
-  className?: string;
-  postType?: PostDataType["postType"];
-  onClick?: () => void;
-  wrapSize?: string;
-  iconSize?: string;
+  className?: string
+  postType?: PostDataType["postType"]
+  onClick?: () => void
+  wrapSize?: string
+  iconSize?: string
 }
 
 const PostTypeFeaturedIcon: FC<PostTypeFeaturedIconProps> = ({
@@ -14,7 +14,7 @@ const PostTypeFeaturedIcon: FC<PostTypeFeaturedIconProps> = ({
   postType = "standard",
   onClick,
   wrapSize = "w-11 h-11",
-  iconSize = "w-6 h-6",
+  iconSize = "w-6 h-6"
 }) => {
   const renderMediaIcon = () => {
     if (postType === "video") {
@@ -34,7 +34,7 @@ const PostTypeFeaturedIcon: FC<PostTypeFeaturedIconProps> = ({
             strokeLinejoin="round"
           />
         </svg>
-      );
+      )
     }
 
     if (postType === "audio") {
@@ -81,7 +81,7 @@ const PostTypeFeaturedIcon: FC<PostTypeFeaturedIconProps> = ({
             strokeLinejoin="round"
           />
         </svg>
-      );
+      )
     }
 
     if (postType === "gallery") {
@@ -114,11 +114,11 @@ const PostTypeFeaturedIcon: FC<PostTypeFeaturedIconProps> = ({
             strokeLinejoin="round"
           />
         </svg>
-      );
+      )
     }
 
-    return null;
-  };
+    return null
+  }
 
   return (
     <div
@@ -134,7 +134,7 @@ const PostTypeFeaturedIcon: FC<PostTypeFeaturedIconProps> = ({
         </span>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default PostTypeFeaturedIcon;
+export default PostTypeFeaturedIcon

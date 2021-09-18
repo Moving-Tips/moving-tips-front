@@ -1,22 +1,22 @@
-import React, { FC } from "react";
-import NcImage from "shared/NcImage/NcImage";
-import { PostDataType } from "data/types";
-import { Link } from "react-router-dom";
-import PostCardMeta from "components/PostCardMeta/PostCardMeta";
-import PostTypeFeaturedIcon from "components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
-import SocialsShare from "shared/SocialsShare/SocialsShare";
-import { DEMO_POSTS } from "data/posts";
+import React, { FC } from "react"
+import NcImage from "shared/NcImage/NcImage"
+import { PostDataType } from "data/types"
+import { Link } from "react-router-dom"
+import PostCardMeta from "components/PostCardMeta/PostCardMeta"
+import PostTypeFeaturedIcon from "components/PostTypeFeaturedIcon/PostTypeFeaturedIcon"
+import SocialsShare from "shared/SocialsShare/SocialsShare"
+import { DEMO_POSTS } from "data/posts"
 
 export interface Card12Props {
-  className?: string;
-  post?: PostDataType;
+  className?: string
+  post?: PostDataType
 }
 
 const Card12: FC<Card12Props> = ({
   className = "h-full",
-  post = DEMO_POSTS[0],
+  post = DEMO_POSTS[0]
 }) => {
-  const { title, href, featuredImage, desc, postType } = post;
+  const { title, href, featuredImage, desc, postType } = post
 
   return (
     <div
@@ -59,7 +59,7 @@ const Card12: FC<Card12Props> = ({
         <PostCardMeta className="mt-5" meta={post} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Card12;
+export default Card12

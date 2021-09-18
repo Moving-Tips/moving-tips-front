@@ -1,6 +1,6 @@
-import { MegamenuItem, NavItemType } from "shared/Navigation/NavigationItem";
-import ncNanoId from "utils/ncNanoId";
-import __megamenu from "./jsons/__megamenu.json";
+import { MegamenuItem, NavItemType } from "shared/Navigation/NavigationItem"
+import ncNanoId from "utils/ncNanoId"
+import __megamenu from "./jsons/__megamenu.json"
 
 const megaMenuDemo: MegamenuItem[] = [
   {
@@ -11,8 +11,8 @@ const megaMenuDemo: MegamenuItem[] = [
     items: __megamenu.map((i) => ({
       id: ncNanoId(),
       href: "#",
-      name: i.Company,
-    })),
+      name: i.Company
+    }))
   },
   {
     id: ncNanoId(),
@@ -22,8 +22,8 @@ const megaMenuDemo: MegamenuItem[] = [
     items: __megamenu.map((i) => ({
       id: ncNanoId(),
       href: "#",
-      name: i.AppName,
-    })),
+      name: i.AppName
+    }))
   },
   {
     id: ncNanoId(),
@@ -33,8 +33,8 @@ const megaMenuDemo: MegamenuItem[] = [
     items: __megamenu.map((i) => ({
       id: ncNanoId(),
       href: "#",
-      name: i.City,
-    })),
+      name: i.City
+    }))
   },
   {
     id: ncNanoId(),
@@ -44,8 +44,8 @@ const megaMenuDemo: MegamenuItem[] = [
     items: __megamenu.map((i) => ({
       id: ncNanoId(),
       href: "#",
-      name: i.Contruction,
-    })),
+      name: i.Contruction
+    }))
   },
   {
     id: ncNanoId(),
@@ -55,48 +55,48 @@ const megaMenuDemo: MegamenuItem[] = [
     items: __megamenu.map((i) => ({
       id: ncNanoId(),
       href: "#",
-      name: i.Country,
-    })),
-  },
-];
+      name: i.Country
+    }))
+  }
+]
 
 const otherPageChildMenus: NavItemType[] = [
   {
     id: ncNanoId(),
     href: "/blog",
-    name: "Blog Page",
+    name: "Blog Page"
   },
   {
     id: ncNanoId(),
     href: "/blog-single",
-    name: "Blog Single",
+    name: "Blog Single"
   },
   {
     id: ncNanoId(),
     href: "/about",
-    name: "About",
+    name: "About"
   },
   {
     id: ncNanoId(),
     href: "/contact",
-    name: "Contact us",
+    name: "Contact us"
   },
   {
     id: ncNanoId(),
     href: "/login",
-    name: "Login",
+    name: "Login"
   },
   {
     id: ncNanoId(),
     href: "/signup",
-    name: "Signup",
+    name: "Signup"
   },
   {
     id: ncNanoId(),
     href: "/subscription",
-    name: "Subscription",
-  },
-];
+    name: "Subscription"
+  }
+]
 
 const templatesChildrenMenus: NavItemType[] = [
   {
@@ -108,68 +108,68 @@ const templatesChildrenMenus: NavItemType[] = [
       {
         id: ncNanoId(),
         href: "/add-listing-1",
-        name: "Add Listings 1",
+        name: "Add Listings 1"
       },
       {
         id: ncNanoId(),
         href: "/add-listing-2",
-        name: "Add Listings 2",
+        name: "Add Listings 2"
       },
       {
         id: ncNanoId(),
         href: "/add-listing-3",
-        name: "Add Listings 3",
+        name: "Add Listings 3"
       },
       {
         id: ncNanoId(),
         href: "/add-listing-4",
-        name: "Add Listings 4",
+        name: "Add Listings 4"
       },
       {
         id: ncNanoId(),
         href: "/add-listing-5",
-        name: "Add Listings 5",
+        name: "Add Listings 5"
       },
       {
         id: ncNanoId(),
         href: "/add-listing-6",
-        name: "Add Listings 6",
+        name: "Add Listings 6"
       },
       {
         id: ncNanoId(),
         href: "/add-listing-7",
-        name: "Add Listings 7",
+        name: "Add Listings 7"
       },
       {
         id: ncNanoId(),
         href: "/add-listing-8",
-        name: "Add Listings 8",
+        name: "Add Listings 8"
       },
       {
         id: ncNanoId(),
         href: "/add-listing-9",
-        name: "Add Listings 9",
+        name: "Add Listings 9"
       },
       {
         id: ncNanoId(),
         href: "/add-listing-10",
-        name: "Add Listings 10",
-      },
-    ],
+        name: "Add Listings 10"
+      }
+    ]
   },
   //
   { id: ncNanoId(), href: "/checkout", name: "Checkout" },
   { id: ncNanoId(), href: "/pay-done", name: "Pay done" },
   //
   { id: ncNanoId(), href: "/author", name: "Author Page" },
-  { id: ncNanoId(), href: "/account", name: "Account Page" },
-];
+  { id: ncNanoId(), href: "/account", name: "Account Page" }
+]
 
 export const NAVIGATION_DEMO: NavItemType[] = [
   {
     id: ncNanoId(),
     href: "/",
-    name: "Home",
+    name: "Home"
     // type: "dropdown",
     // children: demoChildMenus,
   },
@@ -178,7 +178,7 @@ export const NAVIGATION_DEMO: NavItemType[] = [
     href: "#",
     name: "Five columns",
     type: "megaMenu",
-    megaMenu: megaMenuDemo,
+    megaMenu: megaMenuDemo
   },
   {
     id: ncNanoId(),
@@ -193,30 +193,30 @@ export const NAVIGATION_DEMO: NavItemType[] = [
       {
         id: ncNanoId(),
         href: "/listing-experiences",
-        name: "Experiences page",
+        name: "Experiences page"
       },
       {
         id: ncNanoId(),
         href: "/listing-experiences-map",
-        name: "Experiences page (map)",
+        name: "Experiences page (map)"
       },
       {
         id: ncNanoId(),
         href: "/listing-experiences-detail",
-        name: "Experiences Detail",
+        name: "Experiences Detail"
       },
       //
       { id: ncNanoId(), href: "/listing-car", name: "Cars page" },
       { id: ncNanoId(), href: "/listing-car-map", name: "Cars page (map)" },
-      { id: ncNanoId(), href: "/listing-car-detail", name: "Car Detail" },
-    ],
+      { id: ncNanoId(), href: "/listing-car-detail", name: "Car Detail" }
+    ]
   },
   {
     id: ncNanoId(),
     href: "#",
     name: "Templates",
     type: "dropdown",
-    children: templatesChildrenMenus,
+    children: templatesChildrenMenus
   },
 
   {
@@ -224,6 +224,6 @@ export const NAVIGATION_DEMO: NavItemType[] = [
     href: "#",
     name: "Other pages",
     type: "dropdown",
-    children: otherPageChildMenus,
-  },
-];
+    children: otherPageChildMenus
+  }
+]

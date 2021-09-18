@@ -1,8 +1,8 @@
-import Label from "components/Label/Label";
-import React from "react";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import Input from "shared/Input/Input";
-import CommonLayout from "./CommonLayout";
+import Label from "components/Label/Label"
+import React from "react"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import Input from "shared/Input/Input"
+import CommonLayout from "./CommonLayout"
 
 const AccountPass = () => {
   return (
@@ -32,7 +32,7 @@ const AccountPass = () => {
         </div>
       </CommonLayout>
     </div>
-  );
-};
+  )
+}
 
-export default AccountPass;
+export default AccountPass

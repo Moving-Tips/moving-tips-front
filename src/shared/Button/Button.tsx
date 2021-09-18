@@ -1,20 +1,20 @@
-import React, { ButtonHTMLAttributes, FC } from "react";
-import { Link, LinkProps } from "react-router-dom";
-import { LocationStates } from "routers/types";
-import twFocusClass from "utils/twFocusClass";
+import React, { ButtonHTMLAttributes, FC } from "react"
+import { Link, LinkProps } from "react-router-dom"
+import { LocationStates } from "routers/types"
+import twFocusClass from "utils/twFocusClass"
 
 export interface ButtonProps {
-  className?: string;
-  translate?: string;
-  sizeClass?: string;
-  fontSize?: string;
+  className?: string
+  translate?: string
+  sizeClass?: string
+  fontSize?: string
   //
-  loading?: boolean;
-  disabled?: boolean;
-  type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
-  href?: keyof LocationStates | "#" | LinkProps["to"];
-  targetBlank?: boolean;
-  onClick?: () => void;
+  loading?: boolean
+  disabled?: boolean
+  type?: ButtonHTMLAttributes<HTMLButtonElement>["type"]
+  href?: keyof LocationStates | "#" | LinkProps["to"]
+  targetBlank?: boolean
+  onClick?: () => void
 }
 
 const Button: FC<ButtonProps> = ({
@@ -28,11 +28,11 @@ const Button: FC<ButtonProps> = ({
   targetBlank,
   type,
   loading,
-  onClick = () => {},
+  onClick = () => {}
 }) => {
   const CLASSES =
     `nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors ${fontSize} ${sizeClass} ${translate} ${className} ` +
-    twFocusClass(true);
+    twFocusClass(true)
 
   const _renderLoading = () => {
     return (
@@ -56,10 +56,10 @@ const Button: FC<ButtonProps> = ({
           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
         ></path>
       </svg>
-    );
-  };
+    )
+  }
 
-  if (!!href) {
+  if (href) {
     return (
       <Link
         to={href}
@@ -70,7 +70,7 @@ const Button: FC<ButtonProps> = ({
       >
         {children || `This is Link`}
       </Link>
-    );
+    )
   }
 
   return (
@@ -83,7 +83,7 @@ const Button: FC<ButtonProps> = ({
       {loading && _renderLoading()}
       {children || `This is Button`}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

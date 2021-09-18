@@ -1,52 +1,52 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import NcInputNumber from "components/NcInputNumber/NcInputNumber";
-import { FC } from "react";
-import ClearDataButton from "./ClearDataButton";
+import React, { Fragment, useEffect, useState, FC } from "react"
+import { Popover, Transition } from "@headlessui/react"
+import NcInputNumber from "components/NcInputNumber/NcInputNumber"
+
+import ClearDataButton from "./ClearDataButton"
 
 export interface GuestsInputProps {
   defaultValue: {
-    guestAdults?: number;
-    guestChildren?: number;
-    guestInfants?: number;
-  };
-  onChange?: (data: GuestsInputProps["defaultValue"]) => void;
-  fieldClassName?: string;
+    guestAdults?: number
+    guestChildren?: number
+    guestInfants?: number
+  }
+  onChange?: (data: GuestsInputProps["defaultValue"]) => void
+  fieldClassName?: string
 }
 
 const GuestsInput: FC<GuestsInputProps> = ({
   defaultValue,
   onChange,
-  fieldClassName = "[ nc-hero-field-padding ]",
+  fieldClassName = "[ nc-hero-field-padding ]"
 }) => {
   const [guestAdultsInputValue, setGuestAdultsInputValue] = useState(
     defaultValue.guestAdults || 0
-  );
+  )
   const [guestChildrenInputValue, setGuestChildrenInputValue] = useState(
     defaultValue.guestChildren || 0
-  );
+  )
   const [guestInfantsInputValue, setGuestInfantsInputValue] = useState(
     defaultValue.guestInfants || 0
-  );
+  )
 
   useEffect(() => {
-    setGuestAdultsInputValue(defaultValue.guestAdults || 0);
-    setGuestChildrenInputValue(defaultValue.guestChildren || 0);
-    setGuestInfantsInputValue(defaultValue.guestInfants || 0);
-  }, [defaultValue]);
+    setGuestAdultsInputValue(defaultValue.guestAdults || 0)
+    setGuestChildrenInputValue(defaultValue.guestChildren || 0)
+    setGuestInfantsInputValue(defaultValue.guestInfants || 0)
+  }, [defaultValue])
 
   useEffect(() => {
     if (onChange) {
       onChange({
         guestAdults: guestAdultsInputValue,
         guestChildren: guestChildrenInputValue,
-        guestInfants: guestInfantsInputValue,
-      });
+        guestInfants: guestInfantsInputValue
+      })
     }
-  }, [guestAdultsInputValue, guestChildrenInputValue, guestInfantsInputValue]);
+  }, [guestAdultsInputValue, guestChildrenInputValue, guestInfantsInputValue])
 
   const totalGuests =
-    guestChildrenInputValue + guestAdultsInputValue + guestInfantsInputValue;
+    guestChildrenInputValue + guestAdultsInputValue + guestInfantsInputValue
 
   return (
     <Popover className="flex relative [ nc-flex-1 ]">
@@ -83,9 +83,9 @@ const GuestsInput: FC<GuestsInputProps> = ({
               {!!totalGuests && open && (
                 <ClearDataButton
                   onClick={() => {
-                    setGuestAdultsInputValue(0);
-                    setGuestChildrenInputValue(0);
-                    setGuestInfantsInputValue(0);
+                    setGuestAdultsInputValue(0)
+                    setGuestChildrenInputValue(0)
+                    setGuestInfantsInputValue(0)
                   }}
                 />
               )}
@@ -132,7 +132,7 @@ const GuestsInput: FC<GuestsInputProps> = ({
         </>
       )}
     </Popover>
-  );
-};
+  )
+}
 
-export default GuestsInput;
+export default GuestsInput

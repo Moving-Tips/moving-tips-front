@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import { PostDataType } from "data/types";
-import { Link } from "react-router-dom";
-import Avatar from "shared/Avatar/Avatar";
-import { CardAuthor2Props } from "./CardAuthor2";
+import React, { FC } from "react"
+import { PostDataType } from "data/types"
+import { Link } from "react-router-dom"
+import Avatar from "shared/Avatar/Avatar"
+import { CardAuthor2Props } from "./CardAuthor2"
 
 export interface CardAuthor2WhiteProps extends CardAuthor2Props {}
 
@@ -10,9 +10,9 @@ const CardAuthor2White: FC<CardAuthor2WhiteProps> = ({
   className = "",
   author,
   readingTime,
-  date,
+  date
 }) => {
-  const { displayName, href = "/", avatar } = author;
+  const { displayName, href = "/", avatar } = author
   return (
     <Link
       to={href}
@@ -49,7 +49,7 @@ const CardAuthor2White: FC<CardAuthor2WhiteProps> = ({
         </span>
       </div>
     </Link>
-  );
-};
+  )
+}
 
-export default CardAuthor2White;
+export default CardAuthor2White

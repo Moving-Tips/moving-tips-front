@@ -1,27 +1,27 @@
-import React, { FC } from "react";
-import GallerySlider from "components/GallerySlider/GallerySlider";
-import { DEMO_STAY_LISTINGS } from "data/listings";
-import { StayDataType } from "data/types";
-import StartRating from "components/StartRating/StartRating";
-import { Link } from "react-router-dom";
-import BtnLikeIcon from "components/BtnLikeIcon/BtnLikeIcon";
-import SaleOffBadge from "components/SaleOffBadge/SaleOffBadge";
-import Badge from "shared/Badge/Badge";
+import React, { FC } from "react"
+import GallerySlider from "components/GallerySlider/GallerySlider"
+import { DEMO_STAY_LISTINGS } from "data/listings"
+import { StayDataType } from "data/types"
+import StartRating from "components/StartRating/StartRating"
+import { Link } from "react-router-dom"
+import BtnLikeIcon from "components/BtnLikeIcon/BtnLikeIcon"
+import SaleOffBadge from "components/SaleOffBadge/SaleOffBadge"
+import Badge from "shared/Badge/Badge"
 
 export interface StayCardProps {
-  className?: string;
-  ratioClass?: string;
-  data?: StayDataType;
-  size?: "default" | "small";
+  className?: string
+  ratioClass?: string
+  data?: StayDataType
+  size?: "default" | "small"
 }
 
-const DEMO_DATA = DEMO_STAY_LISTINGS[0];
+const DEMO_DATA = DEMO_STAY_LISTINGS[0]
 
 const StayCard: FC<StayCardProps> = ({
   size = "default",
   className = "",
   data = DEMO_DATA,
-  ratioClass,
+  ratioClass
 }) => {
   const {
     galleryImgs,
@@ -35,8 +35,8 @@ const StayCard: FC<StayCardProps> = ({
     isAds,
     price,
     reviewStart,
-    reviewCount,
-  } = data;
+    reviewCount
+  } = data
 
   const renderSliderGallery = () => {
     return (
@@ -45,8 +45,8 @@ const StayCard: FC<StayCardProps> = ({
         <BtnLikeIcon isLiked={like} className="absolute right-3 top-3" />
         {saleOff && <SaleOffBadge className="absolute left-3 top-3" />}
       </div>
-    );
-  };
+    )
+  }
 
   const renderContent = () => {
     return (
@@ -107,8 +107,8 @@ const StayCard: FC<StayCardProps> = ({
           )}
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -120,7 +120,7 @@ const StayCard: FC<StayCardProps> = ({
         {renderContent()}
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default StayCard;
+export default StayCard

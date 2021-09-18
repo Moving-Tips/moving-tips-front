@@ -1,33 +1,33 @@
-import React, { FC } from "react";
-import facebookSvg from "images/Facebook.svg";
-import twitterSvg from "images/Twitter.svg";
-import googleSvg from "images/Google.svg";
-import { Helmet } from "react-helmet";
-import Input from "shared/Input/Input";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import { Link } from "react-router-dom";
+import React, { FC } from "react"
+import facebookSvg from "images/Facebook.svg"
+import twitterSvg from "images/Twitter.svg"
+import googleSvg from "images/Google.svg"
+import { Helmet } from "react-helmet"
+import Input from "shared/Input/Input"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import { Link } from "react-router-dom"
 
 export interface PageSignUpProps {
-  className?: string;
+  className?: string
 }
 
 const loginSocials = [
   {
     name: "Continue with Facebook",
     href: "#",
-    icon: facebookSvg,
+    icon: facebookSvg
   },
   {
     name: "Continue with Twitter",
     href: "#",
-    icon: twitterSvg,
+    icon: twitterSvg
   },
   {
     name: "Continue with Google",
     href: "#",
-    icon: googleSvg,
-  },
-];
+    icon: googleSvg
+  }
+]
 
 const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
   return (
@@ -94,7 +94,7 @@ const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PageSignUp;
+export default PageSignUp

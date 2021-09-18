@@ -1,21 +1,21 @@
-import React, { FC } from "react";
-import { DEMO_CAR_LISTINGS } from "data/listings";
-import { CarDataType } from "data/types";
-import Pagination from "shared/Pagination/Pagination";
-import TabFilters from "./TabFilters";
-import Heading2 from "components/Heading/Heading2";
-import CarCard from "components/CarCard/CarCard";
+import React, { FC } from "react"
+import { DEMO_CAR_LISTINGS } from "data/listings"
+import { CarDataType } from "data/types"
+import Pagination from "shared/Pagination/Pagination"
+import TabFilters from "./TabFilters"
+import Heading2 from "components/Heading/Heading2"
+import CarCard from "components/CarCard/CarCard"
 
 export interface SectionGridFilterCardProps {
-  className?: string;
-  data?: CarDataType[];
+  className?: string
+  data?: CarDataType[]
 }
 
-const DEMO_DATA: CarDataType[] = DEMO_CAR_LISTINGS.filter((_, i) => i < 12);
+const DEMO_DATA: CarDataType[] = DEMO_CAR_LISTINGS.filter((_, i) => i < 12)
 
 const SectionGridFilterCard: FC<SectionGridFilterCardProps> = ({
   className = "",
-  data = DEMO_DATA,
+  data = DEMO_DATA
 }) => {
   return (
     <div
@@ -45,7 +45,7 @@ const SectionGridFilterCard: FC<SectionGridFilterCardProps> = ({
         <Pagination />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionGridFilterCard;
+export default SectionGridFilterCard

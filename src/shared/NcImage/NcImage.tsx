@@ -3,15 +3,15 @@ import React, {
   ImgHTMLAttributes,
   useEffect,
   useRef,
-  useState,
-} from "react";
-import checkInViewIntersectionObserver from "utils/isInViewPortIntersectionObserver";
-import placeholderLarge from "images/placeholder-large.png";
-import placeholderLargeH from "images/placeholder-large-h.png";
+  useState
+} from "react"
+import checkInViewIntersectionObserver from "utils/isInViewPortIntersectionObserver"
+import placeholderLarge from "images/placeholder-large.png"
+import placeholderLargeH from "images/placeholder-large-h.png"
 
 export interface NcImageProps extends ImgHTMLAttributes<HTMLImageElement> {
-  containerClassName?: string;
-  prevImageHorizontal?: boolean;
+  containerClassName?: string
+  prevImageHorizontal?: boolean
 }
 
 const NcImage: FC<NcImageProps> = ({
@@ -22,55 +22,55 @@ const NcImage: FC<NcImageProps> = ({
   className = "object-cover w-full h-full",
   ...args
 }) => {
-  let isMounted = false;
-  const _containerRef = useRef(null);
-  let _imageEl: HTMLImageElement | null = null;
+  let isMounted = false
+  const _containerRef = useRef(null)
+  let _imageEl: HTMLImageElement | null = null
   const placeholderImage = prevImageHorizontal
     ? placeholderLargeH
-    : placeholderLarge;
+    : placeholderLarge
 
-  const [__src, set__src] = useState(placeholderImage);
+  const [__src, set__src] = useState(placeholderImage)
 
   const _initActions = async () => {
-    set__src(placeholderImage);
-    _checkInViewPort();
-  };
+    set__src(placeholderImage)
+    _checkInViewPort()
+  }
 
   const _checkInViewPort = () => {
-    if (!_containerRef.current) return;
+    if (!_containerRef.current) return
     checkInViewIntersectionObserver({
       target: _containerRef.current as any,
       distanceFromEnd: 0,
-      callback: _imageOnViewPort,
-    });
-  };
+      callback: _imageOnViewPort
+    })
+  }
 
   const _imageOnViewPort = () => {
     if (!src) {
-      _handleImageLoaded();
-      return true;
+      _handleImageLoaded()
+      return true
     }
-    _imageEl = new Image();
+    _imageEl = new Image()
     if (_imageEl) {
-      _imageEl.src = src;
-      _imageEl.addEventListener("load", _handleImageLoaded);
+      _imageEl.src = src
+      _imageEl.addEventListener("load", _handleImageLoaded)
     }
-    return true;
-  };
+    return true
+  }
 
   const _handleImageLoaded = () => {
-    if (!isMounted) return;
-    // setImageLoaded(true);
-    set__src(src);
-  };
+    if (!isMounted) return
+    // setImageLoaded(true)
+    set__src(src)
+  }
 
   useEffect(() => {
-    isMounted = true;
-    _initActions();
+    isMounted = true
+    _initActions()
     return () => {
-      isMounted = false;
-    };
-  }, [src]);
+      isMounted = false
+    }
+  }, [src])
 
   return (
     <div
@@ -86,7 +86,7 @@ const NcImage: FC<NcImageProps> = ({
         ></div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default NcImage;
+export default NcImage

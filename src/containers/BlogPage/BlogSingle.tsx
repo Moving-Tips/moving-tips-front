@@ -1,16 +1,16 @@
-import { DEMO_POSTS } from "data/posts";
-import { PostDataType } from "data/types";
-import React from "react";
-import { Link } from "react-router-dom";
-import Avatar from "shared/Avatar/Avatar";
-import Badge from "shared/Badge/Badge";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import ButtonSecondary from "shared/Button/ButtonSecondary";
-import Comment from "shared/Comment/Comment";
-import NcImage from "shared/NcImage/NcImage";
-import SocialsList from "shared/SocialsList/SocialsList";
-import Textarea from "shared/Textarea/Textarea";
-import { Helmet } from "react-helmet";
+import { DEMO_POSTS } from "data/posts"
+import { PostDataType } from "data/types"
+import React from "react"
+import { Link } from "react-router-dom"
+import Avatar from "shared/Avatar/Avatar"
+import Badge from "shared/Badge/Badge"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import ButtonSecondary from "shared/Button/ButtonSecondary"
+import Comment from "shared/Comment/Comment"
+import NcImage from "shared/NcImage/NcImage"
+import SocialsList from "shared/SocialsList/SocialsList"
+import Textarea from "shared/Textarea/Textarea"
+import { Helmet } from "react-helmet"
 
 const BlogSingle = () => {
   const renderHeader = () => {
@@ -63,8 +63,8 @@ const BlogSingle = () => {
           </div>
         </div>
       </header>
-    );
-  };
+    )
+  }
 
   const renderContent = () => {
     return (
@@ -114,7 +114,7 @@ const BlogSingle = () => {
         </p>
         <figure>
           <img
-            src="https://images.unsplash.com/photo-1501493870936-9c2e41625521?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1045&amp;q=80"
+            src="https://images.unsplash.com/photo-1501493870936-9c2e41625521?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ampixlib=rb-1.2.1&ampauto=format&ampfit=crop&ampw=1045&ampq=80"
             alt="nc blog"
             className="rounded-2xl"
           />
@@ -168,8 +168,8 @@ const BlogSingle = () => {
           sentence can't hurt.
         </p>
       </div>
-    );
-  };
+    )
+  }
 
   const renderTags = () => {
     return (
@@ -193,8 +193,8 @@ const BlogSingle = () => {
           Tools
         </a>
       </div>
-    );
-  };
+    )
+  }
 
   const renderAuthor = () => {
     return (
@@ -221,8 +221,8 @@ const BlogSingle = () => {
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderCommentForm = () => {
     return (
@@ -238,8 +238,8 @@ const BlogSingle = () => {
           </div>
         </form>
       </div>
-    );
-  };
+    )
+  }
 
   const renderCommentLists = () => {
     return (
@@ -263,8 +263,8 @@ const BlogSingle = () => {
           </li>
         </ul>
       </div>
-    );
-  };
+    )
+  }
 
   const renderPostRelated = (post: PostDataType) => {
     return (
@@ -296,8 +296,8 @@ const BlogSingle = () => {
         </div>
         <Link to={post.href} />
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div className="nc-PageSingle pt-8 lg:pt-16 ">
@@ -330,7 +330,7 @@ const BlogSingle = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BlogSingle;
+export default BlogSingle

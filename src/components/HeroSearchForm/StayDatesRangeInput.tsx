@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, FC } from "react"
 import {
   AnchorDirectionShape,
   DateRangePicker,
-  FocusedInputShape,
-} from "react-dates";
-import { DateRage } from "./StaySearchForm";
-import { FC } from "react";
-import ClearDataButton from "./ClearDataButton";
-import useWindowSize from "hooks/useWindowResize";
+  FocusedInputShape
+} from "react-dates"
+import { DateRage } from "./StaySearchForm"
 
-type Fields = "checkIn" | "checkOut";
+import ClearDataButton from "./ClearDataButton"
+import useWindowSize from "hooks/useWindowResize"
+
+type Fields = "checkIn" | "checkOut"
 
 export interface StayDatesRangeInputProps {
-  defaultValue: DateRage;
-  defaultFocus?: FocusedInputShape | null;
-  onChange?: (data: DateRage) => void;
-  onFocusChange?: (focus: FocusedInputShape | null) => void;
-  fieldClassName?: string;
-  wrapClassName?: string;
-  numberOfMonths?: number;
-  anchorDirection?: AnchorDirectionShape;
+  defaultValue: DateRage
+  defaultFocus?: FocusedInputShape | null
+  onChange?: (data: DateRage) => void
+  onFocusChange?: (focus: FocusedInputShape | null) => void
+  fieldClassName?: string
+  wrapClassName?: string
+  numberOfMonths?: number
+  anchorDirection?: AnchorDirectionShape
 }
 
 const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
@@ -30,48 +30,48 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
   fieldClassName = "[ nc-hero-field-padding ]",
   wrapClassName = "divide-y divide-neutral-200 lg:divide-y-0 md:border-l md:border-r border-neutral-200 lg:border-none",
   numberOfMonths,
-  anchorDirection,
+  anchorDirection
 }) => {
-  const [focusedInput, setFocusedInput] = useState(defaultFocus);
-  const [stateDate, setStateDate] = useState(defaultValue);
+  const [focusedInput, setFocusedInput] = useState(defaultFocus)
+  const [stateDate, setStateDate] = useState(defaultValue)
 
-  const windowSize = useWindowSize();
-
-  useEffect(() => {
-    setStateDate(defaultValue);
-  }, [defaultValue]);
+  const windowSize = useWindowSize()
 
   useEffect(() => {
-    setFocusedInput(defaultFocus);
-  }, [defaultFocus]);
+    setStateDate(defaultValue)
+  }, [defaultValue])
+
+  useEffect(() => {
+    setFocusedInput(defaultFocus)
+  }, [defaultFocus])
 
   useEffect(() => {
     if (onChange) {
-      onChange(stateDate);
+      onChange(stateDate)
     }
-  }, [stateDate]);
+  }, [stateDate])
 
   const handleClearData = (field: Fields) => {
     switch (field) {
       case "checkIn": {
-        return setStateDate((date) => ({ ...date, startDate: null }));
+        return setStateDate((date) => ({ ...date, startDate: null }))
       }
       case "checkOut": {
-        return setStateDate((date) => ({ ...date, endDate: null }));
+        return setStateDate((date) => ({ ...date, endDate: null }))
       }
 
       default:
-        break;
+        break
     }
-  };
+  }
 
   const handleDateFocusChange = (focus: FocusedInputShape | null) => {
-    setFocusedInput(focus);
-    onFocusChange && onFocusChange(focus);
-  };
+    setFocusedInput(focus)
+    onFocusChange && onFocusChange(focus)
+  }
 
   const renderInputCheckInDate = () => {
-    const focused = focusedInput === "startDate";
+    const focused = focusedInput === "startDate"
     return (
       <div
         className={`relative flex flex-1 ${fieldClassName} flex-shrink-0 items-center space-x-3 cursor-pointer ${
@@ -109,11 +109,11 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
           )}
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderInputCheckOutDate = () => {
-    const focused = focusedInput === "endDate";
+    const focused = focusedInput === "endDate"
     return (
       <div
         className={`relative flex flex-1 ${fieldClassName} flex-shrink-0 items-center space-x-3 cursor-pointer ${
@@ -151,8 +151,8 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
           )}
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div className="relative flex-shrink-0 flex z-10 [ lg:nc-flex-2 ] ">
@@ -186,7 +186,7 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
         {renderInputCheckOutDate()}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default StayDatesRangeInput;
+export default StayDatesRangeInput

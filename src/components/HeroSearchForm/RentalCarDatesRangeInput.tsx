@@ -1,29 +1,29 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState, FC } from "react"
 import {
   AnchorDirectionShape,
   DateRangePicker,
-  FocusedInputShape,
-} from "react-dates";
-import { DateRage } from "./StaySearchForm";
-import { FC } from "react";
-import ClearDataButton from "./ClearDataButton";
-import { Listbox } from "@headlessui/react";
-import { CheckIcon } from "@heroicons/react/solid";
-import { TimeRage } from "./RentalCarSearchForm";
-import useWindowSize from "hooks/useWindowResize";
+  FocusedInputShape
+} from "react-dates"
+import { DateRage } from "./StaySearchForm"
 
-type Fields = "pickUp" | "dropOff";
+import ClearDataButton from "./ClearDataButton"
+import { Listbox } from "@headlessui/react"
+import { CheckIcon } from "@heroicons/react/solid"
+import { TimeRage } from "./RentalCarSearchForm"
+import useWindowSize from "hooks/useWindowResize"
+
+type Fields = "pickUp" | "dropOff"
 
 export interface RentalCarDatesRangeInputProps {
-  defaultDateValue: DateRage;
-  defaultTimeValue: TimeRage;
-  defaultFocus?: FocusedInputShape | null;
-  onChange?: (data: { stateDate: DateRage; stateTimeRage: TimeRage }) => void;
-  onFocusChange?: (focus: FocusedInputShape | null) => void;
-  fieldClassName?: string;
-  wrapFieldClassName?: string;
-  numberOfMonths?: number;
-  anchorDirection?: AnchorDirectionShape;
+  defaultDateValue: DateRage
+  defaultTimeValue: TimeRage
+  defaultFocus?: FocusedInputShape | null
+  onChange?: (data: { stateDate: DateRage, stateTimeRage: TimeRage }) => void
+  onFocusChange?: (focus: FocusedInputShape | null) => void
+  fieldClassName?: string
+  wrapFieldClassName?: string
+  numberOfMonths?: number
+  anchorDirection?: AnchorDirectionShape
 }
 
 const RentalCarDatesRangeInput: FC<RentalCarDatesRangeInputProps> = ({
@@ -35,47 +35,47 @@ const RentalCarDatesRangeInput: FC<RentalCarDatesRangeInputProps> = ({
   fieldClassName = "[ nc-hero-field-padding ]",
   wrapFieldClassName = "flex flex-col xl:flex-row xl:items-center w-full flex-shrink-0 relative [ nc-divide-field ]",
   numberOfMonths,
-  anchorDirection,
+  anchorDirection
 }) => {
-  const [focusedInput, setFocusedInput] = useState(defaultFocus);
-  const [stateDate, setStateDate] = useState(defaultDateValue);
-  const [stateTimeRage, setStateTimeRage] = useState(defaultTimeValue);
+  const [focusedInput, setFocusedInput] = useState(defaultFocus)
+  const [stateDate, setStateDate] = useState(defaultDateValue)
+  const [stateTimeRage, setStateTimeRage] = useState(defaultTimeValue)
 
   //
   useEffect(() => {
-    setStateDate(defaultDateValue);
-  }, [defaultDateValue]);
+    setStateDate(defaultDateValue)
+  }, [defaultDateValue])
 
   useEffect(() => {
-    setFocusedInput(defaultFocus);
-  }, [defaultFocus]);
+    setFocusedInput(defaultFocus)
+  }, [defaultFocus])
 
   useEffect(() => {
     if (onChange) {
-      onChange({ stateDate, stateTimeRage });
+      onChange({ stateDate, stateTimeRage })
     }
-  }, [stateDate, stateTimeRage]);
+  }, [stateDate, stateTimeRage])
 
-  const windowSize = useWindowSize();
+  const windowSize = useWindowSize()
 
   const handleClearData = (field: Fields) => {
     switch (field) {
       case "pickUp": {
-        return setStateDate((date) => ({ ...date, startDate: null }));
+        return setStateDate((date) => ({ ...date, startDate: null }))
       }
       case "dropOff": {
-        return setStateDate((date) => ({ ...date, endDate: null }));
+        return setStateDate((date) => ({ ...date, endDate: null }))
       }
 
       default:
-        break;
+        break
     }
-  };
+  }
 
   const handleDateFocusChange = (focus: FocusedInputShape | null) => {
-    setFocusedInput(focus);
-    onFocusChange && onFocusChange(focus);
-  };
+    setFocusedInput(focus)
+    onFocusChange && onFocusChange(focus)
+  }
 
   const renderEditTime = (field: Fields) => {
     const times = [
@@ -102,20 +102,20 @@ const RentalCarDatesRangeInput: FC<RentalCarDatesRangeInputProps> = ({
       "8:00 PM",
       "9:00 PM",
       "10:00 PM",
-      "11:00 PM",
-    ];
-    let timeValue = stateTimeRage.startTime;
+      "11:00 PM"
+    ]
+    let timeValue = stateTimeRage.startTime
     if (field === "dropOff") {
-      timeValue = stateTimeRage.endTime;
+      timeValue = stateTimeRage.endTime
     }
     return (
       <Listbox
         value={stateTimeRage.startTime}
         onChange={(time) => {
           if (field === "pickUp") {
-            return setStateTimeRage((state) => ({ ...state, startTime: time }));
+            return setStateTimeRage((state) => ({ ...state, startTime: time }))
           }
-          setStateTimeRage((state) => ({ ...state, endTime: time }));
+          setStateTimeRage((state) => ({ ...state, endTime: time }))
         }}
         as="div"
         className="relative flex-shrink-0"
@@ -179,11 +179,11 @@ const RentalCarDatesRangeInput: FC<RentalCarDatesRangeInputProps> = ({
           ))}
         </Listbox.Options>
       </Listbox>
-    );
-  };
+    )
+  }
 
   const renderInputpickUpDate = () => {
-    const focused = focusedInput === "startDate";
+    const focused = focusedInput === "startDate"
     return (
       <div
         className={`flex flex-1 relative  ${fieldClassName} flex-shrink-0 items-center space-x-3 cursor-pointer ${
@@ -230,11 +230,11 @@ const RentalCarDatesRangeInput: FC<RentalCarDatesRangeInputProps> = ({
           )}
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderInputdropOffDate = () => {
-    const focused = focusedInput === "endDate";
+    const focused = focusedInput === "endDate"
     return (
       <div
         className={`flex relative flex-1  ${fieldClassName} flex-shrink-0 items-center space-x-3 cursor-pointer ${
@@ -279,8 +279,8 @@ const RentalCarDatesRangeInput: FC<RentalCarDatesRangeInputProps> = ({
           )}
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div className="relative flex-shrink-0 flex nc-flex-2-auto z-10 ">
@@ -311,7 +311,7 @@ const RentalCarDatesRangeInput: FC<RentalCarDatesRangeInputProps> = ({
         {renderInputdropOffDate()}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default RentalCarDatesRangeInput;
+export default RentalCarDatesRangeInput

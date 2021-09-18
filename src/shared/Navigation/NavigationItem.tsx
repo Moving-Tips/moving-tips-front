@@ -1,69 +1,69 @@
-import { Popover, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/solid";
-import React, { FC, Fragment, useEffect, useState } from "react";
-import { NavLink, RouteComponentProps, withRouter } from "react-router-dom";
-import NcImage from "shared/NcImage/NcImage";
+import { Popover, Transition } from "@headlessui/react"
+import { ChevronDownIcon } from "@heroicons/react/solid"
+import React, { FC, Fragment, useEffect, useState } from "react"
+import { NavLink, RouteComponentProps, withRouter } from "react-router-dom"
+import NcImage from "shared/NcImage/NcImage"
 
 // <--- NavItemType --->
 export interface MegamenuItem {
-  id: string;
-  image: string;
-  title: string;
-  items: NavItemType[];
+  id: string
+  image: string
+  title: string
+  items: NavItemType[]
 }
 export interface NavItemType {
-  id: string;
-  name: string;
-  href: string;
-  targetBlank?: boolean;
-  children?: NavItemType[];
-  megaMenu?: MegamenuItem[];
-  type?: "dropdown" | "megaMenu" | "none";
+  id: string
+  name: string
+  href: string
+  targetBlank?: boolean
+  children?: NavItemType[]
+  megaMenu?: MegamenuItem[]
+  type?: "dropdown" | "megaMenu" | "none"
 }
 
 export interface NavigationItemProps {
-  menuItem: NavItemType;
+  menuItem: NavItemType
 }
 
-type NavigationItemWithRouterProps = RouteComponentProps & NavigationItemProps;
+type NavigationItemWithRouterProps = RouteComponentProps & NavigationItemProps
 
 const NavigationItem: FC<NavigationItemWithRouterProps> = ({
   menuItem,
-  history,
+  history
 }) => {
-  const [menuCurrentHovers, setMenuCurrentHovers] = useState<string[]>([]);
+  const [menuCurrentHovers, setMenuCurrentHovers] = useState<string[]>([])
 
   // CLOSE ALL MENU OPENING WHEN CHANGE HISTORY
   useEffect(() => {
     const unlisten = history.listen(() => {
-      setMenuCurrentHovers([]);
-    });
+      setMenuCurrentHovers([])
+    })
     return () => {
-      unlisten();
-    };
-  }, [history]);
+      unlisten()
+    }
+  }, [history])
 
   const onMouseEnterMenu = (id: string) => {
-    setMenuCurrentHovers((state) => [...state, id]);
-  };
+    setMenuCurrentHovers((state) => [...state, id])
+  }
 
   const onMouseLeaveMenu = (id: string) => {
     setMenuCurrentHovers((state) => {
       return state.filter((item, index) => {
-        return item !== id && index < state.indexOf(id);
-      });
-    });
-  };
+        return item !== id && index < state.indexOf(id)
+      })
+    })
+  }
 
   // ===================== MENU MEGAMENU =====================
   const renderMegaMenu = (menu: NavItemType) => {
-    const isHover = menuCurrentHovers.includes(menu.id);
+    const isHover = menuCurrentHovers.includes(menu.id)
 
-    const isFull = menu.megaMenu && menu.megaMenu?.length > 3;
+    const isFull = menu.megaMenu && menu.megaMenu?.length > 3
     const classPopover = isFull
       ? "menu-megamenu--large"
-      : "menu-megamenu--small relative";
-    const classPanel = isFull ? "left-0" : "-translate-x-1/2 left-1/2";
+      : "menu-megamenu--small relative"
+    const classPanel = isFull ? "left-0" : "-translate-x-1/2 left-1/2"
 
     return (
       <Popover
@@ -118,8 +118,8 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
           </>
         )}
       </Popover>
-    );
-  };
+    )
+  }
   const renderMegaMenuNavlink = (item: NavItemType) => {
     return (
       <li key={item.id}>
@@ -130,19 +130,19 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
           rel="noopener noreferrer"
           className="inline-flex items-center font-normal text-neutral-6000 dark:text-neutral-300 py-1 px-2 rounded hover:text-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
           to={{
-            pathname: item.href || undefined,
+            pathname: item.href || undefined
           }}
           activeClassName="font-semibold text-neutral-900 dark:!text-neutral-200"
         >
           {item.name}
         </NavLink>
       </li>
-    );
-  };
+    )
+  }
 
   // ===================== MENU DROPDOW =====================
   const renderDropdownMenu = (menuDropdown: NavItemType) => {
-    const isHover = menuCurrentHovers.includes(menuDropdown.id);
+    const isHover = menuCurrentHovers.includes(menuDropdown.id)
     return (
       <Popover
         as="li"
@@ -172,13 +172,13 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
                 <ul className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-white dark:ring-opacity-10 text-sm relative bg-white dark:bg-neutral-900 py-4 grid space-y-1">
                   {menuDropdown.children?.map((i) => {
                     if (i.type) {
-                      return renderDropdownMenuNavlinkHasChild(i);
+                      return renderDropdownMenuNavlinkHasChild(i)
                     } else {
                       return (
                         <li key={i.id} className="px-2">
                           {renderDropdownMenuNavlink(i)}
                         </li>
-                      );
+                      )
                     }
                   })}
                 </ul>
@@ -187,11 +187,11 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
           </>
         )}
       </Popover>
-    );
-  };
+    )
+  }
 
   const renderDropdownMenuNavlinkHasChild = (item: NavItemType) => {
-    const isHover = menuCurrentHovers.includes(item.id);
+    const isHover = menuCurrentHovers.includes(item.id)
     return (
       <Popover
         as="li"
@@ -222,13 +222,13 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
                 <ul className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-white dark:ring-opacity-10 text-sm relative bg-white dark:bg-neutral-900 py-4 grid space-y-1">
                   {item.children?.map((i) => {
                     if (i.type) {
-                      return renderDropdownMenuNavlinkHasChild(i);
+                      return renderDropdownMenuNavlinkHasChild(i)
                     } else {
                       return (
                         <li key={i.id} className="px-2">
                           {renderDropdownMenuNavlink(i)}
                         </li>
-                      );
+                      )
                     }
                   })}
                 </ul>
@@ -237,8 +237,8 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
           </>
         )}
       </Popover>
-    );
-  };
+    )
+  }
 
   const renderDropdownMenuNavlink = (item: NavItemType) => {
     return (
@@ -249,7 +249,7 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
         rel="noopener noreferrer"
         className="flex items-center font-normal text-neutral-6000 dark:text-neutral-300 py-2 px-4 rounded-md hover:text-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
         to={{
-          pathname: item.href || undefined,
+          pathname: item.href || undefined
         }}
         activeClassName="!font-medium  dark:!text-neutral-100"
       >
@@ -261,8 +261,8 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
           />
         )}
       </NavLink>
-    );
-  };
+    )
+  }
 
   // ===================== MENU MAIN MENU =====================
   const renderMainItem = (item: NavItemType) => {
@@ -274,7 +274,7 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
         rel="noopener noreferrer"
         className="inline-flex items-center text-sm xl:text-base font-normal text-neutral-700 dark:text-neutral-300 py-2 px-4 xl:px-5 rounded-full hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
         to={{
-          pathname: item.href || undefined,
+          pathname: item.href || undefined
         }}
         activeClassName="!font-semibold !text-neutral-900 bg-neutral-100 dark:bg-neutral-800 dark:!text-neutral-100"
       >
@@ -286,22 +286,22 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
           />
         )}
       </NavLink>
-    );
-  };
+    )
+  }
 
   switch (menuItem.type) {
     case "megaMenu":
-      return renderMegaMenu(menuItem);
+      return renderMegaMenu(menuItem)
     case "dropdown":
-      return renderDropdownMenu(menuItem);
+      return renderDropdownMenu(menuItem)
     default:
-      return <li className="menu-item">{renderMainItem(menuItem)}</li>;
+      return <li className="menu-item">{renderMainItem(menuItem)}</li>
   }
-};
+}
 // Your component own properties
 
 const NavigationItemWithRouter = withRouter<
-  NavigationItemWithRouterProps,
-  FC<NavigationItemWithRouterProps>
->(NavigationItem);
-export default NavigationItemWithRouter;
+NavigationItemWithRouterProps,
+FC<NavigationItemWithRouterProps>
+>(NavigationItem)
+export default NavigationItemWithRouter

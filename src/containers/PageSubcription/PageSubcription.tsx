@@ -1,19 +1,19 @@
-import { CheckIcon } from "@heroicons/react/solid";
-import React, { FC } from "react";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import ButtonSecondary from "shared/Button/ButtonSecondary";
+import { CheckIcon } from "@heroicons/react/solid"
+import React, { FC } from "react"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import ButtonSecondary from "shared/Button/ButtonSecondary"
 
 export interface PageSubcriptionProps {
-  className?: string;
+  className?: string
 }
 
 export interface PricingItem {
-  isPopular: boolean;
-  name: string;
-  pricing: string;
-  desc: string;
-  per: string;
-  features: string[];
+  isPopular: boolean
+  name: string
+  pricing: string
+  desc: string
+  per: string
+  features: string[]
 }
 
 const pricings: PricingItem[] = [
@@ -23,7 +23,7 @@ const pricings: PricingItem[] = [
     pricing: "$5",
     per: "/mo",
     features: ["Automated Reporting", "Faster Processing", "Customizations"],
-    desc: ` Literally you probably haven't heard of them jean shorts.`,
+    desc: ` Literally you probably haven't heard of them jean shorts.`
   },
   {
     isPopular: true,
@@ -34,9 +34,9 @@ const pricings: PricingItem[] = [
       "Everything in Starter",
       "100 Builds",
       "Progress Reports",
-      "Premium Support",
+      "Premium Support"
     ],
-    desc: ` Literally you probably haven't heard of them jean shorts.`,
+    desc: ` Literally you probably haven't heard of them jean shorts.`
   },
   {
     isPopular: false,
@@ -47,11 +47,11 @@ const pricings: PricingItem[] = [
       "Everything in Basic",
       "Unlimited Builds",
       "Advanced Analytics",
-      "Company Evaluations",
+      "Company Evaluations"
     ],
-    desc: ` Literally you probably haven't heard of them jean shorts.`,
-  },
-];
+    desc: ` Literally you probably haven't heard of them jean shorts.`
+  }
+]
 
 const PageSubcription: FC<PageSubcriptionProps> = ({ className = "" }) => {
   const renderPricingItem = (pricing: PricingItem, index: number) => {
@@ -105,8 +105,8 @@ const PageSubcription: FC<PageSubcriptionProps> = ({ className = "" }) => {
           </p>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -128,7 +128,7 @@ const PageSubcription: FC<PageSubcriptionProps> = ({ className = "" }) => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default PageSubcription;
+export default PageSubcription

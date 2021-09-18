@@ -1,21 +1,21 @@
-import React, { FC, ReactNode } from "react";
-import imagePng from "images/hero-right2.png";
+import React, { FC, ReactNode } from "react"
+import imagePng from "images/hero-right2.png"
 import HeroSearchForm, {
-  SearchTab,
-} from "components/HeroSearchForm/HeroSearchForm";
+  SearchTab
+} from "components/HeroSearchForm/HeroSearchForm"
 
 export interface SectionHeroArchivePageProps {
-  className?: string;
-  listingType?: ReactNode;
-  currentPage: "Stay" | "Experiences" | "Rental car";
-  currentTab: SearchTab;
+  className?: string
+  listingType?: ReactNode
+  currentPage: "Stay" | "Experiences" | "Rental car"
+  currentTab: SearchTab
 }
 
 const SectionHeroArchivePage: FC<SectionHeroArchivePageProps> = ({
   className = "",
   listingType,
   currentPage,
-  currentTab,
+  currentTab
 }) => {
   return (
     <div
@@ -31,9 +31,7 @@ const SectionHeroArchivePage: FC<SectionHeroArchivePageProps> = ({
             <i className="text-2xl las la-map-marked"></i>
             <span className="ml-2.5">Jappan </span>
             <span className="mx-5"></span>
-            {listingType ? (
-              listingType
-            ) : (
+            {listingType || (
               <>
                 <i className="text-2xl las la-home"></i>
                 <span className="ml-2.5">112 properties</span>
@@ -52,7 +50,7 @@ const SectionHeroArchivePage: FC<SectionHeroArchivePageProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionHeroArchivePage;
+export default SectionHeroArchivePage

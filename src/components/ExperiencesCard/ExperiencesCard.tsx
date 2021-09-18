@@ -1,27 +1,27 @@
-import React, { FC } from "react";
-import GallerySlider from "components/GallerySlider/GallerySlider";
-import { DEMO_EXPERIENCES_LISTINGS } from "data/listings";
-import { ExperiencesDataType } from "data/types";
-import StartRating from "components/StartRating/StartRating";
-import { Link } from "react-router-dom";
-import BtnLikeIcon from "components/BtnLikeIcon/BtnLikeIcon";
-import SaleOffBadge from "components/SaleOffBadge/SaleOffBadge";
-import Badge from "shared/Badge/Badge";
+import React, { FC } from "react"
+import GallerySlider from "components/GallerySlider/GallerySlider"
+import { DEMO_EXPERIENCES_LISTINGS } from "data/listings"
+import { ExperiencesDataType } from "data/types"
+import StartRating from "components/StartRating/StartRating"
+import { Link } from "react-router-dom"
+import BtnLikeIcon from "components/BtnLikeIcon/BtnLikeIcon"
+import SaleOffBadge from "components/SaleOffBadge/SaleOffBadge"
+import Badge from "shared/Badge/Badge"
 
 export interface ExperiencesCardProps {
-  className?: string;
-  ratioClass?: string;
-  data?: ExperiencesDataType;
-  size?: "default" | "small";
+  className?: string
+  ratioClass?: string
+  data?: ExperiencesDataType
+  size?: "default" | "small"
 }
 
-const DEMO_DATA: ExperiencesDataType = DEMO_EXPERIENCES_LISTINGS[0];
+const DEMO_DATA: ExperiencesDataType = DEMO_EXPERIENCES_LISTINGS[0]
 
 const ExperiencesCard: FC<ExperiencesCardProps> = ({
   size = "default",
   className = "",
   data = DEMO_DATA,
-  ratioClass = "aspect-w-3 aspect-h-3",
+  ratioClass = "aspect-w-3 aspect-h-3"
 }) => {
   const {
     galleryImgs,
@@ -33,8 +33,8 @@ const ExperiencesCard: FC<ExperiencesCardProps> = ({
     isAds,
     price,
     reviewStart,
-    reviewCount,
-  } = data;
+    reviewCount
+  } = data
 
   const renderSliderGallery = () => {
     return (
@@ -43,8 +43,8 @@ const ExperiencesCard: FC<ExperiencesCardProps> = ({
         <BtnLikeIcon isLiked={like} className="absolute right-3 top-3" />
         {saleOff && <SaleOffBadge className="absolute left-3 top-3" />}
       </div>
-    );
-  };
+    )
+  }
 
   const renderContent = () => {
     return (
@@ -101,8 +101,8 @@ const ExperiencesCard: FC<ExperiencesCardProps> = ({
           <StartRating reviewCount={reviewCount} point={reviewStart} />
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -114,7 +114,7 @@ const ExperiencesCard: FC<ExperiencesCardProps> = ({
         {renderContent()}
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default ExperiencesCard;
+export default ExperiencesCard

@@ -1,23 +1,23 @@
-import React, { FC } from "react";
-import GallerySlider from "components/GallerySlider/GallerySlider";
-import { DEMO_STAY_LISTINGS } from "data/listings";
-import { StayDataType } from "data/types";
-import StartRating from "components/StartRating/StartRating";
-import { Link } from "react-router-dom";
-import BtnLikeIcon from "components/BtnLikeIcon/BtnLikeIcon";
-import SaleOffBadge from "components/SaleOffBadge/SaleOffBadge";
-import Badge from "shared/Badge/Badge";
+import React, { FC } from "react"
+import GallerySlider from "components/GallerySlider/GallerySlider"
+import { DEMO_STAY_LISTINGS } from "data/listings"
+import { StayDataType } from "data/types"
+import StartRating from "components/StartRating/StartRating"
+import { Link } from "react-router-dom"
+import BtnLikeIcon from "components/BtnLikeIcon/BtnLikeIcon"
+import SaleOffBadge from "components/SaleOffBadge/SaleOffBadge"
+import Badge from "shared/Badge/Badge"
 
 export interface StayCardHProps {
-  className?: string;
-  data?: StayDataType;
+  className?: string
+  data?: StayDataType
 }
 
-const DEMO_DATA = DEMO_STAY_LISTINGS[0];
+const DEMO_DATA = DEMO_STAY_LISTINGS[0]
 
 const StayCardH: FC<StayCardHProps> = ({
   className = "",
-  data = DEMO_DATA,
+  data = DEMO_DATA
 }) => {
   const {
     galleryImgs,
@@ -30,8 +30,8 @@ const StayCardH: FC<StayCardHProps> = ({
     isAds,
     price,
     reviewStart,
-    reviewCount,
-  } = data;
+    reviewCount
+  } = data
 
   const renderSliderGallery = () => {
     return (
@@ -43,8 +43,8 @@ const StayCardH: FC<StayCardHProps> = ({
         <BtnLikeIcon isLiked={like} className="absolute right-3 top-3" />
         {saleOff && <SaleOffBadge className="absolute left-3 top-3" />}
       </div>
-    );
-  };
+    )
+  }
 
   const renderTienIch = () => {
     return (
@@ -92,8 +92,8 @@ const StayCardH: FC<StayCardHProps> = ({
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderContent = () => {
     return (
@@ -125,8 +125,8 @@ const StayCardH: FC<StayCardHProps> = ({
           </span>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -138,7 +138,7 @@ const StayCardH: FC<StayCardHProps> = ({
         {renderContent()}
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default StayCardH;
+export default StayCardH

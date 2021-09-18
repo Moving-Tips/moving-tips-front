@@ -1,20 +1,20 @@
-import React, { FC } from "react";
-import twFocusClass from "utils/twFocusClass";
-import { PostDataType } from "data/types";
+import React, { FC } from "react"
+import twFocusClass from "utils/twFocusClass"
+import { PostDataType } from "data/types"
 
 export interface NcBookmarkProps {
-  containerClassName?: string;
-  iconClass?: string;
-  isBookmarked: boolean;
-  postId: PostDataType["id"];
-  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  containerClassName?: string
+  iconClass?: string
+  isBookmarked: boolean
+  postId: PostDataType["id"]
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
 const NcBookmark: FC<NcBookmarkProps> = ({
   containerClassName = "h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700",
   isBookmarked,
   postId,
-  onClick = () => {},
+  onClick = () => {}
 }) => {
   return (
     <button
@@ -36,7 +36,7 @@ const NcBookmark: FC<NcBookmarkProps> = ({
         ></path>
       </svg>
     </button>
-  );
-};
+  )
+}
 
-export default NcBookmark;
+export default NcBookmark

@@ -1,8 +1,7 @@
-import React from "react";
-import { FC } from "react";
+import React, { FC } from "react"
 
 export interface ClearDataButtonProps {
-  onClick: () => void;
+  onClick: () => void
 }
 
 const ClearDataButton: FC<ClearDataButtonProps> = ({ onClick }) => {
@@ -13,7 +12,7 @@ const ClearDataButton: FC<ClearDataButtonProps> = ({ onClick }) => {
     >
       <i className="las la-times"></i>
     </span>
-  );
-};
+  )
+}
 
-export default ClearDataButton;
+export default ClearDataButton

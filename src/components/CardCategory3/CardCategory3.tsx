@@ -1,19 +1,19 @@
-import React, { FC } from "react";
-import NcImage from "shared/NcImage/NcImage";
-import { TaxonomyType } from "data/types";
-import { Link } from "react-router-dom";
-import convertNumbThousand from "utils/convertNumbThousand";
+import React, { FC } from "react"
+import NcImage from "shared/NcImage/NcImage"
+import { TaxonomyType } from "data/types"
+import { Link } from "react-router-dom"
+import convertNumbThousand from "utils/convertNumbThousand"
 
 export interface CardCategory3Props {
-  className?: string;
-  taxonomy: TaxonomyType;
+  className?: string
+  taxonomy: TaxonomyType
 }
 
 const CardCategory3: FC<CardCategory3Props> = ({
   className = "",
-  taxonomy,
+  taxonomy
 }) => {
-  const { count, name, href = "/", thumbnail } = taxonomy;
+  const { count, name, href = "/", thumbnail } = taxonomy
   return (
     <Link
       to={href}
@@ -42,7 +42,7 @@ const CardCategory3: FC<CardCategory3Props> = ({
         </span>
       </div>
     </Link>
-  );
-};
+  )
+}
 
-export default CardCategory3;
+export default CardCategory3

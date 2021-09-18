@@ -1,30 +1,28 @@
-import React, { FC } from "react";
-import MainNav1 from "./MainNav1";
-import { Helmet } from "react-helmet";
-import { useEffect } from "react";
-import { useState } from "react";
+import React, { FC, useEffect, useState } from "react"
+import MainNav1 from "./MainNav1"
+import { Helmet } from "react-helmet"
 
 export interface HeaderProps {}
 
 const Header: FC<HeaderProps> = () => {
-  const [isTop, setisTop] = useState(true);
+  const [isTop, setisTop] = useState(true)
 
   useEffect(() => {
     window.onscroll = function () {
-      scrollFunction();
-    };
-  }, []);
+      scrollFunction()
+    }
+  }, [])
 
-  function scrollFunction() {
-    const $head = document.getElementById("nc-chifis-header");
-    if (!$head) return;
+  function scrollFunction () {
+    const $head = document.getElementById("nc-chifis-header")
+    if (!$head) return
     if (
       document.body.scrollTop > 20 ||
       document.documentElement.scrollTop > 20
     ) {
-      !!isTop && setisTop(false);
+      !!isTop && setisTop(false)
     } else {
-      setisTop(true);
+      setisTop(true)
     }
   }
 
@@ -40,7 +38,7 @@ const Header: FC<HeaderProps> = () => {
       {/* NAV */}
       <MainNav1 isTop={isTop} />
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

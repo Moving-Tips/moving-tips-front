@@ -1,9 +1,9 @@
-import { Popover, Transition } from "@headlessui/react";
-import Input from "shared/Input/Input";
-import React, { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react"
+import Input from "shared/Input/Input"
+import React, { Fragment } from "react"
 
 const SearchDropdown = () => {
-  const inputRef = React.createRef<HTMLInputElement>();
+  const inputRef = React.createRef<HTMLInputElement>()
 
   return (
     <React.Fragment>
@@ -11,8 +11,8 @@ const SearchDropdown = () => {
         {({ open }) => {
           if (open) {
             setTimeout(() => {
-              inputRef.current?.focus();
-            }, 100);
+              inputRef.current?.focus()
+            }, 100)
           }
 
           return (
@@ -46,11 +46,11 @@ const SearchDropdown = () => {
                 </Popover.Panel>
               </Transition>
             </>
-          );
+          )
         }}
       </Popover>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default SearchDropdown;
+export default SearchDropdown

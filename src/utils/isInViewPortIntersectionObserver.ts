@@ -1,13 +1,13 @@
 export interface InviewPortType {
-  distanceFromEnd: number;
-  callback: () => boolean;
-  target: HTMLElement;
+  distanceFromEnd: number
+  callback: () => boolean
+  target: HTMLElement
 }
 
 const checkInViewIntersectionObserver = ({
   target,
   distanceFromEnd,
-  callback,
+  callback
 }: InviewPortType) => {
   const _funCallback: IntersectionObserverCallback = (
     entries: IntersectionObserverEntry[],
@@ -16,27 +16,27 @@ const checkInViewIntersectionObserver = ({
     entries.map((entry: IntersectionObserverEntry) => {
       if (entry.isIntersecting) {
         // NEED CALLBACK WILL RETURN BOOLEAN ---- IF TRUE WE WILL UNOBSERVER AND FALSE IS NO
-        const unobserve = callback();
-        unobserve && observer.unobserve(entry.target);
+        const unobserve = callback()
+        unobserve && observer.unobserve(entry.target)
       }
-      return true;
-    });
-  };
+      return true
+    })
+  }
 
   // _checkBrowserSupport-----
   if (typeof window.IntersectionObserver === "undefined") {
     console.error(
       "window.IntersectionObserver === undefined! => Your Browser is Notsupport"
-    );
-    return;
+    )
+    return
   }
   const options = {
     root: null,
     rootMargin: `${distanceFromEnd}px 0px`,
-    threshold: 0,
-  };
-  const observer = new IntersectionObserver(_funCallback, options);
-  target && observer.observe(target);
-};
+    threshold: 0
+  }
+  const observer = new IntersectionObserver(_funCallback, options)
+  target && observer.observe(target)
+}
 
-export default checkInViewIntersectionObserver;
+export default checkInViewIntersectionObserver

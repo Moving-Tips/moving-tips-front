@@ -1,16 +1,16 @@
-import { StarIcon } from "@heroicons/react/solid";
-import React, { FC } from "react";
+import { StarIcon } from "@heroicons/react/solid"
+import React, { FC } from "react"
 
 export interface StartRatingProps {
-  className?: string;
-  point?: number;
-  reviewCount?: number;
+  className?: string
+  point?: number
+  reviewCount?: number
 }
 
 const StartRating: FC<StartRatingProps> = ({
   className = "",
   point = 4.5,
-  reviewCount = 112,
+  reviewCount = 112
 }) => {
   return (
     <div
@@ -23,7 +23,7 @@ const StartRating: FC<StartRatingProps> = ({
         ({reviewCount})
       </span>
     </div>
-  );
-};
+  )
+}
 
-export default StartRating;
+export default StartRating

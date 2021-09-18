@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { MoonIcon } from "@heroicons/react/solid";
-import { SunIcon } from "@heroicons/react/outline";
+import React, { useEffect, useState } from "react"
+import { MoonIcon } from "@heroicons/react/solid"
+import { SunIcon } from "@heroicons/react/outline"
 export interface SwitchDarkModeProps {
-  className?: string;
+  className?: string
 }
 const SwitchDarkMode: React.FC<SwitchDarkModeProps> = ({ className = "" }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
   useEffect(() => {
     if (
@@ -13,33 +13,33 @@ const SwitchDarkMode: React.FC<SwitchDarkModeProps> = ({ className = "" }) => {
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
-      toDark();
+      toDark()
     } else {
-      toLight();
+      toLight()
     }
-  }, []);
+  }, [])
 
   const toDark = () => {
-    setIsDarkMode(true);
-    const root = document.querySelector("html");
-    if (!root) return;
-    !root.classList.contains("dark") && root.classList.add("dark");
-    localStorage.theme = "dark";
-  };
+    setIsDarkMode(true)
+    const root = document.querySelector("html")
+    if (!root) return
+    !root.classList.contains("dark") && root.classList.add("dark")
+    localStorage.theme = "dark"
+  }
 
   const toLight = () => {
-    setIsDarkMode(false);
-    const root = document.querySelector("html");
-    if (!root) return;
-    root.classList.remove("dark");
-    localStorage.theme = "light";
-  };
+    setIsDarkMode(false)
+    const root = document.querySelector("html")
+    if (!root) return
+    root.classList.remove("dark")
+    localStorage.theme = "light"
+  }
 
-  function _toogleDarkMode() {
+  function _toogleDarkMode () {
     if (localStorage.theme === "light") {
-      toDark();
+      toDark()
     } else {
-      toLight();
+      toLight()
     }
   }
 
@@ -55,7 +55,7 @@ const SwitchDarkMode: React.FC<SwitchDarkModeProps> = ({ className = "" }) => {
         <SunIcon className="w-7 h-7" aria-hidden="true" />
       )}
     </button>
-  );
-};
+  )
+}
 
-export default SwitchDarkMode;
+export default SwitchDarkMode

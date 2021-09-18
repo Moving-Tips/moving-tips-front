@@ -1,77 +1,77 @@
-import React, { Fragment, useState } from "react";
-import { Dialog, Popover, Transition } from "@headlessui/react";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import ButtonThird from "shared/Button/ButtonThird";
-import ButtonClose from "shared/ButtonClose/ButtonClose";
-import Checkbox from "shared/Checkbox/Checkbox";
+import React, { Fragment, useState } from "react"
+import { Dialog, Popover, Transition } from "@headlessui/react"
+import ButtonPrimary from "shared/Button/ButtonPrimary"
+import ButtonThird from "shared/Button/ButtonThird"
+import ButtonClose from "shared/ButtonClose/ButtonClose"
+import Checkbox from "shared/Checkbox/Checkbox"
 
 // DEMO DATA
 const typeOfExpriences = [
   {
     name: "Food & drink",
-    description: "Short description for the experience",
+    description: "Short description for the experience"
   },
   {
     name: "Art and culture",
-    description: "Short description for the experience",
+    description: "Short description for the experience"
   },
   {
     name: "Nature and outdoors",
-    description: "Short description for the experience",
+    description: "Short description for the experience"
   },
   {
     name: "Sports",
-    description: "Short description for the experience",
-  },
-];
+    description: "Short description for the experience"
+  }
+]
 
 const timeOfdays = [
   {
     name: "Morning",
-    description: "Start before 12pm",
+    description: "Start before 12pm"
   },
   {
     name: "Afternoon",
-    description: "Start after 12pm",
+    description: "Start after 12pm"
   },
   {
     name: "Evening",
-    description: "Start after 5pm",
-  },
-];
+    description: "Start after 5pm"
+  }
+]
 
 const rangePrices = [
   {
-    name: "$ 0 - 20",
+    name: "$ 0 - 20"
   },
   {
     name: "$ 20 - 50",
-    defaultChecked: true,
+    defaultChecked: true
   },
   {
     name: "$ 50 - 100",
-    defaultChecked: true,
+    defaultChecked: true
   },
   {
-    name: "$ 100 - 200",
+    name: "$ 100 - 200"
   },
   {
-    name: "> $1,000",
-  },
-];
+    name: "> $1,000"
+  }
+]
 
 //
-const moreFilter1 = typeOfExpriences;
-const moreFilter2 = timeOfdays;
-const moreFilter3 = rangePrices;
+const moreFilter1 = typeOfExpriences
+const moreFilter2 = timeOfdays
+const moreFilter3 = rangePrices
 
 const TabFilters = () => {
-  const [isOpenMoreFilter, setisOpenMoreFilter] = useState(false);
+  const [isOpenMoreFilter, setisOpenMoreFilter] = useState(false)
   //
-  const [isOnSale, setIsOnSale] = useState(true);
+  const [isOnSale, setIsOnSale] = useState(true)
   //
-  const closeModalMoreFilter = () => setisOpenMoreFilter(false);
-  const openModalMoreFilter = () => setisOpenMoreFilter(true);
+  const closeModalMoreFilter = () => setisOpenMoreFilter(false)
+  const openModalMoreFilter = () => setisOpenMoreFilter(true)
 
   const renderXClear = () => {
     return (
@@ -89,8 +89,8 @@ const TabFilters = () => {
           />
         </svg>
       </span>
-    );
-  };
+    )
+  }
 
   const renderTabsTypeOfPlace = () => {
     return (
@@ -143,8 +143,8 @@ const TabFilters = () => {
           </>
         )}
       </Popover>
-    );
-  };
+    )
+  }
 
   const renderTabsTimeOfDay = () => {
     return (
@@ -197,8 +197,8 @@ const TabFilters = () => {
           </>
         )}
       </Popover>
-    );
-  };
+    )
+  }
 
   const renderTabsPriceRage = () => {
     return (
@@ -307,8 +307,8 @@ const TabFilters = () => {
           </>
         )}
       </Popover>
-    );
-  };
+    )
+  }
 
   const renderTabOnSale = () => {
     return (
@@ -323,18 +323,18 @@ const TabFilters = () => {
         <span>On sale</span>
         {isOnSale && renderXClear()}
       </div>
-    );
-  };
+    )
+  }
 
   const renderMoreFilterItem = (
-    data: {
-      name: string;
-      description?: string;
-      defaultChecked?: boolean;
-    }[]
+    data: Array<{
+      name: string
+      description?: string
+      defaultChecked?: boolean
+    }>
   ) => {
-    const list1 = data.filter((_, i) => i < data.length / 2);
-    const list2 = data.filter((_, i) => i >= data.length / 2);
+    const list1 = data.filter((_, i) => i < data.length / 2)
+    const list2 = data.filter((_, i) => i >= data.length / 2)
     return (
       <div className="grid grid-cols-2 gap-8">
         <div className="flex flex-col space-y-5">
@@ -360,8 +360,8 @@ const TabFilters = () => {
           ))}
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderTabMobileFilter = () => {
     return (
@@ -400,7 +400,7 @@ const TabFilters = () => {
                 className="inline-block h-screen align-middle"
                 aria-hidden="true"
               >
-                &#8203;
+                &#8203
               </span>
               <Transition.Child
                 className="inline-block py-8 h-screen w-full"
@@ -469,8 +469,8 @@ const TabFilters = () => {
           </Dialog>
         </Transition>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div className="flex lg:space-x-4">
@@ -485,7 +485,7 @@ const TabFilters = () => {
         {renderTabOnSale()}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TabFilters;
+export default TabFilters

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const LogoSvgLight = () => {
   return (
@@ -20,7 +20,7 @@ const LogoSvgLight = () => {
         fill="#f1f5f9"
       />
     </svg>
-  );
-};
+  )
+}
 
-export default LogoSvgLight;
+export default LogoSvgLight
