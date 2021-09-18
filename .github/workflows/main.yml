@@ -16,27 +16,27 @@ jobs:
 
   build:
     needs: checkout
-    name: Build on Main
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 13.x
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13.x
 
-    - name: Cache dependencies
-      uses: actions/cache@v2
-      with:
-        path: |
-          **/node_modules
-        key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
-    - name: Install NPM packages
-      run: npm ci
+      - name: Install NPM packages
+        run: npm ci
 
-    - name: Run tests
-      run: npm run test
+      - name: Run tests
+        run: npm run test
 
-    - name: Build project
-      run: npm run build
+      - name: Build project
+        run: npm run build

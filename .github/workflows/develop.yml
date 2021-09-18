@@ -7,7 +7,7 @@ on:
 
 jobs:
   checkout:
-    name: Build
+    name: Checkout
     runs-on: ubuntu-latest
 
     steps:
@@ -16,24 +16,27 @@ jobs:
 
   build:
     needs: checkout
-    name: Development test
+    name: Tests
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 13.x
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Cache dependencies
-      uses: actions/cache@v2
-      with:
-        path: |
-          **/node_modules
-        key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13.x
 
-    - name: Install NPM packages
-      run: npm ci
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
-    - name: Run tests
-      run: npm run test
+      - name: Install NPM packages
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test
