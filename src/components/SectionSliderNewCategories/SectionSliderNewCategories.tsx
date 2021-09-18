@@ -27,7 +27,7 @@ const DEMO_CATS: TaxonomyType[] = [
     taxonomy: "category",
     count: 17288,
     thumbnail:
-      "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
   },
   {
     id: "2",
@@ -36,7 +36,7 @@ const DEMO_CATS: TaxonomyType[] = [
     taxonomy: "category",
     count: 2118,
     thumbnail:
-      "https://images.pexels.com/photos/2351649/pexels-photo-2351649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            "https://images.pexels.com/photos/2351649/pexels-photo-2351649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   },
   {
     id: "3",
@@ -45,7 +45,7 @@ const DEMO_CATS: TaxonomyType[] = [
     taxonomy: "category",
     count: 36612,
     thumbnail:
-      "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   },
   {
     id: "4",
@@ -54,7 +54,7 @@ const DEMO_CATS: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/248837/pexels-photo-248837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            "https://images.pexels.com/photos/248837/pexels-photo-248837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   },
   {
     id: "5",
@@ -63,7 +63,7 @@ const DEMO_CATS: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/3613236/pexels-photo-3613236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            "https://images.pexels.com/photos/3613236/pexels-photo-3613236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   },
   {
     id: "6",
@@ -72,7 +72,7 @@ const DEMO_CATS: TaxonomyType[] = [
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/3613236/pexels-photo-3613236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            "https://images.pexels.com/photos/3613236/pexels-photo-3613236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   }
 ]
 
@@ -122,13 +122,13 @@ const SectionSliderNewCategories: FC<SectionSliderNewCategoriesProps> = ({
   const renderCard = (item: TaxonomyType, index: number) => {
     switch (categoryCardType) {
       case "card3":
-        return <CardCategory3 taxonomy={item} />
+        return <CardCategory3 taxonomy={item}/>
       case "card4":
-        return <CardCategory4 taxonomy={item} />
+        return <CardCategory4 taxonomy={item}/>
       case "card5":
-        return <CardCategory5 taxonomy={item} />
+        return <CardCategory5 taxonomy={item}/>
       default:
-        return <CardCategory3 taxonomy={item} />
+        return <CardCategory3 taxonomy={item}/>
     }
   }
 
@@ -153,7 +153,7 @@ const SectionSliderNewCategories: FC<SectionSliderNewCategoriesProps> = ({
         </div>
 
         {sliderStyle === "style2" && (
-          <NextPrev className="justify-center mt-16" />
+          <NextPrev className="justify-center mt-16"/>
         )}
       </div>
     </div>
