@@ -6,20 +6,13 @@ on:
       - develop
 
 jobs:
-  checkout:
-    name: Checkout
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
   build:
-    needs: checkout
     name: Tests
     runs-on: ubuntu-latest
 
     steps:
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -40,3 +33,5 @@ jobs:
 
       - name: Run tests
         run: npm run test
+
+      - run: echo "This job's status is ${{ job.status }}."

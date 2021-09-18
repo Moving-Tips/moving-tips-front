@@ -6,20 +6,16 @@ on:
       - main
 
 jobs:
-  checkout:
-    name: Checkout
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
   build:
-    needs: checkout
     name: Build
     runs-on: ubuntu-latest
 
     steps:
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Install Node.js
         uses: actions/setup-node@v1
         with:
@@ -68,3 +64,5 @@ jobs:
 
       - name: Deploy static site to S3 bucket
         run: aws s3 sync ./build s3://www.movingtips.com.br  --delete
+
+      - run: echo "This job's status is ${{ job.status }}."
