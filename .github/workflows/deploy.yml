@@ -43,9 +43,6 @@ jobs:
         name: production-files
         path: ./build
 
-    - name: Checkout
-      uses: actions/checkout@v1
-
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -54,4 +51,4 @@ jobs:
         aws-region: sa-east-1
 
     - name: Deploy static site to S3 bucket
-      run: ls -l | aws s3 sync ./build s3://www.movingtips.com.br  --delete
+      run: aws s3 sync ./build s3://www.movingtips.com.br  --delete
