@@ -7,48 +7,34 @@ on:
 
 jobs:
   build:
-    name: Build on Main
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
 
-    - name: Install Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 13.x
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Install NPM packages
-      run: npm ci
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13.x
 
-    - name: Build project
-      run: npm run build
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
-    - name: Run tests
-      run: npm run test
+      - name: Install NPM packages
+        run: npm ci
 
-    - name: Upload production-ready build files
-      uses: actions/upload-artifact@v2
-      with:
-        name: production-files
-        path: ./build
+      - name: Run tests
+        run: npm run test
 
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+      - name: Build project
+        run: npm run build
 
-    steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v2
-      with:
-        name: production-files
-        path: ./build
-
-    - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+      - run: echo "This job's status is ${{ job.status }}."

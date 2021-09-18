@@ -7,20 +7,31 @@ on:
 
 jobs:
   build:
-    name: Development test
+    name: Tests
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
 
-    - name: Install Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 13.x
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Install NPM packages
-      run: npm ci
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13.x
 
-    - name: Run tests
-      run: npm run test
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install NPM packages
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test
+
+      - run: echo "This job's status is ${{ job.status }}."
