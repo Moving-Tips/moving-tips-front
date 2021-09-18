@@ -1,29 +1,39 @@
-name: Development & test
+name: Development test
 
 on:
   push:
     branches:
       - develop
-  pull_request:
-    branches:
-      - develop
 
 jobs:
-  build:
-    name: Test Develop
+  checkout:
+    name: Build
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+  build:
+    needs: checkout
+    name: Development test
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Install Node.js
       uses: actions/setup-node@v1
       with:
         node-version: 13.x
-    
+
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: |
+          **/node_modules
+        key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
     - name: Install NPM packages
-      run: npm ci
-    
+      run: npm install
+
     - name: Run tests
       run: npm run test
