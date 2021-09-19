@@ -21,6 +21,7 @@ const PasswordInput: FC<PasswordProps> = ({ className = "" }) => {
                 Password
         </span>
         <Input
+          role="password"
           type="password"
           className="mt-1"
           onBlur={(e) => validatePasswordLength(e)}
