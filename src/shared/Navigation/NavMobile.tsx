@@ -70,7 +70,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
       <Disclosure
         key={item.id}
         as="li"
-        className="text-neutral-900 dark:text-white"
+        className="text-neutral-900 dark:text-white colorMenu"
       >
         <NavLink
           exact
@@ -117,16 +117,8 @@ const NavMobile: React.FC<NavMobileProps> = ({
         <Logo />
         <div className="flex flex-col mt-5 text-neutral-700 dark:text-neutral-300 text-sm">
           <span>
-            Discover the most outstanding articles on all topics of life. Write
-            your stories and share them
+            Descubra os melhores locais para você e sua familia!
           </span>
-
-          <div className="flex justify-between items-center mt-4">
-            <SocialsList itemClass="w-9 h-9 flex items-center justify-center rounded-full bg-neutral-100 text-xl dark:bg-neutral-800 dark:text-neutral-300" />
-            <span className="block">
-              <SwitchDarkMode className="bg-neutral-100 dark:bg-neutral-800" />
-            </span>
-          </div>
         </div>
         <span className="absolute right-2 top-2 p-1">
           <ButtonClose onClick={onClickClose} />

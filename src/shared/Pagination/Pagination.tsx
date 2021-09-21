@@ -55,7 +55,6 @@ const Pagination: FC<PaginationProps> = ({ className = "" }) => {
     <nav
       className={`nc-Pagination inline-flex space-x-1 text-base font-medium ${className}`}
     >
-      {DEMO_PAGINATION.map(renderItem)}
     </nav>
   )
 }

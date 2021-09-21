@@ -51,11 +51,6 @@ const HeroSearchForm: FC<HeroSearchFormProps> = ({
     switch (tabActive) {
       case "Stay":
         return <StaySearchForm haveDefaultValue={isArchivePage} />
-      case "Experiences":
-        return <ExperiencesSearchForm haveDefaultValue={isArchivePage} />
-      case "Rental car":
-        return <RentalCarSearchForm haveDefaultValue={isArchivePage} />
-
       default:
         return null
     }
@@ -66,7 +61,6 @@ const HeroSearchForm: FC<HeroSearchFormProps> = ({
       className={`nc-HeroSearchForm w-full max-w-6xl py-5 lg:py-0 ${className}`}
       data-nc-id="HeroSearchForm"
     >
-      {renderTab()}
       {renderForm()}
     </div>
   )

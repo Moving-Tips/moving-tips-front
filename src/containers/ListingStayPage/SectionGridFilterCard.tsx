@@ -23,10 +23,6 @@ const SectionGridFilterCard: FC<SectionGridFilterCardProps> = ({
       data-nc-id="SectionGridFilterCard"
     >
       <Heading2 />
-
-      <div className="mb-8 lg:mb-11">
-        <TabFilters />
-      </div>
       <div className="grid grid-cols-1 gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {data.map((stay) => (
           <StayCard key={stay.id} data={stay} />
