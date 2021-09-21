@@ -34,11 +34,6 @@ import PageAddListing2 from "containers/PageAddListing1/PageAddListing2"
 import PageAddListing3 from "containers/PageAddListing1/PageAddListing3"
 import PageAddListing4 from "containers/PageAddListing1/PageAddListing4"
 import PageAddListing5 from "containers/PageAddListing1/PageAddListing5"
-import PageAddListing6 from "containers/PageAddListing1/PageAddListing6"
-import PageAddListing7 from "containers/PageAddListing1/PageAddListing7"
-import PageAddListing8 from "containers/PageAddListing1/PageAddListing8"
-import PageAddListing9 from "containers/PageAddListing1/PageAddListing9"
-import PageAddListing10 from "containers/PageAddListing1/PageAddListing10"
 
 export const pages: Page[] = [
   { path: "/", exact: true, component: PageHome },
@@ -81,11 +76,6 @@ export const pages: Page[] = [
   { path: "/add-listing-3", component: PageAddListing3 },
   { path: "/add-listing-4", component: PageAddListing4 },
   { path: "/add-listing-5", component: PageAddListing5 },
-  { path: "/add-listing-6", component: PageAddListing6 },
-  { path: "/add-listing-7", component: PageAddListing7 },
-  { path: "/add-listing-8", component: PageAddListing8 },
-  { path: "/add-listing-9", component: PageAddListing9 },
-  { path: "/add-listing-10", component: PageAddListing10 },
   //
   { path: "/contact", component: PageContact },
   { path: "/about", component: PageAbout },

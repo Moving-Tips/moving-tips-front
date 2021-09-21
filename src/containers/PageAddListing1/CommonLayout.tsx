@@ -26,7 +26,7 @@ const CommonLayout: FC<CommonLayoutProps> = ({
         <div>
           <span className="text-4xl font-semibold">{index}</span>{" "}
           <span className="text-lg text-neutral-500 dark:text-neutral-400">
-            / 10
+            / 05
           </span>
         </div>
 
@@ -35,9 +35,9 @@ const CommonLayout: FC<CommonLayoutProps> = ({
 
         {/* --------------------- */}
         <div className="flex justify-end space-x-5">
-          <ButtonSecondary href={backtHref}>Go back</ButtonSecondary>
+          <ButtonSecondary href={backtHref}>Voltar</ButtonSecondary>
           <ButtonPrimary href={nextHref}>
-            {nextBtnText || "Continue"}
+            {nextBtnText || "Continuar"}
           </ButtonPrimary>
         </div>
       </div>
