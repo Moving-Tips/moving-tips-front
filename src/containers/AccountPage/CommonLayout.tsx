@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import { FC } from "react"
 
 import { NavLink } from "react-router-dom"
 
@@ -15,28 +15,14 @@ const CommonLayout: FC<CommonLayoutProps> = ({ children }) => {
               to="/account"
               className="block py-5 md:py-8 border-b-2 border-transparent flex-shrink-0"
             >
-              Account info
-            </NavLink>
-            <NavLink
-              activeClassName="!border-primary-500"
-              to="/account-savelists"
-              className="block py-5 md:py-8 border-b-2 border-transparent flex-shrink-0"
-            >
-              Save lists
+              Perfil do usuário
             </NavLink>
             <NavLink
               activeClassName="!border-primary-500"
               to="/account-password"
               className="block py-5 md:py-8 border-b-2 border-transparent flex-shrink-0"
             >
-              Change password
-            </NavLink>
-            <NavLink
-              activeClassName="!border-primary-500"
-              to="/account-billing"
-              className="block py-5 md:py-8 border-b-2 border-transparent flex-shrink-0"
-            >
-              Change Billing
+              Trocar Senha
             </NavLink>
           </div>
         </div>

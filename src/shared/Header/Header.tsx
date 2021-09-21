@@ -32,7 +32,7 @@ const Header: FC<HeaderProps> = () => {
       className="nc-Header lg:sticky lg:top-0 w-full lg:left-0 lg:right-0 z-40"
     >
       <Helmet>
-        <title>Chisfis || Booking React Template</title>
+        <title>MovingTips || Booking React Template</title>
       </Helmet>
 
       {/* NAV */}

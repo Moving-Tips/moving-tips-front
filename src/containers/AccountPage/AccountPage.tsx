@@ -1,5 +1,5 @@
 import Label from "components/Label/Label"
-import React, { FC } from "react"
+import { FC } from "react"
 import Avatar from "shared/Avatar/Avatar"
 import ButtonPrimary from "shared/Button/ButtonPrimary"
 import Input from "shared/Input/Input"
@@ -16,12 +16,12 @@ const AccountPage: FC<AccountPageProps> = ({ className = "" }) => {
   return (
     <div className={`nc-AccountPage ${className}`} data-nc-id="AccountPage">
       <Helmet>
-        <title>Account || Booking React Template</title>
+        <title>Perfil do usuário || MovingTips</title>
       </Helmet>
       <CommonLayout>
         <div className="space-y-6 sm:space-y-8">
           {/* HEADING */}
-          <h2 className="text-3xl font-semibold">Account infomation</h2>
+          <h2 className="text-3xl font-semibold">Informações da conta</h2>
           <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
           <div className="flex flex-col md:flex-row">
             <div className="flex-shrink-0 flex items-start">
@@ -44,7 +44,7 @@ const AccountPage: FC<AccountPageProps> = ({ className = "" }) => {
                     />
                   </svg>
 
-                  <span className="mt-1 text-xs">Change Image</span>
+                  <span className="mt-1 text-xs">Trocar de Foto</span>
                 </div>
                 <input
                   type="file"
@@ -54,54 +54,54 @@ const AccountPage: FC<AccountPageProps> = ({ className = "" }) => {
             </div>
             <div className="flex-grow mt-10 md:mt-0 md:pl-16 max-w-3xl space-y-6">
               <div>
-                <Label>Name</Label>
-                <Input className="mt-1.5" defaultValue="Eden Tuan" />
+                <Label>Nome</Label>
+                <Input className="mt-1.5" defaultValue="" />
               </div>
               {/* ---- */}
               <div>
-                <Label>Gender</Label>
+                <Label>Genêro</Label>
                 <Select className="mt-1.5">
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Other">Other</option>
+                  <option value="Male">Masculino</option>
+                  <option value="Female">Feminino</option>
+                  <option value="Other">Outro</option>
                 </Select>
               </div>
               {/* ---- */}
               <div>
-                <Label>Username</Label>
-                <Input className="mt-1.5" defaultValue="@eden_tuan" />
+                <Label>Nome de usuário</Label>
+                <Input className="mt-1.5" defaultValue="" />
               </div>
               {/* ---- */}
               <div>
-                <Label>Email</Label>
-                <Input className="mt-1.5" defaultValue="example@email.com" />
+                <Label>Email *</Label>
+                <Input className="mt-1.5" defaultValue="" />
               </div>
               {/* ---- */}
               <div className="max-w-lg">
-                <Label>Date of birth</Label>
+                <Label>Data de Nascimento</Label>
                 <Input
                   className="mt-1.5"
                   type="date"
-                  defaultValue="1990-07-22"
+                  defaultValue=""
                 />
               </div>
               {/* ---- */}
               <div>
-                <Label>Addess</Label>
-                <Input className="mt-1.5" defaultValue="New york, USA" />
+                <Label>Endereço</Label>
+                <Input className="mt-1.5" defaultValue="" />
               </div>
               {/* ---- */}
               <div>
-                <Label>Phone number</Label>
-                <Input className="mt-1.5" defaultValue="003 888 232" />
+                <Label>Celular</Label>
+                <Input className="mt-1.5" defaultValue="" />
               </div>
               {/* ---- */}
               <div>
-                <Label>About you</Label>
+                <Label>Sobre você</Label>
                 <Textarea className="mt-1.5" defaultValue="..." />
               </div>
               <div className="pt-2">
-                <ButtonPrimary>Update info</ButtonPrimary>
+                <ButtonPrimary>Atualizar informações</ButtonPrimary>
               </div>
             </div>
           </div>
