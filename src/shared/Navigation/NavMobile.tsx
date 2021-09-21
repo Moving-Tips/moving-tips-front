@@ -129,7 +129,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
       </ul>
       <div className="flex items-center justify-between py-6 px-5 space-x-4">
         <a href="/#" target="_blank" rel="noopener noreferrer">
-          <ButtonPrimary>Get Template</ButtonPrimary>
+          <ButtonPrimary>Nova Análise</ButtonPrimary>
         </a>
       </div>
     </div>
