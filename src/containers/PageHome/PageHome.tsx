@@ -124,7 +124,7 @@ function PageHome () {
   return (
     <div className="nc-PageHome relative overflow-hidden">
       <Helmet>
-        <title>Chisfis || Booking React Template</title>
+        <title>Moving Tips</title>
       </Helmet>
       {/* GLASSMOPHIN */}
       <BgGlassmorphism />
@@ -156,7 +156,7 @@ function PageHome () {
             categoryCardType="card4"
             itemPerRow={4}
             heading="Suggestions for discovery"
-            subHeading="Popular places to stay that Chisfis recommends for you"
+            subHeading="Popular places to stay that Moving Tips recommends for you"
             sliderStyle="style2"
           />
         </div>

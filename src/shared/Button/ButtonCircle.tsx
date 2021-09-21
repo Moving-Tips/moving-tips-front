@@ -14,7 +14,7 @@ const ButtonCircle: React.FC<ButtonCircleProps> = ({
   return (
     <button
       className={
-        `ttnc-ButtonCircle flex items-center justify-center rounded-full !leading-none disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 ${className} ${size} ` +
+        `ttnc-ButtonCircle flex items-center justify-center rounded-full background:4F46E5 !leading-none disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 ${className} ${size} ` +
         twFocusClass(true)
       }
       {...args}

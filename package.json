@@ -85,7 +85,7 @@
     "@types/react-router-dom": "^5.1.7",
     "@types/redux-logger": "^3.0.8",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "9",
     "eslint": "^7.32.0",
     "eslint-config-standard-with-typescript": "^11.0.1",
     "eslint-plugin-import": "^2.20.2",
@@ -96,8 +96,8 @@
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
     "node-sass": "^5.0.0",
-    "postcss": "^7.0.36",
+    "postcss": "7",
     "redux-logger": "^3.0.6",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }
