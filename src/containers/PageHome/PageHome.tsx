@@ -124,7 +124,7 @@ function PageHome () {
   return (
     <div className="nc-PageHome relative overflow-hidden">
       <Helmet>
-        <title>MovingTips || Booking React Template</title>
+        <title>MovingTips || Encontre seu novo lar</title>
       </Helmet>
       {/* GLASSMOPHIN */}
       <BgGlassmorphism />

@@ -21,7 +21,7 @@ const ListingStayMapPage: FC<ListingStayMapPageProps> = ({
       data-nc-id="ListingStayMapPage"
     >
       <Helmet>
-        <title>MovingTips || Booking React Template</title>
+        <title>MovingTips || Encontre seu novo lar</title>
       </Helmet>
       <BgGlassmorphism />
 
