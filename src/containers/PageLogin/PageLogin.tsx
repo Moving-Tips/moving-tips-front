@@ -4,7 +4,7 @@ import twitterSvg from "images/Twitter.svg"
 import googleSvg from "images/Google.svg"
 import { Helmet } from "react-helmet"
 import Input from "shared/Input/Input"
-import { Link, Redirect } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import ButtonPrimary from "shared/Button/ButtonPrimary"
 import { usersCreated } from "data/users"
 export interface PageLoginProps {
@@ -32,9 +32,10 @@ const loginSocials = [
 const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const history = useHistory()
 
   const validateLogin = () => {
-    usersCreated[0] === email && usersCreated[1] === password ? alert("Logado") : alert("Email ou senha inválidos")
+    usersCreated[0] === email && usersCreated[1] === password ? callHome() : alert("Email ou senha inválidos")
   }
 
   const handleEmail = (event: { target: { value: any } }) => {
@@ -46,7 +47,7 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
   }
 
   const callHome = () => {
-
+    history.push("/")
   }
 
   return (
