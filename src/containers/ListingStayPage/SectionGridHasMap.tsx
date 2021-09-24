@@ -22,7 +22,9 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
       <div className="relative flex min-h-screen">
         {/* CARDSSSS */}
         <div className="min-h-screen w-full xl:w-[780px] 2xl:w-[880px] flex-shrink-0 xl:px-8 ">
-          <Heading2 />
+          <Heading2
+            heading = {"Experiências"}
+          />
           <div className="mb-8 lg:mb-11">
           </div>
           <div className="grid grid-cols-1 gap-8">
