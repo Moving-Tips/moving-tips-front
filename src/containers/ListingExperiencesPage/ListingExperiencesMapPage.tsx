@@ -21,7 +21,7 @@ const ListingExperiencesMapPage: FC<ListingExperiencesMapPageProps> = ({
       data-nc-id="ListingExperiencesMapPage"
     >
       <Helmet>
-        <title>MovingTips || Booking React Template</title>
+        <title>MovingTips || Encontre seu novo lar</title>
       </Helmet>
       <BgGlassmorphism />
 

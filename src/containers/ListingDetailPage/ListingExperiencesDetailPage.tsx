@@ -16,7 +16,7 @@ import ButtonPrimary from "shared/Button/ButtonPrimary"
 import ButtonSecondary from "shared/Button/ButtonSecondary"
 import Input from "shared/Input/Input"
 import NcImage from "shared/NcImage/NcImage"
-import LikeSaveBtns from "./LikeSaveBtns"
+import LikeBtn from "./LikeBtn"
 import ModalPhotos from "./ModalPhotos"
 import BackgroundSection from "components/BackgroundSection/BackgroundSection"
 import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories"
@@ -85,7 +85,7 @@ const ListingExperiencesDetailPage: FC<ListingExperiencesDetailPageProps> = ({
         {/* 1 */}
         <div className="flex justify-between items-center">
           <Badge color="pink" name="Specific Tour" />
-          <LikeSaveBtns />
+          <LikeBtn />
         </div>
 
         {/* 2 */}
