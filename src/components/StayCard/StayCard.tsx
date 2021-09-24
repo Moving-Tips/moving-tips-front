@@ -1,11 +1,10 @@
-import React, { FC } from "react"
+import { FC } from "react"
 import GallerySlider from "components/GallerySlider/GallerySlider"
 import { DEMO_STAY_LISTINGS } from "data/listings"
 import { StayDataType } from "data/types"
 import StartRating from "components/StartRating/StartRating"
 import { Link } from "react-router-dom"
 import BtnLikeIcon from "components/BtnLikeIcon/BtnLikeIcon"
-import SaleOffBadge from "components/SaleOffBadge/SaleOffBadge"
 import Badge from "shared/Badge/Badge"
 
 export interface StayCardProps {
@@ -28,12 +27,9 @@ const StayCard: FC<StayCardProps> = ({
     listingCategory,
     address,
     title,
-    house,
     href,
     like,
-    saleOff,
     isAds,
-    price,
     reviewStart,
     reviewCount
   } = data
@@ -42,8 +38,7 @@ const StayCard: FC<StayCardProps> = ({
     return (
       <div className="relative w-full">
         <GallerySlider ratioClass={ratioClass} galleryImgs={galleryImgs} />
-        <BtnLikeIcon isLiked={like} className="absolute right-3 top-3" />
-        {saleOff && <SaleOffBadge className="absolute left-3 top-3" />}
+        {!!reviewStart && (<BtnLikeIcon isLiked={like} className="absolute right-3 top-3" />)}
       </div>
     )
   }
@@ -53,10 +48,10 @@ const StayCard: FC<StayCardProps> = ({
       <div className={size === "default" ? "p-4 space-y-4" : "p-3 space-y-2"}>
         <div className="space-y-2">
           <span className="text-sm text-neutral-500 dark:text-neutral-400">
-            {listingCategory.name} · {house} casas
+            {listingCategory.name}
           </span>
           <div className="flex items-center space-x-2">
-            {isAds && <Badge name="ADS" color="green" />}
+            {!!reviewStart && isAds && <Badge name="ADS" color="green" />}
             <h2
               className={` font-medium capitalize ${
                 size === "default" ? "text-lg" : "text-base"
@@ -66,7 +61,7 @@ const StayCard: FC<StayCardProps> = ({
             </h2>
           </div>
           <div className="flex items-center text-neutral-500 dark:text-neutral-400 text-sm space-x-2">
-            {size === "default" && (
+            {!!reviewStart && size === "default" && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -92,20 +87,11 @@ const StayCard: FC<StayCardProps> = ({
           </div>
         </div>
         <div className="w-14 border-b border-neutral-100 dark:border-neutral-800"></div>
-        <div className="flex justify-between items-center">
-          <span className="text-base font-semibold">
-            {price}
-            {` `}
-            {size === "default" && (
-              <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
-                /mês
-              </span>
-            )}
-          </span>
-          {!!reviewStart && (
+        {!!reviewStart && (
+          <div className="flex justify-between items-center">
             <StartRating reviewCount={reviewCount} point={reviewStart} />
-          )}
-        </div>
+          </div>
+        )}
       </div>
     )
   }

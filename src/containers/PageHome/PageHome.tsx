@@ -124,7 +124,7 @@ function PageHome () {
   return (
     <div className="nc-PageHome relative overflow-hidden">
       <Helmet>
-        <title>Moving Tips</title>
+        <title>MovingTips || Encontre seu novo lar</title>
       </Helmet>
       {/* GLASSMOPHIN */}
       <BgGlassmorphism />
@@ -156,7 +156,7 @@ function PageHome () {
             categoryCardType="card4"
             itemPerRow={4}
             heading="Suggestions for discovery"
-            subHeading="Popular places to stay that Moving Tips recommends for you"
+            subHeading="Lugares populares para se hospedar que a Moving tips recomenda para você"
             sliderStyle="style2"
           />
         </div>

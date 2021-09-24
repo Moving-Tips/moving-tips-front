@@ -17,10 +17,10 @@ export interface CommentListingProps {
 }
 
 const DEMO_DATA: CommentListingDataType = {
-  name: "Cody Fisher",
-  date: "May 20, 2021",
+  name: "Thor",
+  date: "20 de Maio de 2021",
   comment:
-    "There’s no stopping the tech giant. Apple now opens its 100th store in China.There’s no stopping the tech giant.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras leo enim, efficitur et ornare vitae, tincidunt faucibus odio. .",
   starPoint: 5
 }
 
