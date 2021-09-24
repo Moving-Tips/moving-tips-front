@@ -17,7 +17,7 @@ Object.defineProperty(window, 'matchMedia', {
 })
 
 test('test HeaderFilter', () => {
-  const heading = "Bairros em destaque"
+  const heading = "Bairros destaque"
   const subHeading = "Lugares populares para se hospedar que a Moving tips recomenda para você"
   const tabs = ["São Paulo", "Santo André", "Rio de Janeiro", "Brasília"]
   render(<HeaderFilter

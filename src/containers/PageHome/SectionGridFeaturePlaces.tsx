@@ -21,7 +21,7 @@ export interface SectionGridFeaturePlacesProps {
 const SectionGridFeaturePlaces: FC<SectionGridFeaturePlacesProps> = ({
   stayListings = DEMO_DATA,
   gridClass = "",
-  heading = "Bairros em destaque",
+  heading = "Bairros destaque",
   subHeading = "Lugares populares para se hospedar que a Moving tips recomenda para você",
   headingIsCenter,
   tabs = ["São Paulo", "Santo André", "Rio de Janeiro", "Brasília"]
