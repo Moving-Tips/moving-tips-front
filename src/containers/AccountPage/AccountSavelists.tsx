@@ -49,7 +49,7 @@ const AccountSavelists = () => {
                   ))}
                 </div>
                 <div className="flex mt-11 justify-center items-center">
-                  <ButtonSecondary>Show me more</ButtonSecondary>
+                  <ButtonSecondary href="/login">Mostre-me mais</ButtonSecondary>
                 </div>
               </Tab.Panel>
               <Tab.Panel className="mt-8">
@@ -61,7 +61,7 @@ const AccountSavelists = () => {
                   )}
                 </div>
                 <div className="flex mt-11 justify-center items-center">
-                  <ButtonSecondary>Show me more</ButtonSecondary>
+                  <ButtonSecondary href="/login">Mostre-me mais</ButtonSecondary>
                 </div>
               </Tab.Panel>
               <Tab.Panel className="mt-8">
@@ -71,7 +71,7 @@ const AccountSavelists = () => {
                   ))}
                 </div>
                 <div className="flex mt-11 justify-center items-center">
-                  <ButtonSecondary>Show me more</ButtonSecondary>
+                  <ButtonSecondary href="/login">Mostre-me mais</ButtonSecondary>
                 </div>
               </Tab.Panel>
             </Tab.Panels>

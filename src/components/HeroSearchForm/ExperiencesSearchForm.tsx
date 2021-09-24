@@ -6,7 +6,7 @@ import ButtonSubmit from "./ButtonSubmit"
 import moment from "moment"
 
 // DEFAULT DATA FOR ARCHIVE PAGE
-const defaultLocationValue = "Tokyo, Jappan"
+const defaultLocationValue = "Santo André, SP"
 const defaultDate = moment()
 const defaultGuestValue: GuestsInputProps["defaultValue"] = {
   guestAdults: 2,

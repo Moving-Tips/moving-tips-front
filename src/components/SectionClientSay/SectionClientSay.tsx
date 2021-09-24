@@ -20,24 +20,24 @@ export interface SectionClientSayProps {
 const DEMO_DATA = [
   {
     id: 1,
-    clientName: "Tiana Abie",
-    clientAddress: "Malaysia",
+    clientName: "Joana",
+    clientAddress: "Brasília",
     content:
-      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!"
+      "Este lugar é exatamento conforme a Moving Tips falou!"
   },
   {
     id: 2,
-    clientName: "Lennie Swiffan",
-    clientAddress: "London",
+    clientName: "Cleide",
+    clientAddress: "Natal",
     content:
-      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!"
+      "Este lugar é exatamento conforme a Moving Tips falou!"
   },
   {
     id: 3,
-    clientName: "Berta Emili",
-    clientAddress: "Tokyo",
+    clientName: "Roberta",
+    clientAddress: "Santo André",
     content:
-      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!"
+      "Este lugar é exatamento conforme a Moving Tips falou!"
   }
 ]
 

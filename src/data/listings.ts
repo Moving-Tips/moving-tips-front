@@ -53,7 +53,8 @@ const DEMO_STAY_LISTINGS = __stayListing.map((post, index): StayDataType => {
     saleOff: !index ? "-20% today" : post.saleOff,
     isAds: !index ? true : post.isAds,
     author: DEMO_AUTHORS.filter((user) => user.id === post.authorId)[0],
-    listingCategory: category
+    listingCategory: category,
+    house: ""
   }
 })
 

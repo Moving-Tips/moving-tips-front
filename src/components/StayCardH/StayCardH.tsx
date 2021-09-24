@@ -58,7 +58,7 @@ const StayCardH: FC<StayCardHProps> = ({
           <div className="flex items-center space-x-3">
             <i className="las la-bed text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              6 beds
+              6 casas
             </span>
           </div>
         </div>

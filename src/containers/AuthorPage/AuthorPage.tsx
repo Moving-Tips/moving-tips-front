@@ -156,7 +156,7 @@ const AuthorPage: FC<AuthorPageProps> = ({ className = "" }) => {
                   ))}
                 </div>
                 <div className="flex mt-11 justify-center items-center">
-                  <ButtonSecondary>Show me more</ButtonSecondary>
+                  <ButtonSecondary href="/login">Mostre-me mais</ButtonSecondary>
                 </div>
               </Tab.Panel>
               <Tab.Panel className="">
@@ -168,7 +168,7 @@ const AuthorPage: FC<AuthorPageProps> = ({ className = "" }) => {
                   )}
                 </div>
                 <div className="flex mt-11 justify-center items-center">
-                  <ButtonSecondary>Show me more</ButtonSecondary>
+                  <ButtonSecondary href="/login">Mostre-me mais</ButtonSecondary>
                 </div>
               </Tab.Panel>
               <Tab.Panel className="">
@@ -178,7 +178,7 @@ const AuthorPage: FC<AuthorPageProps> = ({ className = "" }) => {
                   ))}
                 </div>
                 <div className="flex mt-11 justify-center items-center">
-                  <ButtonSecondary>Show me more</ButtonSecondary>
+                  <ButtonSecondary href="/login">Mostre-me mais</ButtonSecondary>
                 </div>
               </Tab.Panel>
             </Tab.Panels>

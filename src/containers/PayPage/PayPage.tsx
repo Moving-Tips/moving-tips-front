@@ -36,7 +36,7 @@ const PayPage: FC<PayPageProps> = ({ className = "" }) => {
                 </span>
               </div>
               <span className="block  text-sm text-neutral-500 dark:text-neutral-400">
-                2 beds · 2 baths
+                2 houses
               </span>
               <div className="w-10 border-b border-neutral-200  dark:border-neutral-700"></div>
               <StartRating />

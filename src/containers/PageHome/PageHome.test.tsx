@@ -17,17 +17,17 @@ Object.defineProperty(window, 'matchMedia', {
 })
 
 test('test HeaderFilter', () => {
-  const heading = "Featured places to stay"
-  const subHeading = "Popular places to stay that Chisfis recommends for you"
-  const tabs = ["New York", "Tokyo", "Paris", "London"]
+  const heading = "Bairros em destaque"
+  const subHeading = "Lugares populares para se hospedar que a Moving tips recomenda para você"
+  const tabs = ["São Paulo", "Santo André", "Rio de Janeiro", "Brasília"]
   render(<HeaderFilter
-    tabActive={"New York"}
+    tabActive={"São Paulo"}
     subHeading={subHeading}
     tabs={tabs}
     heading={heading}
     onClickTab={() => {
     }}
   />)
-  const linkElement = screen.getByText(/Popular places to stay that Chisfis recommends for you/i)
+  const linkElement = screen.getByText(/Lugares populares para se hospedar que a Moving tips recomenda para você/i)
   expect(linkElement).toBeInTheDocument()
 })

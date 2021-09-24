@@ -167,7 +167,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           <div className="flex items-center space-x-3">
             <i className=" las la-bed text-2xl"></i>
             <span className=" ">
-              6 <span className="hidden sm:inline-block">beds</span>
+              6 <span className="hidden sm:inline-block">casas</span>
             </span>
           </div>
           <div className="flex items-center space-x-3">

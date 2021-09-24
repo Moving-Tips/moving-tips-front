@@ -24,8 +24,8 @@ const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({
   haveDefaultValue
 }) => {
   // DEFAULT DATA FOR ARCHIVE PAGE
-  const defaultPickUpInputValue = "Tokyo, Jappan"
-  const defaultDropOffInputValue = "Paris, France"
+  const defaultPickUpInputValue = "Santo André, SP"
+  const defaultDropOffInputValue = "Rio de Janeiro, RJ"
   // const defaultDateRange = {
   //   startDate: moment("2021-08-08"),
   //   endDate: moment("2021-09-09"),

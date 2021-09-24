@@ -1,5 +1,4 @@
 import React, { FC } from "react"
-import rightImg from "images/our-features.png"
 import NcImage from "shared/NcImage/NcImage"
 import Badge from "shared/Badge/Badge"
 
@@ -15,14 +14,11 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
       className={`nc-SectionOurFeatures relative flex flex-col lg:flex-row items-center ${className}`}
       data-nc-id="SectionOurFeatures"
     >
-      <div className="flex-grow">
-        <NcImage src={rightImg} />
-      </div>
-      <div className="max-w-2xl flex-shrink-0 mb-10 lg:mb-0 lg:pl-16 lg:w-2/5">
+      {/* <div className="max-w-2xl flex-shrink-0 mb-10 lg:mb-0 lg:pl-16 lg:w-2/5">
         <span className="uppercase text-sm text-gray-400 tracking-widest">
           BENnefits
         </span>
-        <h2 className="font-semibold text-4xl mt-5">Happening cities </h2>
+         <h2 className="font-semibold text-4xl mt-5">Happening cities </h2>
 
         <ul className="space-y-10 mt-16">
           <li className="space-y-4">
@@ -55,8 +51,7 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
               bookings and payments online
             </span>
           </li>
-        </ul>
-      </div>
+        </ul></div> */}
     </div>
   )
 }

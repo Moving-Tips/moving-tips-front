@@ -84,6 +84,7 @@ export interface StayDataType {
     lat: number
     lng: number
   }
+  house:string
 }
 
 //

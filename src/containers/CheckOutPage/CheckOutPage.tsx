@@ -28,14 +28,14 @@ const CheckOutPage: FC<CheckOutPageProps> = ({ className = "" }) => {
           <div className="py-5 sm:px-5 space-y-3">
             <div>
               <span className="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-1">
-                Hotel room in Tokyo, Jappan
+                Santo André, SP
               </span>
               <span className="text-base font-medium mt-1 block">
                 The Lounge & Bar
               </span>
             </div>
             <span className="block  text-sm text-neutral-500 dark:text-neutral-400">
-              2 beds · 2 baths
+              2 casas
             </span>
             <div className="w-10 border-b border-neutral-200  dark:border-neutral-700"></div>
             <StartRating />

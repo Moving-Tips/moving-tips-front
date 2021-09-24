@@ -33,7 +33,7 @@ const PageAddListing2: FC<PageAddListing2Props> = () => {
               <option value="Viet Nam">Viet Nam</option>
               <option value="Thailand">Thailand</option>
               <option value="France">France</option>
-              <option value="Singapore">Singapore</option>
+              <option value="Brasília">Brasília</option>
               <option value="Jappan">Jappan</option>
               <option value="Korea">Korea</option>
               <option value="...">...</option>

@@ -190,7 +190,7 @@ const TabFilters = () => {
               <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 left-0 sm:px-0 lg:max-w-md">
                 <div className="overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-neutral-900   border border-neutral-200 dark:border-neutral-700">
                   <div className="relative flex flex-col px-5 py-6 space-y-5">
-                    <NcInputNumber label="Beds" max={10} />
+                    <NcInputNumber label="Houses" max={10} />
                     <NcInputNumber label="Bedrooms" max={10} />
                     <NcInputNumber label="Bathrooms" max={10} />
                   </div>
@@ -550,7 +550,7 @@ const TabFilters = () => {
                       <div className="py-7">
                         <h3 className="text-xl font-medium">Rooms and beds</h3>
                         <div className="mt-6 relative flex flex-col space-y-5">
-                          <NcInputNumber label="Beds" max={10} />
+                          <NcInputNumber label="Houses" max={10} />
                           <NcInputNumber label="Bedrooms" max={10} />
                           <NcInputNumber label="Bathrooms" max={10} />
                         </div>

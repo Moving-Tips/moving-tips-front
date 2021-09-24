@@ -30,7 +30,7 @@ const PageAddListing3: FC<PageAddListing3Props> = () => {
           </FormItem>
           <NcInputNumber label="Guests" defaultValue={4} />
           <NcInputNumber label="Bedroom" defaultValue={4} />
-          <NcInputNumber label="Beds" defaultValue={4} />
+          <NcInputNumber label="Houses" defaultValue={4} />
           <NcInputNumber label="Bathroom" defaultValue={2} />
           <NcInputNumber label="Kitchen" defaultValue={2} />
         </div>

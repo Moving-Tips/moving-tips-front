@@ -18,7 +18,7 @@ const LocationInput: FC<LocationInputProps> = ({
   onChange,
   onInputDone,
   placeHolder = "Localização",
-  desc = "Para onde deseja ir?",
+  desc = "Para onde vai se mudar?",
   className = "nc-flex-1.5"
 }) => {
   const containerRef = useRef<HTMLDivElement>(null)
