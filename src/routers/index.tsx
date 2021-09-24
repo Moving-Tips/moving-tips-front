@@ -7,13 +7,7 @@ import Header from "shared/Header/Header"
 import Page404 from "containers/Page404/Page404"
 import ListingStayPage from "containers/ListingStayPage/ListingStayPage"
 import ListingStayMapPage from "containers/ListingStayPage/ListingStayMapPage"
-import ListingExperiencesPage from "containers/ListingExperiencesPage/ListingExperiencesPage"
-import ListingExperiencesMapPage from "containers/ListingExperiencesPage/ListingExperiencesMapPage"
 import ListingStayDetailPage from "containers/ListingDetailPage/ListingStayDetailPage"
-import ListingExperiencesDetailPage from "containers/ListingDetailPage/ListingExperiencesDetailPage"
-import CheckOutPage from "containers/CheckOutPage/CheckOutPage"
-import PayPage from "containers/PayPage/PayPage"
-import AuthorPage from "containers/AuthorPage/AuthorPage"
 import AccountPage from "containers/AccountPage/AccountPage"
 import AccountPass from "containers/AccountPage/AccountPass"
 import AccountSavelists from "containers/AccountPage/AccountSavelists"
@@ -37,24 +31,6 @@ export const pages: Page[] = [
   { path: "/listing-stay", component: ListingStayPage },
   { path: "/listing-stay-map", component: ListingStayMapPage },
   { path: "/listing-stay-detail", component: ListingStayDetailPage },
-  //
-  {
-    path: "/listing-experiences",
-    component: ListingExperiencesPage
-  },
-  {
-    path: "/listing-experiences-map",
-    component: ListingExperiencesMapPage
-  },
-  {
-    path: "/listing-experiences-detail",
-    component: ListingExperiencesDetailPage
-  },
-  //
-  { path: "/checkout", component: CheckOutPage },
-  { path: "/pay-done", component: PayPage },
-  //
-  { path: "/author", component: AuthorPage },
   { path: "/account", component: AccountPage },
   { path: "/account-password", component: AccountPass },
   { path: "/account-savelists", component: AccountSavelists },
