@@ -18,6 +18,6 @@ Object.defineProperty(window, 'matchMedia', {
 
 test('test PasswordInput', () => {
   const tree = render(<PasswordInput/>)
-  const label = tree.getByLabelText("Password")
+  const label = tree.getByLabelText("Senha")
   expect(label).toBeInTheDocument()
 })
