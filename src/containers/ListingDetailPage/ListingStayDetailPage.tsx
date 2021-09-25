@@ -132,7 +132,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
     return (
       <div className="listingSection__wrap">
         <h2 className="text-2xl font-semibold">Informações</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
         <div className="text-neutral-6000 dark:text-neutral-300">
           <span>
             Parelheiros é um distrito localizado na zona sul do município de São Paulo. É o segundo maior distrito do município em extensão territorial, embora seja muito pouco povoado.
@@ -147,7 +147,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
       <div className="listingSection__wrap">
         {/* HEADING */}
         <h2 className="text-2xl font-semibold">Skills</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
         <NcImage src={ChartDemo} />
       </div>
     )
@@ -158,7 +158,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
       <div className="listingSection__wrap">
         {/* HEADING */}
         <h2 className="text-2xl font-semibold">Análises (23 análise)</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
 
         {/* Content */}
         <div className="space-y-5">

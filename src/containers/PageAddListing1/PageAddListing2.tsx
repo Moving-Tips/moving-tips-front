@@ -13,7 +13,7 @@ const PageAddListing2: FC<PageAddListing2Props> = () => {
     >
       <>
         <h2 className="text-2xl font-semibold">Avaliação do bairro</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
         {/* FORM */}
         <div className="space-y-8">
           {/* ITEM */}

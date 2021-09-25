@@ -20,7 +20,7 @@ const PageAddListing5: FC<PageAddListing5Props> = () => {
             Excelente, parabéns por completar o cadastro do seu bairro, o mesmo está aguardando a ser revisado para publicação
           </span>
         </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
         {/* FORM */}
         <div>
           <h3 className="text-lg font-semibold">Este é seu bairro</h3>

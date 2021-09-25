@@ -42,7 +42,7 @@ const PageAddListing9: FC<PageAddListing9Props> = () => {
             space more often.
           </span>
         </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
         {/* FORM */}
         <div className="space-y-7">
           {/* ITEM */}

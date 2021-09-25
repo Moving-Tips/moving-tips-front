@@ -19,7 +19,7 @@ const PageAddListing1: FC<PageAddListing1Props> = () => {
     >
       <>
         <h2 className="text-2xl font-semibold">Informe sua localidade</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
         {/* FORM */}
         <div className="space-y-8">
           <ButtonSecondary>
