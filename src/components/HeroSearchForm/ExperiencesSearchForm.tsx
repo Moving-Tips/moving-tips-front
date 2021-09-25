@@ -1,6 +1,6 @@
-import React, { useEffect, useState, FC } from "react"
-import LocationInput from "./LocationInput"
-import GuestsInput, { GuestsInputProps } from "./GuestsInput"
+import React, { FC, useEffect, useState } from "react"
+import LocationInput from "components/HeroSearchForm/LocationInput"
+import GuestsInput, { GuestsInputProps } from "components/HeroSearchForm/GuestsInput"
 import ExperiencesDateSingleInput from "./ExperiencesDateSingleInput"
 import ButtonSubmit from "./ButtonSubmit"
 import moment from "moment"
@@ -39,7 +39,8 @@ const ExperiencesSearchForm: FC<ExperiencesSearchFormProps> = ({
 
   const renderForm = () => {
     return (
-      <form className="w-full relative mt-8 flex flex-col md:flex-row md:items-center rounded-3xl md:rounded-full shadow-xl dark:shadow-2xl bg-white dark:bg-neutral-900 divide-y divide-neutral-200 md:divide-y-0">
+      <form
+        className="w-full relative mt-8 flex flex-col md:flex-row md:items-center rounded-3xl md:rounded-full shadow-xl dark:shadow-2xl bg-white dark:bg-neutral-900 divide-y divide-neutral-200 md:divide-y-0">
         <LocationInput
           defaultValue={locationInputValue}
           onChange={(e) => setLocationInputValue(e)}
@@ -61,7 +62,7 @@ const ExperiencesSearchForm: FC<ExperiencesSearchFormProps> = ({
         />
         {/* BUTTON SUBMIT OF FORM */}
         <div className="px-4 py-4 lg:py-0">
-          <ButtonSubmit />
+          <ButtonSubmit/>
         </div>
       </form>
     )
