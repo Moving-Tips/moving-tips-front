@@ -3,7 +3,6 @@ import Heading from "components/Heading/Heading"
 import React, { FC, useEffect } from "react"
 
 import ncNanoId from "utils/ncNanoId"
-import clientSayMain from "images/clientSayMain.png"
 import clientSay1 from "images/clientSay1.png"
 import clientSay2 from "images/clientSay2.png"
 import clientSay3 from "images/clientSay3.png"
@@ -24,7 +23,7 @@ const DEMO_DATA = [
     image: clientSay1,
     clientAddress: "Brasília",
     content:
-      "Pretendo continuar aqui por muito tempo!"
+            "Pretendo continuar aqui por muito tempo!"
   },
   {
     id: 2,
@@ -32,7 +31,7 @@ const DEMO_DATA = [
     clientName: "Roberto",
     clientAddress: "Natal",
     content:
-      "Maravilha, ótima vizinhança!"
+            "Maravilha, ótima vizinhança!"
   },
   {
     id: 3,
@@ -40,7 +39,7 @@ const DEMO_DATA = [
     clientName: "Angelo",
     clientAddress: "Santo André",
     content:
-      "Próximo a tudo, como eu imaginei!"
+            "Próximo a tudo, como eu imaginei!"
   }
 ]
 
@@ -90,7 +89,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
       data-nc-id="SectionClientSay"
     >
       <Heading desc="Vamos ver o que estão dizendo sobre a MovingTips" isCenter>
-        Avaliações
+                Avaliações
       </Heading>
       <div className="relative md:mb-16 max-w-2xl mx-auto">
         {renderBg()}
@@ -112,7 +111,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
                   key={item.id}
                   className="glide__slide flex flex-col items-center text-center"
                 >
-                  <img className="mx-auto" src={item.image} alt="" />
+                  <img className="mx-auto" src={item.image} alt=""/>
                   <span className="block text-2xl">{item.content}</span>
                   <span className="block mt-8 text-2xl font-semibold">
                     {item.clientName}
@@ -153,7 +152,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
                 key={item.id}
                 className="glide__bullet w-2 h-2 rounded-full bg-neutral-300 mx-1 focus:outline-none"
                 data-glide-dir={`=${index}`}
-              ></button>
+              />
             ))}
           </div>
         </div>
