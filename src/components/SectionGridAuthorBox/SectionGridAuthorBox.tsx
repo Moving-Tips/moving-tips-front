@@ -26,7 +26,7 @@ const SectionGridAuthorBox: FC<SectionGridAuthorBoxProps> = ({
       data-nc-id="SectionGridAuthorBox"
     >
       <Heading desc="Rating based on customer reviews" isCenter>
-        Top 10 author of the month
+        Descubra lugares novos !
       </Heading>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8 ">
         {authors.map((author, index) =>
