@@ -83,36 +83,36 @@ const DEMO_CATS_2: TaxonomyType[] = [
       "https://viagemeturismo.abril.com.br/wp-content/uploads/2016/10/aosidu.jpeg?quality=70&strip=info&w=928"
   },
   {
-    id: "222",
+    id: "2",
     href: "#",
-    name: "Sleep in a floating way",
+    name: "Ótimas localizações",
     taxonomy: "category",
-    count: 188288,
+    count: 250693,
     thumbnail:
-      "https://images.pexels.com/photos/2869499/pexels-photo-2869499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      "https://blog.appmeuimovel.com/wp-content/uploads/2017/12/apartamentos-proximo-ao-metro-em-sao-paulo-750x400.jpg"
   },
   {
     id: "3",
     href: "#",
-    name: "In the billionaire's house",
+    name: "Residências de qualquer tipo",
     taxonomy: "category",
-    count: 188288,
+    count: 389586,
     thumbnail:
-      "https://images.pexels.com/photos/7031413/pexels-photo-7031413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      "https://omunicipioblumenau.com.br/wp-content/uploads/2015/02/escola-agricola-ou-asilo-conheca-a-curiosa-historia-do-bairro-um-dos-mais-desenvolvidos-de-blumenau-whatsapp-image-2019-02-14-at-21.25.35-1280x720.jpeg"
   },
   {
     id: "4",
     href: "#",
-    name: "Cool in the deep forest",
+    name: "Avalie suas experiências",
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/247532/pexels-photo-247532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      "https://www.ibahia.com/fileadmin/user_upload/ibahia/2017/dezembro/28/cabula-720x288.jpg"
   },
   {
     id: "5",
     href: "#",
-    name: "In the billionaire's house",
+    name: "União entre útil e agradável",
     taxonomy: "category",
     count: 188288,
     thumbnail:
