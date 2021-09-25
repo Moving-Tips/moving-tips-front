@@ -167,16 +167,11 @@ function PageHome () {
 
         {/* SECTION 1 */}
         <SectionSliderNewCategories
-          heading="Explore by types of stays"
-          subHeading="Explore houses based on 10 types of stays"
+          heading="Veja os tipos de residências mais peculiares"
+          subHeading="Moving Tips mostra as casas que podem te interessar"
           categoryCardType="card5"
           itemPerRow={5}
         />
-
-        {/* SECTION */}
-        <SectionVideos />
-
-        {/* SECTION */}
         <div className="relative py-16">
           <BackgroundSection />
           <SectionClientSay />

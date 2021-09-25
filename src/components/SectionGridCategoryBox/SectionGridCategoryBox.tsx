@@ -42,7 +42,7 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "2",
     href: "#",
-    name: "Natala",
+    name: "Natal",
     taxonomy: "category",
     count: 112,
     thumbnail:
