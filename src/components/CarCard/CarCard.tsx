@@ -73,7 +73,7 @@ const CarCard: FC<CarCardProps> = ({
             <span className="">{gearshift} </span>
           </div>
         </div>
-        <div className="w-14  border-b border-neutral-100 dark:border-neutral-800"></div>
+        <div className="w-14  border-b border-neutral-100 dark:border-neutral-800"/>
         <div className="flex justify-between items-center">
           <span className="text-base font-semibold">
             {price}

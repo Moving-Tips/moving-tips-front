@@ -1,7 +1,7 @@
 name: Development test
 
 on:
-  push:
+  pull_request:
     branches:
       - develop
 
