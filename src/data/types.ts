@@ -1,11 +1,9 @@
-//  ######  CustomLink  ######## //
 export interface CustomLink {
   label: string
   href: string
   targetBlank?: boolean
 }
 
-//  ##########  PostDataType ######## //
 export interface TaxonomyType {
   id: string | number
   name: string

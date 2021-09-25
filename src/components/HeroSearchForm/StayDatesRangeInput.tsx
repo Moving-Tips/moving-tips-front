@@ -1,12 +1,8 @@
-import React, { useEffect, useState, FC } from "react"
-import {
-  AnchorDirectionShape,
-  DateRangePicker,
-  FocusedInputShape
-} from "react-dates"
+import React, { FC, useEffect, useState } from "react"
+import { AnchorDirectionShape, DateRangePicker, FocusedInputShape } from "react-dates"
 import { DateRage } from "./StaySearchForm"
 
-import ClearDataButton from "./ClearDataButton"
+import ClearDataButton from "components/HeroSearchForm/ClearDataButton"
 import useWindowSize from "hooks/useWindowResize"
 
 type Fields = "checkIn" | "checkOut"
@@ -75,8 +71,8 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
     return (
       <div
         className={`relative flex flex-1 ${fieldClassName} flex-shrink-0 items-center space-x-3 cursor-pointer ${
-          focused ? "shadow-2xl rounded-full dark:bg-neutral-800" : " "
-        }`}
+                    focused ? "shadow-2xl rounded-full dark:bg-neutral-800" : " "
+                }`}
         onClick={() => handleDateFocusChange("startDate")}
       >
         <div className="text-neutral-300 dark:text-neutral-400">
@@ -105,7 +101,7 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
             {stateDate.startDate ? "Check in" : `Add date`}
           </span>
           {stateDate.startDate && focused && (
-            <ClearDataButton onClick={() => handleClearData("checkIn")} />
+            <ClearDataButton onClick={() => handleClearData("checkIn")}/>
           )}
         </div>
       </div>
@@ -117,8 +113,8 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
     return (
       <div
         className={`relative flex flex-1 ${fieldClassName} flex-shrink-0 items-center space-x-3 cursor-pointer ${
-          focused ? "shadow-2xl rounded-full dark:bg-neutral-800" : " "
-        }`}
+                    focused ? "shadow-2xl rounded-full dark:bg-neutral-800" : " "
+                }`}
         onClick={() => handleDateFocusChange("endDate")}
       >
         <div className="text-neutral-300 dark:text-neutral-400">
@@ -147,7 +143,7 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
             {stateDate.endDate ? "Check out" : `Add date`}
           </span>
           {stateDate.endDate && focused && (
-            <ClearDataButton onClick={() => handleClearData("checkOut")} />
+            <ClearDataButton onClick={() => handleClearData("checkOut")}/>
           )}
         </div>
       </div>

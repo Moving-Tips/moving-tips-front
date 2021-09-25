@@ -1,8 +1,7 @@
-import React, { useEffect, useState, FC } from "react"
+import React, { FC, useEffect, useState } from "react"
 import LocationInput from "./LocationInput"
-import GuestsInput, { GuestsInputProps } from "./GuestsInput"
+import { GuestsInputProps } from "./GuestsInput"
 import { FocusedInputShape } from "react-dates"
-import StayDatesRangeInput from "./StayDatesRangeInput"
 import ButtonSubmit from "./ButtonSubmit"
 import moment from "moment"
 
@@ -15,7 +14,6 @@ export interface StaySearchFormProps {
   haveDefaultValue?: boolean
 }
 
-// DEFAULT DATA FOR ARCHIVE PAGE
 const defaultLocationValue = ""
 const defaultDateRange = {
   startDate: moment(),
@@ -53,7 +51,8 @@ const StaySearchForm: FC<StaySearchFormProps> = ({
 
   const renderForm = () => {
     return (
-      <form className="w-full relative flex flex-col md:flex-row md:items-center rounded-3xl lg:rounded-full shadow-xl dark:shadow-2xl bg-white dark:bg-neutral-900 divide-y divide-neutral-200 md:divide-y-0">
+      <form
+        className="w-full relative flex flex-col md:flex-row md:items-center rounded-3xl lg:rounded-full shadow-xl dark:shadow-2xl bg-white dark:bg-neutral-900 divide-y divide-neutral-200 md:divide-y-0">
         <LocationInput
           defaultValue={locationInputValue}
           onChange={(e) => setLocationInputValue(e)}
@@ -61,7 +60,7 @@ const StaySearchForm: FC<StaySearchFormProps> = ({
         />
         {/* BUTTON SUBMIT OF FORM */}
         <div className="px-4 py-4 lg:py-0">
-          <ButtonSubmit />
+          <ButtonSubmit/>
         </div>
       </form>
     )

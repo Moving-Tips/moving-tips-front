@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState, FC } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import NcInputNumber from "components/NcInputNumber/NcInputNumber"
 
-import ClearDataButton from "./ClearDataButton"
+import ClearDataButton from "components/HeroSearchForm/ClearDataButton"
 
 export interface GuestsInputProps {
   defaultValue: {

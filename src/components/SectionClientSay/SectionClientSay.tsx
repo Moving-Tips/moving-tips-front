@@ -23,21 +23,21 @@ const DEMO_DATA = [
     clientName: "Joana",
     clientAddress: "Brasília",
     content:
-      "Este lugar é exatamento conforme a Moving Tips falou!"
+            "Este lugar é exatamento conforme a Moving Tips falou!"
   },
   {
     id: 2,
     clientName: "Cleide",
     clientAddress: "Natal",
     content:
-      "Este lugar é exatamento conforme a Moving Tips falou!"
+            "Este lugar é exatamento conforme a Moving Tips falou!"
   },
   {
     id: 3,
     clientName: "Roberta",
     clientAddress: "Santo André",
     content:
-      "Este lugar é exatamento conforme a Moving Tips falou!"
+            "Este lugar é exatamento conforme a Moving Tips falou!"
   }
 ]
 
@@ -55,7 +55,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
   const renderBg = () => {
     return (
       <div className="hidden md:block">
-        <img className="absolute top-9 -left-20" src={clientSay1} alt="" />
+        <img className="absolute top-9 -left-20" src={clientSay1} alt=""/>
         <img
           className="absolute bottom-[100px] right-full mr-40"
           src={clientSay2}
@@ -76,7 +76,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
           src={clientSay5}
           alt=""
         />
-        <img className="absolute -right-10 top-10 " src={clientSay6} alt="" />
+        <img className="absolute -right-10 top-10 " src={clientSay6} alt=""/>
       </div>
     )
   }
@@ -87,11 +87,11 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
       data-nc-id="SectionClientSay"
     >
       <Heading desc="Let's see what people think of MovingTips" isCenter>
-        Good news from far away
+                Good news from far away
       </Heading>
       <div className="relative md:mb-16 max-w-2xl mx-auto">
         {renderBg()}
-        <img className="mx-auto" src={clientSayMain} alt="" />
+        <img className="mx-auto" src={clientSayMain} alt=""/>
         <div className={`mt-12 lg:mt-16 relative ${UNIQUE_CLASS}`}>
           <img
             className="opacity-50 md:opacity-100 absolute -mr-16 lg:mr-3 right-full top-1"

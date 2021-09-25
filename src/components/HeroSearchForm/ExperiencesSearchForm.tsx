@@ -5,7 +5,6 @@ import ExperiencesDateSingleInput from "./ExperiencesDateSingleInput"
 import ButtonSubmit from "./ButtonSubmit"
 import moment from "moment"
 
-// DEFAULT DATA FOR ARCHIVE PAGE
 const defaultLocationValue = "Santo André, SP"
 const defaultDate = moment()
 const defaultGuestValue: GuestsInputProps["defaultValue"] = {

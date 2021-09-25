@@ -5,10 +5,8 @@ import ButtonPrimary from "shared/Button/ButtonPrimary"
 import HeaderFilter from "containers/PageHome/HeaderFilter"
 import StayCard from "components/StayCard/StayCard"
 
-// OTHER DEMO WILL PASS PROPS
 const DEMO_DATA: StayDataType[] = DEMO_STAY_LISTINGS.filter((_, i) => i < 8)
 
-//
 export interface SectionGridFeaturePlacesProps {
   stayListings?: StayDataType[]
   gridClass?: string
@@ -27,7 +25,7 @@ const SectionGridFeaturePlaces: FC<SectionGridFeaturePlacesProps> = ({
   tabs = ["São Paulo", "Santo André", "Rio de Janeiro", "Brasília"]
 }) => {
   const renderCard = (stay: StayDataType) => {
-    return <StayCard key={stay.id} data={stay} />
+    return <StayCard key={stay.id} data={stay}/>
   }
 
   return (
@@ -37,7 +35,8 @@ const SectionGridFeaturePlaces: FC<SectionGridFeaturePlacesProps> = ({
         subHeading={subHeading}
         tabs={tabs}
         heading={heading}
-        onClickTab={() => {}}
+        onClickTab={() => {
+        }}
       />
       <div
         className={`grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ${gridClass}`}

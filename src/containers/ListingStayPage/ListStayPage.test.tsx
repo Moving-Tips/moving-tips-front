@@ -8,8 +8,8 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
@@ -19,7 +19,7 @@ Object.defineProperty(window, 'matchMedia', {
 test('test Heading2', () => {
   const heading = "Experiências"
   render(<Heading2
-    heading = {heading}
+    heading={heading}
   />)
   const linkElement = screen.getByText(/Experiências/i)
   expect(linkElement).toBeInTheDocument()
