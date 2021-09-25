@@ -27,7 +27,8 @@ const CardCategory3: FC<CardCategory3Props> = ({
           src={thumbnail}
           className="object-cover w-full h-full rounded-2xl"
         />
-        <span className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity"></span>
+        <span
+          className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity"/>
       </div>
       <div className="mt-4 truncate">
         <h2
