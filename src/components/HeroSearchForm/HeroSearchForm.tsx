@@ -1,8 +1,6 @@
 import React, { FC, useState } from "react"
 import "react-dates/initialize"
-import ExperiencesSearchForm from "./ExperiencesSearchForm"
 import StaySearchForm from "./StaySearchForm"
-import RentalCarSearchForm from "./RentalCarSearchForm"
 
 export type SearchTab = "Stay" | "Experiences"
 
@@ -29,14 +27,15 @@ const HeroSearchForm: FC<HeroSearchFormProps> = ({
             <li
               onClick={() => setTabActive(tab)}
               className={`flex items-center cursor-pointer text-sm lg:text-base font-medium ${
-                active
-                  ? ""
-                  : "text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-100"
-              } `}
+                                active
+                                    ? ""
+                                    : "text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-100"
+                            } `}
               key={tab}
             >
               {active && (
-                <span className="block w-2.5 h-2.5 rounded-full bg-neutral-800 dark:bg-neutral-100 mr-2" />
+                <span
+                  className="block w-2.5 h-2.5 rounded-full bg-neutral-800 dark:bg-neutral-100 mr-2"/>
               )}
               <span>{tab}</span>
             </li>
@@ -50,7 +49,7 @@ const HeroSearchForm: FC<HeroSearchFormProps> = ({
     const isArchivePage = !!currentPage && !!currentTab
     switch (tabActive) {
       case "Stay":
-        return <StaySearchForm haveDefaultValue={isArchivePage} />
+        return <StaySearchForm haveDefaultValue={isArchivePage}/>
       default:
         return null
     }

@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism"
 import SectionHeroArchivePage from "components/SectionHeroArchivePage/SectionHeroArchivePage"
-import SectionGridHasMap from "./SectionGridHasMap"
+import SectionGridHasMap from "containers/ListingExperiencesPage/SectionGridHasMap"
 import { Helmet } from "react-helmet"
 
 export interface ListingStayMapPageProps {
