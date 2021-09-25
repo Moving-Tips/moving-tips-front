@@ -1,7 +1,7 @@
 import React, { useEffect, useState, FC } from "react"
 import { SingleDatePicker, AnchorDirectionShape } from "react-dates"
 
-import ClearDataButton from "./ClearDataButton"
+import ClearDataButton from "components/HeroSearchForm/ClearDataButton"
 import moment from "moment"
 import useWindowSize from "hooks/useWindowResize"
 

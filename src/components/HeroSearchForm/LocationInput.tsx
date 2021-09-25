@@ -1,6 +1,6 @@
 import React, { useState, FC, useEffect, useRef } from "react"
 
-import ClearDataButton from "./ClearDataButton"
+import ClearDataButton from "components/HeroSearchForm/ClearDataButton"
 
 export interface LocationInputProps {
   defaultValue: string
@@ -17,8 +17,8 @@ const LocationInput: FC<LocationInputProps> = ({
   autoFocus = false,
   onChange,
   onInputDone,
-  placeHolder = "Location",
-  desc = "Where are you going?",
+  placeHolder = "Localização",
+  desc = "Para onde vai se mudar?",
   className = "nc-flex-1.5"
 }) => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -57,11 +57,9 @@ const LocationInput: FC<LocationInputProps> = ({
 
   const eventClickOutsideDiv = (event: MouseEvent) => {
     if (!containerRef.current) return
-    // CLICK IN_SIDE
     if (!showPopover || containerRef.current.contains(event.target as Node)) {
       return
     }
-    // CLICK OUT_SIDE
     setShowPopover(false)
   }
 
@@ -75,14 +73,12 @@ const LocationInput: FC<LocationInputProps> = ({
     return (
       <>
         <h3 className="block mt-2 sm:mt-0 px-4 sm:px-8 font-semibold text-base sm:text-lg text-neutral-800 dark:text-neutral-100">
-          Recent searches
+          Sugestões
         </h3>
         <div className="mt-2">
           {[
-            "Hamptons, Suffolk County, NY",
-            "Las Vegas, NV, United States",
-            "Ueno, Taito, Tokyo",
-            "Ikebukuro, Toshima, Tokyo"
+            "Liberdade",
+            "Interlagos"
           ].map((item) => (
             <span
               onClick={() => handleSelectLocation(item)}
@@ -119,10 +115,8 @@ const LocationInput: FC<LocationInputProps> = ({
     return (
       <>
         {[
-          "Ha Noi, Viet Nam",
-          "San Diego, CA",
-          "Humboldt Park, Chicago, IL",
-          "Bangor, Northern Ireland"
+          "Liberdade",
+          "Interlagos"
         ].map((item) => (
           <span
             onClick={() => handleSelectLocation(item)}

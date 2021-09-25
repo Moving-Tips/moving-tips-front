@@ -15,13 +15,13 @@ const PasswordAndConfirm: FC<PasswordAndConfirmProps> = ({ className = "" }) => 
       setPasswordError('')
       showErrorPassword = false
     } else {
-      setPasswordError('Password is different')
+      setPasswordError('Senha é diferente')
       showErrorPassword = true
     }
   }
   const validatePasswordLength = (e: any) => {
     if (e.target.value.length < 6) {
-      setPasswordError('Minimum of 6 characters')
+      setPasswordError('Mínimo de 6 caracteres')
       showErrorPassword = true
     } else {
     }
@@ -30,7 +30,7 @@ const PasswordAndConfirm: FC<PasswordAndConfirmProps> = ({ className = "" }) => 
     <div>
       <label className="block">
         <span className="flex justify-between items-center text-neutral-800 dark:text-neutral-200">
-                Password
+                Nova Senha
         </span>
         <Input
           type="password"
@@ -41,7 +41,7 @@ const PasswordAndConfirm: FC<PasswordAndConfirmProps> = ({ className = "" }) => 
       </label>
       <label className="block">
         <span className="flex justify-between items-center text-neutral-800 dark:text-neutral-200">
-                Confirm Password
+                Confirmar Senha
         </span>
         <Input
           type="password"

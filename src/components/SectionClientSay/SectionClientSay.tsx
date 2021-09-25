@@ -3,7 +3,6 @@ import Heading from "components/Heading/Heading"
 import React, { FC, useEffect } from "react"
 
 import ncNanoId from "utils/ncNanoId"
-import clientSayMain from "images/clientSayMain.png"
 import clientSay1 from "images/clientSay1.png"
 import clientSay2 from "images/clientSay2.png"
 import clientSay3 from "images/clientSay3.png"
@@ -20,24 +19,27 @@ export interface SectionClientSayProps {
 const DEMO_DATA = [
   {
     id: 1,
-    clientName: "Tiana Abie",
-    clientAddress: "Malaysia",
+    clientName: "Joana",
+    image: clientSay1,
+    clientAddress: "Brasília",
     content:
-      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!"
+            "Pretendo continuar aqui por muito tempo!"
   },
   {
     id: 2,
-    clientName: "Lennie Swiffan",
-    clientAddress: "London",
+    image: clientSay4,
+    clientName: "Roberto",
+    clientAddress: "Natal",
     content:
-      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!"
+            "Maravilha, ótima vizinhança!"
   },
   {
     id: 3,
-    clientName: "Berta Emili",
-    clientAddress: "Tokyo",
+    image: clientSay5,
+    clientName: "Angelo",
+    clientAddress: "Santo André",
     content:
-      "This place is exactly like the picture posted on Chisfis. Great service, we had a great stay!"
+            "Próximo a tudo, como eu imaginei!"
   }
 ]
 
@@ -55,7 +57,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
   const renderBg = () => {
     return (
       <div className="hidden md:block">
-        <img className="absolute top-9 -left-20" src={clientSay1} alt="" />
+        <img className="absolute top-9 -left-20" src={clientSay1} alt=""/>
         <img
           className="absolute bottom-[100px] right-full mr-40"
           src={clientSay2}
@@ -76,7 +78,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
           src={clientSay5}
           alt=""
         />
-        <img className="absolute -right-10 top-10 " src={clientSay6} alt="" />
+        <img className="absolute -right-10 top-10 " src={clientSay6} alt=""/>
       </div>
     )
   }
@@ -86,12 +88,11 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
       className={`nc-SectionClientSay relative ${className} `}
       data-nc-id="SectionClientSay"
     >
-      <Heading desc="Let's see what people think of Chisfis" isCenter>
-        Good news from far away
+      <Heading desc="Vamos ver o que estão dizendo sobre a MovingTips" isCenter>
+                Avaliações
       </Heading>
       <div className="relative md:mb-16 max-w-2xl mx-auto">
         {renderBg()}
-        <img className="mx-auto" src={clientSayMain} alt="" />
         <div className={`mt-12 lg:mt-16 relative ${UNIQUE_CLASS}`}>
           <img
             className="opacity-50 md:opacity-100 absolute -mr-16 lg:mr-3 right-full top-1"
@@ -110,6 +111,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
                   key={item.id}
                   className="glide__slide flex flex-col items-center text-center"
                 >
+                  <img className="mx-auto" src={item.image} alt=""/>
                   <span className="block text-2xl">{item.content}</span>
                   <span className="block mt-8 text-2xl font-semibold">
                     {item.clientName}
@@ -150,7 +152,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
                 key={item.id}
                 className="glide__bullet w-2 h-2 rounded-full bg-neutral-300 mx-1 focus:outline-none"
                 data-glide-dir={`=${index}`}
-              ></button>
+              />
             ))}
           </div>
         </div>

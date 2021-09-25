@@ -27,7 +27,8 @@ const CardCategory5: FC<CardCategory5Props> = ({
           src={thumbnail}
           className="object-cover w-full h-full rounded-2xl"
         />
-        <span className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity"></span>
+        <span
+          className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity"/>
       </div>
       <div className="mt-4 px-3 truncate">
         <h2
@@ -38,7 +39,7 @@ const CardCategory5: FC<CardCategory5Props> = ({
         <span
           className={`block mt-2 text-sm text-neutral-6000 dark:text-neutral-400`}
         >
-          {convertNumbThousand(count)} properties
+          {convertNumbThousand(count)} residências
         </span>
       </div>
     </Link>

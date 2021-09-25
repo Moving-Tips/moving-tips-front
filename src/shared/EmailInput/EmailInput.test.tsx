@@ -18,6 +18,6 @@ Object.defineProperty(window, 'matchMedia', {
 
 test('test FormEmail', () => {
   const tree = render(<FormEmail/>)
-  const label = tree.getByLabelText("Email address")
+  const label = tree.getByLabelText("Email")
   expect(label).toBeInTheDocument()
 })

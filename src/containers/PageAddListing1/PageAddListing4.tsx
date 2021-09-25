@@ -1,8 +1,8 @@
-import React, { FC } from "react"
-import Checkbox from "shared/Checkbox/Checkbox"
-import CommonLayout from "./CommonLayout"
+import { FC } from "react"
+import CommonLayout from "containers/PageAddListing1/CommonLayout"
 
-export interface PageAddListing4Props {}
+export interface PageAddListing4Props {
+}
 
 const PageAddListing4: FC<PageAddListing4Props> = () => {
   return (
@@ -13,81 +13,95 @@ const PageAddListing4: FC<PageAddListing4Props> = () => {
     >
       <>
         <div>
-          <h2 className="text-2xl font-semibold">Amenities </h2>
+          <h2 className="text-2xl font-semibold">Fotos do bairro</h2>
           <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-            Many customers have searched for accommodation based on amenities
-            criteria
+            Algumas belas fotos ajudarão os demais usuários a ter mais simpatia pelo seu bairro.
           </span>
         </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
-        {/* FORM */}
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
         <div className="space-y-8">
-          {/* ITEM */}
           <div>
-            <label className="text-lg font-semibold" htmlFor="">
-              General amenities
-            </label>
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              <Checkbox label="Wifi" name="Wifi" defaultChecked />
-              <Checkbox label="Internet" name="Internet" />
-              <Checkbox label="TV" name="TV" defaultChecked />
-              <Checkbox label="Air conditioning" name="Air conditioning" />
-              <Checkbox label="Fan" name="Fan" />
-              <Checkbox label="Private entrance" name="Private entrance" />
-              <Checkbox label="Dryer" name="Dryer" defaultChecked />
-              <Checkbox label="Heater" name="Heater" />
-              <Checkbox label="Washing machine" name="Washing machine" />
-              <Checkbox label="Detergent" name="Detergent" defaultChecked />
-              <Checkbox label="Clothes dryer" name="Clothes dryer" />
-              <Checkbox label="Baby cot" name="Baby cot" />
-              <Checkbox label="Desk" name="Desk " defaultChecked />
-              <Checkbox label="Fridge" name="Fridge" />
-              <Checkbox label="Dryer" name="Dryer" defaultChecked />
+            <span className="text-lg font-semibold">Foto principal</span>
+            <div className="mt-5 ">
+              <div
+                className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-neutral-300 dark:border-neutral-6000 border-dashed rounded-md">
+                <div className="space-y-1 text-center">
+                  <svg
+                    className="mx-auto h-12 w-12 text-neutral-400"
+                    stroke="currentColor"
+                    fill="none"
+                    viewBox="0 0 48 48"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div className="flex text-sm text-neutral-6000 dark:text-neutral-300">
+                    <label
+                      htmlFor="file-upload"
+                      className="relative cursor-pointer  rounded-md font-medium text-primary-6000 hover:text-primary-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary-500"
+                    >
+                      <span>Carregue a foto</span>
+                      <input
+                        id="file-upload"
+                        name="file-upload"
+                        type="file"
+                        className="sr-only"
+                      />
+                    </label>
+                    <p className="pl-1">ou arraste ela aqui</p>
+                  </div>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">
+                                        PNG, JPG, GIF de até 10MB
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-
-          {/* ITEM */}
           <div>
-            <label className="text-lg font-semibold" htmlFor="">
-              Other amenities
-            </label>
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              <Checkbox label="Wardrobe" name="Wardrobe" defaultChecked />
-              <Checkbox label="Cloth hook" name="Cloth hook" />
-              <Checkbox
-                label="Extra cushion"
-                name="Extra cushion"
-                defaultChecked
-              />
-              <Checkbox label="Gas stove" name="Gas stove" />
-              <Checkbox label="Toilet paper" name="Toilet paper" />
-              <Checkbox
-                label="Free toiletries"
-                name="Free toiletries"
-                defaultChecked
-              />
-              <Checkbox label="Makeup table" name="Makeup table" />
-              <Checkbox label="Hot pot" name="Hot pot" />
-              <Checkbox label="Bathroom heaters" name="Bathroom heaters" />
-              <Checkbox label="Kettle" name="Kettle" defaultChecked />
-              <Checkbox label="Dishwasher" name="Dishwasher" />
-              <Checkbox label="BBQ grill" name="BBQ grill" defaultChecked />
-              <Checkbox label="Toaster" name="Toaster" defaultChecked />
-              <Checkbox label="Towel" name="Towel" />
-              <Checkbox label="Dining table" name="Dining table" />
-            </div>
-          </div>
-
-          {/* ITEM */}
-          <div>
-            <label className="text-lg font-semibold" htmlFor="">
-              Safe amenities
-            </label>
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              <Checkbox label="Fire siren" name="Fire siren" defaultChecked />
-              <Checkbox label="Fire extinguisher" name="Fire extinguisher" />
-              <Checkbox label="Anti-theft key" name="Anti-theft key" />
-              <Checkbox label="Safe vault" name="Safe vault" />
+            <span className="text-lg font-semibold">Outras fotos interessantes</span>
+            <div className="mt-5 ">
+              <div
+                className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-neutral-300 dark:border-neutral-6000 border-dashed rounded-md">
+                <div className="space-y-1 text-center">
+                  <svg
+                    className="mx-auto h-12 w-12 text-neutral-400"
+                    stroke="currentColor"
+                    fill="none"
+                    viewBox="0 0 48 48"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div className="flex text-sm text-neutral-6000 dark:text-neutral-300">
+                    <label
+                      htmlFor="file-upload-2"
+                      className="relative cursor-pointer  rounded-md font-medium text-primary-6000 hover:text-primary-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary-500"
+                    >
+                      <span>Carregue a foto</span>
+                      <input
+                        id="file-upload-2"
+                        name="file-upload-2"
+                        type="file"
+                        className="sr-only"
+                      />
+                    </label>
+                    <p className="pl-1">ou arraste ela aqui</p>
+                  </div>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">
+                                        PNG, JPG, GIF de até 10MB
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

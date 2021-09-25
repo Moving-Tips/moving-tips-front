@@ -18,8 +18,8 @@ Object.defineProperty(window, 'matchMedia', {
 
 test('test PasswordAndConfirm', () => {
   const tree = render(<PasswordAndConfirm/>)
-  const label = tree.getByLabelText("Password")
+  const label = tree.getByLabelText("Nova Senha")
   expect(label).toBeInTheDocument()
-  const label2 = tree.getByLabelText("Confirm Password")
+  const label2 = tree.getByLabelText("Confirmar Senha")
   expect(label2).toBeInTheDocument()
 })

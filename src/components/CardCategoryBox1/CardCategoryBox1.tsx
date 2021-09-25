@@ -28,7 +28,7 @@ const CardCategoryBox1: FC<CardCategoryBox1Props> = ({
       />
 
       <div className="relative flex-shrink-0 w-24 h-24 rounded-full overflow-hidden">
-        <NcImage src={thumbnail} containerClassName="absolute inset-0" />
+        <NcImage src={thumbnail} containerClassName="absolute inset-0"/>
       </div>
       <div className="ml-4 flex-grow overflow-hidden">
         <h2 className="text-base font-medium">
@@ -37,7 +37,7 @@ const CardCategoryBox1: FC<CardCategoryBox1Props> = ({
         <span
           className={`block mt-2 text-sm text-neutral-500 dark:text-neutral-400`}
         >
-          19 minutes drive
+          19 minutos dirigindo
         </span>
       </div>
     </Link>

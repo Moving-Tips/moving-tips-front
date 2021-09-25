@@ -101,7 +101,6 @@
     "or": "^0.2.0",
     "postcss": "^7.0.36",
     "redux-logger": "^3.0.6",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14",
-    "yarn": "^1.22.11"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14"
   }
 }

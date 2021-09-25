@@ -18,7 +18,7 @@ const PasswordInput: FC<PasswordProps> = ({ className = "" }) => {
     <div>
       <label className="block">
         <span className="flex justify-between items-center text-neutral-800 dark:text-neutral-200">
-                Password
+                Senha
         </span>
         <Input
           role="password"

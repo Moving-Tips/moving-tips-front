@@ -1,8 +1,9 @@
 import React, { FC, useEffect, useState } from "react"
-import MainNav1 from "./MainNav1"
+import MainNav1 from "shared/Header/MainNav1"
 import { Helmet } from "react-helmet"
 
-export interface HeaderProps {}
+export interface HeaderProps {
+}
 
 const Header: FC<HeaderProps> = () => {
   const [isTop, setisTop] = useState(true)
@@ -18,7 +19,7 @@ const Header: FC<HeaderProps> = () => {
     if (!$head) return
     if (
       document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
+            document.documentElement.scrollTop > 20
     ) {
       !!isTop && setisTop(false)
     } else {
@@ -32,11 +33,10 @@ const Header: FC<HeaderProps> = () => {
       className="nc-Header lg:sticky lg:top-0 w-full lg:left-0 lg:right-0 z-40"
     >
       <Helmet>
-        <title>Chisfis || Booking React Template</title>
+        <title>MovingTips || Encontre seu novo lar</title>
       </Helmet>
 
-      {/* NAV */}
-      <MainNav1 isTop={isTop} />
+      <MainNav1 isTop={isTop}/>
     </div>
   )
 }

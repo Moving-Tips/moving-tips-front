@@ -29,7 +29,6 @@ export interface PaginationProps {
 const Pagination: FC<PaginationProps> = ({ className = "" }) => {
   const renderItem = (pag: CustomLink, index: number) => {
     if (index === 0) {
-      // RETURN ACTIVE PAGINATION
       return (
         <span
           key={index}
@@ -39,7 +38,6 @@ const Pagination: FC<PaginationProps> = ({ className = "" }) => {
         </span>
       )
     }
-    // RETURN UNACTIVE PAGINATION
     return (
       <Link
         key={index}
@@ -55,7 +53,6 @@ const Pagination: FC<PaginationProps> = ({ className = "" }) => {
     <nav
       className={`nc-Pagination inline-flex space-x-1 text-base font-medium ${className}`}
     >
-      {DEMO_PAGINATION.map(renderItem)}
     </nav>
   )
 }

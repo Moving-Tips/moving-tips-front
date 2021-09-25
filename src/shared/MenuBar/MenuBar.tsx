@@ -1,8 +1,10 @@
-import React, { useState, Fragment, useEffect } from "react"
-import { Transition, Dialog } from "@headlessui/react"
+import React, { Fragment, useEffect, useState } from "react"
+import { Dialog, Transition } from "@headlessui/react"
 import NavMobile from "shared/Navigation/NavMobile"
 
-export interface MenuBarProps {}
+export interface MenuBarProps {
+}
+
 const MenuBar: React.FC<MenuBarProps> = () => {
   const [isVisable, setIsVisable] = useState(false)
 
@@ -33,7 +35,7 @@ const MenuBar: React.FC<MenuBarProps> = () => {
                 leaveTo="opacity-0 -translate-x-14"
               >
                 <div className="z-10 relative">
-                  <NavMobile onClickClose={handleCloseMenu} />
+                  <NavMobile onClickClose={handleCloseMenu}/>
                 </div>
               </Transition.Child>
 
@@ -46,7 +48,7 @@ const MenuBar: React.FC<MenuBarProps> = () => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Dialog.Overlay className="fixed inset-0 bg-neutral-900 bg-opacity-50" />
+                <Dialog.Overlay className="fixed inset-0 bg-neutral-900 bg-opacity-50"/>
               </Transition.Child>
             </React.Fragment>
           </div>

@@ -1,11 +1,9 @@
-//  ######  CustomLink  ######## //
 export interface CustomLink {
   label: string
   href: string
   targetBlank?: boolean
 }
 
-//  ##########  PostDataType ######## //
 export interface TaxonomyType {
   id: string | number
   name: string
@@ -58,7 +56,6 @@ export type TwMainColor =
   | "purple"
   | "gray"
 
-//
 export interface StayDataType {
   id: string | number
   author: AuthorType
@@ -84,9 +81,9 @@ export interface StayDataType {
     lat: number
     lng: number
   }
+  house: string
 }
 
-//
 export interface ExperiencesDataType {
   id: string | number
   author: AuthorType
@@ -104,33 +101,6 @@ export interface ExperiencesDataType {
   price: string
   listingCategory: TaxonomyType
   maxGuests: number
-  saleOff?: string | null
-  isAds: boolean | null
-  map: {
-    lat: number
-    lng: number
-  }
-}
-
-//
-export interface CarDataType {
-  id: string | number
-  author: AuthorType
-  date: string
-  href: string
-  title: string
-  featuredImage: string
-  commentCount: number
-  viewCount: number
-  address: string
-  reviewStart: number
-  reviewCount: number
-  like: boolean
-  galleryImgs: string[]
-  price: string
-  listingCategory: TaxonomyType
-  seats: number
-  gearshift: string
   saleOff?: string | null
   isAds: boolean | null
   map: {
