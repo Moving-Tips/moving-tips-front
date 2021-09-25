@@ -13,7 +13,7 @@ import ButtonCircle from "shared/Button/ButtonCircle"
 import ButtonSecondary from "shared/Button/ButtonSecondary"
 import Input from "shared/Input/Input"
 import NcImage from "shared/NcImage/NcImage"
-import ModalPhotos from "./ModalPhotos"
+import ModalPhotos from "containers/ListingDetailPage/ModalPhotos"
 import ChartDemo from "images/chart/demo.png"
 
 export interface ListingStayDetailPageProps {
@@ -148,7 +148,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           <CommentListing className="py-8"/>
           <CommentListing className="py-8"/>
           <div className="pt-8">
-            <ButtonSecondary >Veja mais 20 análises</ButtonSecondary>
+            <ButtonSecondary>Veja mais 20 análises</ButtonSecondary>
           </div>
         </div>
       </div>

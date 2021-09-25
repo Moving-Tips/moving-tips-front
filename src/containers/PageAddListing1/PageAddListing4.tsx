@@ -1,7 +1,8 @@
 import { FC } from "react"
-import CommonLayout from "./CommonLayout"
+import CommonLayout from "containers/PageAddListing1/CommonLayout"
 
-export interface PageAddListing4Props {}
+export interface PageAddListing4Props {
+}
 
 const PageAddListing4: FC<PageAddListing4Props> = () => {
   return (
@@ -17,14 +18,13 @@ const PageAddListing4: FC<PageAddListing4Props> = () => {
             Algumas belas fotos ajudarão os demais usuários a ter mais simpatia pelo seu bairro.
           </span>
         </div>
-
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
-        {/* FORM */}
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
         <div className="space-y-8">
           <div>
             <span className="text-lg font-semibold">Foto principal</span>
             <div className="mt-5 ">
-              <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-neutral-300 dark:border-neutral-6000 border-dashed rounded-md">
+              <div
+                className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-neutral-300 dark:border-neutral-6000 border-dashed rounded-md">
                 <div className="space-y-1 text-center">
                   <svg
                     className="mx-auto h-12 w-12 text-neutral-400"
@@ -38,7 +38,7 @@ const PageAddListing4: FC<PageAddListing4Props> = () => {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                    ></path>
+                    />
                   </svg>
                   <div className="flex text-sm text-neutral-6000 dark:text-neutral-300">
                     <label
@@ -56,17 +56,17 @@ const PageAddListing4: FC<PageAddListing4Props> = () => {
                     <p className="pl-1">ou arraste ela aqui</p>
                   </div>
                   <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                    PNG, JPG, GIF de até 10MB
+                                        PNG, JPG, GIF de até 10MB
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          {/* ----------------- */}
           <div>
             <span className="text-lg font-semibold">Outras fotos interessantes</span>
             <div className="mt-5 ">
-              <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-neutral-300 dark:border-neutral-6000 border-dashed rounded-md">
+              <div
+                className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-neutral-300 dark:border-neutral-6000 border-dashed rounded-md">
                 <div className="space-y-1 text-center">
                   <svg
                     className="mx-auto h-12 w-12 text-neutral-400"
@@ -80,7 +80,7 @@ const PageAddListing4: FC<PageAddListing4Props> = () => {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                    ></path>
+                    />
                   </svg>
                   <div className="flex text-sm text-neutral-6000 dark:text-neutral-300">
                     <label
@@ -98,7 +98,7 @@ const PageAddListing4: FC<PageAddListing4Props> = () => {
                     <p className="pl-1">ou arraste ela aqui</p>
                   </div>
                   <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                    PNG, JPG, GIF de até 10MB
+                                        PNG, JPG, GIF de até 10MB
                   </p>
                 </div>
               </div>

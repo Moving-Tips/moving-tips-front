@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import ButtonPrimary from "shared/Button/ButtonPrimary"
 import Input from "shared/Input/Input"
-import CommonLayout from "./CommonLayout"
+import CommonLayout from "containers/PageAddListing1/CommonLayout"
 
 export interface PageAddListing5Props {}
 

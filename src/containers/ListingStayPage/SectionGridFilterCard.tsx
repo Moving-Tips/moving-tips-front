@@ -3,7 +3,6 @@ import StayCard from "components/StayCard/StayCard"
 import { DEMO_STAY_LISTINGS } from "data/listings"
 import { StayDataType } from "data/types"
 import Pagination from "shared/Pagination/Pagination"
-import TabFilters from "./TabFilters"
 import Heading2 from "components/Heading/Heading2"
 
 export interface SectionGridFilterCardProps {

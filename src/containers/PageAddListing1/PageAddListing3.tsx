@@ -1,6 +1,6 @@
 import { FC } from "react"
 import Textarea from "shared/Textarea/Textarea"
-import CommonLayout from "./CommonLayout"
+import CommonLayout from "containers/PageAddListing1/CommonLayout"
 
 export interface PageAddListing3Props {}
 
@@ -20,7 +20,6 @@ const PageAddListing3: FC<PageAddListing3Props> = () => {
             Mencione as principais caracteristicas do seu bairro. Disserte sobre os pontos positivos e negativos de acordo com a avaliação feita previamente. Importante elencar também possiveis pontos de atenção!
           </span>
         </div>
-
         <Textarea placeholder="..." rows={14} />
       </>
     </CommonLayout>

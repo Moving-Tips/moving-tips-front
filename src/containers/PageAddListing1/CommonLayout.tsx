@@ -29,11 +29,7 @@ const CommonLayout: FC<CommonLayoutProps> = ({
             / 05
           </span>
         </div>
-
-        {/* --------------------- */}
         <div className="listingSection__wrap ">{children}</div>
-
-        {/* --------------------- */}
         <div className="flex justify-end space-x-5">
           <ButtonSecondary href={backtHref}>Voltar</ButtonSecondary>
           <ButtonPrimary href={nextHref}>
