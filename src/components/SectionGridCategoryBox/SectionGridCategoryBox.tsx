@@ -106,7 +106,7 @@ const SectionGridCategoryBox: React.FC<SectionGridCategoryBoxProps> = ({
   return (
     <div className={`nc-SectionGridCategoryBox relative ${className}`}>
       <Heading
-        desc="Discover great places near where you live"
+        desc="Descubra ótimos lugares perto de onde você vive"
         isCenter={headingCenter}
       >
                 Veja nas proximidades
