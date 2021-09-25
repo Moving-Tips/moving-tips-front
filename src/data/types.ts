@@ -84,7 +84,7 @@ export interface StayDataType {
     lat: number
     lng: number
   }
-  house:string
+  house: string
 }
 
 //
@@ -105,33 +105,6 @@ export interface ExperiencesDataType {
   price: string
   listingCategory: TaxonomyType
   maxGuests: number
-  saleOff?: string | null
-  isAds: boolean | null
-  map: {
-    lat: number
-    lng: number
-  }
-}
-
-//
-export interface CarDataType {
-  id: string | number
-  author: AuthorType
-  date: string
-  href: string
-  title: string
-  featuredImage: string
-  commentCount: number
-  viewCount: number
-  address: string
-  reviewStart: number
-  reviewCount: number
-  like: boolean
-  galleryImgs: string[]
-  price: string
-  listingCategory: TaxonomyType
-  seats: number
-  gearshift: string
   saleOff?: string | null
   isAds: boolean | null
   map: {

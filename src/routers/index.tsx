@@ -2,7 +2,6 @@ import React from "react"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import { Page } from "./types"
 import ScrollToTop from "./ScrollToTop"
-import Footer from "shared/Footer/Footer"
 import PageHome from "containers/PageHome/PageHome"
 import Header from "shared/Header/Header"
 import Page404 from "containers/Page404/Page404"
@@ -12,9 +11,6 @@ import ListingExperiencesPage from "containers/ListingExperiencesPage/ListingExp
 import ListingExperiencesMapPage from "containers/ListingExperiencesPage/ListingExperiencesMapPage"
 import ListingStayDetailPage from "containers/ListingDetailPage/ListingStayDetailPage"
 import ListingExperiencesDetailPage from "containers/ListingDetailPage/ListingExperiencesDetailPage"
-import ListingCarPage from "containers/ListingCarPage/ListingCarPage"
-import ListingCarMapPage from "containers/ListingCarPage/ListingCarMapPage"
-import ListingCarDetailPage from "containers/ListingDetailPage/ListingCarDetailPage"
 import CheckOutPage from "containers/CheckOutPage/CheckOutPage"
 import PayPage from "containers/PayPage/PayPage"
 import AuthorPage from "containers/AuthorPage/AuthorPage"
@@ -54,10 +50,6 @@ export const pages: Page[] = [
     path: "/listing-experiences-detail",
     component: ListingExperiencesDetailPage
   },
-  //
-  { path: "/listing-car", component: ListingCarPage },
-  { path: "/listing-car-map", component: ListingCarMapPage },
-  { path: "/listing-car-detail", component: ListingCarDetailPage },
   //
   { path: "/checkout", component: CheckOutPage },
   { path: "/pay-done", component: PayPage },
