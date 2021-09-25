@@ -41,7 +41,6 @@ const StayCardH: FC<StayCardHProps> = ({
           galleryImgs={galleryImgs}
         />
         <BtnLikeIcon isLiked={like} className="absolute right-3 top-3" />
-        {saleOff && <SaleOffBadge className="absolute left-3 top-3" />}
       </div>
     )
   }
@@ -59,7 +58,7 @@ const StayCardH: FC<StayCardHProps> = ({
           <div className="flex items-center space-x-3">
             <i className="las la-bed text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              6 beds
+              6 casas
             </span>
           </div>
         </div>
@@ -97,40 +96,53 @@ const StayCardH: FC<StayCardHProps> = ({
 
   const renderContent = () => {
     return (
-      <div className="flex-grow p-3 sm:p-5 flex flex-col">
-        <div className="space-y-2">
-          <div className="text-sm text-neutral-500 dark:text-neutral-400">
-            <span>
-              {listingCategory.name} in {address}
-            </span>
+      <>
+        <div className="flex-grow p-3 sm:p-5 flex flex-col">
+          <div className="space-y-2 mb-8">
+            <div className="flex items-center space-x-2">
+              <h2 className="text-lg font-medium capitalize items-center">
+                <span className="line-clamp-1">{title}</span>
+              </h2>
+            </div>
           </div>
-          <div className="flex items-center space-x-2">
-            {isAds && <Badge name="ADS" color="green" />}
-            <h2 className="text-lg font-medium capitalize">
-              <span className="line-clamp-1">{title}</span>
-            </h2>
+          {renderTienIch()}
+          <div className="flex justify-between items-end p-10">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="nc-icon-field"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+            <div className="text-sm text-neutral-500 dark:text-neutral-400">
+              <span>
+                {listingCategory.name}
+              </span>
+            </div>
+            <StartRating reviewCount={reviewCount} point={reviewStart} />
           </div>
         </div>
-        <div className="hidden sm:block w-14 border-b border-neutral-100 dark:border-neutral-800 my-4"></div>
-        {renderTienIch()}
-        <div className="w-14 border-b border-neutral-100 dark:border-neutral-800 my-4"></div>
-        <div className="flex justify-between items-end">
-          <StartRating reviewCount={reviewCount} point={reviewStart} />
-          <span className="text-base font-semibold">
-            {price}
-            {` `}
-            <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
-              /night
-            </span>
-          </span>
-        </div>
-      </div>
+        <div className="sm:block border-b border-neutral-100 dark:border-neutral-800 my-4"></div>
+      </>
     )
   }
 
   return (
     <div
-      className={`nc-StayCardH group relative bg-white dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow ${className}`}
+      className={`nc-StayCardH group relative bg-white 0 overflow-hidden hover:shadow-xl transition-shadow ${className}`}
       data-nc-id="StayCardH"
     >
       <Link to={href} className="flex flex-col sm:flex-row sm:items-center">

@@ -14,8 +14,10 @@ export interface NextPrevProps {
 
 const NextPrev: FC<NextPrevProps> = ({
   className = "",
-  onClickNext = () => {},
-  onClickPrev = () => {},
+  onClickNext = () => {
+  },
+  onClickPrev = () => {
+  },
   btnClassName = "w-10 h-10",
   onlyNext = false,
   onlyPrev = false
@@ -29,13 +31,13 @@ const NextPrev: FC<NextPrevProps> = ({
       {!onlyNext && (
         <button
           className={`${btnClassName} ${
-            !onlyPrev ? "mr-[6px]" : ""
-          } bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-6000 dark:hover:border-neutral-500 rounded-full flex items-center justify-center hover:border-neutral-300 ${twFocusClass()}`}
+                        !onlyPrev ? "mr-[6px]" : ""
+                    } bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-6000 dark:hover:border-neutral-500 rounded-full flex items-center justify-center hover:border-neutral-300 ${twFocusClass()}`}
           onClick={onClickPrev}
           title="Prev"
           data-glide-dir="<"
         >
-          <i className="las la-angle-left"></i>
+          <i className="las la-angle-left"/>
         </button>
       )}
       {!onlyPrev && (
@@ -45,7 +47,7 @@ const NextPrev: FC<NextPrevProps> = ({
           title="Next"
           data-glide-dir=">"
         >
-          <i className="las la-angle-right"></i>
+          <i className="las la-angle-right"/>
         </button>
       )}
     </div>

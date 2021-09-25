@@ -13,7 +13,7 @@ const EmailInput: FC<EmailInputProps> = ({ className = "" }) => {
     const lastAtPos = email.lastIndexOf("@")
     const lastDotPos = email.lastIndexOf(".")
     if (!(lastAtPos < lastDotPos && lastAtPos > 0 && email.indexOf("@@") === -1 && lastDotPos > 2 && email.length - lastDotPos > 2)) {
-      setEmailError('Email is invalid')
+      setEmailError('Email é inválido')
       showErrorEmail = false
     } else {
       setEmailError('')
@@ -23,17 +23,18 @@ const EmailInput: FC<EmailInputProps> = ({ className = "" }) => {
   return (
     <label className="block">
       <span className="text-neutral-800 dark:text-neutral-200">
-        Email address
+        Email
       </span>
       <Input
         type="email"
-        placeholder="example@example.com"
+        placeholder="exemplo@exemplo.com"
         className="mt-1"
         onBlur={(e) => validateEmail(e)}
       />
       {showErrorEmail ?? <br/>}
       <span className="block text-center text-neutral-700 dark:text-neutral-300">
-        {emailError}</span>
+        {emailError}
+      </span>
     </label>
   )
 }

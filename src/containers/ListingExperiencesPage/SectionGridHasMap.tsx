@@ -5,7 +5,7 @@ import { DEMO_EXPERIENCES_LISTINGS } from "data/listings"
 import ButtonClose from "shared/ButtonClose/ButtonClose"
 import Checkbox from "shared/Checkbox/Checkbox"
 import Pagination from "shared/Pagination/Pagination"
-import TabFilters from "./TabFilters"
+import TabFilters from "containers/ListingExperiencesPage/TabFilters"
 import Heading2 from "components/Heading/Heading2"
 import ExperiencesCardH from "components/ExperiencesCardH/ExperiencesCardH"
 
@@ -20,10 +20,9 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
   return (
     <div>
       <div className="relative flex min-h-screen">
-        {/* CARDSSSS */}
         <div className="min-h-screen w-full xl:w-[780px] 2xl:w-[880px] flex-shrink-0 xl:px-8 ">
           <Heading2
-            heading="Experiences in Tokyo"
+            heading="Experiências em Santo André"
             subHeading={
               <span className="block text-neutral-500 dark:text-neutral-400 mt-3">
                 233 experiences

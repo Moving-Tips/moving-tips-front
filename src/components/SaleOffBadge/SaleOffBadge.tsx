@@ -7,7 +7,7 @@ export interface SaleOffBadgeProps {
 
 const SaleOffBadge: FC<SaleOffBadgeProps> = ({
   className = "",
-  desc = "-10% today"
+  desc = "-10% hoje"
 }) => {
   return (
     <div

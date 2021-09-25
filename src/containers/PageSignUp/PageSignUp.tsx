@@ -1,9 +1,8 @@
-import React, { FC, useState } from "react"
+import React, { FC } from "react"
 import facebookSvg from "images/Facebook.svg"
 import twitterSvg from "images/Twitter.svg"
 import googleSvg from "images/Google.svg"
 import { Helmet } from "react-helmet"
-import Input from "shared/Input/Input"
 import ButtonPrimary from "shared/Button/ButtonPrimary"
 import { Link } from "react-router-dom"
 import FormEmail from "shared/EmailInput/FormEmail"
@@ -15,17 +14,17 @@ export interface PageSignUpProps {
 
 const loginSocials = [
   {
-    name: "Continue with Facebook",
+    name: "Entrar com Facebook",
     href: "#",
     icon: facebookSvg
   },
   {
-    name: "Continue with Twitter",
+    name: "Entrar com Twitter",
     href: "#",
     icon: twitterSvg
   },
   {
-    name: "Continue with Google",
+    name: "Entrar com Google",
     href: "#",
     icon: googleSvg
   }
@@ -35,12 +34,9 @@ const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
   return (
     <div className={`nc-PageSignUp  ${className}`} data-nc-id="PageSignUp">
       <Helmet>
-        <title>Sign up || Booking React Template</title>
+        <title>Moving Tips || Encontre seu novo lar</title>
       </Helmet>
       <div className="container mb-24 lg:mb-32">
-        <h2 className="my-20 flex items-center text-3xl leading-[115%] md:text-5xl md:leading-[115%] font-semibold text-neutral-900 dark:text-neutral-100 justify-center">
-                    Signup
-        </h2>
         <div className="max-w-md mx-auto space-y-6 ">
           <div className="grid gap-3">
             {loginSocials.map((item, index) => (
@@ -70,13 +66,13 @@ const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
           </div>
           {/* FORM */}
           <form className="grid grid-cols-1 gap-6" action="#" method="post">
-            <FormEmail />
-            <PasswordAndConfirm />
-            <ButtonPrimary type="submit">Continue</ButtonPrimary>
+            <FormEmail/>
+            <PasswordAndConfirm/>
+            <ButtonPrimary type="button">Cadastrar</ButtonPrimary>
           </form>
           <span className="block text-center text-neutral-700 dark:text-neutral-300">
-            Already have an account? {` `}
-            <Link to="/login">Sign in</Link>
+            Já possui uma conta? {` `}
+            <Link to="/login">Entrar</Link>
           </span>
         </div>
       </div>

@@ -5,23 +5,22 @@ import ButtonThird from "shared/Button/ButtonThird"
 import ButtonClose from "shared/ButtonClose/ButtonClose"
 import Checkbox from "shared/Checkbox/Checkbox"
 
-// DEMO DATA
 const typeOfExpriences = [
   {
-    name: "Food & drink",
-    description: "Short description for the experience"
+    name: "Comida & bebida",
+    description: "Breve descrição da experiência"
   },
   {
-    name: "Art and culture",
-    description: "Short description for the experience"
+    name: "Arte e cultura",
+    description: "Breve descrição da experiência"
   },
   {
-    name: "Nature and outdoors",
-    description: "Short description for the experience"
+    name: "Natureza e ar livre",
+    description: "Breve descrição da experiência"
   },
   {
-    name: "Sports",
-    description: "Short description for the experience"
+    name: "Esportes",
+    description: "Breve descrição da experiência"
   }
 ]
 
@@ -67,15 +66,14 @@ const moreFilter3 = rangePrices
 
 const TabFilters = () => {
   const [isOpenMoreFilter, setisOpenMoreFilter] = useState(false)
-  //
   const [isOnSale, setIsOnSale] = useState(true)
-  //
   const closeModalMoreFilter = () => setisOpenMoreFilter(false)
   const openModalMoreFilter = () => setisOpenMoreFilter(true)
 
   const renderXClear = () => {
     return (
-      <span className="w-4 h-4 rounded-full bg-primary-500 text-white flex items-center justify-center ml-3 cursor-pointer">
+      <span
+        className="w-4 h-4 rounded-full bg-primary-500 text-white flex items-center justify-center ml-3 cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-3 w-3"
@@ -99,8 +97,8 @@ const TabFilters = () => {
           <>
             <Popover.Button
               className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 focus:outline-none ${
-                open ? "!border-primary-500 " : ""
-              }`}
+                                open ? "!border-primary-500 " : ""
+                            }`}
             >
               <span>Type of experiences</span>
             </Popover.Button>
@@ -113,8 +111,10 @@ const TabFilters = () => {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 left-0 sm:px-0 lg:max-w-md">
-                <div className="overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
+              <Popover.Panel
+                className="absolute z-10 w-screen max-w-sm px-4 mt-3 left-0 sm:px-0 lg:max-w-md">
+                <div
+                  className="overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
                   <div className="relative flex flex-col px-5 py-6 space-y-5">
                     {typeOfExpriences.map((item) => (
                       <div key={item.name} className="">
@@ -126,15 +126,16 @@ const TabFilters = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
+                  <div
+                    className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                                            Limpar
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                                            Aplicar
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -153,8 +154,8 @@ const TabFilters = () => {
           <>
             <Popover.Button
               className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 focus:outline-none ${
-                open ? "!border-primary-500 " : ""
-              }`}
+                                open ? "!border-primary-500 " : ""
+                            }`}
             >
               <span>Time of day</span>
             </Popover.Button>
@@ -167,8 +168,10 @@ const TabFilters = () => {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 left-0 sm:px-0 lg:max-w-md">
-                <div className="overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-neutral-900   border border-neutral-200 dark:border-neutral-700">
+              <Popover.Panel
+                className="absolute z-10 w-screen max-w-sm px-4 mt-3 left-0 sm:px-0 lg:max-w-md">
+                <div
+                  className="overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-neutral-900   border border-neutral-200 dark:border-neutral-700">
                   <div className="relative flex flex-col px-5 py-6 space-y-5">
                     {timeOfdays.map((item) => (
                       <div key={item.name} className="">
@@ -180,15 +183,16 @@ const TabFilters = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
+                  <div
+                    className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                                            Clear
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                                            Apply
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -220,8 +224,10 @@ const TabFilters = () => {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 left-0 sm:px-0 lg:max-w-md">
-                <div className="overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
+              <Popover.Panel
+                className="absolute z-10 w-screen max-w-sm px-4 mt-3 left-0 sm:px-0 lg:max-w-md">
+                <div
+                  className="overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
                   <div className="relative flex flex-col px-5 py-6 space-y-8">
                     <div className="space-y-5">
                       <span className="font-medium">Price per adults</span>
@@ -235,7 +241,8 @@ const TabFilters = () => {
                       ))}
                     </div>
                     <div className="relative border-b border-neutral-200 dark:border-neutral-700">
-                      <span className="p-2 bg-white dark:bg-neutral-900 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 font-medium">
+                      <span
+                        className="p-2 bg-white dark:bg-neutral-900 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 font-medium">
                         Or
                       </span>
                     </div>
@@ -245,10 +252,11 @@ const TabFilters = () => {
                           htmlFor="minPrice"
                           className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                         >
-                          Min price
+                                                    Min price
                         </label>
                         <div className="mt-1 relative rounded-md">
-                          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                          <div
+                            className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <span className="text-neutral-500 sm:text-sm">
                               $
                             </span>
@@ -269,10 +277,11 @@ const TabFilters = () => {
                           htmlFor="maxPrice"
                           className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                         >
-                          Max price
+                                                    Max price
                         </label>
                         <div className="mt-1 relative rounded-md">
-                          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                          <div
+                            className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <span className="text-neutral-500 sm:text-sm">
                               $
                             </span>
@@ -290,15 +299,16 @@ const TabFilters = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
+                  <div
+                    className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                                            Clear
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                                            Apply
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -314,10 +324,10 @@ const TabFilters = () => {
     return (
       <div
         className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border focus:outline-none cursor-pointer transition-all ${
-          isOnSale
-            ? "border-primary-500 bg-primary-50 text-primary-700"
-            : "border-neutral-300 dark:border-neutral-700"
-        }`}
+                    isOnSale
+                        ? "border-primary-500 bg-primary-50 text-primary-700"
+                        : "border-neutral-300 dark:border-neutral-700"
+                }`}
         onClick={() => setIsOnSale(!isOnSale)}
       >
         <span>On sale</span>
@@ -392,7 +402,7 @@ const TabFilters = () => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-40 dark:bg-opacity-60" />
+                <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-40 dark:bg-opacity-60"/>
               </Transition.Child>
 
               {/* This element is to trick the browser into centering the modal contents. */}
@@ -411,16 +421,18 @@ const TabFilters = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <div className="inline-flex flex-col w-full max-w-4xl text-left align-middle transition-all transform overflow-hidden rounded-2xl bg-white dark:bg-neutral-900 dark:border dark:border-neutral-700 dark:text-neutral-100 shadow-xl h-full">
-                  <div className="relative flex-shrink-0 px-6 py-4 border-b border-neutral-200 dark:border-neutral-800 text-center">
+                <div
+                  className="inline-flex flex-col w-full max-w-4xl text-left align-middle transition-all transform overflow-hidden rounded-2xl bg-white dark:bg-neutral-900 dark:border dark:border-neutral-700 dark:text-neutral-100 shadow-xl h-full">
+                  <div
+                    className="relative flex-shrink-0 px-6 py-4 border-b border-neutral-200 dark:border-neutral-800 text-center">
                     <Dialog.Title
                       as="h3"
                       className="text-lg font-medium leading-6 text-gray-900"
                     >
-                      Experiences filters
+                                            Experiences filters
                     </Dialog.Title>
                     <span className="absolute left-3 top-3">
-                      <ButtonClose onClick={closeModalMoreFilter} />
+                      <ButtonClose onClick={closeModalMoreFilter}/>
                     </span>
                   </div>
 
@@ -428,7 +440,7 @@ const TabFilters = () => {
                     <div className="px-10 divide-y divide-neutral-200 dark:divide-neutral-800">
                       <div className="py-7">
                         <h3 className="text-xl font-medium">
-                          Type of experiences
+                                                    Type of experiences
                         </h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(moreFilter1)}
@@ -449,18 +461,19 @@ const TabFilters = () => {
                     </div>
                   </div>
 
-                  <div className="p-6 flex-shrink-0 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
+                  <div
+                    className="p-6 flex-shrink-0 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird
                       onClick={closeModalMoreFilter}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Clear
+                                            Clear
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={closeModalMoreFilter}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                                            Apply
                     </ButtonPrimary>
                   </div>
                 </div>

@@ -17,7 +17,7 @@ const StartRating: FC<StartRatingProps> = ({
       className={`nc-StartRating flex items-center space-x-1 text-sm  ${className}`}
       data-nc-id="StartRating"
     >
-      <StarIcon className="w-5 h-5 text-red-500" />
+      <StarIcon className="w-5 h-5 text-black-500" />
       <span className="font-medium ">{point}</span>
       <span className="text-neutral-500 dark:text-neutral-400">
         ({reviewCount})

@@ -23,62 +23,62 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "1",
     href: "#",
-    name: "Nature House",
+    name: "Casa Natural",
     taxonomy: "category",
     count: 17288,
     thumbnail:
-            "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "https://s2.glbimg.com/7JB9k1wv1lZ_1I9fgTsNIAKLYpw=/smart/e.glbimg.com/og/ed/f/original/2017/09/05/casa-del-suspiro-mexico_01.jpg"
   },
   {
     id: "2",
     href: "#",
-    name: "Wooden house",
+    name: "Casa de madeira",
     taxonomy: "category",
     count: 2118,
     thumbnail:
-            "https://images.pexels.com/photos/2351649/pexels-photo-2351649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            "https://imagens-revista.vivadecora.com.br/uploads/2019/11/casas-de-madeira.jpg"
   },
   {
     id: "3",
     href: "#",
-    name: "Houseboat",
+    name: "Casa flutuante",
     taxonomy: "category",
     count: 36612,
     thumbnail:
-            "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            "https://casa.abril.com.br/wp-content/uploads/2020/11/altar-casa-flutuante.png"
   },
   {
     id: "4",
     href: "#",
-    name: "Farm House",
+    name: "Casa na fazenda",
     taxonomy: "category",
     count: 188288,
     thumbnail:
-            "https://images.pexels.com/photos/248837/pexels-photo-248837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            "https://www.brotasonline.com.br/wp-content/uploads/2020/01/casa-na-fazenda-em-brotas-1.jpg"
   },
   {
     id: "5",
     href: "#",
-    name: "Dome House",
+    name: "Casa domo",
     taxonomy: "category",
     count: 188288,
     thumbnail:
-            "https://images.pexels.com/photos/3613236/pexels-photo-3613236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            "https://todososcaminhos.com/wp-content/uploads/2021/02/Domo-geodesico-2.png"
   },
   {
     id: "6",
     href: "#",
-    name: "Dome House",
+    name: "Casa container",
     taxonomy: "category",
     count: 188288,
     thumbnail:
-            "https://images.pexels.com/photos/3613236/pexels-photo-3613236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            "https://lh3.googleusercontent.com/proxy/v-o1ledTBXHYpcxZpTY12BtaABMMYevRlht1mGbROdVYIRpYRVQ5AbZxcLeoS6H91XUtQ7Kotnns77E_7_EwZhVeD915uVSZoGxKbfCDJbHVsnDy8DXpKGOM_q7dPzMJwUPVP7Ld4xp3jOALzZ576oYY4ML5Vw"
   }
 ]
 
 const SectionSliderNewCategories: FC<SectionSliderNewCategoriesProps> = ({
-  heading = "Heading of sections",
-  subHeading = "Descriptions for sections",
+  heading = "Cidades em destaques",
+  subHeading = "Cidades mais bem avaliadas",
   className = "",
   itemClassName = "",
   categories = DEMO_CATS,

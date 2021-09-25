@@ -1,7 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
-// Custom color with css variable color in __theme_color.scss
 function customColors (cssVar) {
   return ({ opacityVariable, opacityValue }) => {
     if (opacityValue !== undefined) {
@@ -17,7 +16,7 @@ function customColors (cssVar) {
 module.exports = {
   mode: 'jit',
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: 'class', // or 'media' or 'class',
+  darkMode: 'class',
   theme: {
     container: {
       center: true,

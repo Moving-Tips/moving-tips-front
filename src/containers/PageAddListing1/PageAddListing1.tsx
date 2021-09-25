@@ -1,10 +1,15 @@
-import React, { FC } from "react"
+import { LocationMarkerIcon } from "@heroicons/react/solid"
+import LocationMarker from "components/AnyReactComponent/LocationMarker"
+import GoogleMapReact from "google-map-react"
+import { FC } from "react"
+import ButtonSecondary from "shared/Button/ButtonSecondary"
 import Input from "shared/Input/Input"
 import Select from "shared/Select/Select"
-import CommonLayout from "./CommonLayout"
-import FormItem from "./FormItem"
+import CommonLayout from "containers/PageAddListing1/CommonLayout"
+import FormItem from "containers/PageAddListing1/FormItem"
 
-export interface PageAddListing1Props {}
+export interface PageAddListing1Props {
+}
 
 const PageAddListing1: FC<PageAddListing1Props> = () => {
   return (
@@ -14,41 +19,60 @@ const PageAddListing1: FC<PageAddListing1Props> = () => {
       nextHref="/add-listing-2"
     >
       <>
-        <h2 className="text-2xl font-semibold">Choosing listing categories</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
-        {/* FORM */}
+        <h2 className="text-2xl font-semibold">Informe sua localidade</h2>
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
         <div className="space-y-8">
-          {/* ITEM */}
-          <FormItem
-            label="Choose a property type"
-            desc="Hotel: Professional hospitality businesses that usually have a unique style or theme defining their brand and decor"
-          >
+          <ButtonSecondary>
+            <LocationMarkerIcon className="w-5 h-5 text-neutral-500 dark:text-neutral-400"/>
+            <span className="ml-3">Use sua localização atual</span>
+          </ButtonSecondary>
+          <FormItem label="CEP">
+            <Input/>
+          </FormItem>
+          <FormItem label="Endereço">
+            <Input placeholder="..."/>
+          </FormItem>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-5">
+            <FormItem label="Cidade">
+              <Input/>
+            </FormItem>
+            <FormItem label="Estado">
+              <Input/>
+            </FormItem>
+          </div>
+          <FormItem label="País">
             <Select>
-              <option value="Hotel">Hotel</option>
-              <option value="Cottage">Cottage</option>
-              <option value="Villa">Villa</option>
-              <option value="Cabin">Cabin</option>
-              <option value="Farm stay">Farm stay</option>
-              <option value="Houseboat">Houseboat</option>
-              <option value="Lighthouse">Lighthouse</option>
+              <option value="Angola">Angola</option>
+              <option value="Arábia Saudita">Arábia Saudita</option>
+              <option value="Argélia">Argélia</option>
+              <option value="Alemanha">Alemanha</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Austrália">Austrália</option>
+              <option value="Brasil" selected>Brasil</option>
+              <option value="...">...</option>
             </Select>
           </FormItem>
-          <FormItem
-            label="Place name"
-            desc="A catchy name usually includes: House name + Room name + Featured property + Tourist destination"
-          >
-            <Input placeholder="Places name" />
-          </FormItem>
-          <FormItem
-            label="Rental form"
-            desc="Entire place: Guests have the whole place to themselves—there's a private entrance and no shared spaces. A bedroom, bathroom, and kitchen are usually included."
-          >
-            <Select>
-              <option value="Hotel">Entire place</option>
-              <option value="Private room">Private room</option>
-              <option value="Share room">Share room</option>
-            </Select>
-          </FormItem>
+          <div>
+            <div className="mt-4">
+              <div className="aspect-w-5 aspect-h-5 sm:aspect-h-3">
+                <div className="rounded-xl overflow-hidden">
+                  <GoogleMapReact
+                    bootstrapURLKeys={{
+                      key: "AIzaSyDxJaU8bLdx7sSJ8fcRdhYS1pLk8Jdvnx0"
+                    }}
+                    defaultZoom={15}
+                    yesIWantToUseGoogleMapApiInternals
+                    defaultCenter={{
+                      lat: -23.59498942427704,
+                      lng: -46.68712751756319
+                    }}
+                  >
+                    <LocationMarker lat={-23.59498942427704} lng={-46.68712751756319}/>
+                  </GoogleMapReact>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </>
     </CommonLayout>

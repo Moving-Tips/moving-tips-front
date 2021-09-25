@@ -4,7 +4,6 @@ import React, { FC, Fragment, useEffect, useState } from "react"
 import { NavLink, RouteComponentProps, withRouter } from "react-router-dom"
 import NcImage from "shared/NcImage/NcImage"
 
-// <--- NavItemType --->
 export interface MegamenuItem {
   id: string
   image: string
@@ -33,7 +32,6 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
 }) => {
   const [menuCurrentHovers, setMenuCurrentHovers] = useState<string[]>([])
 
-  // CLOSE ALL MENU OPENING WHEN CHANGE HISTORY
   useEffect(() => {
     const unlisten = history.listen(() => {
       setMenuCurrentHovers([])
@@ -55,7 +53,6 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
     })
   }
 
-  // ===================== MENU MEGAMENU =====================
   const renderMegaMenu = (menu: NavItemType) => {
     const isHover = menuCurrentHovers.includes(menu.id)
 
@@ -140,7 +137,6 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
     )
   }
 
-  // ===================== MENU DROPDOW =====================
   const renderDropdownMenu = (menuDropdown: NavItemType) => {
     const isHover = menuCurrentHovers.includes(menuDropdown.id)
     return (
@@ -264,7 +260,6 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
     )
   }
 
-  // ===================== MENU MAIN MENU =====================
   const renderMainItem = (item: NavItemType) => {
     return (
       <NavLink
@@ -298,7 +293,6 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
       return <li className="menu-item">{renderMainItem(menuItem)}</li>
   }
 }
-// Your component own properties
 
 const NavigationItemWithRouter = withRouter<
 NavigationItemWithRouterProps,

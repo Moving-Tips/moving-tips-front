@@ -30,7 +30,7 @@ const SocialsShare: FC<SocialsShareProps> = ({
         className={`rounded-full leading-none flex items-center justify-center bg-white text-neutral-6000 ${itemClass}`}
         title={`Share on ${item.name}`}
       >
-        <i className={item.icon}></i>
+        <i className={item.icon}/>
       </a>
     )
   }
