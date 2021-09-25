@@ -21,23 +21,26 @@ const DEMO_DATA = [
   {
     id: 1,
     clientName: "Joana",
+    image: clientSay1,
     clientAddress: "Brasília",
     content:
-            "Este lugar é exatamento conforme a Moving Tips falou!"
+      "Pretendo continuar aqui por muito tempo!"
   },
   {
     id: 2,
-    clientName: "Cleide",
+    image: clientSay4,
+    clientName: "Roberto",
     clientAddress: "Natal",
     content:
-            "Este lugar é exatamento conforme a Moving Tips falou!"
+      "Maravilha, ótima vizinhança!"
   },
   {
     id: 3,
-    clientName: "Roberta",
+    image: clientSay5,
+    clientName: "Angelo",
     clientAddress: "Santo André",
     content:
-            "Este lugar é exatamento conforme a Moving Tips falou!"
+      "Próximo a tudo, como eu imaginei!"
   }
 ]
 
@@ -87,11 +90,10 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
       data-nc-id="SectionClientSay"
     >
       <Heading desc="Let's see what people think of MovingTips" isCenter>
-                Good news from far away
+        Avaliações
       </Heading>
       <div className="relative md:mb-16 max-w-2xl mx-auto">
         {renderBg()}
-        <img className="mx-auto" src={clientSayMain} alt=""/>
         <div className={`mt-12 lg:mt-16 relative ${UNIQUE_CLASS}`}>
           <img
             className="opacity-50 md:opacity-100 absolute -mr-16 lg:mr-3 right-full top-1"
@@ -110,6 +112,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
                   key={item.id}
                   className="glide__slide flex flex-col items-center text-center"
                 >
+                  <img className="mx-auto" src={item.image} alt="" />
                   <span className="block text-2xl">{item.content}</span>
                   <span className="block mt-8 text-2xl font-semibold">
                     {item.clientName}
