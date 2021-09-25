@@ -1,7 +1,7 @@
-import __taxonomies from "./jsons/__taxonomies.json"
-import __stayTaxonomies from "./jsons/__stayTaxonomies.json"
-import __experiencesTaxonomies from "./jsons/__experiencesTaxonomies.json"
-import { TaxonomyType } from "./types"
+import __taxonomies from "data/jsons/__taxonomies.json"
+import __stayTaxonomies from "data/jsons/__stayTaxonomies.json"
+import __experiencesTaxonomies from "data/jsons/__experiencesTaxonomies.json"
+import { TaxonomyType } from "data/types"
 
 const DEMO_CATEGORIES: TaxonomyType[] = __taxonomies.map((item) => ({
   ...item,
@@ -18,6 +18,7 @@ const DEMO_STAY_CATEGORIES: TaxonomyType[] = __stayTaxonomies.map((item) => ({
   taxonomy: "category",
   listingType: "stay"
 }))
+
 const DEMO_EXPERIENCES_CATEGORIES: TaxonomyType[] = __experiencesTaxonomies.map(
   (item) => ({
     ...item,

@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from "react"
 import { AnchorDirectionShape, DateRangePicker, FocusedInputShape } from "react-dates"
-import { DateRage } from "./StaySearchForm"
+import { DateRage } from "components/HeroSearchForm/StaySearchForm"
 
 import ClearDataButton from "components/HeroSearchForm/ClearDataButton"
 import useWindowSize from "hooks/useWindowResize"

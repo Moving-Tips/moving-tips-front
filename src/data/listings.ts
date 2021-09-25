@@ -1,8 +1,8 @@
-import __stayListing from "./jsons/__stayListing.json"
-import __experiencesListing from "./jsons/__experiencesListing.json"
-import { DEMO_EXPERIENCES_CATEGORIES, DEMO_STAY_CATEGORIES } from "./taxonomies"
-import { ExperiencesDataType, StayDataType } from "./types"
-import { DEMO_AUTHORS } from "./authors"
+import __stayListing from "data/jsons/__stayListing.json"
+import __experiencesListing from "data/jsons/__experiencesListing.json"
+import { DEMO_EXPERIENCES_CATEGORIES, DEMO_STAY_CATEGORIES } from "data/taxonomies"
+import { ExperiencesDataType, StayDataType } from "data/types"
+import { DEMO_AUTHORS } from "data/authors"
 
 const DEMO_STAY_LISTINGS = __stayListing.map((post, index): StayDataType => {
   const category = DEMO_STAY_CATEGORIES.filter(

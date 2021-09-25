@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState, FC } from "react"
+import React, { FC, Fragment, useEffect, useState } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import NcInputNumber from "components/NcInputNumber/NcInputNumber"
 
@@ -46,7 +46,7 @@ const GuestsInput: FC<GuestsInputProps> = ({
   }, [guestAdultsInputValue, guestChildrenInputValue, guestInfantsInputValue])
 
   const totalGuests =
-    guestChildrenInputValue + guestAdultsInputValue + guestInfantsInputValue
+        guestChildrenInputValue + guestAdultsInputValue + guestInfantsInputValue
 
   return (
     <Popover className="flex relative [ nc-flex-1 ]">
@@ -54,8 +54,8 @@ const GuestsInput: FC<GuestsInputProps> = ({
         <>
           <Popover.Button
             className={`flex text-left w-full flex-shrink-0 items-center ${fieldClassName} space-x-3 focus:outline-none cursor-pointer ${
-              open ? "shadow-2xl rounded-full dark:bg-neutral-800" : ""
-            }`}
+                            open ? "shadow-2xl rounded-full dark:bg-neutral-800" : ""
+                        }`}
           >
             <div className="text-neutral-300 dark:text-neutral-400">
               <svg
@@ -100,7 +100,8 @@ const GuestsInput: FC<GuestsInputProps> = ({
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute right-0 z-10 w-full sm:min-w-[340px] max-w-sm bg-white dark:bg-neutral-800 top-full mt-3 py-5 sm:py-6 px-4 sm:px-8 rounded-3xl shadow-xl">
+            <Popover.Panel
+              className="absolute right-0 z-10 w-full sm:min-w-[340px] max-w-sm bg-white dark:bg-neutral-800 top-full mt-3 py-5 sm:py-6 px-4 sm:px-8 rounded-3xl shadow-xl">
               <NcInputNumber
                 className="w-full"
                 defaultValue={guestAdultsInputValue}

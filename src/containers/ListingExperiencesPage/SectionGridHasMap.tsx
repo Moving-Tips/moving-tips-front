@@ -5,7 +5,7 @@ import { DEMO_EXPERIENCES_LISTINGS } from "data/listings"
 import ButtonClose from "shared/ButtonClose/ButtonClose"
 import Checkbox from "shared/Checkbox/Checkbox"
 import Pagination from "shared/Pagination/Pagination"
-import TabFilters from "./TabFilters"
+import TabFilters from "containers/ListingExperiencesPage/TabFilters"
 import Heading2 from "components/Heading/Heading2"
 import ExperiencesCardH from "components/ExperiencesCardH/ExperiencesCardH"
 

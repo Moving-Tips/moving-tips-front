@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useState } from "react"
 import LocationInput from "components/HeroSearchForm/LocationInput"
 import GuestsInput, { GuestsInputProps } from "components/HeroSearchForm/GuestsInput"
-import ExperiencesDateSingleInput from "./ExperiencesDateSingleInput"
-import ButtonSubmit from "./ButtonSubmit"
+import ExperiencesDateSingleInput from "components/HeroSearchForm/ExperiencesDateSingleInput"
+import ButtonSubmit from "components/HeroSearchForm/ButtonSubmit"
 import moment from "moment"
 
 const defaultLocationValue = "Santo André, SP"

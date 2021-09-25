@@ -33,36 +33,6 @@ const PHOTOS: string[] = [
   "https://images.pexels.com/photos/2677398/pexels-photo-2677398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 ]
 
-const Amenities_demos = [
-  { name: "la-key", icon: "la-key" },
-  { name: "la-luggage-cart", icon: "la-luggage-cart" },
-  { name: "la-shower", icon: "la-shower" },
-  { name: "la-smoking", icon: "la-smoking" },
-  { name: "la-snowflake", icon: "la-snowflake" },
-  { name: "la-spa", icon: "la-spa" },
-  { name: "la-suitcase", icon: "la-suitcase" },
-  { name: "la-suitcase-rolling", icon: "la-suitcase-rolling" },
-  { name: "la-swimmer", icon: "la-swimmer" },
-  { name: "la-swimming-pool", icon: "la-swimming-pool" },
-  { name: "la-tv", icon: "la-tv" },
-  { name: "la-umbrella-beach", icon: "la-umbrella-beach" },
-  { name: "la-utensils", icon: "la-utensils" },
-  { name: "la-wheelchair", icon: "la-wheelchair" },
-  { name: "la-wifi", icon: "la-wifi" },
-  { name: "la-baby-carriage", icon: "la-baby-carriage" },
-  { name: "la-bath", icon: "la-bath" },
-  { name: "la-bed", icon: "la-bed" },
-  { name: "la-briefcase", icon: "la-briefcase" },
-  { name: "la-car", icon: "la-car" },
-  { name: "la-cocktail", icon: "la-cocktail" },
-  { name: "la-coffee", icon: "la-coffee" },
-  { name: "la-concierge-bell", icon: "la-concierge-bell" },
-  { name: "la-dice", icon: "la-dice" },
-  { name: "la-dumbbell", icon: "la-dumbbell" },
-  { name: "la-hot-tub", icon: "la-hot-tub" },
-  { name: "la-infinity", icon: "la-infinity" }
-]
-
 const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
   className = "",
   isPreviewMode
@@ -119,7 +89,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           <StartRating/>
           <span>·</span>
           <span>
-            <i className="las la-map-marker-alt"></i>
+            <i className="las la-map-marker-alt"/>
             <span className="ml-1"> São Paulo, SP</span>
           </span>
         </div>
@@ -144,7 +114,6 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
   const renderSkills = () => {
     return (
       <div className="listingSection__wrap">
-        {/* HEADING */}
         <h2 className="text-2xl font-semibold">Skills</h2>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
         <NcImage src={ChartDemo}/>
@@ -155,11 +124,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
   const renderReviews = () => {
     return (
       <div className="listingSection__wrap">
-        {/* HEADING */}
         <h2 className="text-2xl font-semibold">Análises (23 análise)</h2>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
-
-        {/* Content */}
         <div className="space-y-5">
           <FiveStartIconForRate iconClass="w-6 h-6" className="space-x-0.5"/>
           <div className="relative">
@@ -177,14 +143,12 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             </ButtonCircle>
           </div>
         </div>
-
-        {/* comment */}
         <div className="divide-y divide-neutral-100 dark:divide-neutral-800">
           <CommentListing className="py-8"/>
           <CommentListing className="py-8"/>
           <CommentListing className="py-8"/>
           <div className="pt-8">
-            <ButtonSecondary>Veja mais 20 análises</ButtonSecondary>
+            <ButtonSecondary >Veja mais 20 análises</ButtonSecondary>
           </div>
         </div>
       </div>
@@ -194,7 +158,6 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
   const renderLocation = () => {
     return (
       <div className="listingSection__wrap">
-        {/* HEADING */}
         <div>
           <h2 className="text-2xl font-semibold">Localidade</h2>
           <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
@@ -203,7 +166,6 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
 
-        {/* MAP */}
         <div className="aspect-w-5 aspect-h-5 sm:aspect-h-3">
           <div className="rounded-xl overflow-hidden">
             <GoogleMapReact
@@ -228,11 +190,9 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
   const renderThingsToKnow = () => {
     return (
       <div className="listingSection__wrap">
-        {/* HEADING */}
         <h2 className="text-2xl font-semibold">Coisas para saber</h2>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
 
-        {/* CONTENT */}
         <div>
           <h4 className="text-lg font-semibold">Curiosidades e belezas naturais</h4>
           <span className="block mt-3 text-neutral-500 dark:text-neutral-400">
@@ -249,7 +209,6 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
       className={`nc-ListingStayDetailPage  ${className}`}
       data-nc-id="ListingStayDetailPage"
     >
-      {/* SINGLE HEADER */}
       <>
         <header className="container 2xl:px-14 rounded-md sm:rounded-xl">
           <div className="relative grid grid-cols-3 sm:grid-cols-4 gap-1 sm:gap-2">
@@ -264,7 +223,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
                 prevImageHorizontal
               />
               <div
-                className="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity"></div>
+                className="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity"/>
             </div>
             {PHOTOS.filter((_, i) => i >= 1 && i < 5).map((item, index) => (
               <div
@@ -280,7 +239,6 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
                   prevImageHorizontal
                 />
 
-                {/* OVERLAY */}
                 <div
                   className="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity cursor-pointer"
                   onClick={() => handleOpenModal(index + 1)}
@@ -312,7 +270,6 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             </div>
           </div>
         </header>
-        {/* MODAL PHOTOS */}
         <ModalPhotos
           imgs={PHOTOS}
           isOpen={isOpen}
@@ -321,9 +278,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
         />
       </>
 
-      {/* MAIn */}
       <main className="container mt-11 flex ">
-        {/* CONTENT */}
         <div className="w-full lg:w-3/5 xl:w-2/3 space-y-8 lg:space-y-10 lg:pr-10">
           {renderInicial()}
           {renderInfo()}

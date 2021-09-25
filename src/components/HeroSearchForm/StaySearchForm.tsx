@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from "react"
 import LocationInput from "components/HeroSearchForm/LocationInput"
 import { GuestsInputProps } from "components/HeroSearchForm/GuestsInput"
 import { FocusedInputShape } from "react-dates"
-import ButtonSubmit from "./ButtonSubmit"
+import ButtonSubmit from "components/HeroSearchForm/ButtonSubmit"
 import moment from "moment"
 
 export interface DateRage {
