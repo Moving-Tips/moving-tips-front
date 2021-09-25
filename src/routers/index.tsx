@@ -10,8 +10,6 @@ import ListingStayMapPage from "containers/ListingStayPage/ListingStayMapPage"
 import ListingStayDetailPage from "containers/ListingDetailPage/ListingStayDetailPage"
 import AccountPage from "containers/AccountPage/AccountPage"
 import AccountPass from "containers/AccountPage/AccountPass"
-import PageContact from "containers/PageContact/PageContact"
-import PageAbout from "containers/PageAbout/PageAbout"
 import PageSignUp from "containers/PageSignUp/PageSignUp"
 import PageLogin from "containers/PageLogin/PageLogin"
 import PageSubcription from "containers/PageSubcription/PageSubcription"
@@ -34,9 +32,6 @@ export const pages: Page[] = [
   { path: "/add-listing-3", component: PageAddListing3 },
   { path: "/add-listing-4", component: PageAddListing4 },
   { path: "/add-listing-5", component: PageAddListing5 },
-  //
-  { path: "/contact", component: PageContact },
-  { path: "/about", component: PageAbout },
   { path: "/signup", component: PageSignUp },
   { path: "/login", component: PageLogin },
   { path: "/subscription", component: PageSubcription }
