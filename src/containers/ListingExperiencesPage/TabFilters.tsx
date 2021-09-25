@@ -66,9 +66,7 @@ const moreFilter3 = rangePrices
 
 const TabFilters = () => {
   const [isOpenMoreFilter, setisOpenMoreFilter] = useState(false)
-  //
   const [isOnSale, setIsOnSale] = useState(true)
-  //
   const closeModalMoreFilter = () => setisOpenMoreFilter(false)
   const openModalMoreFilter = () => setisOpenMoreFilter(true)
 
@@ -131,13 +129,13 @@ const TabFilters = () => {
                   <div
                     className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                                            Clear
+                                            Limpar
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                                            Apply
+                                            Aplicar
                     </ButtonPrimary>
                   </div>
                 </div>
