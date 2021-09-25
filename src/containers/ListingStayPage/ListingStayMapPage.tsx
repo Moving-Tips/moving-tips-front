@@ -28,7 +28,7 @@ const ListingStayMapPage: FC<ListingStayMapPageProps> = ({
 
       {/* SECTION */}
       <div className="container pb-24 lg:pb-32 2xl:pl-10 xl:pr-0 xl:max-w-none">
-        <SectionGridHasMap/>
+        <SectionGridHasMap />
       </div>
     </div>
   )

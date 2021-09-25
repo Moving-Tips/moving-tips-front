@@ -38,6 +38,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
           </div>
         </div>
 
+        {/* MAPPPPP */}
         <div
           className={`xl:flex-grow xl:static xl:block ${
                         showFullMapFixed ? "fixed inset-0 z-50" : "hidden"

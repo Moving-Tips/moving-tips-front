@@ -13,7 +13,7 @@ const EmailInput: FC<EmailInputProps> = ({ className = "" }) => {
     const lastAtPos = email.lastIndexOf("@")
     const lastDotPos = email.lastIndexOf(".")
     if (!(lastAtPos < lastDotPos && lastAtPos > 0 && email.indexOf("@@") === -1 && lastDotPos > 2 && email.length - lastDotPos > 2)) {
-      setEmailError('Email is invalid')
+      setEmailError('Email é inválido')
       showErrorEmail = false
     } else {
       setEmailError('')

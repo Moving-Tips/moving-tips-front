@@ -1,8 +1,5 @@
 import React, { FC, ReactNode } from "react"
-import imagePng from "images/hero-right2.png"
-import HeroSearchForm, {
-  SearchTab
-} from "components/HeroSearchForm/HeroSearchForm"
+import HeroSearchForm, { SearchTab } from "components/HeroSearchForm/HeroSearchForm"
 
 export interface SectionHeroArchivePageProps {
   className?: string
@@ -24,7 +21,7 @@ const SectionHeroArchivePage: FC<SectionHeroArchivePageProps> = ({
     >
       <div className="flow-root w-full">
         <div className="z-10 lg:-mt-40 xl:-mt-56 w-full">
-          <HeroSearchForm currentPage={currentPage} currentTab={currentTab} />
+          <HeroSearchForm currentPage={currentPage} currentTab={currentTab}/>
         </div>
       </div>
     </div>

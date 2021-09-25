@@ -127,7 +127,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
         {data.map(_renderItem)}
       </ul>
       <div className="flex items-center justify-between py-6 px-5 space-x-4">
-        <a href="/#" target="_blank" rel="noopener noreferrer">
+        <a href="/add-listing-1" rel="noopener noreferrer">
           <ButtonPrimary>Nova Análise</ButtonPrimary>
         </a>
       </div>

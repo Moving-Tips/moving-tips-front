@@ -1,6 +1,6 @@
 import React from 'react'
-import { render } from '@testing-library/react'
-import PasswordInput from "shared/PasswordInput/PasswordInput"
+import { render, screen } from '@testing-library/react'
+import AccountPage from "./AccountPage"
 
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -16,8 +16,8 @@ Object.defineProperty(window, 'matchMedia', {
   }))
 })
 
-test('test PasswordInput', () => {
-  const tree = render(<PasswordInput/>)
-  const label = tree.getByLabelText("Senha")
-  expect(label).toBeInTheDocument()
+test('test AccountPage', () => {
+  // const elem = render(<AccountPage/>)
+  // const linkElement = elem.getByText(/Informações da conta/i)
+  // expect(linkElement).toBeInTheDocument()
 })
