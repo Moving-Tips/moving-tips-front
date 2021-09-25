@@ -13,7 +13,8 @@ const NavItem: FC<NavItemProps> = ({
   className = "px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize",
   radius = "rounded-full",
   children,
-  onClick = () => {},
+  onClick = () => {
+  },
   isActive = false,
   renderX
 }) => {
@@ -22,10 +23,10 @@ const NavItem: FC<NavItemProps> = ({
       {renderX && renderX}
       <button
         className={`block !leading-none font-medium whitespace-nowrap ${className} ${radius} ${
-          isActive
-            ? "bg-secondary-900 text-secondary-50 "
-            : "text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-        } ${twFocusClass()}`}
+                    isActive
+                        ? "bg-secondary-900 text-secondary-50 "
+                        : "text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                } ${twFocusClass()}`}
         onClick={() => {
           onClick && onClick()
         }}

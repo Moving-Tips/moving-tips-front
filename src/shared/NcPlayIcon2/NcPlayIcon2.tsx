@@ -28,7 +28,7 @@ const NcPlayIcon2: FC<NcPlayIcon2Props> = ({
             strokeLinejoin="round"
             strokeWidth="1"
             d="M18.25 12L5.75 5.75V18.25L18.25 12Z"
-          ></path>
+          />
         </svg>
       </span>
     </div>
