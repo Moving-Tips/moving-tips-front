@@ -1,10 +1,4 @@
-import React, {
-  FC,
-  ImgHTMLAttributes,
-  useEffect,
-  useRef,
-  useState
-} from "react"
+import React, { FC, ImgHTMLAttributes, useEffect, useRef, useState } from "react"
 import checkInViewIntersectionObserver from "utils/isInViewPortIntersectionObserver"
 import placeholderLarge from "images/placeholder-large.png"
 import placeholderLargeH from "images/placeholder-large-h.png"
@@ -82,7 +76,7 @@ const NcImage: FC<NcImageProps> = ({
       ) : (
         <div
           className={`${className} bg-neutral-200 dark:bg-neutral-6000`}
-        ></div>
+        />
       )}
     </div>
   )

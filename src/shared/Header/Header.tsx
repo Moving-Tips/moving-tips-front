@@ -36,7 +36,6 @@ const Header: FC<HeaderProps> = () => {
         <title>MovingTips || Encontre seu novo lar</title>
       </Helmet>
 
-      {/* NAV */}
       <MainNav1 isTop={isTop}/>
     </div>
   )

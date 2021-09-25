@@ -33,7 +33,8 @@ const EmailInput: FC<EmailInputProps> = ({ className = "" }) => {
       />
       {showErrorEmail ?? <br/>}
       <span className="block text-center text-neutral-700 dark:text-neutral-300">
-        {emailError}</span>
+        {emailError}
+      </span>
     </label>
   )
 }

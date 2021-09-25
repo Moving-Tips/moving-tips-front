@@ -18,8 +18,6 @@ const Logo: React.FC<LogoProps> = ({
       to="/"
       className={`ttnc-logo inline-block text-primary-6000 ${className}`}
     >
-      {/* THIS USE FOR MY CLIENT */}
-      {/* PLEASE UN COMMENT BELLOW CODE AND USE IT */}
       {img ? (
         <img
           className={`block max-h-12 ${imgLight ? "dark:hidden" : ""}`}
