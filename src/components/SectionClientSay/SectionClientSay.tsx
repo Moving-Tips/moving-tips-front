@@ -23,8 +23,7 @@ const DEMO_DATA = [
     clientName: "Joana",
     image: clientSay1,
     clientAddress: "Brasília",
-    content:
-      "Pretendo continuar aqui por muito tempo!"
+    content: "Pretendo continuar aqui por muito tempo!"
   },
   {
     id: 2,

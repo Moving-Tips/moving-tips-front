@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet"
 import Input from "shared/Input/Input"
 import { Link, useHistory } from "react-router-dom"
 import ButtonPrimary from "shared/Button/ButtonPrimary"
+import { Alert } from "shared/Alert/Alert"
 import { usersCreated } from "data/users"
 export interface PageLoginProps {
   className?: string
@@ -35,7 +36,15 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
   const history = useHistory()
 
   const validateLogin = () => {
-    usersCreated[0] === email && usersCreated[1] === password ? callHome() : alert("Email ou senha inválidos")
+    if (usersCreated[0] === email) {
+      if (usersCreated[1] === password) {
+        callHome()
+      } else {
+        alert("Senha inválida")
+      }
+    } else {
+      alert("Email inválido")
+    }
   }
 
   const handleEmail = (event: { target: { value: any } }) => {
@@ -105,7 +114,7 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
               </span>
               <Input type="password" id="inputPassword" className="mt-1" onChange={handlePassword}/>
             </label>
-            <ButtonPrimary type="submit" onClick={validateLogin}>Continue</ButtonPrimary>
+            <ButtonPrimary type="submit" >Continue</ButtonPrimary>
           </form>
 
           {/* ==== */}

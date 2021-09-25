@@ -1,6 +1,5 @@
 import SectionHero from "components/SectionHero/SectionHero"
 import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories"
-import React from "react"
 import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2"
 import SectionOurFeatures from "components/SectionOurFeatures/SectionOurFeatures"
 import SectionGridFeaturePlaces from "containers/PageHome/SectionGridFeaturePlaces"
@@ -172,6 +171,7 @@ function PageHome () {
           categoryCardType="card5"
           itemPerRow={5}
         />
+        {/* SECTION 2 */}
         <div className="relative py-16">
           <BackgroundSection/>
           <SectionClientSay/>
