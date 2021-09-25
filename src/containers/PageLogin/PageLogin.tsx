@@ -78,7 +78,7 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
           {/* OR */}
           <div className="relative text-center">
             <span className="relative z-10 inline-block px-4 font-medium text-sm bg-white dark:text-neutral-400 dark:bg-neutral-900">
-              OR
+              Ou
             </span>
             <div className="absolute left-0 w-full top-1/2 transform -translate-y-1/2 border border-neutral-100 dark:border-neutral-800"/>
           </div>

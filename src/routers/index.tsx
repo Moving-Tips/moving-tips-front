@@ -12,7 +12,6 @@ import AccountPage from "containers/AccountPage/AccountPage"
 import AccountPass from "containers/AccountPage/AccountPass"
 import PageSignUp from "containers/PageSignUp/PageSignUp"
 import PageLogin from "containers/PageLogin/PageLogin"
-import PageSubcription from "containers/PageSubcription/PageSubcription"
 import PageAddListing1 from "containers/PageAddListing1/PageAddListing1"
 import PageAddListing2 from "containers/PageAddListing1/PageAddListing2"
 import PageAddListing3 from "containers/PageAddListing1/PageAddListing3"
@@ -33,8 +32,7 @@ export const pages: Page[] = [
   { path: "/add-listing-4", component: PageAddListing4 },
   { path: "/add-listing-5", component: PageAddListing5 },
   { path: "/signup", component: PageSignUp },
-  { path: "/login", component: PageLogin },
-  { path: "/subscription", component: PageSubcription }
+  { path: "/login", component: PageLogin }
 ]
 
 const Routes = () => {
