@@ -298,7 +298,6 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
       return <li className="menu-item">{renderMainItem(menuItem)}</li>
   }
 }
-// Your component own properties
 
 const NavigationItemWithRouter = withRouter<
 NavigationItemWithRouterProps,

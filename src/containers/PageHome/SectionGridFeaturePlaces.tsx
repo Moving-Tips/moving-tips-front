@@ -22,7 +22,7 @@ const SectionGridFeaturePlaces: FC<SectionGridFeaturePlacesProps> = ({
   stayListings = DEMO_DATA,
   gridClass = "",
   heading = "Bairros destaque",
-  subHeading = "Lugares populares para se hospedar que a Moving tips recomenda para você",
+  subHeading = "Lugares populares para morar que a Moving tips recomenda para você",
   headingIsCenter,
   tabs = ["São Paulo", "Santo André", "Rio de Janeiro", "Brasília"]
 }) => {

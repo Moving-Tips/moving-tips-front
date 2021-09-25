@@ -76,11 +76,11 @@ const DEMO_CATS_2: TaxonomyType[] = [
   {
     id: "1",
     href: "#",
-    name: "Enjoy the great cold",
+    name: "More em cidades históricas",
     taxonomy: "category",
     count: 188288,
     thumbnail:
-      "https://images.pexels.com/photos/5764100/pexels-photo-5764100.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+      "https://viagemeturismo.abril.com.br/wp-content/uploads/2016/10/aosidu.jpeg?quality=70&strip=info&w=928"
   },
   {
     id: "222",
@@ -155,8 +155,8 @@ function PageHome () {
             categories={DEMO_CATS_2}
             categoryCardType="card4"
             itemPerRow={4}
-            heading="Suggestions for discovery"
-            subHeading="Lugares populares para se hospedar que a Moving tips recomenda para você"
+            heading="Sugestões"
+            subHeading="Lugares populares para morar que a Moving tips recomenda para você"
             sliderStyle="style2"
           />
         </div>

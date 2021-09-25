@@ -40,7 +40,7 @@ const CardCategory4: FC<CardCategory4Props> = ({
         >
           {convertNumbThousand(count || 0)}
           {` `}
-          {(!listingType || listingType === "stay") && "properties"}
+          {(!listingType || listingType === "stay") && "residências"}
           {listingType === "car" && "cars"}
           {listingType === "experiences" && "experiences"}
         </span>

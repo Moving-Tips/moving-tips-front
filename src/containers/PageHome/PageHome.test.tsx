@@ -18,7 +18,7 @@ Object.defineProperty(window, 'matchMedia', {
 
 test('test HeaderFilter', () => {
   const heading = "Bairros destaque"
-  const subHeading = "Lugares populares para se hospedar que a Moving tips recomenda para você"
+  const subHeading = "Lugares populares para morar que a Moving tips recomenda para você"
   const tabs = ["São Paulo", "Santo André", "Rio de Janeiro", "Brasília"]
   render(<HeaderFilter
     tabActive={"São Paulo"}
@@ -28,6 +28,6 @@ test('test HeaderFilter', () => {
     onClickTab={() => {
     }}
   />)
-  const linkElement = screen.getByText(/Lugares populares para se hospedar que a Moving tips recomenda para você/i)
+  const linkElement = screen.getByText(/Lugares populares para morar que a Moving tips recomenda para você/i)
   expect(linkElement).toBeInTheDocument()
 })
