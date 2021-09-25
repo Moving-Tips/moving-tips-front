@@ -7,6 +7,7 @@ import Select from "shared/Select/Select"
 import Textarea from "shared/Textarea/Textarea"
 import CommonLayout from "./CommonLayout"
 import { Helmet } from "react-helmet"
+import EmailInput from "../../shared/EmailInput/FormEmail"
 
 export interface AccountPageProps {
   className?: string
@@ -73,8 +74,7 @@ const AccountPage: FC<AccountPageProps> = ({ className = "" }) => {
               </div>
               {/* ---- */}
               <div>
-                <Label>Email *</Label>
-                <Input className="mt-1.5" defaultValue="" />
+                <EmailInput/>
               </div>
               {/* ---- */}
               <div className="max-w-lg">

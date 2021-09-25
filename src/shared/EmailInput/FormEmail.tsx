@@ -23,7 +23,7 @@ const EmailInput: FC<EmailInputProps> = ({ className = "" }) => {
   return (
     <label className="block">
       <span className="text-neutral-800 dark:text-neutral-200">
-        Email address
+        Email
       </span>
       <Input
         type="email"

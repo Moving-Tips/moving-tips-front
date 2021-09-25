@@ -10,15 +10,11 @@ import ListingStayMapPage from "containers/ListingStayPage/ListingStayMapPage"
 import ListingStayDetailPage from "containers/ListingDetailPage/ListingStayDetailPage"
 import AccountPage from "containers/AccountPage/AccountPage"
 import AccountPass from "containers/AccountPage/AccountPass"
-import AccountSavelists from "containers/AccountPage/AccountSavelists"
-import AccountBilling from "containers/AccountPage/AccountBilling"
 import PageContact from "containers/PageContact/PageContact"
 import PageAbout from "containers/PageAbout/PageAbout"
 import PageSignUp from "containers/PageSignUp/PageSignUp"
 import PageLogin from "containers/PageLogin/PageLogin"
 import PageSubcription from "containers/PageSubcription/PageSubcription"
-import BlogPage from "containers/BlogPage/BlogPage"
-import BlogSingle from "containers/BlogPage/BlogSingle"
 import PageAddListing1 from "containers/PageAddListing1/PageAddListing1"
 import PageAddListing2 from "containers/PageAddListing1/PageAddListing2"
 import PageAddListing3 from "containers/PageAddListing1/PageAddListing3"
@@ -33,12 +29,6 @@ export const pages: Page[] = [
   { path: "/listing-stay-detail", component: ListingStayDetailPage },
   { path: "/account", component: AccountPage },
   { path: "/account-password", component: AccountPass },
-  { path: "/account-savelists", component: AccountSavelists },
-  { path: "/account-billing", component: AccountBilling },
-  //
-  { path: "/blog", component: BlogPage },
-  { path: "/blog-single", component: BlogSingle },
-  //
   { path: "/add-listing-1", component: PageAddListing1 },
   { path: "/add-listing-2", component: PageAddListing2 },
   { path: "/add-listing-3", component: PageAddListing3 },
