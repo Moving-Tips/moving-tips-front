@@ -13,17 +13,17 @@ export interface PageLoginProps {
 
 const loginSocials = [
   {
-    name: "Continue with Facebook",
+    name: "Entrar com Facebook",
     href: "#",
     icon: facebookSvg
   },
   {
-    name: "Continue with Twitter",
+    name: "Entrar com Twitter",
     href: "#",
     icon: twitterSvg
   },
   {
-    name: "Continue with Google",
+    name: "Entrar com Google",
     href: "#",
     icon: googleSvg
   }
@@ -56,9 +56,6 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
         <title>Login || Encontre seu novo lar</title>
       </Helmet>
       <div className="container mb-24 lg:mb-32">
-        <h2 className="my-20 flex items-center text-3xl leading-[115%] md:text-5xl md:leading-[115%] font-semibold text-neutral-900 dark:text-neutral-100 justify-center">
-          Login
-        </h2>
         <div className="max-w-md mx-auto space-y-6">
           <div className="grid gap-3">
             {loginSocials.map((item, index) => (
@@ -83,17 +80,17 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
             <span className="relative z-10 inline-block px-4 font-medium text-sm bg-white dark:text-neutral-400 dark:bg-neutral-900">
               OR
             </span>
-            <div className="absolute left-0 w-full top-1/2 transform -translate-y-1/2 border border-neutral-100 dark:border-neutral-800"></div>
+            <div className="absolute left-0 w-full top-1/2 transform -translate-y-1/2 border border-neutral-100 dark:border-neutral-800"/>
           </div>
           {/* FORM */}
           <form className="grid grid-cols-1 gap-6" action="#" onSubmit={validateLogin}>
             <label className="block">
               <span className="text-neutral-800 dark:text-neutral-200">
-                Email address
+                Email
               </span>
               <Input
                 type="email"
-                placeholder="example@example.com"
+                placeholder="exemplo@exemplo.com"
                 className="mt-1"
                 id="inputEmail"
                 onChange={handleEmail}
@@ -101,9 +98,9 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
             </label>
             <label className="block">
               <span className="flex justify-between items-center text-neutral-800 dark:text-neutral-200">
-                Password
+                Senha
                 <Link to="/forgot-pass" className="text-sm">
-                  Forgot password?
+                  Esqueceu a senha?
                 </Link>
               </span>
               <Input type="password" id="inputPassword" className="mt-1" onChange={handlePassword}/>
