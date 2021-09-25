@@ -8,9 +8,7 @@ import SectionHowItWork from "components/SectionHowItWork/SectionHowItWork"
 import BackgroundSection from "components/BackgroundSection/BackgroundSection"
 import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism"
 import { TaxonomyType } from "data/types"
-import SectionGridAuthorBox from "components/SectionGridAuthorBox/SectionGridAuthorBox"
 import SectionGridCategoryBox from "components/SectionGridCategoryBox/SectionGridCategoryBox"
-import SectionBecomeAnAuthor from "components/SectionBecomeAnAuthor/SectionBecomeAnAuthor"
 import SectionVideos from "./SectionVideos"
 import SectionClientSay from "components/SectionClientSay/SectionClientSay"
 import { Helmet } from "react-helmet"
@@ -165,19 +163,7 @@ function PageHome () {
         <SectionSubscribe2 />
 
         {/* SECTION */}
-        <div className="relative py-16">
-          <BackgroundSection className="bg-orange-50 dark:bg-black dark:bg-opacity-20 " />
-          <SectionGridAuthorBox />
-        </div>
-
-        {/* SECTION */}
         <SectionGridCategoryBox />
-
-        {/* SECTION */}
-        <div className="relative py-16">
-          <BackgroundSection />
-          <SectionBecomeAnAuthor />
-        </div>
 
         {/* SECTION 1 */}
         <SectionSliderNewCategories

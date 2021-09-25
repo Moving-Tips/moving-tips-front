@@ -1,6 +1,5 @@
 import BackgroundSection from "components/BackgroundSection/BackgroundSection"
 import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism"
-import SectionGridAuthorBox from "components/SectionGridAuthorBox/SectionGridAuthorBox"
 import SectionHeroArchivePage from "components/SectionHeroArchivePage/SectionHeroArchivePage"
 import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories"
 import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2"
@@ -48,12 +47,6 @@ const ListingStayPage: FC<ListingStayPageProps> = ({ className = "" }) => {
 
         {/* SECTION */}
         <SectionSubscribe2 className="py-24 lg:py-32" />
-
-        {/* SECTION */}
-        <div className="relative py-16 mb-24 lg:mb-32">
-          <BackgroundSection className="bg-orange-50 dark:bg-black dark:bg-opacity-20 " />
-          <SectionGridAuthorBox />
-        </div>
       </div>
     </div>
   )

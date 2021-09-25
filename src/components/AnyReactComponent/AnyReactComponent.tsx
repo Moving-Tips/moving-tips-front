@@ -30,10 +30,10 @@ const AnyReactComponent: FC<AnyReactComponentProps> = ({
     >
       <span
         className={`flex px-2 py-1 rounded-lg bg-white dark:bg-neutral-900 text-sm font-semibold items-center justify-center min-w-max shadow-lg hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-900 transition-colors ${
-          isSelected
-            ? "bg-neutral-900 text-white dark:bg-white dark:text-neutral-900"
-            : ""
-        }`}
+              isSelected
+                  ? "bg-neutral-900 text-white dark:bg-white dark:text-neutral-900"
+                  : ""
+          }`}
       >
         {listing?.price || experiences?.price}
       </span>
@@ -49,7 +49,7 @@ const AnyReactComponent: FC<AnyReactComponentProps> = ({
       >
         <div className="absolute z-50 bottom-full pb-3 -left-12 w-[260px] aspect-w-1">
           {listing && (
-            <StayCard size="small" data={listing} className="shadow-2xl" />
+            <StayCard size="small" data={listing} className="shadow-2xl"/>
           )}
           {experiences && (
             <ExperiencesCard
