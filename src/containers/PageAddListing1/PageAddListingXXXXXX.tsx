@@ -3,9 +3,10 @@ import useWindowSize from "hooks/useWindowResize"
 import moment from "moment"
 import React, { FC, useState } from "react"
 import { DayPickerSingleDateController } from "react-dates"
-import CommonLayout from "./CommonLayout"
+import CommonLayout from "containers/PageAddListing1/CommonLayout"
 
-export interface PageAddListing9Props {}
+export interface PageAddListing9Props {
+}
 
 const PageAddListing9: FC<PageAddListing9Props> = () => {
   const [dates, setDates] = useState<moment.Moment[]>([])
@@ -42,12 +43,12 @@ const PageAddListing9: FC<PageAddListing9Props> = () => {
             space more often.
           </span>
         </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
         {/* FORM */}
         <div className="space-y-7">
           {/* ITEM */}
-          <NcInputNumber label="Nights min" defaultValue={1} />
-          <NcInputNumber label="Nights max" defaultValue={99} />
+          <NcInputNumber label="Nights min" defaultValue={1}/>
+          <NcInputNumber label="Nights max" defaultValue={99}/>
         </div>
 
         {/*  */}

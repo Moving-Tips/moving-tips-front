@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react"
 import "react-dates/initialize"
-import StaySearchForm from "./StaySearchForm"
+import StaySearchForm from "components/HeroSearchForm/StaySearchForm"
 
 export type SearchTab = "Stay" | "Experiences"
 

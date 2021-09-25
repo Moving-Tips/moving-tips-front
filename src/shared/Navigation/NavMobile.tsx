@@ -3,12 +3,10 @@ import ButtonClose from "shared/ButtonClose/ButtonClose"
 import Logo from "shared/Logo/Logo"
 import { Disclosure } from "@headlessui/react"
 import { NavLink } from "react-router-dom"
-import { NavItemType } from "./NavigationItem"
+import { NavItemType } from "shared/Navigation/NavigationItem"
 import { NAVIGATION_DEMO } from "data/navigation"
 import ButtonPrimary from "shared/Button/ButtonPrimary"
-import SocialsList from "shared/SocialsList/SocialsList"
 import { ChevronDownIcon } from "@heroicons/react/solid"
-import SwitchDarkMode from "shared/SwitchDarkMode/SwitchDarkMode"
 
 export interface NavMobileProps {
   data?: NavItemType[]
@@ -112,16 +110,17 @@ const NavMobile: React.FC<NavMobileProps> = ({
   }
 
   return (
-    <div className="overflow-y-auto w-full max-w-sm h-screen py-2 transition transform shadow-lg ring-1 dark:ring-neutral-700 bg-white dark:bg-neutral-900 divide-y-2 divide-neutral-100 dark:divide-neutral-800">
+    <div
+      className="overflow-y-auto w-full max-w-sm h-screen py-2 transition transform shadow-lg ring-1 dark:ring-neutral-700 bg-white dark:bg-neutral-900 divide-y-2 divide-neutral-100 dark:divide-neutral-800">
       <div className="py-6 px-5">
-        <Logo />
+        <Logo/>
         <div className="flex flex-col mt-5 text-neutral-700 dark:text-neutral-300 text-sm">
           <span>
             Descubra os melhores locais para você e sua familia!
           </span>
         </div>
         <span className="absolute right-2 top-2 p-1">
-          <ButtonClose onClick={onClickClose} />
+          <ButtonClose onClick={onClickClose}/>
         </span>
       </div>
       <ul className="flex flex-col py-6 px-2 space-y-1">

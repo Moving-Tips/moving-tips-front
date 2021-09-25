@@ -1,6 +1,6 @@
 import React, { useState, FC, useEffect, useRef } from "react"
 
-import ClearDataButton from "./ClearDataButton"
+import ClearDataButton from "components/HeroSearchForm/ClearDataButton"
 
 export interface LocationInputProps {
   defaultValue: string
@@ -57,11 +57,9 @@ const LocationInput: FC<LocationInputProps> = ({
 
   const eventClickOutsideDiv = (event: MouseEvent) => {
     if (!containerRef.current) return
-    // CLICK IN_SIDE
     if (!showPopover || containerRef.current.contains(event.target as Node)) {
       return
     }
-    // CLICK OUT_SIDE
     setShowPopover(false)
   }
 

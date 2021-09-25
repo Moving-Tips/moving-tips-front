@@ -1,7 +1,7 @@
 import React from "react"
-import { BrowserRouter, Switch, Route } from "react-router-dom"
-import { Page } from "./types"
-import ScrollToTop from "./ScrollToTop"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import { Page } from "routers/types"
+import ScrollToTop from "routers/ScrollToTop"
 import PageHome from "containers/PageHome/PageHome"
 import Header from "shared/Header/Header"
 import Page404 from "containers/Page404/Page404"
@@ -38,8 +38,8 @@ export const pages: Page[] = [
 const Routes = () => {
   return (
     <BrowserRouter>
-      <ScrollToTop />
-      <Header />
+      <ScrollToTop/>
+      <Header/>
       <Switch>
         {pages.map(({ component, path, exact }) => {
           return (
@@ -51,7 +51,7 @@ const Routes = () => {
             />
           )
         })}
-        <Route component={Page404} />
+        <Route component={Page404}/>
       </Switch>
     </BrowserRouter>
   )

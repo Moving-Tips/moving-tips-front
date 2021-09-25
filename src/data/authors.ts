@@ -1,5 +1,5 @@
-import __authors from "./jsons/__users.json"
-import { AuthorType } from "./types"
+import __authors from "data/jsons/__users.json"
+import { AuthorType } from "data/types"
 import avatar1 from "images/avatars/Image-1.png"
 import avatar2 from "images/avatars/Image-2.png"
 import avatar3 from "images/avatars/Image-3.png"

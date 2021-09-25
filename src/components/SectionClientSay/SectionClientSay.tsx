@@ -58,7 +58,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
   const renderBg = () => {
     return (
       <div className="hidden md:block">
-        <img className="absolute top-9 -left-20" src={clientSay1} alt="" />
+        <img className="absolute top-9 -left-20" src={clientSay1} alt=""/>
         <img
           className="absolute bottom-[100px] right-full mr-40"
           src={clientSay2}
@@ -79,7 +79,7 @@ const SectionClientSay: FC<SectionClientSayProps> = ({ className = "" }) => {
           src={clientSay5}
           alt=""
         />
-        <img className="absolute -right-10 top-10 " src={clientSay6} alt="" />
+        <img className="absolute -right-10 top-10 " src={clientSay6} alt=""/>
       </div>
     )
   }

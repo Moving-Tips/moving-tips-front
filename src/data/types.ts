@@ -1,11 +1,9 @@
-//  ######  CustomLink  ######## //
 export interface CustomLink {
   label: string
   href: string
   targetBlank?: boolean
 }
 
-//  ##########  PostDataType ######## //
 export interface TaxonomyType {
   id: string | number
   name: string
@@ -58,7 +56,6 @@ export type TwMainColor =
   | "purple"
   | "gray"
 
-//
 export interface StayDataType {
   id: string | number
   author: AuthorType
@@ -87,7 +84,6 @@ export interface StayDataType {
   house: string
 }
 
-//
 export interface ExperiencesDataType {
   id: string | number
   author: AuthorType

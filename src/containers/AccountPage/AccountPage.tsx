@@ -5,9 +5,9 @@ import ButtonPrimary from "shared/Button/ButtonPrimary"
 import Input from "shared/Input/Input"
 import Select from "shared/Select/Select"
 import Textarea from "shared/Textarea/Textarea"
-import CommonLayout from "./CommonLayout"
+import CommonLayout from "containers/AccountPage/CommonLayout"
 import { Helmet } from "react-helmet"
-import EmailInput from "../../shared/EmailInput/FormEmail"
+import EmailInput from "shared/EmailInput/FormEmail"
 
 export interface AccountPageProps {
   className?: string
@@ -23,12 +23,13 @@ const AccountPage: FC<AccountPageProps> = ({ className = "" }) => {
         <div className="space-y-6 sm:space-y-8">
           {/* HEADING */}
           <h2 className="text-3xl font-semibold">Informações da conta</h2>
-          <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+          <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
           <div className="flex flex-col md:flex-row">
             <div className="flex-shrink-0 flex items-start">
               <div className="relative rounded-full overflow-hidden flex">
-                <Avatar sizeClass="w-32 h-32" />
-                <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-neutral-50 cursor-pointer">
+                <Avatar sizeClass="w-32 h-32"/>
+                <div
+                  className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-neutral-50 cursor-pointer">
                   <svg
                     width="30"
                     height="30"
@@ -56,7 +57,7 @@ const AccountPage: FC<AccountPageProps> = ({ className = "" }) => {
             <div className="flex-grow mt-10 md:mt-0 md:pl-16 max-w-3xl space-y-6">
               <div>
                 <Label>Nome</Label>
-                <Input className="mt-1.5" defaultValue="" />
+                <Input className="mt-1.5" defaultValue=""/>
               </div>
               {/* ---- */}
               <div>
@@ -70,7 +71,7 @@ const AccountPage: FC<AccountPageProps> = ({ className = "" }) => {
               {/* ---- */}
               <div>
                 <Label>Nome de usuário</Label>
-                <Input className="mt-1.5" defaultValue="" />
+                <Input className="mt-1.5" defaultValue=""/>
               </div>
               {/* ---- */}
               <div>
@@ -88,17 +89,17 @@ const AccountPage: FC<AccountPageProps> = ({ className = "" }) => {
               {/* ---- */}
               <div>
                 <Label>Endereço</Label>
-                <Input className="mt-1.5" defaultValue="" />
+                <Input className="mt-1.5" defaultValue=""/>
               </div>
               {/* ---- */}
               <div>
                 <Label>Celular</Label>
-                <Input className="mt-1.5" defaultValue="" />
+                <Input className="mt-1.5" defaultValue=""/>
               </div>
               {/* ---- */}
               <div>
                 <Label>Sobre você</Label>
-                <Textarea className="mt-1.5" defaultValue="..." />
+                <Textarea className="mt-1.5" defaultValue="..."/>
               </div>
               <div className="pt-2">
                 <ButtonPrimary>Atualizar informações</ButtonPrimary>

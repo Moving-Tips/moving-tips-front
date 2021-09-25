@@ -1,10 +1,8 @@
-import Label from "components/Label/Label"
 import ButtonPrimary from "shared/Button/ButtonPrimary"
-import Input from "shared/Input/Input"
-import CommonLayout from "./CommonLayout"
-import PasswordAndConfirm from "../../shared/PasswordAndConfirm/PasswordAndConfirm"
+import CommonLayout from "containers/AccountPage/CommonLayout"
+import PasswordAndConfirm from "shared/PasswordAndConfirm/PasswordAndConfirm"
 import React from "react"
-import PasswordInput from "../../shared/PasswordInput/PasswordInput"
+import PasswordInput from "shared/PasswordInput/PasswordInput"
 
 const AccountPass = () => {
   return (
@@ -16,7 +14,7 @@ const AccountPass = () => {
           <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
           <div className=" max-w-xl space-y-6">
             <PasswordInput/>
-            <PasswordAndConfirm />
+            <PasswordAndConfirm/>
             <div className="pt-2">
               <ButtonPrimary>Atualizar senha</ButtonPrimary>
             </div>

@@ -29,7 +29,6 @@ export interface PaginationProps {
 const Pagination: FC<PaginationProps> = ({ className = "" }) => {
   const renderItem = (pag: CustomLink, index: number) => {
     if (index === 0) {
-      // RETURN ACTIVE PAGINATION
       return (
         <span
           key={index}
@@ -39,7 +38,6 @@ const Pagination: FC<PaginationProps> = ({ className = "" }) => {
         </span>
       )
     }
-    // RETURN UNACTIVE PAGINATION
     return (
       <Link
         key={index}
