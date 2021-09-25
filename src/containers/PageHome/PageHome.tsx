@@ -174,7 +174,7 @@ function PageHome () {
         {/* SECTION 2 */}
         <div className="relative py-16">
           <BackgroundSection/>
-          <SectionClientSay/>
+          {/* <SectionClientSay/> */}
         </div>
       </div>
     </div>
