@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from "react"
 import { DEMO_STAY_LISTINGS } from "data/listings"
 import { StayDataType } from "data/types"
 import ButtonPrimary from "shared/Button/ButtonPrimary"
-import HeaderFilter from "./HeaderFilter"
+import HeaderFilter from "containers/PageHome/HeaderFilter"
 import StayCard from "components/StayCard/StayCard"
 
 // OTHER DEMO WILL PASS PROPS

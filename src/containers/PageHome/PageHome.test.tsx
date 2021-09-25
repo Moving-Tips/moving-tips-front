@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import HeaderFilter from "./HeaderFilter"
+import HeaderFilter from "containers/PageHome/HeaderFilter"
 
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
