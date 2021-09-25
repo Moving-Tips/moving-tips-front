@@ -20,7 +20,6 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
   return (
     <div>
       <div className="relative flex min-h-screen">
-        {/* CARDSSSS */}
         <div className="min-h-screen w-full xl:w-[780px] 2xl:w-[880px] flex-shrink-0 xl:px-8 ">
           <Heading2
             heading="Experiences in Santo André"
