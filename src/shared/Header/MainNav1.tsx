@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import Logo from "shared/Logo/Logo"
 import Navigation from "shared/Navigation/Navigation"
-import SearchDropdown from "./SearchDropdown"
+import SearchDropdown from "shared/Header/SearchDropdown"
 import ButtonPrimary from "shared/Button/ButtonPrimary"
 import MenuBar from "shared/MenuBar/MenuBar"
 import SwitchDarkMode from "shared/SwitchDarkMode/SwitchDarkMode"

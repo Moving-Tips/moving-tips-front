@@ -7,20 +7,20 @@ import Checkbox from "shared/Checkbox/Checkbox"
 
 const typeOfExpriences = [
   {
-    name: "Food & drink",
-    description: "Short description for the experience"
+    name: "Comida & bebida",
+    description: "Breve descrição da experiência"
   },
   {
-    name: "Art and culture",
-    description: "Short description for the experience"
+    name: "Arte e cultura",
+    description: "Breve descrição da experiência"
   },
   {
-    name: "Nature and outdoors",
-    description: "Short description for the experience"
+    name: "Natureza e ar livre",
+    description: "Breve descrição da experiência"
   },
   {
-    name: "Sports",
-    description: "Short description for the experience"
+    name: "Esportes",
+    description: "Breve descrição da experiência"
   }
 ]
 
