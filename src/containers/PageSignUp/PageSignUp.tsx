@@ -68,7 +68,7 @@ const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
           <form className="grid grid-cols-1 gap-6" action="#" method="post">
             <FormEmail/>
             <PasswordAndConfirm/>
-            <ButtonPrimary type="submit">Cadastrar</ButtonPrimary>
+            <ButtonPrimary type="button">Cadastrar</ButtonPrimary>
           </form>
           <span className="block text-center text-neutral-700 dark:text-neutral-300">
             Já possui uma conta? {` `}
