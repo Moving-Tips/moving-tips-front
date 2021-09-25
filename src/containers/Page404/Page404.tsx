@@ -10,11 +10,10 @@ const Page404: React.FC = () => (
       <title>404 || Moving Tips</title>
     </Helmet>
     <div className="container relative pt-5 pb-16 lg:pb-20 lg:pt-5">
-      {/* HEADER */}
       <header className="text-center max-w-2xl mx-auto space-y-2">
         <NcImage src={I404Png} />
         <div className="pt-8">
-          <ButtonPrimary href="/">Retornar para pagina principal</ButtonPrimary>
+          <ButtonPrimary href="/">Retornar para página principal</ButtonPrimary>
         </div>
       </header>
     </div>
