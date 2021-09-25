@@ -1,7 +1,7 @@
 # Antes de iniciar o projeto
 
-Esse projeto foi feito utilizando [Create React App](https://github.com/facebook/create-react-app).
-no diretorio do projeto, siga os passos a baixo:
+Esse projeto foi feito utilizando [Create React App](https://github.com/facebook/create-react-app). no diretorio do
+projeto, siga os passos a baixo:
 
 ### 1 - Install react and plugins:
 
@@ -20,3 +20,20 @@ No diretorio do projeto você pode rodar:
 ### `npm test`
 
 ### `npm build`
+
+Rotas do sistema:
+
+```
+/listing-stay
+/listing-stay-map
+/listing-stay-detail
+/account
+/account-password
+/add-listing-1
+/add-listing-2
+/add-listing-3
+/add-listing-4
+/add-listing-5
+/signup
+/login
+```
