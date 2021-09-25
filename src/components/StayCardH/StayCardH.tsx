@@ -100,13 +100,13 @@ const StayCardH: FC<StayCardHProps> = ({
         <div className="flex-grow p-3 sm:p-5 flex flex-col">
           <div className="space-y-2 mb-8">
             <div className="flex items-center space-x-2">
-              <h2 className="text-lg font-medium capitalize items-center">
+              <h2 className="text-lg font-medium capitalize mx-auto">
                 <span className="line-clamp-1">{title}</span>
               </h2>
             </div>
           </div>
           {renderTienIch()}
-          <div className="flex justify-between items-end p-10">
+          <div className="flex justify-between items-end">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="nc-icon-field"
