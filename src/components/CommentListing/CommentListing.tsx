@@ -52,7 +52,7 @@ const CommentListing: FC<CommentListingProps> = ({
                   <span className="text-neutral-500 dark:text-neutral-400 font-normal">
                     {` review in `}
                   </span>
-                  <a href="/">The Lounge & Bar</a>
+                  <a href="/">De casa</a>
                 </>
               )}
             </div>

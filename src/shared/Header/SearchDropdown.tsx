@@ -11,16 +11,16 @@ const SearchDropdown = () => {
         {({ open }) => {
           if (open) {
             setTimeout(() => {
-              inputRef.current?.focus()
+                            inputRef.current?.focus()
             }, 100)
           }
 
           return (
             <>
-              <Popover.Button className="text-2xl md:text-[28px] w-12 h-12 rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none flex items-center justify-center">
-                <i className="las la-search"></i>
+              <Popover.Button
+                className="text-2xl md:text-[28px] w-12 h-12 rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none flex items-center justify-center">
+                <i className="las la-search"/>
               </Popover.Button>
-
               <Transition
                 show={open}
                 as={Fragment}
@@ -41,7 +41,7 @@ const SearchDropdown = () => {
                       type="search"
                       placeholder="Type and press enter"
                     />
-                    <input type="submit" hidden value="" />
+                    <input type="submit" hidden value=""/>
                   </form>
                 </Popover.Panel>
               </Transition>

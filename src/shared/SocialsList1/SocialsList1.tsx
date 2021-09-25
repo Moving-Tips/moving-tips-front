@@ -1,4 +1,4 @@
-import { SocialType } from "shared/SocialsShare/SocialsShare"
+import SocialsShare, { SocialType } from "shared/SocialsShare/SocialsShare"
 import React, { FC } from "react"
 
 export interface SocialsList1Props {
@@ -20,7 +20,7 @@ const SocialsList1: FC<SocialsList1Props> = ({ className = "space-y-2.5" }) => {
         className="flex items-center text-2xl text-neutral-700 hover:text-black dark:text-neutral-300 dark:hover:text-white leading-none space-x-2 group"
         key={index}
       >
-        <i className={item.icon}></i>
+        <i className={item.icon}/>
         <span className="hidden lg:block text-sm">{item.name}</span>
       </a>
     )
