@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import Checkbox from "shared/Checkbox/Checkbox"
-import CommonLayout from "./CommonLayout"
+import CommonLayout from "containers/PageAddListing1/CommonLayout"
 
 export interface PageAddListing4Props {}
 
@@ -20,9 +20,7 @@ const PageAddListing4: FC<PageAddListing4Props> = () => {
           </span>
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
-        {/* FORM */}
         <div className="space-y-8">
-          {/* ITEM */}
           <div>
             <label className="text-lg font-semibold" htmlFor="">
               General amenities

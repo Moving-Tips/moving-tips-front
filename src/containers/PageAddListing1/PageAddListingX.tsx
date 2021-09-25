@@ -1,10 +1,11 @@
 import React, { FC } from "react"
 import Input from "shared/Input/Input"
 import Select from "shared/Select/Select"
-import CommonLayout from "./CommonLayout"
-import FormItem from "./FormItem"
+import CommonLayout from "containers/PageAddListing1/CommonLayout"
+import FormItem from "containers/PageAddListing1/FormItem"
 
-export interface PageAddListing1Props {}
+export interface PageAddListing1Props {
+}
 
 const PageAddListing1: FC<PageAddListing1Props> = () => {
   return (
@@ -15,10 +16,8 @@ const PageAddListing1: FC<PageAddListing1Props> = () => {
     >
       <>
         <h2 className="text-2xl font-semibold">Choosing listing categories</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
-        {/* FORM */}
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
         <div className="space-y-8">
-          {/* ITEM */}
           <FormItem
             label="Choose a property type"
             desc="Hotel: Professional hospitality businesses that usually have a unique style or theme defining their brand and decor"
@@ -37,16 +36,16 @@ const PageAddListing1: FC<PageAddListing1Props> = () => {
             label="Place name"
             desc="A catchy name usually includes: House name + Room name + Featured property + Tourist destination"
           >
-            <Input placeholder="Places name" />
+            <Input placeholder="Places name"/>
           </FormItem>
           <FormItem
             label="Rental form"
             desc="Entire place: Guests have the whole place to themselves—there's a private entrance and no shared spaces. A bedroom, bathroom, and kitchen are usually included."
           >
             <Select>
-              <option value="Hotel">Entire place</option>
-              <option value="Private room">Private room</option>
-              <option value="Share room">Share room</option>
+              <option value="Hotel">Todo o local</option>
+              <option value="Private room">Quarto privado</option>
+              <option value="Share room">Compartilhar quarto</option>
             </Select>
           </FormItem>
         </div>

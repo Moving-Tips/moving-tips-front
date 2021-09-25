@@ -4,7 +4,7 @@ import SectionHeroArchivePage from "components/SectionHeroArchivePage/SectionHer
 import SectionSliderNewCategories from "components/SectionSliderNewCategories/SectionSliderNewCategories"
 import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2"
 import { FC } from "react"
-import SectionGridFilterCard from "./SectionGridFilterCard"
+import SectionGridFilterCard from "containers/ListingStayPage/SectionGridFilterCard"
 import { Helmet } from "react-helmet"
 
 export interface ListingStayPageProps {
@@ -20,22 +20,19 @@ const ListingStayPage: FC<ListingStayPageProps> = ({ className = "" }) => {
       <Helmet>
         <title>Moving Tips || Listagem</title>
       </Helmet>
-      <BgGlassmorphism />
+      <BgGlassmorphism/>
 
       <div className="container relative overflow-hidden">
-        {/* SECTION HERO */}
         <SectionHeroArchivePage
           currentPage="Stay"
           currentTab="Stay"
           className="pt-10 pb-24 lg:pb-32 lg:pt-28 "
         />
 
-        {/* SECTION */}
-        <SectionGridFilterCard className="pb-24 lg:pb-32" />
+        <SectionGridFilterCard className="pb-24 lg:pb-32"/>
 
-        {/* SECTION 1 */}
         <div className="relative py-16">
-          <BackgroundSection />
+          <BackgroundSection/>
           <SectionSliderNewCategories
             heading="Explore by types of stays"
             subHeading="Explore houses based on 10 types of stays"
@@ -45,8 +42,7 @@ const ListingStayPage: FC<ListingStayPageProps> = ({ className = "" }) => {
           />
         </div>
 
-        {/* SECTION */}
-        <SectionSubscribe2 className="py-24 lg:py-32" />
+        <SectionSubscribe2 className="py-24 lg:py-32"/>
       </div>
     </div>
   )

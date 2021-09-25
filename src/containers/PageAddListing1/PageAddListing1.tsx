@@ -5,10 +5,11 @@ import { FC } from "react"
 import ButtonSecondary from "shared/Button/ButtonSecondary"
 import Input from "shared/Input/Input"
 import Select from "shared/Select/Select"
-import CommonLayout from "./CommonLayout"
-import FormItem from "./FormItem"
+import CommonLayout from "containers/PageAddListing1/CommonLayout"
+import FormItem from "containers/PageAddListing1/FormItem"
 
-export interface PageAddListing1Props {}
+export interface PageAddListing1Props {
+}
 
 const PageAddListing1: FC<PageAddListing1Props> = () => {
   return (
@@ -19,26 +20,24 @@ const PageAddListing1: FC<PageAddListing1Props> = () => {
     >
       <>
         <h2 className="text-2xl font-semibold">Informe sua localidade</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
-        {/* FORM */}
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
         <div className="space-y-8">
           <ButtonSecondary>
-            <LocationMarkerIcon className="w-5 h-5 text-neutral-500 dark:text-neutral-400" />
+            <LocationMarkerIcon className="w-5 h-5 text-neutral-500 dark:text-neutral-400"/>
             <span className="ml-3">Use sua localização atual</span>
           </ButtonSecondary>
-          {/* ITEM */}
           <FormItem label="CEP">
-            <Input />
+            <Input/>
           </FormItem>
           <FormItem label="Endereço">
-            <Input placeholder="..." />
+            <Input placeholder="..."/>
           </FormItem>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-5">
             <FormItem label="Cidade">
-              <Input />
+              <Input/>
             </FormItem>
             <FormItem label="Estado">
-              <Input />
+              <Input/>
             </FormItem>
           </div>
           <FormItem label="País">
@@ -68,7 +67,7 @@ const PageAddListing1: FC<PageAddListing1Props> = () => {
                       lng: -46.68712751756319
                     }}
                   >
-                    <LocationMarker lat={-23.59498942427704} lng={-46.68712751756319} />
+                    <LocationMarker lat={-23.59498942427704} lng={-46.68712751756319}/>
                   </GoogleMapReact>
                 </div>
               </div>

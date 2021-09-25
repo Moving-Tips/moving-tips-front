@@ -3,7 +3,7 @@ import SectionSliderNewCategories from "components/SectionSliderNewCategories/Se
 import React from "react"
 import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2"
 import SectionOurFeatures from "components/SectionOurFeatures/SectionOurFeatures"
-import SectionGridFeaturePlaces from "./SectionGridFeaturePlaces"
+import SectionGridFeaturePlaces from "containers/PageHome/SectionGridFeaturePlaces"
 import SectionHowItWork from "components/SectionHowItWork/SectionHowItWork"
 import BackgroundSection from "components/BackgroundSection/BackgroundSection"
 import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism"
