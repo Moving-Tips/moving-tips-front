@@ -13,7 +13,6 @@ import ButtonCircle from "shared/Button/ButtonCircle"
 import ButtonSecondary from "shared/Button/ButtonSecondary"
 import Input from "shared/Input/Input"
 import NcImage from "shared/NcImage/NcImage"
-import LikeBtn from "./LikeBtn"
 import ModalPhotos from "./ModalPhotos"
 import ChartDemo from "images/chart/demo.png"
 
@@ -76,7 +75,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
   })
 
   const [focusedInputSectionCheckDate, setFocusedInputSectionCheckDate] =
-    useState<FocusedInputShape>("startDate")
+        useState<FocusedInputShape>("startDate")
   const [isOpenModalAmenities, setIsOpenModalAmenities] = useState(false)
 
   const windowSize = useWindowSize()
@@ -113,11 +112,11 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
     return (
       <div className="listingSection__wrap !space-y-6">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-          Parelheiros
+                    Parelheiros
         </h2>
 
         <div className="flex items-center space-x-4">
-          <StartRating />
+          <StartRating/>
           <span>·</span>
           <span>
             <i className="las la-map-marker-alt"></i>
@@ -132,7 +131,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
     return (
       <div className="listingSection__wrap">
         <h2 className="text-2xl font-semibold">Informações</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
         <div className="text-neutral-6000 dark:text-neutral-300">
           <span>
             Parelheiros é um distrito localizado na zona sul do município de São Paulo. É o segundo maior distrito do município em extensão territorial, embora seja muito pouco povoado.
@@ -147,8 +146,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
       <div className="listingSection__wrap">
         {/* HEADING */}
         <h2 className="text-2xl font-semibold">Skills</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
-        <NcImage src={ChartDemo} />
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
+        <NcImage src={ChartDemo}/>
       </div>
     )
   }
@@ -158,11 +157,11 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
       <div className="listingSection__wrap">
         {/* HEADING */}
         <h2 className="text-2xl font-semibold">Análises (23 análise)</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
 
         {/* Content */}
         <div className="space-y-5">
-          <FiveStartIconForRate iconClass="w-6 h-6" className="space-x-0.5" />
+          <FiveStartIconForRate iconClass="w-6 h-6" className="space-x-0.5"/>
           <div className="relative">
             <Input
               fontClass=""
@@ -174,16 +173,16 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
               className="absolute right-2 top-1/2 transform -translate-y-1/2"
               size=" w-12 h-12 "
             >
-              <ArrowRightIcon className="w-5 h-5" />
+              <ArrowRightIcon className="w-5 h-5"/>
             </ButtonCircle>
           </div>
         </div>
 
         {/* comment */}
         <div className="divide-y divide-neutral-100 dark:divide-neutral-800">
-          <CommentListing className="py-8" />
-          <CommentListing className="py-8" />
-          <CommentListing className="py-8" />
+          <CommentListing className="py-8"/>
+          <CommentListing className="py-8"/>
+          <CommentListing className="py-8"/>
           <div className="pt-8">
             <ButtonSecondary>Veja mais 20 análises</ButtonSecondary>
           </div>
@@ -202,7 +201,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             Parelheiros, São Paulo, SP, Brasil
           </span>
         </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
 
         {/* MAP */}
         <div className="aspect-w-5 aspect-h-5 sm:aspect-h-3">
@@ -218,7 +217,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
                 lng: -46.70273006356647
               }}
             >
-              <LocationMarker lat={-23.821178563018098} lng={-46.70273006356647} />
+              <LocationMarker lat={-23.821178563018098} lng={-46.70273006356647}/>
             </GoogleMapReact>
           </div>
         </div>
@@ -231,7 +230,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
       <div className="listingSection__wrap">
         {/* HEADING */}
         <h2 className="text-2xl font-semibold">Coisas para saber</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
 
         {/* CONTENT */}
         <div>
@@ -240,7 +239,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
             Parelheiros é a fronteira final. O distrito do extremo sul de São Paulo, que faz divisa com a Estância de Itanhaém e fica a 37,1km do Centro Histórico da capital paulista, tem 202 mil habitantes e guarda inúmeras curiosidades, muitas delas ainda por serem descobertas. Uma delas é o seu nome inusitado, que vem das corridas de cavalos ali ocorridas, as antigas parelhas.
           </span>
         </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"/>
       </div>
     )
   }
@@ -264,14 +263,15 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
                 src={PHOTOS[0]}
                 prevImageHorizontal
               />
-              <div className="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity"></div>
+              <div
+                className="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity"></div>
             </div>
             {PHOTOS.filter((_, i) => i >= 1 && i < 5).map((item, index) => (
               <div
                 key={index}
                 className={`relative rounded-md sm:rounded-xl overflow-hidden ${
-                  index >= 3 ? "hidden sm:block" : ""
-                }`}
+                                    index >= 3 ? "hidden sm:block" : ""
+                                }`}
               >
                 <NcImage
                   containerClassName="aspect-w-4 aspect-h-3 sm:aspect-w-6 sm:aspect-h-5"
@@ -307,7 +307,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
                 />
               </svg>
               <span className="ml-2 text-neutral-800 text-sm font-medium">
-                Show all photos
+                Mostrar todas as fotos
               </span>
             </div>
           </div>

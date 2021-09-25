@@ -25,7 +25,6 @@ const ExperiencesSearchForm: FC<ExperiencesSearchFormProps> = ({
   const [guestValue, setGuestValue] = useState({})
 
   const [dateFocused, setDateFocused] = useState<boolean>(false)
-  //
 
   useEffect(() => {
     if (haveDefaultValue) {
@@ -34,8 +33,6 @@ const ExperiencesSearchForm: FC<ExperiencesSearchFormProps> = ({
       setGuestValue(defaultGuestValue)
     }
   }, [])
-
-  //
 
   const renderForm = () => {
     return (

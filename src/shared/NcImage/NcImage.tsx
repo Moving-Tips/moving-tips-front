@@ -60,7 +60,6 @@ const NcImage: FC<NcImageProps> = ({
 
   const _handleImageLoaded = () => {
     if (!isMounted) return
-    // setImageLoaded(true)
     set__src(src)
   }
 

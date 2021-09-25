@@ -13,14 +13,11 @@ const DEMO_TAGS: TaxonomyType[] = __taxonomies.map((item) => ({
   taxonomy: "tag"
 }))
 
-//
-
 const DEMO_STAY_CATEGORIES: TaxonomyType[] = __stayTaxonomies.map((item) => ({
   ...item,
   taxonomy: "category",
   listingType: "stay"
 }))
-//
 const DEMO_EXPERIENCES_CATEGORIES: TaxonomyType[] = __experiencesTaxonomies.map(
   (item) => ({
     ...item,

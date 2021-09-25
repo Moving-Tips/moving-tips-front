@@ -39,7 +39,6 @@ const StaySearchForm: FC<StaySearchFormProps> = ({
     null
   )
 
-  //
   useEffect(() => {
     if (haveDefaultValue) {
       setDateRangeValue(defaultDateRange)
@@ -47,7 +46,6 @@ const StaySearchForm: FC<StaySearchFormProps> = ({
       setGuestValue(defaultGuestValue)
     }
   }, [])
-  //
 
   const renderForm = () => {
     return (

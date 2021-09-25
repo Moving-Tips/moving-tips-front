@@ -8,7 +8,6 @@ export interface ButtonProps {
   translate?: string
   sizeClass?: string
   fontSize?: string
-  //
   loading?: boolean
   disabled?: boolean
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"]
