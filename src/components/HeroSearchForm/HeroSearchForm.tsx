@@ -49,7 +49,11 @@ const HeroSearchForm: FC<HeroSearchFormProps> = ({
     const isArchivePage = !!currentPage && !!currentTab
     switch (tabActive) {
       case "Stay":
+<<<<<<< Updated upstream
         return <StaySearchForm haveDefaultValue={isArchivePage}/>
+=======
+        return <StaySearchForm haveDefaultValue={isArchivePage} />
+>>>>>>> Stashed changes
       default:
         return null
     }
