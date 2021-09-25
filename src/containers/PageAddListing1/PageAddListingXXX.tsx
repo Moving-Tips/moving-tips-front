@@ -57,7 +57,7 @@ const PageAddListing5: FC<PageAddListing5Props> = () => {
             Guests must agree to your house rules before they book.
           </span>
         </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
+        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
         {/* FORM */}
         <div className="space-y-8">
           {/* ITEM */}
