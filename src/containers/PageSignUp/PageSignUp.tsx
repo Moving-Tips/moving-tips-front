@@ -7,6 +7,7 @@ import ButtonPrimary from "shared/Button/ButtonPrimary"
 import { Link } from "react-router-dom"
 import FormEmail from "shared/EmailInput/FormEmail"
 import PasswordAndConfirm from "../../shared/PasswordAndConfirm/PasswordAndConfirm"
+import axios from "axios"
 
 export interface PageSignUpProps {
   className?: string
@@ -29,7 +30,15 @@ const loginSocials = [
     icon: googleSvg
   }
 ]
-
+const handleSubmit = (event: { preventDefault: () => void}) => {
+  event.preventDefault()
+  console.log(event)
+  // axios.post('https://apimovingtipscore.azurewebsites.net/Users', ({ userid: x }))
+  //   .then((res: { data: any }) => {
+  //     console.log(res)
+  //     console.log(res.data)
+  //   })
+}
 const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
   return (
     <div className={`nc-PageSignUp  ${className}`} data-nc-id="PageSignUp">
@@ -65,10 +74,10 @@ const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
               className="absolute left-0 w-full top-1/2 transform -translate-y-1/2 border border-neutral-100 dark:border-neutral-800"/>
           </div>
           {/* FORM */}
-          <form className="grid grid-cols-1 gap-6" action="#" method="post">
+          <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6" action="#" method="post">
             <FormEmail/>
             <PasswordAndConfirm/>
-            <ButtonPrimary type="button">Cadastrar</ButtonPrimary>
+            <ButtonPrimary type="submit">Cadastrar</ButtonPrimary>
           </form>
           <span className="block text-center text-neutral-700 dark:text-neutral-300">
             Já possui uma conta? {` `}
