@@ -37,6 +37,7 @@ const PasswordAndConfirm: FC<PasswordAndConfirmProps> = ({ className = "" }) => 
           className="mt-1"
           onChange={(e) => { setPass(e.target.value) }}
           onBlur={(e) => validatePasswordLength(e)}
+          name="password"
         />
       </label>
       <label className="block">
@@ -48,6 +49,7 @@ const PasswordAndConfirm: FC<PasswordAndConfirmProps> = ({ className = "" }) => 
           className="mt-1"
           onChange={(e) => { setConfirmPass(e.target.value) }}
           onBlur={(e) => validatePassword()}
+          name="confirmPassword"
         />
         {showErrorPassword ?? <br/>}
         <span className="block text-center text-neutral-700 dark:text-neutral-300">

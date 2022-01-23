@@ -30,6 +30,7 @@ const EmailInput: FC<EmailInputProps> = ({ className = "" }) => {
         placeholder="exemplo@exemplo.com"
         className="mt-1"
         onBlur={(e) => validateEmail(e)}
+        name="email"
       />
       {showErrorEmail ?? <br/>}
       <span className="block text-center text-neutral-700 dark:text-neutral-300">

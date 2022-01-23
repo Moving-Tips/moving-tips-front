@@ -7,7 +7,7 @@ import ButtonPrimary from "shared/Button/ButtonPrimary"
 import { Link } from "react-router-dom"
 import FormEmail from "shared/EmailInput/FormEmail"
 import PasswordAndConfirm from "../../shared/PasswordAndConfirm/PasswordAndConfirm"
-import axios from "axios"
+import axios, { AxiosInstance } from "axios"
 
 export interface PageSignUpProps {
   className?: string
@@ -30,15 +30,53 @@ const loginSocials = [
     icon: googleSvg
   }
 ]
-const handleSubmit = (event: { preventDefault: () => void}) => {
-  event.preventDefault()
-  console.log(event)
-  // axios.post('https://apimovingtipscore.azurewebsites.net/Users', ({ userid: x }))
-  //   .then((res: { data: any }) => {
-  //     console.log(res)
-  //     console.log(res.data)
-  //   })
+
+let instance: AxiosInstance
+
+function getAuth (response: any) {
+  axios.defaults.headers.common = {
+    Authorization: 'Bearer ' + response.token
+  }
 }
+
+function handleAddNewUser (this: any, e: any) {
+  e.preventDefault()
+  const email = e.target.elements.email.value.toLowerCase().trim()
+  const password = e.target.elements.password.value
+  const repassword = e.target.elements.confirmPassword.value
+  const userInfo = {
+    email: email,
+    password: password,
+    confirmPassword: repassword
+  }
+  console.log(userInfo)
+
+  const auth = {
+    Email: "user@example.com",
+    Password: "string"
+  }
+
+  // Autenticando e obtendo o token
+  axios.post('https://apimovingtipscore.azurewebsites.net/Auth/login', auth)
+    .then(res => {
+      const response = res.data
+      getAuth(response)
+    })
+
+  // Cadastrando o usuário na api (com o token)
+  axios.post('https://apimovingtipscore.azurewebsites.net/Users', userInfo)
+    .then(res => {
+      const responseData = res.data
+      if (responseData.status === 200) {
+        const user = responseData.email
+        console.log(user)
+        alert('Usuário criado com sucesso!')
+      } else {
+        alert('Algo deu errado ao criar o usuário!')
+      }
+    })
+}
+
 const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
   return (
     <div className={`nc-PageSignUp  ${className}`} data-nc-id="PageSignUp">
@@ -74,7 +112,7 @@ const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
               className="absolute left-0 w-full top-1/2 transform -translate-y-1/2 border border-neutral-100 dark:border-neutral-800"/>
           </div>
           {/* FORM */}
-          <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6" action="#" method="post">
+          <form onSubmit={handleAddNewUser} className="grid grid-cols-1 gap-6" action="#" method="post">
             <FormEmail/>
             <PasswordAndConfirm/>
             <ButtonPrimary type="submit">Cadastrar</ButtonPrimary>
