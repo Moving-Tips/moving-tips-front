@@ -8,8 +8,6 @@ import BackgroundSection from "components/BackgroundSection/BackgroundSection"
 import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism"
 import { TaxonomyType } from "data/types"
 import SectionGridCategoryBox from "components/SectionGridCategoryBox/SectionGridCategoryBox"
-import SectionVideos from "containers/PageHome/SectionVideos"
-import SectionClientSay from "components/SectionClientSay/SectionClientSay"
 import { Helmet } from "react-helmet"
 
 const DEMO_CATS: TaxonomyType[] = [

@@ -9,7 +9,8 @@ import ButtonPrimary from "shared/Button/ButtonPrimary"
 import { Alert } from "shared/Alert/Alert"
 import { usersCreated } from "data/users"
 import axios from "axios"
-export interface PageLoginProps {
+import { isTemplateLiteralToken } from "typescript"
+export interface PageDistrictProps {
   className?: string
 }
 
@@ -37,49 +38,45 @@ function getAuth (response: any) {
   }
 }
 
-function handleLogin (email: string, password: string) {
-  const userInfo = {
-    email: email,
-    password: password
+const PageDistrict: FC<PageDistrictProps> = ({ className = "" }) => {
+  const history = useHistory()
+
+  const auth = {
+    Email: "user@example.com",
+    Password: "string"
   }
-  console.log(userInfo)
 
   // Autenticando e obtendo o token
-  axios.post('https://apimovingtipscore.azurewebsites.net/Auth/login', userInfo)
+  axios.post('https://apimovingtipscore.azurewebsites.net/Auth/login', auth)
     .then(res => {
       const response = res.data
       getAuth(response)
     })
-}
 
-const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const history = useHistory()
+  const insertLocation = (e: any) => {
+    const bairro = e.target.elements.inputBairro.value
+    const descricao = e.target.elements.inputDescricao.value
+    const cidade = e.target.elements.inputCidade.value
+    const estado = e.target.elements.inputEstado.value
+    const pais = e.target.elements.inputPais.value
 
-  const validateLogin = () => {
-    if (usersCreated[0] === email) {
-      if (usersCreated[1] === password) {
-        handleLogin(email, password)
-        callHome()
-      } else {
-        alert("Senha inválida")
-      }
-    } else {
-      alert("Email inválido")
+    const location = {
+      name: bairro,
+      description: descricao,
+      city: cidade,
+      state: estado,
+      country: pais
     }
-  }
 
-  const handleEmail = (event: { target: { value: any } }) => {
-    setEmail(event.target.value)
-  }
-
-  const handlePassword = (event: { target: { value: any } }) => {
-    setPassword(event.target.value)
-  }
-
-  const callHome = () => {
-    history.push("/")
+    axios.post('https://apimovingtipscore.azurewebsites.net/Districts', location)
+      .then(res => {
+        alert(`Bairro inserido com sucesso`)
+        history.push("/")
+      })
+      .catch(function (error) {
+        console.log(error.toJSON())
+        alert("Credenciais inválidas!!")
+      })
   }
 
   return (
@@ -90,27 +87,40 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
       <div className="container mb-24 lg:mb-32">
         <div className="max-w-md mx-auto space-y-6">
           {/* FORM */}
-          <form className="grid grid-cols-1 gap-6" action="#" onSubmit={validateLogin}>
+          <form className="grid grid-cols-1 gap-6" action="#" onSubmit={insertLocation}>
             <label className="block">
               <span className="text-neutral-800 dark:text-neutral-200">
                 Bairro
               </span>
               <Input
-                type="email"
                 placeholder="Insira o nome do seu bairro aqui"
                 className="mt-1"
-                id="inputEmail"
-                onChange={handleEmail}
+                id="inputBairro"
               />
             </label>
             <label className="block">
               <span className="flex justify-between items-center text-neutral-800 dark:text-neutral-200">
-                Senha
-                <Link to="" className="text-sm">
-                  Esqueceu a senha?
-                </Link>
+                Descrição
               </span>
-              <Input type="password" id="inputPassword" className="mt-1" onChange={handlePassword}/>
+              <Input id="inputDescricao" className="mt-1"/>
+            </label>
+            <label className="block">
+              <span className="flex justify-between items-center text-neutral-800 dark:text-neutral-200">
+                Cidade
+              </span>
+              <Input id="inputCidade" className="mt-1"/>
+            </label>
+            <label className="block">
+              <span className="flex justify-between items-center text-neutral-800 dark:text-neutral-200">
+                Estado
+              </span>
+              <Input id="inputEstado" className="mt-1"/>
+            </label>
+            <label className="block">
+              <span className="flex justify-between items-center text-neutral-800 dark:text-neutral-200">
+                País
+              </span>
+              <Input id="inputPais" className="mt-1"/>
             </label>
             <ButtonPrimary type="submit" >Continue</ButtonPrimary>
           </form>
@@ -126,4 +136,4 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
   )
 }
 
-export default PageLogin
+export default PageDistrict
