@@ -31,15 +31,13 @@ const loginSocials = [
   }
 ]
 
-let instance: AxiosInstance
-
 function getAuth (response: any) {
   axios.defaults.headers.common = {
     Authorization: 'Bearer ' + response.token
   }
 }
 
-function handleAddNewUser (this: any, e: any) {
+function handleAddNewUser (e: any) {
   e.preventDefault()
   const email = e.target.elements.email.value.toLowerCase().trim()
   const password = e.target.elements.password.value

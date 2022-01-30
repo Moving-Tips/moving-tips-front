@@ -17,6 +17,7 @@ import PageAddListing2 from "containers/PageAddListing1/PageAddListing2"
 import PageAddListing3 from "containers/PageAddListing1/PageAddListing3"
 import PageAddListing4 from "containers/PageAddListing1/PageAddListing4"
 import PageAddListing5 from "containers/PageAddListing1/PageAddListing5"
+import PageDistrict from "containers/PageDistrict/PageDistrict"
 
 export const pages: Page[] = [
   { path: "/", exact: true, component: PageHome },
@@ -32,7 +33,8 @@ export const pages: Page[] = [
   { path: "/add-listing-4", component: PageAddListing4 },
   { path: "/add-listing-5", component: PageAddListing5 },
   { path: "/signup", component: PageSignUp },
-  { path: "/login", component: PageLogin }
+  { path: "/login", component: PageLogin },
+  { path: "/district", component: PageDistrict }
 ]
 
 const Routes = () => {

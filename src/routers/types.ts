@@ -47,6 +47,7 @@ export interface LocationStates {
   "/forgot-pass"?: {}
   "/page404"?: {}
   "/subscription"?: {}
+  "/district" ?: {}
 }
 
 export type PathName = keyof LocationStates

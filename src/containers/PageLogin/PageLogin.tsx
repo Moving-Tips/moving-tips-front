@@ -7,7 +7,7 @@ import Input from "shared/Input/Input"
 import { Link, useHistory } from "react-router-dom"
 import ButtonPrimary from "shared/Button/ButtonPrimary"
 import { Alert } from "shared/Alert/Alert"
-import { usersCreated } from "data/users"
+import axios from "axios"
 export interface PageLoginProps {
   className?: string
 }
@@ -30,33 +30,54 @@ const loginSocials = [
   }
 ]
 
+function getAuth (response: any) {
+  axios.defaults.headers.common = {
+    Authorization: 'Bearer ' + response.token
+  }
+}
+
+function validatePassword (password: string) {
+  var res = (password.length > 6)
+  return (res)
+}
+
+function validateEmail (email: string) {
+  var re = /\S+@\S+\.\S+/
+  var res = re.test(email)
+  return (res)
+}
+
 const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
   const history = useHistory()
 
-  const validateLogin = () => {
-    if (usersCreated[0] === email) {
-      if (usersCreated[1] === password) {
-        callHome()
-      } else {
-        alert("Senha inválida")
-      }
-    } else {
-      alert("Email inválido")
+  function getAuthentication (email: string, password: string) {
+    const userInfo = {
+      email: email,
+      password: password
     }
+    console.log(userInfo)
+    // Autenticando e obtendo o token
+    axios.post('https://apimovingtipscore.azurewebsites.net/Auth/login', userInfo)
+      .then(res => {
+        const response = res.data
+        getAuth(response)
+        alert(`Seja bem-vindo(a) ${response.user.email}!!`)
+        history.push("/")
+      })
+      .catch(function (error) {
+        console.log(error.toJSON())
+        alert("Credenciais inválidas!!")
+      })
   }
 
-  const handleEmail = (event: { target: { value: any } }) => {
-    setEmail(event.target.value)
-  }
-
-  const handlePassword = (event: { target: { value: any } }) => {
-    setPassword(event.target.value)
-  }
-
-  const callHome = () => {
-    history.push("/")
+  function validateLogin (e: any) {
+    const email = e.target.elements.inputEmail.value.toLowerCase().trim()
+    const password = e.target.elements.inputPassword.value
+    if ((validateEmail(email) && validatePassword(password)) === true) {
+      getAuthentication(email, password)
+    } else {
+      alert("Email ou senha fora do formato padrão!")
+    }
   }
 
   return (
@@ -102,7 +123,6 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
                 placeholder="exemplo@exemplo.com"
                 className="mt-1"
                 id="inputEmail"
-                onChange={handleEmail}
               />
             </label>
             <label className="block">
@@ -112,7 +132,7 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
                   Esqueceu a senha?
                 </Link>
               </span>
-              <Input type="password" id="inputPassword" className="mt-1" onChange={handlePassword}/>
+              <Input type="password" id="inputPassword" className="mt-1"/>
             </label>
             <ButtonPrimary type="submit" >Continue</ButtonPrimary>
           </form>

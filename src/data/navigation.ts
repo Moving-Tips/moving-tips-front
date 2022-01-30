@@ -9,6 +9,11 @@ export const NAVIGATION_DEMO: NavItemType[] = [
   },
   {
     id: ncNanoId(),
+    href: "/district",
+    name: "Bairros"
+  },
+  {
+    id: ncNanoId(),
     href: "/signup",
     name: "Sair"
   }
